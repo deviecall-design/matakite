@@ -759,6 +759,7 @@
 
         <!-- FORECAST TAB -->
         <div id="forecast" class="tab-content">
+            <!-- Prediction Cards -->
             <div class="section">
                 <div class="section-title">Score Distribution Forecast | South Africa Series (Aug 2026)</div>
                 <div style="border: 1px solid #333; padding: 20px; background: #111;">
@@ -775,35 +776,104 @@
                             </div>
                             <div>
                                 <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Point Spread</div>
-                                <div style="font-size: 22px; color: #fff; font-family: 'Courier New';">+2 (60% NZ)</div>
+                                <div id="forecast-spread" style="font-size: 22px; color: #fff; font-family: 'Courier New';">+2 (60% NZ)</div>
                             </div>
                             <div>
-                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Confidence</div>
-                                <div style="font-size: 22px; color: #4ade80;">High</div>
+                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Win Prob (Model)</div>
+                                <div id="forecast-win-prob" style="font-size: 22px; color: #4ade80; font-family: 'Courier New';">60%</div>
                             </div>
                         </div>
                     </div>
-                    <div style="border-top: 1px solid #333; padding-top: 20px;">
-                        <div style="font-size: 12px; color: #aaa; margin-bottom: 10px; text-transform: uppercase;">Match 2: Cape Town (29 Aug)</div>
-                        <div style="display: flex; gap: 20px;">
-                            <div>
-                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Projected NZ Score</div>
-                                <div style="font-size: 22px; color: #4a9eff; font-family: 'Courier New';">21 (±5)</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Projected SA Score</div>
-                                <div style="font-size: 22px; color: #f87171; font-family: 'Courier New';">19 (±6)</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Point Spread</div>
-                                <div style="font-size: 22px; color: #fff; font-family: 'Courier New';">+2 (55% NZ)</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 10px; color: #666; margin-bottom: 5px;">Confidence</div>
-                                <div style="font-size: 22px; color: #f59e0b;">Moderate</div>
-                            </div>
+                </div>
+            </div>
+
+            <!-- Live Standings (ESPN) -->
+            <div class="section">
+                <div class="section-title" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span>League Standings</span>
+                    <span id="standings-source" style="font-size:10px; color:#666; font-family: 'Courier New'; font-weight:normal;">loading…</span>
+                </div>
+                <div id="standings-container">
+                    <table class="collection-table" id="standings-table" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th style="width:30px;">#</th>
+                                <th>Team</th>
+                                <th style="text-align:center;">P</th>
+                                <th style="text-align:center;">W</th>
+                                <th style="text-align:center;">L</th>
+                                <th style="text-align:center;">D</th>
+                                <th style="text-align:center;">Pts</th>
+                                <th style="text-align:center;">PF</th>
+                                <th style="text-align:center;">PA</th>
+                                <th style="text-align:center;">Diff</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standings-body"></tbody>
+                    </table>
+                    <div id="standings-empty" style="color:#666; font-size:12px; padding:20px; text-align:center;">
+                        <span class="status-indicator status-live-ind" style="background:#666;"></span>
+                        Standings load on first tab visit — fetched from ESPN.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOSSIER TAB -->
+        <div id="dossier" class="tab-content">
+            <!-- Team selector -->
+            <div class="section">
+                <div class="section-title" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span>Opponent Dossier</span>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        <select id="dossier-team-select" style="background:#1a1a1a; color:#ccc; border:1px solid #333; padding:4px 8px; font-size:11px; font-family:'Courier New';">
+                            <option value="">Select team…</option>
+                        </select>
+                        <button onclick="loadDossier()" style="background:#1a3a5c; color:#4a9eff; border:1px solid #1e4a7a; padding:4px 12px; font-size:11px; cursor:pointer; font-family:'Courier New';">LOAD</button>
+                    </div>
+                </div>
+
+                <!-- Team header -->
+                <div id="dossier-header" style="display:none; border:1px solid #333; background:#111; padding:16px; margin-bottom:12px;">
+                    <div style="display:flex; gap:16px; align-items:center;">
+                        <img id="dossier-logo" src="" style="width:48px; height:48px; object-fit:contain;" alt="">
+                        <div>
+                            <div id="dossier-team-name" style="font-size:18px; color:#fff; font-weight:bold;"></div>
+                            <div id="dossier-team-meta" style="font-size:11px; color:#666; margin-top:2px;"></div>
+                        </div>
+                        <div style="margin-left:auto; text-align:right;">
+                            <div style="font-size:10px; color:#666; text-transform:uppercase;">Source</div>
+                            <div style="font-size:11px; color:#4a9eff; font-family:'Courier New';">ESPN • OBSERVED</div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Player roster -->
+                <div id="dossier-roster-section" style="display:none;">
+                    <div style="font-size:11px; color:#aaa; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Squad</div>
+                    <table class="collection-table" id="dossier-roster-table">
+                        <thead>
+                            <tr>
+                                <th style="width:30px;">#</th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th style="text-align:center;">Age</th>
+                                <th style="text-align:center;">Carries</th>
+                                <th style="text-align:center;">Metres</th>
+                                <th style="text-align:center;">Tackles</th>
+                                <th style="text-align:center;">Passes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dossier-roster-body"></tbody>
+                    </table>
+                </div>
+
+                <div id="dossier-empty" style="color:#666; font-size:12px; padding:40px; text-align:center;">
+                    Select a team and click LOAD to generate opponent dossier from ESPN data.
+                </div>
+                <div id="dossier-loading" style="display:none; color:#4a9eff; font-size:12px; padding:20px; text-align:center;">
+                    <span class="status-indicator status-live-ind"></span>
+                    Fetching dossier from ESPN…
                 </div>
             </div>
         </div>
@@ -1088,62 +1158,374 @@
 
         <!-- LIVE TAB -->
         <div id="live" class="tab-content">
+            <!-- Scoreboard -->
             <div class="section">
-                <div class="section-title">Live Match Stream | Ellis Park · 22 Aug 2026 vs South Africa</div>
-                <div style="border: 1px solid #333; padding: 20px; background: #111; text-align: center;">
-                    <span class="status-indicator status-live-ind"></span>
-                    <span style="color: #f87171; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Live data stream inactive</span>
-                    <p style="color: #666; font-size: 11px; margin-top: 15px;">
-                        Live WebSocket connection will activate on match day. Dashboard will refresh every phase with:
-                    </p>
-                    <ul style="color: #666; font-size: 11px; text-align: left; display: inline-block; margin-top: 10px;">
-                        <li>• Real-time Opta event feed</li>
-                        <li>• Updated win probability (Bayesian)</li>
-                        <li>• Next-phase prediction (MiroFish swarm)</li>
-                        <li>• The Call (highest-value decision)</li>
-                        <li>• Substitution value clock</li>
-                    </ul>
+                <div class="section-title" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span>Live Scoreboard</span>
+                    <span id="live-source-badge" style="font-size:10px; color:#666; font-family:'Courier New';">connecting&#8230;</span>
+                </div>
+
+                <!-- Score display -->
+                <div style="border:1px solid #333; padding:20px; background:#0d0d0d; text-align:center; margin-bottom:12px;">
+                    <div style="font-size:10px; color:#666; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;" id="live-league-label">League</div>
+                    <div style="display:flex; justify-content:center; align-items:center; gap:40px;">
+                        <div style="text-align:center;">
+                            <img id="live-home-logo" src="" style="width:40px;height:40px;object-fit:contain;margin-bottom:4px;" alt="">
+                            <div id="live-home-name" style="font-size:13px; color:#4a9eff; font-family:'Courier New';">HOME</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <div style="display:flex; gap:20px; align-items:center; justify-content:center;">
+                                <div id="live-home-score" style="font-size:52px; color:#fff; font-family:'Courier New'; font-weight:bold;">0</div>
+                                <div style="font-size:24px; color:#555;">&mdash;</div>
+                                <div id="live-away-score" style="font-size:52px; color:#fff; font-family:'Courier New'; font-weight:bold;">0</div>
+                            </div>
+                            <div id="live-phase-badge" style="font-size:11px; color:#f87171; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">pre-match</div>
+                            <div style="font-size:10px; color:#555; margin-top:2px;" id="live-minute-display"></div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img id="live-away-logo" src="" style="width:40px;height:40px;object-fit:contain;margin-bottom:4px;" alt="">
+                            <div id="live-away-name" style="font-size:13px; color:#f87171; font-family:'Courier New';">AWAY</div>
+                        </div>
+                    </div>
+                    <div style="font-size:10px; color:#555; margin-top:12px;" id="live-venue-display"></div>
+                </div>
+
+                <!-- Win prob bar -->
+                <div style="border:1px solid #333; padding:14px; background:#111; margin-bottom:12px;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                        <span style="font-size:11px; color:#4a9eff; font-family:'Courier New';" id="live-prob-home-label">HOME &mdash;%</span>
+                        <span style="font-size:10px; color:#666;">Win Probability</span>
+                        <span style="font-size:11px; color:#f87171; font-family:'Courier New';" id="live-prob-away-label">AWAY &mdash;%</span>
+                    </div>
+                    <div style="background:#222; height:8px; border-radius:4px; overflow:hidden;">
+                        <div id="live-win-prob-bar" style="height:100%; background:linear-gradient(to right,#4a9eff,#1e4a7a); width:50%; transition:width 0.8s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- The Call -->
+                <div style="border:1px solid #f59e0b55; padding:14px; background:#1a1400; margin-bottom:12px;">
+                    <div style="font-size:10px; color:#f59e0b; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">The Call</div>
+                    <div id="live-the-call" style="font-size:13px; color:#fff; font-family:'Courier New';">Waiting for match data&#8230;</div>
+                    <div style="display:flex; gap:20px; margin-top:8px;">
+                        <div><span style="font-size:10px; color:#666;">xP Value: </span><span id="live-xp" style="font-size:12px; color:#4ade80; font-family:'Courier New';">+0.0</span></div>
+                        <div><span style="font-size:10px; color:#666;">Window: </span><span id="live-window" style="font-size:12px; color:#f59e0b; font-family:'Courier New';">&mdash;</span></div>
+                        <div><span style="font-size:10px; color:#666;">Confidence: </span><span id="live-call-conf" style="font-size:12px; color:#aaa; font-family:'Courier New';">&mdash;</span></div>
+                    </div>
+                </div>
+
+                <!-- Feed status row -->
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <div id="feed-espn" style="background:#111; border:1px solid #333; padding:6px 10px; font-size:10px; font-family:'Courier New'; color:#666;">ESPN <span class="feed-espn-dot">&#9679;</span></div>
+                    <div id="feed-opta" style="background:#111; border:1px solid #333; padding:6px 10px; font-size:10px; font-family:'Courier New'; color:#666;">OPTA <span style="color:#333;">&#9679;</span> stub</div>
+                    <div id="feed-gps" style="background:#111; border:1px solid #333; padding:6px 10px; font-size:10px; font-family:'Courier New'; color:#666;">GPS <span style="color:#333;">&#9679;</span> stub</div>
+                    <div id="feed-mirofish" style="background:#111; border:1px solid #333; padding:6px 10px; font-size:10px; font-family:'Courier New'; color:#666;">MIROFISH <span style="color:#333;">&#9679;</span> stub</div>
+                    <div id="feed-ws-status" style="background:#111; border:1px solid #333; padding:6px 10px; font-size:10px; font-family:'Courier New'; color:#666;">WS <span class="feed-ws-dot">&#9679;</span></div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Update current date
+        // ── Config ────────────────────────────────────────────────────────
+        const API_BASE = 'http://localhost:3940';
+        const WS_URL   = 'ws://localhost:8080';
+
+        // ── Date ──────────────────────────────────────────────────────────
         function updateDate() {
             const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
-            const today = new Date();
-            document.getElementById('current-date').textContent = today.toLocaleDateString('en-NZ', options);
+            document.getElementById('current-date').textContent =
+                new Date().toLocaleDateString('en-NZ', options);
         }
 
-        // Tab switching
+        // ── Tab Switching ─────────────────────────────────────────────────
         function switchTab(tabName) {
-            // Hide all
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-
-            // Show selected
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
+
+            // Lazy load on first visit
+            if (tabName === 'forecast' && !window._standingsLoaded) loadStandings();
+            if (tabName === 'dossier'  && !window._teamsLoaded)    loadTeams();
         }
 
-        // Initialize
-        updateDate();
+        // ── Live Score + State ────────────────────────────────────────────
+        function applyState(state) {
+            if (!state) return;
+            const m = state.match || {};
+            const p = state.prediction || {};
+            const c = state.the_call || {};
 
-        // WebSocket connection (stub for later)
-        function connectLiveStream() {
-            const wsUrl = 'ws://localhost:8080';
-            try {
-                const socket = new WebSocket(wsUrl);
-                socket.onopen = () => console.log('Live stream connected');
-                socket.onmessage = (e) => console.log('Data:', JSON.parse(e.data));
-                socket.onerror = () => console.log('Live stream unavailable (expected for POC)');
-            } catch (e) {
-                console.log('WebSocket not available for this POC phase');
+            // Live tab — score
+            setText('live-home-name',  m.homeAbbr || m.home || 'HOME');
+            setText('live-away-name',  m.awayAbbr || m.away || 'AWAY');
+            setText('live-home-score', m.score?.home ?? 0);
+            setText('live-away-score', m.score?.away ?? 0);
+            setText('live-phase-badge', (m.phase || 'pre-match').toUpperCase());
+            setText('live-venue-display', m.venue || '');
+            setText('live-league-label', `League ID ${m.league || ''}`);
+
+            if (m.minute > 0) {
+                setText('live-minute-display', `${m.minute}'`);
+            }
+            setImg('live-home-logo', m.homeLogo || '');
+            setImg('live-away-logo', m.awayLogo || '');
+
+            // Win prob bar
+            const ph = Math.round((p.win_prob_home || 0.5) * 100);
+            const pa = 100 - ph;
+            setText('live-prob-home-label', `${m.homeAbbr || 'HOME'} ${ph}%`);
+            setText('live-prob-away-label', `${m.awayAbbr || 'AWAY'} ${pa}%`);
+            setStyle('live-win-prob-bar', 'width', `${ph}%`);
+
+            // The Call
+            setText('live-the-call',   c.action || 'No call active');
+            setText('live-xp',         `+${c.expected_points ?? 0}`);
+            setText('live-window',      c.window_closes || '—');
+            setText('live-call-conf',   c.confidence ? `${Math.round(c.confidence * 100)}%` : '—');
+
+            // Source badge
+            const src = m.source === 'espn' ? 'ESPN ● LIVE' : 'MOCK ● SIM';
+            const srcColor = m.source === 'espn' ? '#4ade80' : '#f59e0b';
+            const badge = document.getElementById('live-source-badge');
+            if (badge) { badge.textContent = src; badge.style.color = srcColor; }
+
+            // ESPN feed dot
+            const feeds = state.feeds || {};
+            const espnStatus = feeds.espn?.status || 'idle';
+            const espnDot = document.querySelector('.feed-espn-dot');
+            if (espnDot) {
+                espnDot.style.color = espnStatus === 'live' ? '#4ade80' :
+                                      espnStatus === 'error' ? '#f87171' : '#666';
+            }
+
+            // Forecast win prob sync
+            const spread = p.odds_home ? `${p.odds_home > 0 ? '+' : ''}${p.odds_home}` : `+${ph - 50}`;
+            setText('forecast-win-prob', `${ph}%`);
+            setText('forecast-spread', spread);
+
+            // Standings (if present in WS state)
+            if (state.standings?.length) renderStandings(state.standings);
+
+            // Meta
+            const meta = state.meta || {};
+            if (meta.lastRefreshed) {
+                console.log('[MATAKITE] State refreshed:', meta.lastRefreshed);
             }
         }
 
-        // Attempt connection on load (will fail gracefully for POC)
+        // ── Standings ─────────────────────────────────────────────────────
+        window._standingsLoaded = false;
+
+        async function loadStandings() {
+            const src = document.getElementById('standings-source');
+            if (src) src.textContent = 'fetching from ESPN…';
+            try {
+                const resp = await fetch(`${API_BASE}/api/espn/standings`);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const data = await resp.json();
+                if (data.standings?.length) {
+                    renderStandings(data.standings);
+                    window._standingsLoaded = true;
+                    if (src) src.textContent = `ESPN · ${data.count} teams`;
+                } else {
+                    if (src) src.textContent = 'no data';
+                }
+            } catch (e) {
+                console.warn('[Standings] fetch failed:', e.message);
+                if (src) src.textContent = 'unavailable (server offline?)';
+            }
+        }
+
+        function renderStandings(rows) {
+            const tbody = document.getElementById('standings-body');
+            const table = document.getElementById('standings-table');
+            const empty = document.getElementById('standings-empty');
+            if (!tbody || !table) return;
+
+            tbody.innerHTML = rows.map(row => {
+                const diff = row.diff ?? (row.pointsFor - row.pointsAgainst);
+                const diffStr = diff > 0 ? `+${diff}` : `${diff}`;
+                const diffColor = diff > 0 ? '#4ade80' : diff < 0 ? '#f87171' : '#aaa';
+                return `<tr>
+                    <td style="color:#666;">${row.rank}</td>
+                    <td>
+                        ${row.logo ? `<img src="${row.logo}" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;margin-right:6px;" alt="">` : ''}
+                        ${row.team}
+                    </td>
+                    <td style="text-align:center; color:#aaa;">${row.played || 0}</td>
+                    <td style="text-align:center; color:#4ade80;">${row.wins || 0}</td>
+                    <td style="text-align:center; color:#f87171;">${row.losses || 0}</td>
+                    <td style="text-align:center; color:#aaa;">${row.draws || 0}</td>
+                    <td style="text-align:center; color:#4a9eff; font-weight:bold;">${row.points || 0}</td>
+                    <td style="text-align:center; color:#aaa;">${row.pointsFor || 0}</td>
+                    <td style="text-align:center; color:#aaa;">${row.pointsAgainst || 0}</td>
+                    <td style="text-align:center; color:${diffColor};">${diffStr}</td>
+                </tr>`;
+            }).join('');
+
+            table.style.display = 'table';
+            if (empty) empty.style.display = 'none';
+        }
+
+        // ── Dossier ───────────────────────────────────────────────────────
+        window._teamsLoaded = false;
+
+        async function loadTeams() {
+            const sel = document.getElementById('dossier-team-select');
+            if (!sel) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/espn/teams`);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const data = await resp.json();
+                const teams = data.teams || [];
+                teams.forEach(t => {
+                    const opt = document.createElement('option');
+                    opt.value = t.id || t.team?.id || '';
+                    opt.textContent = t.displayName || t.team?.displayName || 'Unknown';
+                    sel.appendChild(opt);
+                });
+                window._teamsLoaded = true;
+            } catch (e) {
+                console.warn('[Dossier] teams fetch failed:', e.message);
+                const opt = document.createElement('option');
+                opt.disabled = true;
+                opt.textContent = 'Server offline — start fusion_server.py';
+                sel.appendChild(opt);
+            }
+        }
+
+        async function loadDossier() {
+            const sel   = document.getElementById('dossier-team-select');
+            const teamId = sel?.value;
+            if (!teamId) return;
+
+            const teamName = sel.options[sel.selectedIndex]?.text || teamId;
+            const loading = document.getElementById('dossier-loading');
+            const empty   = document.getElementById('dossier-empty');
+            const header  = document.getElementById('dossier-header');
+            const rosterSec = document.getElementById('dossier-roster-section');
+
+            if (loading) loading.style.display = 'block';
+            if (empty)   empty.style.display = 'none';
+            if (header)  header.style.display = 'none';
+            if (rosterSec) rosterSec.style.display = 'none';
+
+            try {
+                const resp = await fetch(`${API_BASE}/api/espn/roster/${teamId}`);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const data = await resp.json();
+
+                // Update header
+                setText('dossier-team-name', teamName);
+                setText('dossier-team-meta', `${data.count || 0} players · ESPN data · OBSERVED`);
+                if (header) header.style.display = 'block';
+
+                // Render roster
+                renderRoster(data.roster || []);
+                if (rosterSec) rosterSec.style.display = 'block';
+
+            } catch (e) {
+                console.warn('[Dossier] roster fetch failed:', e.message);
+                if (empty) {
+                    empty.textContent = 'Failed to load roster. Is fusion_server.py running?';
+                    empty.style.display = 'block';
+                }
+            } finally {
+                if (loading) loading.style.display = 'none';
+            }
+        }
+
+        function renderRoster(players) {
+            const tbody = document.getElementById('dossier-roster-body');
+            if (!tbody) return;
+            tbody.innerHTML = players.map((p, i) => `<tr>
+                <td style="color:#555;">${p.jersey || i + 1}</td>
+                <td>${p.displayName || p.shortName || '—'}</td>
+                <td style="color:#aaa;">${p.position || '—'}</td>
+                <td style="text-align:center; color:#aaa;">${p.age || '—'}</td>
+                <td style="text-align:center; color:#4a9eff;">${p.carries ?? '—'}</td>
+                <td style="text-align:center; color:#4ade80;">${p.metres ?? '—'}</td>
+                <td style="text-align:center; color:#f87171;">${p.tackles ?? '—'}</td>
+                <td style="text-align:center; color:#aaa;">${p.passes ?? '—'}</td>
+            </tr>`).join('');
+        }
+
+        // ── WebSocket ─────────────────────────────────────────────────────
+        function connectLiveStream() {
+            const wsDot = document.querySelector('.feed-ws-dot');
+            try {
+                const socket = new WebSocket(WS_URL);
+
+                socket.onopen = () => {
+                    console.log('[MATAKITE] WS connected');
+                    if (wsDot) wsDot.style.color = '#4ade80';
+                    const badge = document.getElementById('live-source-badge');
+                    if (badge) { badge.textContent = 'WS ● LIVE'; badge.style.color = '#4ade80'; }
+                };
+
+                socket.onmessage = (e) => {
+                    try {
+                        const msg = JSON.parse(e.data);
+                        if (msg.type === 'init' || msg.type === 'state') {
+                            applyState(msg.payload);
+                        }
+                    } catch (err) {
+                        console.warn('[MATAKITE] WS parse error:', err);
+                    }
+                };
+
+                socket.onerror = () => {
+                    if (wsDot) wsDot.style.color = '#f87171';
+                    console.warn('[MATAKITE] WS unavailable — server offline?');
+                    // Try REST fallback
+                    restFallback();
+                };
+
+                socket.onclose = () => {
+                    if (wsDot) wsDot.style.color = '#666';
+                    console.log('[MATAKITE] WS closed — reconnect in 15s');
+                    setTimeout(connectLiveStream, 15000);
+                };
+
+            } catch (e) {
+                console.warn('[MATAKITE] WS init failed:', e.message);
+                restFallback();
+            }
+        }
+
+        // ── REST Fallback ─────────────────────────────────────────────────
+        async function restFallback() {
+            try {
+                const resp = await fetch(`${API_BASE}/api/espn/state`);
+                if (!resp.ok) return;
+                const state = await resp.json();
+                applyState(state);
+                const badge = document.getElementById('live-source-badge');
+                if (badge) { badge.textContent = 'REST ● POLL'; badge.style.color = '#f59e0b'; }
+            } catch (e) {
+                // Server offline — not a problem
+            }
+            // Poll every 30s when WS unavailable
+            setTimeout(restFallback, 30000);
+        }
+
+        // ── Helpers ───────────────────────────────────────────────────────
+        function setText(id, val) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = val;
+        }
+        function setImg(id, src) {
+            const el = document.getElementById(id);
+            if (el) { el.src = src; el.style.display = src ? 'block' : 'none'; }
+        }
+        function setStyle(id, prop, val) {
+            const el = document.getElementById(id);
+            if (el) el.style[prop] = val;
+        }
+
+        // ── Init ──────────────────────────────────────────────────────────
+        updateDate();
         connectLiveStream();
     </script>
 </body>
