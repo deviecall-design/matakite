@@ -1,0 +1,1740 @@
+{
+  "meta": {
+    "team": "New Zealand",
+    "nickname": "All Blacks",
+    "season": 2026,
+    "asOf": "2026-09-28",
+    "asOfLabel": "28 Sep 2026",
+    "scoreConvention": "Every score on this page is New Zealand first, then the opponent. Rugby Database lists the home side first. Away wins are flipped so New Zealand stays first.",
+    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. The Australia fixtures are the Bledisloe Cup and are not on the Rugby Database list yet.",
+    "headCoach": {
+      "name": "Dave Rennie",
+      "detail": "Appointed All Blacks head coach on 4 March 2026, through to the 2027 Rugby World Cup. Scott Robertson had departed in January 2026.",
+      "sources": [
+        {
+          "name": "New Zealand Rugby",
+          "url": "https://www.nzrugby.co.nz/news-and-events/latest-news/new-zealand-rugby-appoints-dave-rennie-as-all-blacks-head-coach"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/scott-robertson-departs-as-head-coach-of-the-all-blacks"
+        }
+      ]
+    },
+    "captain": {
+      "summary": "Ardie Savea was named captain for Dave Rennie's first squad and captained the side through the Soweto Test. He dislocated a shoulder in that match. Codie Taylor captained the Baltimore Test, his first Test as captain. A captain for the Bledisloe Tests had not been named in the sources checked on 28 Sep 2026.",
+      "sources": [
+        {
+          "name": "All Blacks — Italy team",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington"
+        },
+        {
+          "name": "All Blacks — Bledisloe buildup",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
+        }
+      ]
+    },
+    "primarySource": {
+      "name": "Rugby Database",
+      "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+      "note": "Primary source for 2026 results, venues and crowds. The games list is embedded in the page and was read on 28 Sep 2026."
+    },
+    "crossCheckSource": {
+      "name": "ESPN",
+      "teamUrl": "https://www.espn.com.au/rugby/team/_/id/8/new-zealand",
+      "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+      "note": "ESPN's New Zealand results page listed the seven Tests. Scores agree. It did not list the four tour matches. Its team-page scorer module is labelled The Rugby Championship and was not used."
+    }
+  },
+  "tests": [
+    {
+      "id": "2026-07-04-france",
+      "date": "2026-07-04",
+      "dateLabel": "04 Jul",
+      "dateNote": "Same ground. Rugby Database says One New Zealand Stadium. ESPN says One NZ Stadium, Christchurch.",
+      "opponent": "France",
+      "venue": "One New Zealand Stadium",
+      "competition": "Nations Championship - 2026",
+      "status": "played",
+      "nzScore": 34,
+      "oppScore": 32,
+      "halfTimeNz": 19,
+      "halfTimeOpp": 13,
+      "nzTries": [
+        {
+          "player": "Will Jordan",
+          "count": 2
+        },
+        {
+          "player": "Peter Lakai",
+          "count": 1
+        },
+        {
+          "player": "Cam Roigard",
+          "count": 2
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Damian Penaud",
+          "count": 1
+        },
+        {
+          "player": "Antoine Hastoy",
+          "count": 1
+        },
+        {
+          "player": "Theo Attissogbe",
+          "count": 1
+        },
+        {
+          "player": "Matthieu Jalibert",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 3,
+          "penalties": 1
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Maxime Lucu",
+          "conversions": 2,
+          "penalties": 2
+        },
+        {
+          "player": "Antoine Hastoy",
+          "conversions": 1,
+          "penalties": 0
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29341",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603975/league/289234"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-edge-france-in-christchurch-thriller-to-open-2026"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c5yze25d46do"
+        },
+        {
+          "name": "NZ Herald",
+          "url": "https://www.nzherald.co.nz/sport/rugby/all-blacks/all-blacks-v-france-result-dave-rennie-era-begins-with-nail-biting-win-in-christchurch/XMVJFMPVYVAONARUXCGHTFY6NY/"
+        }
+      ],
+      "kind": "test",
+      "crowd": 30000,
+      "crowdLabel": "30,000",
+      "kickOffLabel": "Sat 4th Jul 2026, 7:10pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29341",
+        "gameId": 29341,
+        "crowd": 30000,
+        "venue": "One New Zealand Stadium",
+        "kickOffLabel": "Sat 4th Jul 2026, 7:10pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603975/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "New Zealand 34-32 France",
+        "dateLabel": "Sat, Jul 4",
+        "venue": "One NZ Stadium, Christchurch",
+        "note": "Same ground. Rugby Database says One New Zealand Stadium. ESPN says One NZ Stadium, Christchurch."
+      }
+    },
+    {
+      "id": "2026-07-11-italy",
+      "date": "2026-07-11",
+      "dateLabel": "11 Jul",
+      "dateNote": "Same ground. ESPN adds the city, Wellington.",
+      "opponent": "Italy",
+      "venue": "Hnry Stadium",
+      "competition": "Nations Championship - 2026",
+      "status": "played",
+      "nzScore": 47,
+      "oppScore": 17,
+      "halfTimeNz": 14,
+      "halfTimeOpp": 10,
+      "nzTries": [
+        {
+          "player": "Sam Darry",
+          "count": 1
+        },
+        {
+          "player": "Will Jordan",
+          "count": 3
+        },
+        {
+          "player": "Cam Roigard",
+          "count": 1
+        },
+        {
+          "player": "Ethan de Groot",
+          "count": 1
+        },
+        {
+          "player": "Tupou Vaa'i",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Tommaso Menoncello",
+          "count": 1
+        },
+        {
+          "player": "Leonardo Marin",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 6,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Tommaso Allan",
+          "conversions": 1,
+          "penalties": 1
+        },
+        {
+          "player": "Alessandro Garbisi",
+          "conversions": 1,
+          "penalties": 0
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29347",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603981/league/289234"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/will-jordan-breaks-all-blacks-try-scoring-record-in-47-17-win-over-italy"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/new-zealand-vs-italy/111670"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c24y0lpj227o"
+        }
+      ],
+      "kind": "test",
+      "crowd": 33087,
+      "crowdLabel": "33,087",
+      "kickOffLabel": "Sat 11th Jul 2026, 5:10pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29347",
+        "gameId": 29347,
+        "crowd": 33087,
+        "venue": "Hnry Stadium",
+        "kickOffLabel": "Sat 11th Jul 2026, 5:10pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603981/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "New Zealand 47-17 Italy",
+        "dateLabel": "Sat, Jul 11",
+        "venue": "Hnry Stadium, Wellington",
+        "note": "Same ground. ESPN adds the city, Wellington."
+      }
+    },
+    {
+      "id": "2026-07-18-ireland",
+      "date": "2026-07-18",
+      "dateLabel": "18 Jul",
+      "dateNote": "Same ground. ESPN adds the city, Auckland.",
+      "opponent": "Ireland",
+      "venue": "Eden Park",
+      "competition": "Nations Championship - 2026",
+      "status": "played",
+      "nzScore": 40,
+      "oppScore": 21,
+      "halfTimeNz": 28,
+      "halfTimeOpp": 7,
+      "nzTries": [
+        {
+          "player": "Patrick Tuipulotu",
+          "count": 1
+        },
+        {
+          "player": "Ardie Savea",
+          "count": 1
+        },
+        {
+          "player": "Will Jordan",
+          "count": 1
+        },
+        {
+          "player": "Asafo Aumua",
+          "count": 1
+        },
+        {
+          "player": "Damian McKenzie",
+          "count": 1
+        },
+        {
+          "player": "Anton Lienert-Brown",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Jack Conan",
+          "count": 1
+        },
+        {
+          "player": "Joe McCarthy",
+          "count": 1
+        },
+        {
+          "player": "Hugo Keenan",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 5,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Sam Prendergast",
+          "conversions": 3,
+          "penalties": 0
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29353",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603987/league/289234"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-vs-ireland-nations-championship"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c4gk5exp8eko"
+        }
+      ],
+      "kind": "test",
+      "crowd": 48153,
+      "crowdLabel": "48,153",
+      "kickOffLabel": "Sat 18th Jul 2026, 7:10pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29353",
+        "gameId": 29353,
+        "crowd": 48153,
+        "venue": "Eden Park",
+        "kickOffLabel": "Sat 18th Jul 2026, 7:10pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603987/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "New Zealand 40-21 Ireland",
+        "dateLabel": "Sat, Jul 18",
+        "venue": "Eden Park, Auckland",
+        "note": "Same ground. ESPN adds the city, Auckland."
+      }
+    },
+    {
+      "id": "2026-08-07-stormers",
+      "date": "2026-08-07",
+      "dateLabel": "07 Aug",
+      "dateNote": "Tour match, not a Test. ESPN's New Zealand 2026 results list does not include it. The score matches the Wikipedia tour page. Try scorers are not shown, because no score sheet was used.",
+      "opponent": "Stormers",
+      "venue": "Cape Town Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "kind": "tour",
+      "status": "played",
+      "nzScore": 38,
+      "oppScore": 21,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "crowd": 47130,
+      "crowdLabel": "47,130",
+      "kickOffLabel": "Fri 7th Aug 2026, 7:00pm",
+      "nzTries": null,
+      "oppTries": null,
+      "nzKickers": null,
+      "oppKickers": null,
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29376",
+        "gameId": 29376,
+        "crowd": 47130,
+        "venue": "Cape Town Stadium",
+        "kickOffLabel": "Fri 7th Aug 2026, 7:00pm",
+        "home": "Stormers",
+        "homeScore": 21,
+        "away": "All Blacks",
+        "awayScore": 38
+      },
+      "crossCheck": {
+        "name": "Wikipedia",
+        "resultsUrl": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa",
+        "listedOnEspnResults": false,
+        "espnResultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "scoreAgrees": true,
+        "note": "Not on ESPN's New Zealand results page. Wikipedia lists the same score."
+      },
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29376",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-11-sharks",
+      "date": "2026-08-11",
+      "dateLabel": "11 Aug",
+      "dateNote": "Tour match, not a Test. ESPN's New Zealand 2026 results list does not include it. The score matches the Wikipedia tour page. Try scorers are not shown, because no score sheet was used.",
+      "opponent": "Sharks",
+      "venue": "Kings Park Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "kind": "tour",
+      "status": "played",
+      "nzScore": 54,
+      "oppScore": 0,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "crowd": 14759,
+      "crowdLabel": "14,759",
+      "kickOffLabel": "Tue 11th Aug 2026, 7:00pm",
+      "nzTries": null,
+      "oppTries": null,
+      "nzKickers": null,
+      "oppKickers": null,
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29377",
+        "gameId": 29377,
+        "crowd": 14759,
+        "venue": "Kings Park Stadium",
+        "kickOffLabel": "Tue 11th Aug 2026, 7:00pm",
+        "home": "Sharks",
+        "homeScore": 0,
+        "away": "All Blacks",
+        "awayScore": 54
+      },
+      "crossCheck": {
+        "name": "Wikipedia",
+        "resultsUrl": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa",
+        "listedOnEspnResults": false,
+        "espnResultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "scoreAgrees": true,
+        "note": "Not on ESPN's New Zealand results page. Wikipedia lists the same score."
+      },
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29377",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-15-bulls",
+      "date": "2026-08-15",
+      "dateLabel": "15 Aug",
+      "dateNote": "Tour match, not a Test. ESPN's New Zealand 2026 results list does not include it. The score matches the Wikipedia tour page. Try scorers are not shown, because no score sheet was used.",
+      "opponent": "Bulls",
+      "venue": "Loftus Versfeld Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "kind": "tour",
+      "status": "played",
+      "nzScore": 50,
+      "oppScore": 19,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "crowd": 30930,
+      "crowdLabel": "30,930",
+      "kickOffLabel": "Sat 15th Aug 2026, 7:00pm",
+      "nzTries": null,
+      "oppTries": null,
+      "nzKickers": null,
+      "oppKickers": null,
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29378",
+        "gameId": 29378,
+        "crowd": 30930,
+        "venue": "Loftus Versfeld Stadium",
+        "kickOffLabel": "Sat 15th Aug 2026, 7:00pm",
+        "home": "Bulls",
+        "homeScore": 19,
+        "away": "All Blacks",
+        "awayScore": 50
+      },
+      "crossCheck": {
+        "name": "Wikipedia",
+        "resultsUrl": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa",
+        "listedOnEspnResults": false,
+        "espnResultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "scoreAgrees": true,
+        "note": "Not on ESPN's New Zealand results page. Wikipedia lists the same score."
+      },
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29378",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-22-south-africa-ellis-park",
+      "date": "2026-08-22",
+      "dateLabel": "22 Aug",
+      "dateNote": "Score agrees. The name does not. Rugby Database says Emirates Airline Park. ESPN says Ellis Park, Johannesburg. The page uses the Rugby Database name.",
+      "opponent": "South Africa",
+      "venue": "Emirates Airline Park",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "status": "played",
+      "nzScore": 33,
+      "oppScore": 16,
+      "halfTimeNz": 12,
+      "halfTimeOpp": 13,
+      "nzTries": [
+        {
+          "player": "Will Jordan",
+          "count": 2
+        },
+        {
+          "player": "Josh Moorby",
+          "count": 1
+        },
+        {
+          "player": "Fabian Holland",
+          "count": 1
+        },
+        {
+          "player": "Luke Jacobson",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Andre Esterhuizen",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 4,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Cheslin Kolbe",
+          "conversions": 1,
+          "penalties": 3
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29379",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603247/league/289234"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-springboks-first-test-rugby-s-greatest-rivalry"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/12321/13575921/south-africa-vs-new-zealand-all-blacks-emerge-worthy-winners-as-they-outscore-springboks-in-first-test-upset"
+        }
+      ],
+      "kind": "test",
+      "crowd": 60592,
+      "crowdLabel": "60,592",
+      "kickOffLabel": "Sat 22nd Aug 2026, 5:05pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29379",
+        "gameId": 29379,
+        "crowd": 60592,
+        "venue": "Emirates Airline Park",
+        "kickOffLabel": "Sat 22nd Aug 2026, 5:05pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603247/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "South Africa 16-33 New Zealand",
+        "dateLabel": "Sat, Aug 22",
+        "venue": "Ellis Park, Johannesburg",
+        "note": "Score agrees. The name does not. Rugby Database says Emirates Airline Park. ESPN says Ellis Park, Johannesburg. The page uses the Rugby Database name."
+      }
+    },
+    {
+      "id": "2026-08-25-lions",
+      "date": "2026-08-25",
+      "dateLabel": "25 Aug",
+      "dateNote": "Tour match, not a Test. ESPN's New Zealand 2026 results list does not include it. The score matches the Wikipedia tour page. Try scorers are not shown, because no score sheet was used.",
+      "opponent": "Lions",
+      "venue": "Emirates Airline Park",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "kind": "tour",
+      "status": "played",
+      "nzScore": 41,
+      "oppScore": 35,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "crowd": 15956,
+      "crowdLabel": "15,956",
+      "kickOffLabel": "Tue 25th Aug 2026, 5:05pm",
+      "nzTries": null,
+      "oppTries": null,
+      "nzKickers": null,
+      "oppKickers": null,
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29380",
+        "gameId": 29380,
+        "crowd": 15956,
+        "venue": "Emirates Airline Park",
+        "kickOffLabel": "Tue 25th Aug 2026, 5:05pm",
+        "home": "Lions",
+        "homeScore": 35,
+        "away": "All Blacks",
+        "awayScore": 41
+      },
+      "crossCheck": {
+        "name": "Wikipedia",
+        "resultsUrl": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa",
+        "listedOnEspnResults": false,
+        "espnResultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "scoreAgrees": true,
+        "note": "Not on ESPN's New Zealand results page. Wikipedia lists the same score."
+      },
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29380",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2026_New_Zealand_rugby_union_tour_of_South_Africa"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-29-south-africa-cape-town",
+      "date": "2026-08-29",
+      "dateLabel": "29 Aug",
+      "dateNote": "Score agrees. The name does not. Rugby Database says Cape Town Stadium. ESPN says DHL Stadium, Cape Town. The page uses the Rugby Database name.",
+      "opponent": "South Africa",
+      "venue": "Cape Town Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "status": "played",
+      "nzScore": 26,
+      "oppScore": 33,
+      "halfTimeNz": 14,
+      "halfTimeOpp": 24,
+      "nzTries": [
+        {
+          "player": "Cam Roigard",
+          "count": 1
+        },
+        {
+          "player": "Damian McKenzie",
+          "count": 1
+        },
+        {
+          "player": "Leroy Carter",
+          "count": 1
+        },
+        {
+          "player": "Ardie Savea",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Jesse Kriel",
+          "count": 1
+        },
+        {
+          "player": "Damian de Allende",
+          "count": 1
+        },
+        {
+          "player": "Siya Kolisi",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 3,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Cheslin Kolbe",
+          "conversions": 3,
+          "penalties": 4
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29381",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603248/league/289234"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/south-africa-vs-new-zealand/111659"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport/rugby-union/match/EVP5649499"
+        },
+        {
+          "name": "AP",
+          "url": "https://apnews.com/article/south-africa-springboks-all-blacks-2nd-test-b996752150947b828d8c0aff1adda7f0"
+        }
+      ],
+      "kind": "test",
+      "crowd": 56589,
+      "crowdLabel": "56,589",
+      "kickOffLabel": "Sat 29th Aug 2026, 5:05pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29381",
+        "gameId": 29381,
+        "crowd": 56589,
+        "venue": "Cape Town Stadium",
+        "kickOffLabel": "Sat 29th Aug 2026, 5:05pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603248/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "South Africa 33-26 New Zealand",
+        "dateLabel": "Sat, Aug 29",
+        "venue": "DHL Stadium, Cape Town",
+        "note": "Score agrees. The name does not. Rugby Database says Cape Town Stadium. ESPN says DHL Stadium, Cape Town. The page uses the Rugby Database name."
+      }
+    },
+    {
+      "id": "2026-09-05-south-africa-fnb",
+      "date": "2026-09-05",
+      "dateLabel": "05 Sep",
+      "dateNote": "Same ground. Rugby Database says First National Bank Stadium. ESPN says FNB Stadium, Johannesburg.",
+      "opponent": "South Africa",
+      "venue": "First National Bank Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "status": "played",
+      "nzScore": 24,
+      "oppScore": 29,
+      "halfTimeNz": 12,
+      "halfTimeOpp": 12,
+      "nzTries": [
+        {
+          "player": "Ardie Savea",
+          "count": 2
+        },
+        {
+          "player": "Will Jordan",
+          "count": 1
+        },
+        {
+          "player": "Samisoni Taukei'aho",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Kurt-Lee Arendse",
+          "count": 1
+        },
+        {
+          "player": "Penalty try",
+          "count": 1,
+          "penaltyTry": true
+        },
+        {
+          "player": "Jesse Kriel",
+          "count": 1
+        },
+        {
+          "player": "Malcolm Marx",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Ruben Love",
+          "conversions": 1,
+          "penalties": 0
+        },
+        {
+          "player": "Damian McKenzie",
+          "conversions": 1,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Sacha Feinberg-Mngomezulu",
+          "conversions": 2,
+          "penalties": 1
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29382",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603249/league/289234"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c7830m55lklo"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/13582037/south-africa-29-24-new-zealand-springboks-edge-thriller-to-take-2-1-series-lead-in-soweto"
+        }
+      ],
+      "kind": "test",
+      "crowd": 85967,
+      "crowdLabel": "85,967",
+      "kickOffLabel": "Sat 5th Sep 2026, 5:05pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29382",
+        "gameId": 29382,
+        "crowd": 85967,
+        "venue": "First National Bank Stadium",
+        "kickOffLabel": "Sat 5th Sep 2026, 5:05pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603249/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "South Africa 29-24 New Zealand",
+        "dateLabel": "Sat, Sep 5",
+        "venue": "FNB Stadium, Johannesburg",
+        "note": "Same ground. Rugby Database says First National Bank Stadium. ESPN says FNB Stadium, Johannesburg."
+      }
+    },
+    {
+      "id": "2026-09-12-south-africa-baltimore",
+      "date": "2026-09-12",
+      "dateLabel": "12 Sep",
+      "dateNote": "Scores and the stadium name agree. ESPN's match summary is titled 13 Sep 2026 and its game info says 7:00 AM, September 13, 2026. The ESPN results list says Sat, Sep 12. Rugby Database says Sat 12th Sep 2026, 12:00pm. BBC and Sky reported Saturday 12 September in Baltimore. The 13 Sep label is the Australian edition clock.",
+      "opponent": "South Africa",
+      "venue": "M&T Bank Stadium",
+      "competition": "All Blacks in South Africa & United States - 2026",
+      "status": "played",
+      "nzScore": 28,
+      "oppScore": 43,
+      "halfTimeNz": 14,
+      "halfTimeOpp": 17,
+      "nzTries": [
+        {
+          "player": "Codie Taylor",
+          "count": 1
+        },
+        {
+          "player": "Will Jordan",
+          "count": 1
+        },
+        {
+          "player": "Ethan Blackadder",
+          "count": 1
+        },
+        {
+          "player": "Beauden Barrett",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Damian de Allende",
+          "count": 2
+        },
+        {
+          "player": "van den Berg",
+          "count": 1
+        },
+        {
+          "player": "Pieter-Steph du Toit",
+          "count": 1
+        },
+        {
+          "player": "Kurt-Lee Arendse",
+          "count": 1
+        },
+        {
+          "player": "Hanekom",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Damian McKenzie",
+          "conversions": 4,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Sacha Feinberg-Mngomezulu",
+          "conversions": 2,
+          "penalties": 1
+        },
+        {
+          "player": "van den Berg",
+          "conversions": 1,
+          "penalties": 0
+        },
+        {
+          "player": "Libbok",
+          "conversions": 2,
+          "penalties": 0
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=29383",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603250/league/289234"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c07lmxpmvr9o"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ],
+      "kind": "test",
+      "crowd": 68173,
+      "crowdLabel": "68,173",
+      "kickOffLabel": "Sat 12th Sep 2026, 12:00pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=29383",
+        "gameId": 29383,
+        "crowd": 68173,
+        "venue": "M&T Bank Stadium",
+        "kickOffLabel": "Sat 12th Sep 2026, 12:00pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603250/league/289234",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "South Africa 43-28 New Zealand",
+        "dateLabel": "Sat, Sep 12",
+        "venue": "M&T Bank Stadium",
+        "note": "Scores and the stadium name agree. ESPN's match summary is titled 13 Sep 2026 and its game info says 7:00 AM, September 13, 2026. The ESPN results list says Sat, Sep 12. Rugby Database says Sat 12th Sep 2026, 12:00pm. BBC and Sky reported Saturday 12 September in Baltimore. The 13 Sep label is the Australian edition clock."
+      }
+    },
+    {
+      "id": "2026-10-10-australia-eden-park",
+      "date": "2026-10-10",
+      "dateLabel": "10 Oct",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. 7.10pm New Zealand time, as published by allblacks.com.",
+      "opponent": "Australia",
+      "venue": "Eden Park, Auckland",
+      "competition": "Bledisloe Cup",
+      "status": "upcoming",
+      "nzScore": null,
+      "oppScore": null,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "nzTries": [],
+      "oppTries": [],
+      "nzKickers": [],
+      "oppKickers": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ],
+      "kind": "test",
+      "crowd": null,
+      "crowdLabel": null
+    },
+    {
+      "id": "2026-10-17-australia-sydney",
+      "date": "2026-10-17",
+      "dateLabel": "17 Oct",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
+      "opponent": "Australia",
+      "venue": "Accor Stadium, Sydney",
+      "competition": "Bledisloe Cup",
+      "status": "upcoming",
+      "nzScore": null,
+      "oppScore": null,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "nzTries": [],
+      "oppTries": [],
+      "nzKickers": [],
+      "oppKickers": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "Accor Stadium",
+          "url": "https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks"
+        }
+      ],
+      "kind": "test",
+      "crowd": null,
+      "crowdLabel": null
+    },
+    {
+      "id": "2026-11-07-scotland",
+      "date": "2026-11-07",
+      "dateLabel": "07 Nov",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
+      "opponent": "Scotland",
+      "venue": "Murrayfield, Edinburgh",
+      "competition": "Nations Championship",
+      "status": "upcoming",
+      "nzScore": null,
+      "oppScore": null,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "nzTries": [],
+      "oppTries": [],
+      "nzKickers": [],
+      "oppKickers": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/the-nations-championship-explained"
+        }
+      ],
+      "kind": "test",
+      "crowd": null,
+      "crowdLabel": null
+    },
+    {
+      "id": "2026-11-14-wales",
+      "date": "2026-11-14",
+      "dateLabel": "14 Nov",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
+      "opponent": "Wales",
+      "venue": "Principality Stadium, Cardiff",
+      "competition": "Nations Championship",
+      "status": "upcoming",
+      "nzScore": null,
+      "oppScore": null,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "nzTries": [],
+      "oppTries": [],
+      "nzKickers": [],
+      "oppKickers": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/the-nations-championship-explained"
+        }
+      ],
+      "kind": "test",
+      "crowd": null,
+      "crowdLabel": null
+    },
+    {
+      "id": "2026-11-21-england",
+      "date": "2026-11-21",
+      "dateLabel": "21 Nov",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
+      "opponent": "England",
+      "venue": "Twickenham Stadium, London",
+      "competition": "Nations Championship",
+      "status": "upcoming",
+      "nzScore": null,
+      "oppScore": null,
+      "halfTimeNz": null,
+      "halfTimeOpp": null,
+      "nzTries": [],
+      "oppTries": [],
+      "nzKickers": [],
+      "oppKickers": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/the-nations-championship-explained"
+        }
+      ],
+      "kind": "test",
+      "crowd": null,
+      "crowdLabel": null
+    }
+  ],
+  "cards": {
+    "southAfrica": {
+      "title": "South Africa",
+      "meta": "Series finished · South Africa won 3–1",
+      "facts": [
+        "The four-Test series is finished. South Africa won it 3–1. Nothing in this series is live.",
+        "New Zealand won the first Test 33–16 at Emirates Airline Park on 22 August (ESPN calls that ground Ellis Park, Johannesburg), then lost 26–33 at Cape Town Stadium on 29 August (ESPN says DHL Stadium, Cape Town), 24–29 at First National Bank Stadium on 5 September (ESPN says FNB Stadium, Johannesburg), and 28–43 at M&T Bank Stadium in Baltimore on 12 September. The scores are the same on Rugby Database and ESPN.",
+        "Codie Taylor captained the Baltimore Test. Ardie Savea had already gone home with a dislocated shoulder."
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c07lmxpmvr9o"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    "australia": {
+      "title": "Australia",
+      "meta": "Bledisloe Cup · still to be played · no prediction",
+      "facts": [
+        "Saturday 10 October, Eden Park, Auckland, 7.10pm New Zealand time. Saturday 17 October, Accor Stadium, Sydney.",
+        "The Sydney kick-off is not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
+        "allblacks.com says New Zealand have held the Bledisloe Cup since 2003.",
+        "Australia beat South Africa 42–38 in Perth on 27 September 2026.",
+        "On the All Blacks site, Dave Rennie said Ardie Savea and Luke Jacobson will be out of the Bledisloe squad he is planning. The same page, dated as at 21 September, says Savea needs shoulder surgery and that a return date follows the operation. RNZ later reported that New Zealand Rugby confirmed the surgery.",
+        "allblacks.com reported that Wallabies flyhalf Carter Gordon fractured his leg and is expected to miss the series, and that Jordan Petaia has been called into the wider Wallabies squad. Cheslin Kolbe plays for South Africa. He is not in this fixture.",
+        "No win percentage is shown. There is no prediction model on this page."
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cx05r4gg209ro"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1621006/wallabies-hold-on-with-11-men-to-beat-springboks"
+        },
+        {
+          "name": "Accor Stadium",
+          "url": "https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks"
+        }
+      ]
+    }
+  },
+  "gamePlan": {
+    "heading": "All Blacks game plan (public reporting)",
+    "label": "Compiled from public reporting on 28 Sep 2026. This is not AI analysis, and it is not an internal All Blacks document.",
+    "bullets": [
+      {
+        "topic": "Attack shape",
+        "text": "The All Blacks site, reviewing the South Africa series, said the attack can trouble the Springboks, but that New Zealand too often needed long passages of possession to score. ESPN's Liam Napier wrote on 20 Sep 2026 that Dave Rennie and Mike Blair have aimed the attack at pace and at space out wide, and he reported 35 tries in seven Tests. The score sheets in this file also add up to 35 tries.",
+        "sources": [
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+          }
+        ]
+      },
+      {
+        "topic": "Kicking game",
+        "text": "After the Baltimore loss, Rennie said the high ball put the side under more heat and that they could not take a lot of those balls. The All Blacks site listed collection of contested kicks as a review area. ESPN reported that the high ball is still a problem and gave Will Jordan a series-high 24 turnovers. That turnover figure is ESPN's count. It is not an official All Blacks statistic re-counted here.",
+        "sources": [
+          {
+            "name": "Planet Rugby",
+            "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+          }
+        ]
+      },
+      {
+        "topic": "Set piece",
+        "text": "Rennie said the scrum and lineout in the Baltimore Test were excellent. Across the series, ESPN reported 14 scrum penalties conceded, including one penalty try, and a lineout at 86 percent after eight lost throws. Those series figures are ESPN's. The All Blacks site named set-piece consistency as a review area. The penalty try in the score sheets is the Soweto one, awarded to South Africa.",
+        "sources": [
+          {
+            "name": "Planet Rugby",
+            "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          }
+        ]
+      },
+      {
+        "topic": "Defence",
+        "text": "Rennie said needless penalties have to come out of the game, and he called that sort of penalty dumb. The All Blacks site said South Africa were more ruthless after penalties and turnovers. ESPN wrote that smaller wingers stationed in midfield, Leroy Carter and Josh Moorby, were pushed off the ball and that this led to three tries.",
+        "sources": [
+          {
+            "name": "Planet Rugby",
+            "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+          }
+        ]
+      },
+      {
+        "topic": "Bench use",
+        "text": "Rennie said he was happy with Beauden Barrett off the bench in Baltimore, and that the side has cover at first-five and fullback in Richie Mo'unga, Ruben Love, Damian McKenzie and Beauden Barrett. He also praised Kyle Preston's speed to the breakdown. He said the Bledisloe group would be a squad of 34, with Luke Jacobson and Ardie Savea out, and with Scott Barrett and Leicester Fainga'anuku among those expected back.",
+        "sources": [
+          {
+            "name": "Planet Rugby",
+            "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          }
+        ]
+      },
+      {
+        "topic": "What the results showed",
+        "text": "The side won its first four Tests, including 33–16 at Ellis Park, then lost the next three. South Africa won the series 3–1. Rennie said the tour was meant to teach them about their game model, that the Baltimore result hurts, and that he still feels they are tracking in the right direction while needing to be better against a side like the Springboks.",
+        "sources": [
+          {
+            "name": "Planet Rugby",
+            "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks"
+          }
+        ]
+      },
+      {
+        "topic": "What Rennie said he wanted, before July",
+        "text": "Before the July Tests, Rennie told Sky Sport NZ, as reported by SABC Sport, that he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The 2025 split he mentioned is his recollection. It is not re-counted here.",
+        "sources": [
+          {
+            "name": "SABC Sport",
+            "url": "https://www.sabcsport.com/rugby/news/dave-rennie-outlines-what-he-s-looking-for-in-new-all-blacks"
+          },
+          {
+            "name": "RugbyPass",
+            "url": "https://www.rugbypass.com/news/stephen-donald-unpacks-what-dave-rennies-comments-reveal-about-his-game-plan/"
+          }
+        ]
+      }
+    ]
+  },
+  "notVerified": [
+    "Sydney kick-off on 17 October. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Rugby Database and the ESPN results list do not include this fixture yet.",
+    "A captain for the October and November Tests. Codie Taylor captained Baltimore. No Bledisloe captain was named in the sources checked.",
+    "Ardie Savea's return date. The All Blacks injury list of 21 September says it follows surgery. RNZ reported a lengthy layoff. The date is not verified.",
+    "ESPN's series counts from Liam Napier's review: 14 scrum penalties, a lineout at 86 percent, eight lost lineouts, and 24 high-ball turnovers for Will Jordan. Reported, not re-counted here.",
+    "How long Australia's unbeaten run is. BBC and RNZ reported the 42–38 win in Perth. They do not agree on five or six matches, so no streak length is shown.",
+    "Nations Championship Finals Weekend, 27–29 November in London. The opponent is not known, so it is not a fixture.",
+    "Try scorers for the four tour matches. Rugby Database's games list has the score, venue and crowd. It does not list tries. They are left blank.",
+    "ESPN's New Zealand team page has a 2026 Top Scorers module labelled The Rugby Championship. Damian McKenzie is listed on 33 points. Will Jordan is not the leading try scorer in that module. It does not match the Test score sheets, so it is not used.",
+    "The Rugby Championship table on that same ESPN page is empty.",
+    "Crowds other than Baltimore. ESPN match pages store attendance as 0, so they are not a crowd check. Baltimore's 68,173 matches BBC Sport as well as Rugby Database. The other crowds are Rugby Database only.",
+    "A Dubai Telegraph line that called the France Test 32–30. Rugby Database, ESPN, the All Blacks and BBC Sport say 34–32.",
+    "Surnames printed without a first name on the Baltimore score sheet: van den Berg, Hanekom and Libbok.",
+    "No official All Blacks statistical leaderboard was used. Test try and points leaders are added up from published score sheets. Try 5, conversion 2, penalty goal 3. A penalty try is 7 points and is not given to a player."
+  ],
+  "feeds": [
+    {
+      "name": "Opta / Stats Perform",
+      "status": "Not connected"
+    },
+    {
+      "name": "Broadcast + Video",
+      "status": "Not connected"
+    },
+    {
+      "name": "Own GPS / IMU",
+      "status": "Not connected"
+    },
+    {
+      "name": "Own Biometrics",
+      "status": "Not connected"
+    },
+    {
+      "name": "Weather / Venue",
+      "status": "Not connected"
+    },
+    {
+      "name": "Referee Intelligence",
+      "status": "Not connected"
+    },
+    {
+      "name": "MiroFish Swarm",
+      "status": "Not connected"
+    },
+    {
+      "name": "Coaching DNA",
+      "status": "Not connected"
+    },
+    {
+      "name": "Scouting Network",
+      "status": "Not connected"
+    }
+  ],
+  "scoringRules": {
+    "try": 5,
+    "conversion": 2,
+    "penaltyGoal": 3,
+    "penaltyTry": 7,
+    "note": "A penalty try is worth 7 and is not given to a player. It still counts as a try for or against."
+  },
+  "derived": {
+    "played": 7,
+    "upcoming": 5,
+    "won": 4,
+    "lost": 3,
+    "drawn": 0,
+    "pointsFor": 232,
+    "pointsAgainst": 191,
+    "pointsDifference": 41,
+    "triesFor": 35,
+    "triesAgainst": 23,
+    "topTryScorer": {
+      "player": "Will Jordan",
+      "tries": 10,
+      "conversions": 0,
+      "penalties": 0,
+      "points": 50
+    },
+    "topPointsScorer": {
+      "player": "Will Jordan",
+      "tries": 10,
+      "conversions": 0,
+      "penalties": 0,
+      "points": 50
+    },
+    "results": [
+      {
+        "id": "2026-07-04-france",
+        "date": "2026-07-04",
+        "dateLabel": "04 Jul",
+        "opponent": "France",
+        "venue": "One New Zealand Stadium",
+        "competition": "Nations Championship - 2026",
+        "result": "W",
+        "nzScore": 34,
+        "oppScore": 32,
+        "line": "W 34–32",
+        "triesFor": 5,
+        "triesAgainst": 4,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29341",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603975/league/289234"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-edge-france-in-christchurch-thriller-to-open-2026"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c5yze25d46do"
+          },
+          {
+            "name": "NZ Herald",
+            "url": "https://www.nzherald.co.nz/sport/rugby/all-blacks/all-blacks-v-france-result-dave-rennie-era-begins-with-nail-biting-win-in-christchurch/XMVJFMPVYVAONARUXCGHTFY6NY/"
+          }
+        ]
+      },
+      {
+        "id": "2026-07-11-italy",
+        "date": "2026-07-11",
+        "dateLabel": "11 Jul",
+        "opponent": "Italy",
+        "venue": "Hnry Stadium",
+        "competition": "Nations Championship - 2026",
+        "result": "W",
+        "nzScore": 47,
+        "oppScore": 17,
+        "line": "W 47–17",
+        "triesFor": 7,
+        "triesAgainst": 2,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29347",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603981/league/289234"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/will-jordan-breaks-all-blacks-try-scoring-record-in-47-17-win-over-italy"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/new-zealand-vs-italy/111670"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c24y0lpj227o"
+          }
+        ]
+      },
+      {
+        "id": "2026-07-18-ireland",
+        "date": "2026-07-18",
+        "dateLabel": "18 Jul",
+        "opponent": "Ireland",
+        "venue": "Eden Park",
+        "competition": "Nations Championship - 2026",
+        "result": "W",
+        "nzScore": 40,
+        "oppScore": 21,
+        "line": "W 40–21",
+        "triesFor": 6,
+        "triesAgainst": 3,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29353",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603987/league/289234"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-vs-ireland-nations-championship"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c4gk5exp8eko"
+          }
+        ]
+      },
+      {
+        "id": "2026-08-22-south-africa-ellis-park",
+        "date": "2026-08-22",
+        "dateLabel": "22 Aug",
+        "opponent": "South Africa",
+        "venue": "Emirates Airline Park",
+        "competition": "All Blacks in South Africa & United States - 2026",
+        "result": "W",
+        "nzScore": 33,
+        "oppScore": 16,
+        "line": "W 33–16",
+        "triesFor": 5,
+        "triesAgainst": 1,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29379",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603247/league/289234"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-springboks-first-test-rugby-s-greatest-rivalry"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/12321/13575921/south-africa-vs-new-zealand-all-blacks-emerge-worthy-winners-as-they-outscore-springboks-in-first-test-upset"
+          }
+        ]
+      },
+      {
+        "id": "2026-08-29-south-africa-cape-town",
+        "date": "2026-08-29",
+        "dateLabel": "29 Aug",
+        "opponent": "South Africa",
+        "venue": "Cape Town Stadium",
+        "competition": "All Blacks in South Africa & United States - 2026",
+        "result": "L",
+        "nzScore": 26,
+        "oppScore": 33,
+        "line": "L 26–33",
+        "triesFor": 4,
+        "triesAgainst": 3,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29381",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603248/league/289234"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/south-africa-vs-new-zealand/111659"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.co.uk/sport/rugby-union/match/EVP5649499"
+          },
+          {
+            "name": "AP",
+            "url": "https://apnews.com/article/south-africa-springboks-all-blacks-2nd-test-b996752150947b828d8c0aff1adda7f0"
+          }
+        ]
+      },
+      {
+        "id": "2026-09-05-south-africa-fnb",
+        "date": "2026-09-05",
+        "dateLabel": "05 Sep",
+        "opponent": "South Africa",
+        "venue": "First National Bank Stadium",
+        "competition": "All Blacks in South Africa & United States - 2026",
+        "result": "L",
+        "nzScore": 24,
+        "oppScore": 29,
+        "line": "L 24–29",
+        "triesFor": 4,
+        "triesAgainst": 4,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29382",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603249/league/289234"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c7830m55lklo"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/13582037/south-africa-29-24-new-zealand-springboks-edge-thriller-to-take-2-1-series-lead-in-soweto"
+          }
+        ]
+      },
+      {
+        "id": "2026-09-12-south-africa-baltimore",
+        "date": "2026-09-12",
+        "dateLabel": "12 Sep",
+        "opponent": "South Africa",
+        "venue": "M&T Bank Stadium",
+        "competition": "All Blacks in South Africa & United States - 2026",
+        "result": "L",
+        "nzScore": 28,
+        "oppScore": 43,
+        "line": "L 28–43",
+        "triesFor": 4,
+        "triesAgainst": 6,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=29383",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603250/league/289234"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c07lmxpmvr9o"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          }
+        ]
+      }
+    ],
+    "allGames": {
+      "played": 11,
+      "won": 8,
+      "lost": 3,
+      "drawn": 0,
+      "pointsFor": 415,
+      "pointsAgainst": 266,
+      "note": "Tests plus the four tour matches on the Rugby Database list. Try counts are Tests only."
+    },
+    "rules": "Tests only for tries and points scorers. try 5, conversion 2, penalty goal 3, penalty try 7 (counts as a try, no player credited). Tour matches have no score sheet here, so they are in the all-games record only."
+  },
+  "disagreements": [
+    {
+      "game": "22 Aug, South Africa",
+      "field": "Venue name",
+      "rugbyDatabase": "Emirates Airline Park",
+      "espn": "Ellis Park, Johannesburg",
+      "scoresAgree": true,
+      "note": "Same Johannesburg ground, two names. The page uses Rugby Database."
+    },
+    {
+      "game": "29 Aug, South Africa",
+      "field": "Venue name",
+      "rugbyDatabase": "Cape Town Stadium",
+      "espn": "DHL Stadium, Cape Town",
+      "scoresAgree": true,
+      "note": "Same ground, two names. The page uses Rugby Database."
+    },
+    {
+      "game": "5 Sep, South Africa",
+      "field": "Venue name",
+      "rugbyDatabase": "First National Bank Stadium",
+      "espn": "FNB Stadium, Johannesburg",
+      "scoresAgree": true,
+      "note": "Same ground. ESPN also names the city."
+    },
+    {
+      "game": "4 Jul, France",
+      "field": "Venue name",
+      "rugbyDatabase": "One New Zealand Stadium",
+      "espn": "One NZ Stadium, Christchurch",
+      "scoresAgree": true,
+      "note": "Same ground. ESPN uses the short name and adds the city."
+    },
+    {
+      "game": "12 Sep, South Africa",
+      "field": "Date label",
+      "rugbyDatabase": "Sat 12th Sep 2026, 12:00pm",
+      "espn": "Results list: Sat, Sep 12. Match summary title: 13 Sep 2026. Game info: 7:00 AM, September 13, 2026.",
+      "scoresAgree": true,
+      "note": "Not a second match. BBC and Sky reported Saturday 12 September in Baltimore. The 13 Sep clock is the ESPN Australia edition."
+    }
+  ]
+}
