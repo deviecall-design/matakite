@@ -3,10 +3,12 @@
 MATAKITE Fusion Server — Operation Kāhu
 WebSocket backend for real-time dashboard data delivery.
 
-Phase A: Mock data layer with live feed stubs.
-Phase B: ESPN API integration — scoreboard, standings, plays, rosters.
-         REST endpoints at /api/espn/* for dashboard to call directly.
-         Polling loop syncs ESPN data into broadcast state every 30s (live).
+The dashboard scoreboard is the sourced 2026 All Blacks record in
+data/all-blacks-2026.json. There is no prediction model.
+
+ESPN league 242041 is Super Rugby Pacific. It is not the All Blacks
+Test feed, and this server does not copy it onto the match state.
+The random score simulator has been removed.
 
 Architecture:
   HTTP :3940  → serves dashboard HTML
@@ -18,7 +20,6 @@ import asyncio
 import json
 import logging
 import os
-import random
 import time
 import urllib.request
 import urllib.error
@@ -36,8 +37,9 @@ DASHBOARD_FILE = "matakite-poc.html"
 
 # ─── ESPN Config ──────────────────────────────────────────────────────────────
 
-# Primary league (Super Rugby Pacific - All Blacks context)
-# Override with MATAKITE_LEAGUE_ID env var for other leagues
+# ESPN league 242041 is Super Rugby Pacific, not All Blacks Tests.
+# Kept only so the old debug endpoints still name the league they call.
+# The dashboard does not treat this feed as the Test scoreboard.
 ESPN_LEAGUE_ID = os.environ.get("MATAKITE_LEAGUE_ID", "242041")
 ESPN_SITE_BASE = "https://site.api.espn.com"
 ESPN_CORE_BASE = "https://sports.core.api.espn.com"
@@ -305,137 +307,81 @@ def extract_roster(roster_data: list) -> list:
 
 # ─── Shared State ─────────────────────────────────────────────────────────────
 
+def load_season() -> dict:
+    """Sourced 2026 Test record. Same file the page renders."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "all-blacks-2026.json")
+    with open(path, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+SEASON = load_season()
+
+NOT_CONNECTED = "not_connected"
+
 MOCK_STATE = {
     "match": {
-        "id": "ABvRSA-20260822",
+        "id": None,
         "home": "New Zealand",
         "homeAbbr": "NZ",
         "homeLogo": "",
-        "away": "South Africa",
-        "awayAbbr": "RSA",
+        "away": None,
+        "awayAbbr": None,
         "awayLogo": "",
-        "venue": "Ellis Park, Johannesburg",
-        "altitude_m": 1755,
-        "kickoff": "2026-08-22T15:05:00+02:00",
-        "minute": 0,
-        "phase": "pre-match",
-        "score": {"home": 0, "away": 0},
-        "status": "STATUS_SCHEDULED",
-        "period": 0,
-        "league": ESPN_LEAGUE_ID,
-        "source": "mock",
+        "venue": None,
+        "minute": None,
+        "phase": "no match today",
+        "score": None,
+        "status": "NO_LIVE_TEST",
+        "source": "none",
+        "note": "No All Blacks Test is live. Results are in data/all-blacks-2026.json.",
     },
-    "prediction": {
-        "win_prob_home": 0.47,
-        "win_prob_away": 0.53,
-        "confidence": 0.92,
-        "brier_season": 0.151,
-        "hit_rate": 0.74,
-        "calibration_error": 0.038,
-    },
-    "battlegrounds": {
-        "scrum": 0.61,
-        "lineout": 0.38,
-        "breakdown": 0.54,
-        "territory": 0.51,
-        "aerial": 0.43,
-    },
-    "the_call": {
-        "action": "Maintain kick-to-corner strategy — Feinberg showing early fatigue",
-        "expected_points": 2.3,
-        "window_closes": "min 58",
-        "confidence": 0.81,
-    },
+    "prediction": None,
+    "modelConnected": False,
+    "battlegrounds": None,
+    "the_call": None,
     "standings": [],
     "roster": [],
+    "season": SEASON.get("derived"),
     "feeds": {
-        "espn": {"name": "ESPN Core API", "source": "espn", "latency": "live", "status": "idle"},
-        "opta": {"name": "Opta/Stats Perform", "source": "opta", "latency": "live", "status": "stub"},
-        "gps": {"name": "GPS/IMU Telemetry", "source": "own", "latency": "live", "status": "stub"},
-        "broadcast": {"name": "Broadcast Tracking", "source": "observed", "latency": "live", "status": "stub"},
-        "mirofish": {"name": "MiroFish Swarm", "source": "modelled", "latency": "event-based", "status": "stub"},
+        "espn": {"name": "ESPN", "status": NOT_CONNECTED, "note": "League 242041 is Super Rugby Pacific, not All Blacks Tests."},
+        "opta": {"name": "Opta/Stats Perform", "status": NOT_CONNECTED},
+        "gps": {"name": "GPS/IMU Telemetry", "status": NOT_CONNECTED},
+        "biometrics": {"name": "Biometrics", "status": NOT_CONNECTED},
+        "weather": {"name": "Weather / Venue", "status": NOT_CONNECTED},
+        "referee": {"name": "Referee Intelligence", "status": NOT_CONNECTED},
+        "broadcast": {"name": "Broadcast Tracking", "status": NOT_CONNECTED},
+        "mirofish": {"name": "MiroFish Swarm", "status": NOT_CONNECTED},
+        "coaching_dna": {"name": "Coaching DNA", "status": NOT_CONNECTED},
+        "scouting": {"name": "Scouting Network", "status": NOT_CONNECTED},
     },
     "meta": {
-        "provenance": ["OWN", "OBSERVED", "MODELLED"],
-        "classification": "INTERNAL",
-        "version": "v0.2-espn",
+        "provenance": ["sourced-record"],
+        "classification": "PUBLIC_REPORTING",
+        "version": "v0.3-sourced-2026",
+        "dataAsOf": SEASON["meta"]["asOf"],
         "espnLeagueId": ESPN_LEAGUE_ID,
-        "lastRefreshed": datetime.now(timezone.utc).isoformat(),
+        "espnUsedForScoreboard": False,
+        "lastRefreshed": SEASON["meta"]["asOf"],
     },
 }
 
 
 def espn_sync_state():
     """
-    Pull latest ESPN data into MOCK_STATE.
-    Called by background polling loop + on REST requests.
-    Returns True if something changed.
+    Do not copy ESPN into the All Blacks match.
+
+    League 242041 is Super Rugby Pacific. Writing that scoreboard
+    onto this dashboard would present the wrong competition as a
+    Test, and the old code then left typed-in win probabilities in place.
     """
-    changed = False
-
-    # 1. Scoreboard → match state
-    sb = espn_scoreboard()
-    if sb:
-        match = extract_match_state(sb)
-        if match:
-            MOCK_STATE["match"] = match
-            MOCK_STATE["feeds"]["espn"]["status"] = "live"
-            MOCK_STATE["feeds"]["espn"]["lastFetched"] = datetime.now(timezone.utc).isoformat()
-            changed = True
-            log.info(f"ESPN sync: {match['home']} {match['score']['home']} — {match['score']['away']} {match['away']} [{match['phase']}]")
-    else:
-        MOCK_STATE["feeds"]["espn"]["status"] = "error"
-
-    # 2. Standings (less frequent — uses TTL in espn_cache_with_ttl)
-    standings_data = espn_standings()
-    if standings_data:
-        rows = extract_standings(standings_data)
-        if rows:
-            MOCK_STATE["standings"] = rows
-            changed = True
-            log.info(f"ESPN sync: {len(rows)} standings rows loaded")
-
-    # 3. Update meta
-    MOCK_STATE["meta"]["lastRefreshed"] = datetime.now(timezone.utc).isoformat()
-
-    return changed
+    MOCK_STATE["feeds"]["espn"]["status"] = NOT_CONNECTED
+    return False
 
 
 # ─── Mock Simulation (fallback when ESPN data unavailable) ───────────────────
 
 def simulate_live_match(state: dict):
-    """Advance match state by one phase (mock — only used when ESPN is unavailable)."""
-    if state["match"].get("source") != "mock":
-        return state  # Don't simulate if we have real data
-
-    minute = state["match"]["minute"]
-    if minute >= 80:
-        return state
-
-    state["match"]["minute"] = minute + random.randint(2, 5)
-
-    drift = random.gauss(0, 0.02)
-    state["prediction"]["win_prob_home"] = max(
-        0.05, min(0.95, state["prediction"]["win_prob_home"] + drift)
-    )
-    state["prediction"]["win_prob_away"] = 1 - state["prediction"]["win_prob_home"]
-
-    if random.random() < 0.12:
-        team = "home" if random.random() < 0.47 else "away"
-        pts = random.choice([3, 5, 7])
-        state["match"]["score"][team] += pts
-        log.info(f"[Mock] Score: {team} +{pts}")
-
-    calls = [
-        "Apply early lineout pressure — Kolbe tracking shallow",
-        "Shift attack to right channel — Bomb Squad clock at T-6",
-        "Kick to corner — Feinberg fatigue window open",
-        "Box-kick left — aerial contest favoured",
-        "Maul off lineout — scrum advantage > 60%",
-    ]
-    state["the_call"]["action"] = random.choice(calls)
-    state["the_call"]["expected_points"] = round(random.uniform(1.2, 3.8), 1)
-
+    """Disabled. This used to invent scores, win chances and coaching calls."""
     return state
 
 
@@ -483,19 +429,13 @@ async def ws_handler(websocket):
 
 
 async def broadcast_loop():
-    """Push state updates to all connected clients every 30s."""
-    # Initial ESPN sync on startup
-    await asyncio.get_event_loop().run_in_executor(None, espn_sync_state)
+    """Tell connected clients there is no live Test and no model.
 
+    CONNECTED_CLIENTS is a module global. Do not rebind it with -=
+    or Python treats the name as local and the loop crashes.
+    """
     while True:
         await asyncio.sleep(30)
-
-        # Sync ESPN data
-        await asyncio.get_event_loop().run_in_executor(None, espn_sync_state)
-
-        # Fallback mock simulation if ESPN unavailable
-        simulate_live_match(MOCK_STATE)
-
         if not CONNECTED_CLIENTS:
             continue
 
@@ -506,20 +446,13 @@ async def broadcast_loop():
         })
 
         disconnected = set()
-        for ws in CONNECTED_CLIENTS:
+        for ws in list(CONNECTED_CLIENTS):
             try:
                 await ws.send(payload)
             except websockets.exceptions.ConnectionClosed:
                 disconnected.add(ws)
 
-        CONNECTED_CLIENTS -= disconnected
-        if CONNECTED_CLIENTS:
-            log.info(
-                f"Broadcast | {MOCK_STATE['match']['home']} "
-                f"{MOCK_STATE['match']['score']['home']}–{MOCK_STATE['match']['score']['away']} "
-                f"{MOCK_STATE['match']['away']} | {MOCK_STATE['match']['phase']} "
-                f"min {MOCK_STATE['match']['minute']}"
-            )
+        CONNECTED_CLIENTS.difference_update(disconnected)
 
 
 # ─── HTTP + REST Handler ──────────────────────────────────────────────────────
@@ -532,6 +465,30 @@ class DashboardHandler(BaseHTTPRequestHandler):
         body = json.dumps(data, default=str).encode()
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def send_data_file(self, rel: str):
+        """Serve only the sourced record and the source list."""
+        root = os.path.dirname(os.path.abspath(__file__))
+        allowed = {
+            "data/all-blacks-2026.json": "application/json; charset=utf-8",
+            "data/SOURCES.md": "text/markdown; charset=utf-8",
+        }
+        if rel not in allowed:
+            self.send_error(404)
+            return
+        full = os.path.join(root, rel)
+        try:
+            with open(full, "rb") as handle:
+                body = handle.read()
+        except FileNotFoundError:
+            self.send_error(404)
+            return
+        self.send_response(200)
+        self.send_header("Content-Type", allowed[rel])
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
@@ -565,8 +522,13 @@ class DashboardHandler(BaseHTTPRequestHandler):
         # ── ESPN REST Endpoints ─────────────────────────────────────
 
         elif path == "/api/espn/state":
-            espn_sync_state()
             self.send_json(MOCK_STATE)
+
+        elif path == "/api/season":
+            self.send_json(SEASON)
+
+        elif path.startswith("/data/"):
+            self.send_data_file(path.lstrip("/"))
 
         elif path == "/api/espn/scoreboard":
             data = espn_scoreboard()
@@ -617,8 +579,10 @@ class DashboardHandler(BaseHTTPRequestHandler):
         elif path == "/api/health":
             self.send_json({
                 "status": "ok",
-                "version": "v0.2-espn",
+                "version": "v0.3-sourced-2026",
+                "modelConnected": False,
                 "leagueId": ESPN_LEAGUE_ID,
+                "espnUsedForScoreboard": False,
                 "connectedClients": len(CONNECTED_CLIENTS),
                 "cacheKeys": len(_cache),
             })
@@ -643,7 +607,7 @@ async def main():
     log.info(f"Dashboard:  http://localhost:{HTTP_PORT}")
     log.info(f"WebSocket:  ws://localhost:{WS_PORT}")
     log.info(f"ESPN League: {ESPN_LEAGUE_ID} (set MATAKITE_LEAGUE_ID to change)")
-    log.info("Phase B: ESPN integration active")
+    log.info("Scoreboard: sourced 2026 record. No prediction model. ESPN is not the Test feed.")
     log.info("")
     log.info("REST Endpoints:")
     log.info("  GET /api/espn/state          — Full synced dashboard state")
