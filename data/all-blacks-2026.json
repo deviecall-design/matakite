@@ -3,8 +3,8 @@
     "team": "New Zealand",
     "nickname": "All Blacks",
     "season": 2026,
-    "asOf": "2026-09-28",
-    "asOfLabel": "28 Sep 2026",
+    "asOf": "2026-10-07",
+    "asOfLabel": "7 Oct 2026",
     "scoreConvention": "Every score on this page is New Zealand first, then the opponent. Rugby Database lists the home side first. Away wins are flipped so New Zealand stays first.",
     "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. The Australia fixtures are the Bledisloe Cup and are not on the Rugby Database list yet.",
     "headCoach": {
@@ -22,7 +22,7 @@
       ]
     },
     "captain": {
-      "summary": "Ardie Savea was named captain for Dave Rennie's first squad and captained the side through the Soweto Test. He dislocated a shoulder in that match. Codie Taylor captained the Baltimore Test, his first Test as captain. A captain for the Bledisloe Tests had not been named in the sources checked on 28 Sep 2026.",
+      "summary": "Ardie Savea captained the Tests he started, through Soweto. He dislocated a shoulder in that match. Codie Taylor captained Baltimore, then was named captain of the 34-man Bledisloe squad on 29 September 2026. A captain for the November Tests had not been named in the sources checked on 7 Oct 2026.",
       "sources": [
         {
           "name": "All Blacks — Italy team",
@@ -35,13 +35,17 @@
         {
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
+        },
+        {
+          "name": "RNZ — Bledisloe squad",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
         }
       ]
     },
     "primarySource": {
       "name": "Rugby Database",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-      "note": "Primary source for 2026 results, venues and crowds. The games list is embedded in the page and was read on 28 Sep 2026."
+      "note": "Primary source for 2026 results, venues and crowds. The games list was read on 28 Sep 2026 and again on 7 Oct 2026. It still ended at Baltimore on 12 Sep."
     },
     "crossCheckSource": {
       "name": "ESPN",
@@ -1042,7 +1046,7 @@
       "id": "2026-10-10-australia-eden-park",
       "date": "2026-10-10",
       "dateLabel": "10 Oct",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. 7.10pm New Zealand time, as published by allblacks.com.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. 7.10pm New Zealand time, as published by allblacks.com.",
       "opponent": "Australia",
       "venue": "Eden Park, Auckland",
       "competition": "Bledisloe Cup",
@@ -1069,7 +1073,7 @@
       "id": "2026-10-17-australia-sydney",
       "date": "2026-10-17",
       "dateLabel": "17 Oct",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
       "opponent": "Australia",
       "venue": "Accor Stadium, Sydney",
       "competition": "Bledisloe Cup",
@@ -1100,7 +1104,7 @@
       "id": "2026-11-07-scotland",
       "date": "2026-11-07",
       "dateLabel": "07 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
       "opponent": "Scotland",
       "venue": "Murrayfield, Edinburgh",
       "competition": "Nations Championship",
@@ -1127,7 +1131,7 @@
       "id": "2026-11-14-wales",
       "date": "2026-11-14",
       "dateLabel": "14 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
       "opponent": "Wales",
       "venue": "Principality Stadium, Cardiff",
       "competition": "Nations Championship",
@@ -1154,7 +1158,7 @@
       "id": "2026-11-21-england",
       "date": "2026-11-21",
       "dateLabel": "21 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
       "opponent": "England",
       "venue": "Twickenham Stadium, London",
       "competition": "Nations Championship",
@@ -1218,7 +1222,7 @@
         "The Sydney kick-off is not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
         "allblacks.com says New Zealand have held the Bledisloe Cup since 2003.",
         "Australia beat South Africa 42–38 in Perth on 27 September 2026.",
-        "On the All Blacks site, Dave Rennie said Ardie Savea and Luke Jacobson will be out of the Bledisloe squad he is planning. The same page, dated as at 21 September, says Savea needs shoulder surgery and that a return date follows the operation. RNZ later reported that New Zealand Rugby confirmed the surgery.",
+        "The Bledisloe squad was named on 29 September 2026. Codie Taylor is captain. Ardie Savea (shoulder, surgery done) and Luke Jacobson (elbow) are out, with Ruben Love (ankle), Patrick Tuipulotu (calf), Anton Lienert-Brown (knee), Billy Proctor (shoulder), Caleb Clarke (shoulder) and Ollie Norris (knee). On 4 October Dave Rennie said Savea will not return until Super Rugby in 2027, and he is not sure that will be the start of Super Rugby. The player dossier has the sheet-by-sheet detail.",
         "allblacks.com reported that Wallabies flyhalf Carter Gordon fractured his leg and is expected to miss the series, and that Jordan Petaia has been called into the wider Wallabies squad. Cheslin Kolbe plays for South Africa. He is not in this fixture.",
         "No win percentage is shown. There is no prediction model on this page."
       ],
@@ -1238,6 +1242,14 @@
         {
           "name": "Accor Stadium",
           "url": "https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks"
+        },
+        {
+          "name": "RNZ — Bledisloe squad",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
         }
       ]
     }
@@ -1352,8 +1364,8 @@
   },
   "notVerified": [
     "Sydney kick-off on 17 October. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Rugby Database and the ESPN results list do not include this fixture yet.",
-    "A captain for the October and November Tests. Codie Taylor captained Baltimore. No Bledisloe captain was named in the sources checked.",
-    "Ardie Savea's return date. The All Blacks injury list of 21 September says it follows surgery. RNZ reported a lengthy layoff. The date is not verified.",
+    "A captain for the November Tests. Codie Taylor is captain of the Bledisloe squad named on 29 September 2026. Nothing checked on 7 October names a captain past those two Tests.",
+    "Ardie Savea's exact return date. On 4 October Dave Rennie said Savea will not be back until Super Rugby in 2027, and he is not sure that will be in time for the start. There is no calendar day.",
     "ESPN's series counts from Liam Napier's review: 14 scrum penalties, a lineout at 86 percent, eight lost lineouts, and 24 high-ball turnovers for Will Jordan. Reported, not re-counted here.",
     "How long Australia's unbeaten run is. BBC and RNZ reported the 42–38 win in Perth. They do not agree on five or six matches, so no streak length is shown.",
     "Nations Championship Finals Weekend, 27–29 November in London. The opponent is not known, so it is not a fixture.",
