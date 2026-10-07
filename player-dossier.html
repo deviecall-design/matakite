@@ -109,7 +109,7 @@
   .pchip{display:flex;align-items:flex-start;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px;cursor:pointer;text-align:left;color:inherit;font:inherit;width:100%}
   .pchip:hover{border-color:#33414d}
   .pchip.on{border-color:var(--us);background:rgba(243,245,247,.06)}
-  .pchip .pn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);width:28px;flex:0 0 auto}
+  .pchip .pn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);width:34px;flex:0 0 auto;line-height:1.25}
   .pchip .pnm{font-size:13px;color:#D2DAE2;line-height:1.15}
   .pchip .ppos{font-size:10px;color:var(--dim);font-family:'JetBrains Mono',monospace}
   .pchip.out{border-color:rgba(255,93,93,.45)}
@@ -199,6 +199,7 @@
   </div>
 
   <h2 class="screen-only">Squad</h2>
+  <p class="note screen-only" style="margin-top:0">S is times named to start. B is times named on the bench. Both are out of the seven Tests. A bench spot is not minutes.</p>
   <div class="filters screen-only" id="filters"></div>
   <div id="detail"><div class="empty">Choose a player. The card uses team sheets and the score sheet only.</div></div>
   <div id="squad" class="screen-only"></div>
@@ -407,7 +408,8 @@
       list.forEach(function (p) {
         var cls = "pchip" + (p.squad === "injured" ? " out" : "") + (p.squad === "omitted" ? " omitted" : "") + (selected === p.name ? " on" : "");
         var starts = p.sheets.filter(function (s) { return s.role === "start"; }).length;
-        html += '<button class="' + cls + '" type="button" data-n="' + esc(p.name) + '"><span class="pn">' + starts + '/7</span><span><span class="pnm">' + esc(p.name) + flag(p) + '</span><br><span class="ppos">' + esc(p.pos) + "</span></span></button>";
+        var bench = p.sheets.length - starts;
+        html += '<button class="' + cls + '" type="button" data-n="' + esc(p.name) + '"><span class="pn">' + starts + "S<br>" + bench + 'B</span><span><span class="pnm">' + esc(p.name) + flag(p) + '</span><br><span class="ppos">' + esc(p.pos) + "</span></span></button>";
       });
       html += "</div></div>";
     });
@@ -524,10 +526,16 @@
     }
   }
 
+  if (/[?&]pack=1(?:&|$)/.test(location.search)) {
+    document.body.classList.add("pack-preview");
+  }
   $("preview-btn").addEventListener("click", function () {
     document.body.classList.toggle("pack-preview");
     $("preview-btn").textContent = document.body.classList.contains("pack-preview") ? "Back to dossier" : "Preview coaching pack";
   });
+  if (document.body.classList.contains("pack-preview")) {
+    $("preview-btn").textContent = "Back to dossier";
+  }
   $("print-btn").addEventListener("click", function () {
     document.body.classList.add("pack-preview");
     $("preview-btn").textContent = "Back to dossier";
