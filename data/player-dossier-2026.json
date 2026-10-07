@@ -1,0 +1,2534 @@
+{
+  "meta": {
+    "asOf": "2026-10-07",
+    "asOfLabel": "7 Oct 2026",
+    "title": "Player dossier",
+    "team": "New Zealand",
+    "honesty": "Selections come from published match-day 23s. Points and tries come from the Test score sheets in data/all-blacks-2026.json. Injuries come from All Blacks, RNZ, ESPN and Planet Rugby. Nothing on this page is a rating, a prediction, or a guess at minutes.",
+    "checked": "On 7 October 2026 the Rugby Database games list and the ESPN New Zealand results page still ended at Baltimore on 12 September. Scores on the seven Tests still agree. The Bledisloe Tests on 10 and 17 October had not been played. No new result was added to the season file.",
+    "next": "Saturday 10 October, Australia, Eden Park, 7.10pm New Zealand time. Saturday 17 October, Accor Stadium, Sydney. The Sydney kick-off is not verified.",
+    "recordLine": "Tests: played 7, won 4, lost 3. South Africa won the series 3–1. Tour matches are on the main page and are not in the player charts.",
+    "captain": "Codie Taylor, for the Bledisloe squad named 29 September 2026. Ardie Savea captained the Tests he started, through Soweto.",
+    "coach": "Dave Rennie",
+    "squadNamed": "29 Sep 2026",
+    "squadSize": 34,
+    "scoringNote": "Try 5, conversion 2, penalty goal 3. A penalty try is 7 and is not given to a player. Charts use the seven Tests only.",
+    "sheetNote": "Start and bench mean the player was named in that match-day 23. It is not a minute count.",
+    "sources": [
+      {
+        "name": "Rugby Database",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+      },
+      {
+        "name": "ESPN results",
+        "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+      },
+      {
+        "name": "RNZ squad",
+        "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+      },
+      {
+        "name": "All Blacks injury list",
+        "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+      }
+    ]
+  },
+  "units": [
+    {
+      "id": "FR",
+      "label": "Front row",
+      "side": "forwards"
+    },
+    {
+      "id": "LK",
+      "label": "Locks",
+      "side": "forwards"
+    },
+    {
+      "id": "LF",
+      "label": "Loose forwards",
+      "side": "forwards"
+    },
+    {
+      "id": "HB",
+      "label": "Halfbacks",
+      "side": "backs"
+    },
+    {
+      "id": "FH",
+      "label": "First five",
+      "side": "backs"
+    },
+    {
+      "id": "MF",
+      "label": "Midfield",
+      "side": "backs"
+    },
+    {
+      "id": "BK",
+      "label": "Back three",
+      "side": "backs"
+    }
+  ],
+  "tests": [
+    {
+      "id": "2026-07-04-france",
+      "short": "FRA",
+      "dateLabel": "4 Jul",
+      "opponent": "France",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-to-play-france-in-christchurch"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49245513/nations-championship-dave-rennie-all-blacks-era-begins-ruben-love-fly-half-feni-fineanganofo-debut-bench"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-11-italy",
+      "short": "ITA",
+      "dateLabel": "11 Jul",
+      "opponent": "Italy",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-18-ireland",
+      "short": "IRE",
+      "dateLabel": "18 Jul",
+      "opponent": "Ireland",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-ireland-in-auckland"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-to-play-ireland-in-nations-championship-round-3/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-22-south-africa-ellis-park",
+      "short": "SA1",
+      "dateLabel": "22 Aug",
+      "opponent": "South Africa",
+      "sources": [
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/08/20/key-all-blacks-trio-named-to-start-first-test-against-boks/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/story/_/id/49668747/rugby-all-blacks-announce-squad-south-africa-springboks-greatest-rivalry-tour"
+        },
+        {
+          "name": "SABC Sport",
+          "url": "https://www.sabcsport.com/rugby/news/all-blacks-forced-into-late-change-for-springboks-clash-at-ellis-park"
+        }
+      ],
+      "note": "Anton Segner was in the first named bench. SABC Sport reported he was replaced by Simon Parker before kick-off. Parker is the bench loose forward used here."
+    },
+    {
+      "id": "2026-08-29-south-africa-cape-town",
+      "short": "SA2",
+      "dateLabel": "29 Aug",
+      "opponent": "South Africa",
+      "sources": [
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-announced-for-second-rgr-test/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c1mvred1l7do"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1154291/bower-parker-and-carter-into-all-blacks-starting-xv-for-second-test-against-springboks"
+        }
+      ],
+      "note": "Ethan de Groot and Josh Lord were left out. The team announcement said both were still in concussion protocols."
+    },
+    {
+      "id": "2026-09-05-south-africa-fnb",
+      "short": "SA3",
+      "dateLabel": "5 Sep",
+      "opponent": "South Africa",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-to-play-south-africa-in-third-test-in-johannesburg"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1247082/all-blacks-bring-in-fresh-legs-for-third-test-against-the-springboks"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-12-south-africa-baltimore",
+      "short": "SA4",
+      "dateLabel": "12 Sep",
+      "opponent": "South Africa",
+      "sources": [
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1332051/dave-rennie-rings-the-changes-for-all-blacks-final-springboks-test"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/sports/all-blacks-ring-changes-last-test-against-south-africa-2026-09-10/"
+        }
+      ],
+      "note": "Ardie Savea, Luke Jacobson and Quinn Tupaea were ruled out injured. Fabian Holland was unavailable with illness. Codie Taylor captained."
+    }
+  ],
+  "players": [
+    {
+      "name": "Ethan de Groot",
+      "pos": "Loosehead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at loosehead in five of the seven Tests. Left out of Cape Town and Soweto while he was in concussion protocols, then named to start again in Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "notes": [
+        "Cape Town team announcement: still in HIA protocols, with Josh Lord. Not in that match-day 23, and not in the Soweto 23."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-announced-for-second-rgr-test/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c1mvred1l7do"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1154291/bower-parker-and-carter-into-all-blacks-starting-xv-for-second-test-against-springboks"
+        }
+      ]
+    },
+    {
+      "name": "George Bower",
+      "pos": "Loosehead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. On the bench against Italy and at Ellis Park, then named to start at Cape Town and Soweto.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Xavier Numia",
+      "pos": "Loosehead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench for France, and Dave Rennie later said he debuted in that Test. Also named on the bench for Ireland, Cape Town, Soweto and Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench",
+          "note": "Rennie, naming the Italy team, said Xavier Numia debuted against France."
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington"
+        }
+      ]
+    },
+    {
+      "name": "Codie Taylor",
+      "pos": "Hooker",
+      "unit": "FR",
+      "squad": "squad",
+      "captain": true,
+      "summary": "Captain of the 34-man Bledisloe squad, named on 29 September 2026. Started at hooker in six of the seven Tests and captained Baltimore, his first Test as captain. Left out of the Soweto match-day 23.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start",
+          "note": "Captained this Test."
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "name": "Asafo Aumua",
+      "pos": "Hooker",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench for France, Ireland, Ellis Park, Cape Town and Baltimore. Named to start at Soweto.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Samisoni Taukei'aho",
+      "pos": "Hooker",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench against Italy and at Soweto. Not in the other five Test match-day 23s checked.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Tyrel Lomax",
+      "pos": "Tighthead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. On the bench against France, then named to start the next five Tests. On the bench in Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Fletcher Newell",
+      "pos": "Tighthead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start against France and in Baltimore. On the bench for Ireland, Ellis Park, Cape Town and Soweto. Not in the Italy match-day 23.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Pasilio Tosi",
+      "pos": "Tighthead prop",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench against Italy. Not in the other six Test match-day 23s checked.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Ollie Norris",
+      "pos": "Prop",
+      "unit": "FR",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Listed as unavailable with a knee injury. He is not in any of the seven Test match-day 23s checked, so no 2026 Test is shown for him.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Scott Barrett",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. RNZ said he had not been picked in black in 2026 before this squad. He had back surgery, then returned for Taranaki. No 2026 Test match-day 23 includes him.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "name": "Josh Lord",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start against France and Ireland and at Ellis Park, and on the bench against Italy and in Baltimore. Left out of Cape Town and Soweto in concussion protocols.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "notes": [
+        "Cape Town announcement: still in HIA protocols, with Ethan de Groot."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-announced-for-second-rgr-test/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c1mvred1l7do"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1154291/bower-parker-and-carter-into-all-blacks-starting-xv-for-second-test-against-springboks"
+        }
+      ]
+    },
+    {
+      "name": "Fabian Holland",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at Ellis Park and Cape Town, then on the bench at Soweto. Unavailable for Baltimore with illness, which is not on the 29 September injury list.",
+      "sheets": [
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        }
+      ],
+      "notes": [
+        "Baltimore team announcement: unavailable because of illness."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1332051/dave-rennie-rings-the-changes-for-all-blacks-final-springboks-test"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/sports/all-blacks-ring-changes-last-test-against-south-africa-2026-09-10/"
+        }
+      ]
+    },
+    {
+      "name": "Tupou Vaa'i",
+      "pos": "Lock / blindside",
+      "unit": "LK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Ruled out of the France Test with concussion, then named in the next six match-day 23s. Started at lock, at blindside, and back at lock.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start",
+          "note": "Lock."
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start",
+          "note": "Blindside flanker."
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start",
+          "note": "Blindside flanker."
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start",
+          "note": "Lock."
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start",
+          "note": "Lock."
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start",
+          "note": "Blindside flanker."
+        }
+      ],
+      "notes": [
+        "France team sheet: unavailable, recovering from concussion."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-to-play-france-in-christchurch"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49245513/nations-championship-dave-rennie-all-blacks-era-begins-ruben-love-fly-half-feni-fineanganofo-debut-bench"
+        }
+      ]
+    },
+    {
+      "name": "Patrick Tuipulotu",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Calf strain, added to the unavailable list on 29 September. No return date was published with that squad.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Sam Darry",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "omitted",
+      "summary": "Not in the 29 September Bledisloe squad. RNZ listed him among players who missed the cut. No injury was given for him on that squad list. Named in four of the seven Test match-day 23s: France, Italy, Soweto and Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        }
+      ]
+    },
+    {
+      "name": "Simon Parker",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Replaced Anton Segner on the Ellis Park bench before kick-off, then named to start at blindside in Cape Town.",
+      "sheets": [
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench",
+          "note": "Late replacement for Anton Segner."
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/08/20/key-all-blacks-trio-named-to-start-first-test-against-boks/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/story/_/id/49668747/rugby-all-blacks-announce-squad-south-africa-springboks-greatest-rivalry-tour"
+        },
+        {
+          "name": "SABC Sport",
+          "url": "https://www.sabcsport.com/rugby/news/all-blacks-forced-into-late-change-for-springboks-clash-at-ellis-park"
+        }
+      ]
+    },
+    {
+      "name": "Shannon Frizell",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. RNZ said this is his first All Blacks squad since the 2023 World Cup, after three years in Japan. No 2026 Test match-day 23 includes him.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Anton Segner",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to debut on the bench against Italy, and on the bench against Ireland. Originally named on the Ellis Park bench, then replaced by Simon Parker before kick-off. The 21 September injury list gave him ankle-joint inflammation and a likely return of one to two weeks. He was back in the squad on 29 September.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench",
+          "note": "Named to debut."
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        }
+      ],
+      "notes": [
+        "Not counted in the Ellis Park 23. SABC Sport reported the late change."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "SABC Sport",
+          "url": "https://www.sabcsport.com/rugby/news/all-blacks-forced-into-late-change-for-springboks-clash-at-ellis-park"
+        }
+      ]
+    },
+    {
+      "name": "Ethan Blackadder",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at openside in Baltimore. RNZ, when naming the Cape Town team, said he was man of the match against the Lions. That was a tour match. This page has no Lions score sheet.",
+      "sheets": [
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1154291/bower-parker-and-carter-into-all-blacks-starting-xv-for-second-test-against-springboks"
+        }
+      ]
+    },
+    {
+      "name": "Peter Lakai",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at blindside against France and at Soweto, on the bench against Ireland, Ellis Park and Cape Town, and named to start at No. 8 in Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start",
+          "note": "No. 8."
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Wallace Sititi",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start against Italy, on the bench against France, Soweto and Baltimore. Not in the Ireland, Ellis Park or Cape Town match-day 23s.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Ardie Savea",
+      "pos": "No. 8",
+      "unit": "LF",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Captained the side in the Tests he started, through Soweto. Dislocated a shoulder in that match. Surgery is done. On 4 October Dave Rennie said Savea will not return until Super Rugby in 2027, and he is not sure that will be in time for the start of Super Rugby.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start",
+          "note": "Captain."
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start",
+          "note": "Captain."
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start",
+          "note": "Captain."
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start",
+          "note": "Captain."
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start",
+          "note": "Captain."
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start",
+          "note": "Captain. Injured during the match."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Luke Jacobson",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Named to start at openside in the first six Tests. Missed Baltimore with an elbow tendon injury. The 21 September list said he had surgery and a likely return of four to five months. No exact date was given.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Cam Roigard",
+      "pos": "Halfback",
+      "unit": "HB",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at halfback in all seven Tests.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Cortez Ratima",
+      "pos": "Halfback",
+      "unit": "HB",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench against France, Italy and Ireland. Not in the four Springboks Test 23s. The 21 September list said a knee (PCL) injury and a likely return of one to two weeks. He was in the squad on 29 September.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "name": "Kyle Preston",
+      "pos": "Halfback",
+      "unit": "HB",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the bench for all four Springboks Tests. Not in the July match-day 23s. The Baltimore announcement said he had featured in the earlier games of the tour. Minutes are not on these sheets. He did not score in a Test, so the score sheets do not confirm he entered the field.",
+      "sheets": [
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1332051/dave-rennie-rings-the-changes-for-all-blacks-final-springboks-test"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/sports/all-blacks-ring-changes-last-test-against-south-africa-2026-09-10/"
+        }
+      ]
+    },
+    {
+      "name": "Richie Mo'unga",
+      "pos": "First five",
+      "unit": "FH",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad, listed as a first five with Josh Jacomb. Named to start at first five in Baltimore. Planet Rugby said that was his first Test since the 2023 World Cup final. Joined the South Africa tour as an injury replacement.",
+      "sheets": [
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        }
+      ]
+    },
+    {
+      "name": "Josh Jacomb",
+      "pos": "First five",
+      "unit": "FH",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. RNZ said he is the only uncapped player in the 34, and that he played two franchise games on the South Africa tour. Those games are not named. He is not in any of the seven Test match-day 23s.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        }
+      ]
+    },
+    {
+      "name": "Ruben Love",
+      "pos": "First five",
+      "unit": "FH",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Ankle injury. Named to start at first five in the first six Tests. Richie Mo'unga started Baltimore. Planet Rugby reported on 4 October that Love is out for the rest of the season. No calendar return date was given.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        }
+      ]
+    },
+    {
+      "name": "Jordie Barrett",
+      "pos": "Second five",
+      "unit": "MF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at second five in all seven Tests.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Quinn Tupaea",
+      "pos": "Centre",
+      "unit": "MF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start at centre against France, Ireland and the first three Springboks Tests. Billy Proctor started against Italy. Tupaea missed Baltimore with a knee injury. The 21 September list said an MCL sprain and a likely return of one to two weeks. He was named in the 29 September squad.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Timoci Tavatavanawai",
+      "pos": "Midfielder",
+      "unit": "MF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad, listed with the midfielders. Not in any of the seven Test match-day 23s checked. No 2026 Test stats are shown.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Rieko Ioane",
+      "pos": "Midfielder / outside back",
+      "unit": "MF",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad, listed with the midfielders. Named on the Baltimore bench as backline cover. Not in the other six Test 23s. The score sheet does not show a try, so it does not confirm he entered the field.",
+      "sheets": [
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1332051/dave-rennie-rings-the-changes-for-all-blacks-final-springboks-test"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/sports/all-blacks-ring-changes-last-test-against-south-africa-2026-09-10/"
+        }
+      ]
+    },
+    {
+      "name": "Billy Proctor",
+      "pos": "Centre",
+      "unit": "MF",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Fractured shoulder blade on the 21 September list, with a likely return of four to six weeks. Still omitted on 29 September. No newer return date was found. Named to start against Italy and on the bench against France.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Anton Lienert-Brown",
+      "pos": "Centre",
+      "unit": "MF",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. Knee injury. The 21 September list said an MCL injury and a likely return of four to six weeks, and that it did not appear to be an ACL. Still omitted on 29 September. No newer date was found. Named on the bench from Italy through Soweto, and named to start in Baltimore.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Fehi Fineanganofo",
+      "pos": "Wing",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named on the France bench. Rennie later said he debuted in that Test. Unavailable against Italy with a shoulder strain, and unavailable against Ireland with a shoulder injury. Not in the four Springboks Test 23s.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "bench",
+          "note": "Rennie, naming the Italy team, said Fehi Fineanganofo debuted against France."
+        }
+      ],
+      "notes": [
+        "Italy team sheet: unavailable, shoulder strain. Ireland team announcement: unavailable, shoulder, with Leroy Carter."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-ireland-in-auckland"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-to-play-ireland-in-nations-championship-round-3/"
+        }
+      ]
+    },
+    {
+      "name": "Leroy Carter",
+      "pos": "Wing",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Unavailable for Ireland with a shoulder injury, then named on the Ellis Park bench and named to start at Cape Town and Soweto.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        }
+      ],
+      "notes": [
+        "Ireland team announcement: unavailable, shoulder, with Fehi Fineanganofo."
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-ireland-in-auckland"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-to-play-ireland-in-nations-championship-round-3/"
+        }
+      ]
+    },
+    {
+      "name": "Josh Moorby",
+      "pos": "Wing",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to debut on the bench against Italy, then named to start against Ireland, at Ellis Park and in Baltimore. On the bench at Cape Town and Soweto.",
+      "sheets": [
+        {
+          "testId": "2026-07-11-italy",
+          "role": "bench",
+          "note": "Named to debut."
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Will Jordan",
+      "pos": "Wing / fullback",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad. Named to start in all seven Tests, on the wing. Leading Test try scorer and leading Test points scorer on the published score sheets: 10 tries, 50 points.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Beauden Barrett",
+      "pos": "Outside back",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad, listed with the outside backs, not as a first five. His only 2026 Test match-day 23 is the Baltimore bench. He scored a try in that Test, and Planet Rugby said he came on in the second half, his first Test of the year. Rennie said he still has a lot to offer, and that he expects to use him more at fullback.",
+      "sheets": [
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench",
+          "note": "Scored, so he was on the field. Planet Rugby: came on in the second half."
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        }
+      ]
+    },
+    {
+      "name": "Damian McKenzie",
+      "pos": "Fullback",
+      "unit": "BK",
+      "squad": "squad",
+      "summary": "In the Bledisloe squad, listed with the outside backs. Named to start at fullback in all seven Tests.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-11-italy",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-22-south-africa-ellis-park",
+          "role": "start"
+        },
+        {
+          "testId": "2026-08-29-south-africa-cape-town",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-05-south-africa-fnb",
+          "role": "start"
+        },
+        {
+          "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Caleb Clarke",
+      "pos": "Wing",
+      "unit": "BK",
+      "squad": "injured",
+      "summary": "Not in the Bledisloe squad. The 21 September list said a ruptured shoulder tendon and a likely return of about five months. Still omitted on 29 September. Named to start against France and on the bench against Ireland.",
+      "sheets": [
+        {
+          "testId": "2026-07-04-france",
+          "role": "start"
+        },
+        {
+          "testId": "2026-07-18-ireland",
+          "role": "bench"
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    }
+  ],
+  "injuries": [
+    {
+      "player": "Ardie Savea",
+      "issue": "Dislocated shoulder. Surgery done.",
+      "status": "Out of the Bledisloe squad. Out for the rest of the 2026 internationals.",
+      "return": "Not before Super Rugby in 2027. Rennie said on 4 October he is not sure Savea will be ready for the start of Super Rugby.",
+      "returnKnown": true,
+      "events": [
+        {
+          "date": "5 Sep 2026",
+          "text": "Injured in the Soweto Test. Rennie later said it was about 25 minutes in, after two tries."
+        },
+        {
+          "date": "21 Sep 2026",
+          "text": "All Blacks list: dislocated shoulder, surgery required. Return to be set after the operation."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Left out of the Bledisloe squad. Codie Taylor named captain."
+        },
+        {
+          "date": "4 Oct 2026",
+          "text": "Rennie said the operation is done and a Super Rugby return in 2027 is the earliest."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
+        }
+      ]
+    },
+    {
+      "player": "Luke Jacobson",
+      "issue": "Elbow tendon. Surgery done.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "The 21 September list said about four to five months. No calendar date was given. That window runs past the November Tests. A later exact date was not found.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "12 Sep 2026",
+          "text": "Ruled out of the Baltimore Test."
+        },
+        {
+          "date": "21 Sep 2026",
+          "text": "All Blacks list: elbow tendon, surgery done, likely return four to five months."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Still on the unavailable list."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
+        }
+      ]
+    },
+    {
+      "player": "Ruben Love",
+      "issue": "Ankle ligament.",
+      "status": "Out of the Bledisloe squad. Planet Rugby, 4 October: out for the rest of the season.",
+      "return": "No calendar date. The 4 October report says the rest of the season, which covers the Bledisloe and the November Tests.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "29 Sep 2026",
+          "text": "Squad list: unavailable, ankle. Richie Mo'unga and Josh Jacomb are the first fives in the 34."
+        },
+        {
+          "date": "4 Oct 2026",
+          "text": "Planet Rugby reported he is out for the remainder of the season."
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        }
+      ]
+    },
+    {
+      "player": "Patrick Tuipulotu",
+      "issue": "Calf strain.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "Not verified. No return date was published with the 29 September squad.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "29 Sep 2026",
+          "text": "Added to the unavailable list with a calf strain. He had started in Baltimore on 12 September."
+        }
+      ],
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "Super Rugby",
+          "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        }
+      ]
+    },
+    {
+      "player": "Anton Lienert-Brown",
+      "issue": "Knee. The 21 September list said MCL, and that it did not look like an ACL.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "The 21 September list said about four to six weeks. He was still omitted on 29 September. No newer date was found by 7 October.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "12 Sep 2026",
+          "text": "Started in Baltimore, then needed a knee assessment."
+        },
+        {
+          "date": "21 Sep 2026",
+          "text": "MCL. Likely return four to six weeks. Rennie said it did not appear to be an ACL."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Still unavailable. RNZ's punctuation on the body part is messy. The All Blacks list says knee."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "player": "Billy Proctor",
+      "issue": "Fractured shoulder blade.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "The 21 September list said about four to six weeks. Still omitted on 29 September. No newer date was found.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "21 Sep 2026",
+          "text": "Fractured shoulder blade. Likely return four to six weeks."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Still unavailable."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "player": "Caleb Clarke",
+      "issue": "Ruptured shoulder tendon.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "The 21 September list said about five months. No calendar date. Still omitted on 29 September.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "21 Sep 2026",
+          "text": "Ruptured shoulder tendon. Likely return about five months."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Still unavailable."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "player": "Ollie Norris",
+      "issue": "Knee cartilage.",
+      "status": "Out of the Bledisloe squad.",
+      "return": "The 21 September list said a likely return in Super Rugby pre-season. No calendar date. He is not in the seven Test 23s checked.",
+      "returnKnown": false,
+      "events": [
+        {
+          "date": "21 Sep 2026",
+          "text": "Knee cartilage. Likely return in Super Rugby pre-season."
+        },
+        {
+          "date": "29 Sep 2026",
+          "text": "Still unavailable. ESPN described him as a prop."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        }
+      ]
+    }
+  ],
+  "returned": [
+    {
+      "player": "Quinn Tupaea",
+      "text": "Knee (MCL) on the 21 September list, likely one to two weeks. Named in the 29 September squad."
+    },
+    {
+      "player": "Anton Segner",
+      "text": "Ankle-joint inflammation on the 21 September list, likely one to two weeks. Named in the squad."
+    },
+    {
+      "player": "Cortez Ratima",
+      "text": "Knee (PCL) on the 21 September list, likely one to two weeks. Named in the squad. The same All Blacks page said he had been cleared to play for Waikato."
+    },
+    {
+      "player": "Ethan de Groot",
+      "text": "Out of Cape Town and Soweto in concussion protocols. Named to start in Baltimore. In the Bledisloe squad."
+    },
+    {
+      "player": "Josh Lord",
+      "text": "Out of Cape Town and Soweto in concussion protocols. Named on the Baltimore bench. In the Bledisloe squad."
+    },
+    {
+      "player": "Tupou Vaa'i",
+      "text": "Missed France with concussion. Named in the next six Tests. In the Bledisloe squad."
+    },
+    {
+      "player": "Leroy Carter",
+      "text": "Missed Ireland with a shoulder injury. Started Cape Town and Soweto. In the Bledisloe squad."
+    },
+    {
+      "player": "Fehi Fineanganofo",
+      "text": "Shoulder strain for Italy, shoulder injury for Ireland. In the Bledisloe squad. No Springboks Test 23."
+    },
+    {
+      "player": "Scott Barrett",
+      "text": "Back surgery, then a return for Taranaki. In the Bledisloe squad. No 2026 Test 23."
+    }
+  ],
+  "learnings": [
+    {
+      "id": "ellis-park",
+      "kind": "worked",
+      "unit": "Whole team",
+      "title": "Ellis Park is the pattern that worked against this Springboks side",
+      "text": "The only win of the series was 33–16 at Emirates Airline Park on 22 August. New Zealand scored five tries to one: Will Jordan two, Josh Moorby, Fabian Holland and Luke Jacobson. Ruben Love kicked four conversions and no penalties. Half-time was 12–13, so the lead was built after the break. The All Blacks site, reviewing the series, said the attack can trouble the Springboks. This is the match that showed it. It is also the last Test the side won.",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-springboks-first-test-rugby-s-greatest-rivalry"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/12321/13575921/south-africa-vs-new-zealand-all-blacks-emerge-worthy-winners-as-they-outscore-springboks-in-first-test-upset"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "id": "long-phases",
+      "kind": "missed",
+      "unit": "Whole team",
+      "title": "Points took too long, and South Africa punished the mistakes",
+      "text": "The All Blacks site said the attack can trouble the Springboks, but New Zealand too often needed long passages of possession to score. In Baltimore, Will Jordan's try finished a patient 32-phase attack. The same report said South Africa were more ruthless after penalties and turnovers. Cape Town was 14–24 at half-time and finished 26–33. Soweto was 12–12 at half-time and finished 24–29, with a penalty try to South Africa. Baltimore finished 28–43. The series was lost 1–3 after the Ellis Park win.",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        }
+      ]
+    },
+    {
+      "id": "discipline",
+      "kind": "missed",
+      "unit": "Forwards",
+      "title": "Needless penalties are the points the forwards can stop giving away",
+      "text": "After Baltimore, Dave Rennie said needless penalties have to come out of the game, and he called that sort of penalty dumb. The All Blacks site said South Africa were more clinical with the chances they created, especially after penalties and turnovers. The Soweto score sheet includes a penalty try to South Africa. That is seven points with no kicker. ESPN's series review counted 14 scrum penalties conceded, including one penalty try, and a lineout at 86 percent after eight lost throws. Those series counts are ESPN's. They are not re-counted from a second feed here.",
+      "sources": [
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+        }
+      ]
+    },
+    {
+      "id": "set-piece",
+      "kind": "worked",
+      "unit": "Forwards",
+      "title": "The Baltimore set piece was the one Rennie was happy with. The series was not that consistent.",
+      "text": "Rennie said the scrum and lineout in Baltimore were excellent. Across the series, the All Blacks site still named set-piece consistency as a review area. Use Baltimore as the picture of the set piece they want, and the ESPN penalty count above as the picture of what leaked in the other Tests. Do not treat the ESPN count as an official All Blacks statistic.",
+      "sources": [
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+        }
+      ]
+    },
+    {
+      "id": "loose-forward",
+      "kind": "cue",
+      "unit": "Forwards",
+      "title": "The loose-forward meeting is about replacing Savea and Jacobson, not about a new system",
+      "text": "Savea started the first six Tests at No. 8 and captained them. He scored once at Cape Town and twice at Soweto before leaving the field. Jacobson started all six of those Tests at openside and scored at Ellis Park. Both are out of the Bledisloe squad. The loose forwards named on 29 September are Simon Parker, Shannon Frizell, Anton Segner, Ethan Blackadder, Peter Lakai and Wallace Sititi. Frizell has no 2026 Test in these sheets. Rennie said Savea is hard to replace, and that the gap is a chance to give other players time. Codie Taylor is the captain for these two Tests.",
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "id": "high-ball",
+      "kind": "missed",
+      "unit": "Backs",
+      "title": "The high ball is still the back-three review",
+      "text": "After Baltimore, Rennie said the high ball put the side under more heat and that they could not take a lot of those balls. The All Blacks site listed collection of contested kicks as a review area. ESPN wrote that Will Jordan had a series-high 24 high-ball turnovers. That 24 is ESPN's count. It is not on the score sheets and it is not re-counted here. The cue for the back three is the contested kick, not a new attacking shape.",
+      "sources": [
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+        }
+      ]
+    },
+    {
+      "id": "wingers-midfield",
+      "kind": "cue",
+      "unit": "Backs",
+      "title": "Smaller wingers defending in midfield were moved off the ball",
+      "text": "ESPN's series review said Leroy Carter and Josh Moorby, stationed in midfield, were pushed off the ball and that this led to three tries. Both are in the Bledisloe squad. Caleb Clarke, the power wing, is out with a shoulder tendon injury. The meeting point is a defensive one: if Carter or Moorby is in the 13 channel, the collision beside him has to be planned. The three tries are ESPN's reading of the series. They are not listed try-by-try on this page.",
+      "sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        }
+      ]
+    },
+    {
+      "id": "ten",
+      "kind": "cue",
+      "unit": "Backs",
+      "title": "First five for the Bledisloe is Mo'unga and Jacomb, with Barrett and McKenzie still in the squad",
+      "text": "Ruben Love started the first six Tests at first five and is out for the rest of the season. Richie Mo'unga started Baltimore, his first Test since the 2023 World Cup final. The 29 September squad names Mo'unga and Josh Jacomb as the first fives. Jacomb is uncapped. Beauden Barrett and Damian McKenzie are in the outside backs. Barrett's only Test 23 this year is the Baltimore bench, where he scored. McKenzie started all seven Tests at fullback. Rennie said in September he was happy with Barrett off the bench in Baltimore, and on 4 October he said he expects to use Barrett more at fullback. There is no published match-day 23 for Eden Park yet.",
+      "sources": [
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+        },
+        {
+          "name": "Planet Rugby",
+          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "kind": "cue",
+      "unit": "Backs",
+      "title": "Counter-attack was the plan in July. These sheets do not show whether the tries came that way.",
+      "text": "Before the July Tests, Rennie said he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The score sheets list who scored. They do not list the phase. So the plan is on the record, and the 35 Test tries are on the record. How many of those 35 started from a kick return is not verified.",
+      "sources": [
+        {
+          "name": "SABC Sport",
+          "url": "https://www.sabcsport.com/rugby/news/dave-rennie-outlines-what-he-s-looking-for-in-new-all-blacks"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead"
+        }
+      ]
+    },
+    {
+      "id": "july",
+      "kind": "worked",
+      "unit": "Whole team",
+      "title": "The July block was three wins. It is not a six-from-six season.",
+      "text": "France 34–32, Italy 47–17, Ireland 40–21, then the Ellis Park win, then three losses. The four tour matches were also wins, and they are not Tests. Their try scorers are not in this file. The mockup that said six from six, and that the Ellis Park Test was still to come, is out of date. Do not brief the team on that record.",
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+        }
+      ]
+    }
+  ],
+  "notVerified": [
+    "A match-day 23 for Australia at Eden Park on 10 October, or for Sydney on 17 October. The 34-man squad is named. The run-on side is not, in the sources checked on 7 October 2026.",
+    "A captain for the November Tests. Codie Taylor is captain for the Bledisloe squad. Nothing checked names a captain past those two Tests.",
+    "Return dates, as a calendar day, for Luke Jacobson, Ruben Love, Patrick Tuipulotu, Anton Lienert-Brown, Billy Proctor, Caleb Clarke and Ollie Norris. The windows above are the published estimates. They are not a date a coach can write on a board as fact.",
+    "Minutes played. A row on a player card is a named spot in the match-day 23. A try, or a sentence in a report, is what shows the player was on the field. Bench minutes are otherwise not verified.",
+    "Tour-match team sheets and tour try scorers, including the Bulls, Sharks, Stormers and Lions games. Scores for those games are on the main page. They are not used as player form here.",
+    "Which two franchise games Josh Jacomb played on tour. RNZ said he played two. It did not name them.",
+    "Test caps. Reports do not use the same numbers, so no cap count is shown.",
+    "The player Rennie called Jamie, who he said debuted against France, when he named the Italy team. Jamie is not in the France match-day 23 collected here, so that debut is not on a card.",
+    "Rennie's line that Beauden Barrett played a fair bit of fullback in South Africa. The seven Test sheets have Damian McKenzie starting at fullback. Barrett's only Test 23 is the Baltimore bench. Tour games at 15 were not collected game by game.",
+    "ESPN's count of 14 scrum penalties, a lineout at 86 percent, eight lost throws, 24 high-ball turnovers for Will Jordan, and three tries from wingers being pushed off in midfield. Reported by ESPN. Not re-counted here.",
+    "ESPN's New Zealand team-page scorer module. It still does not match these Test score sheets, so it is not used. The same was true on 28 September.",
+    "Sydney kick-off on 17 October. allblacks.com has said 6.00pm New Zealand time. Accor Stadium has said 3.45pm local. Not settled here.",
+    "Predicted teams, including any Eden Park XV published as an opinion. They are not team sheets.",
+    "Strengths, target areas, and pre-match cue lines from the earlier mockup. Those were modelled, not sourced. They have been removed."
+  ]
+}

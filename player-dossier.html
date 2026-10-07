@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATAKITE · Player dossier</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0D11;--panel:#12171D;--line:#222C35;--line-soft:#1A222A;
+    --txt:#E9EEF2;--muted:#8B97A3;--dim:#5C6974;
+    --us:#F3F5F7;--them:#4FBCC9;--call:#FF8A2B;--open:#56D69E;--threat:#FF5D5D;--watch:#E7C24B;--fwd:#E0A86B;
+    --ink:#C8D2DB;--card:#0D1217;--radius:14px;
+    --bar:#4FBCC9;--bar-2:#E0A86B;--win:#1F8A5B;--loss:#A33B3B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%, #11161C 0%, rgba(17,22,28,0) 60%),linear-gradient(180deg,var(--bg),#080A0D);color:var(--txt);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:14px;min-height:100vh;line-height:1.45}
+  .wrap{max-width:1080px;margin:0 auto}
+  a{color:var(--them);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h2{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:15px;font-weight:700;margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"▸";color:var(--call)}
+  .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+  .topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(180deg,var(--panel),#0F141A);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .fern{width:22px;height:22px}
+  .brand .name{font-family:'Saira Condensed',sans-serif;font-weight:700;letter-spacing:.14em;font-size:15px}
+  .brand .sub{font-size:10px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;font-family:'Saira Condensed',sans-serif}
+  .actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  button.act{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:13px;color:var(--txt);background:#1A120C;border:1px solid var(--call);padding:8px 12px;border-radius:8px;cursor:pointer}
+  button.act.ghost{background:#0D1217;border-color:var(--line);color:var(--muted)}
+  button.act:hover{filter:brightness(1.08)}
+  .home{font-size:12px;color:var(--muted)}
+  .note{font-size:12.5px;color:var(--muted);background:#0C1116;border:1px solid var(--line-soft);border-radius:9px;padding:10px 12px;margin:12px 0;line-height:1.5}
+  .note b{color:var(--txt);font-weight:600}
+  .banner{background:rgba(255,93,93,.1);border:1px solid var(--threat);color:#ffd0d0;border-radius:9px;padding:10px 12px;margin:12px 0;font-size:13px}
+  .panel{background:linear-gradient(180deg,var(--panel),#0F141A);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px}
+  .form{display:flex;gap:6px;flex-wrap:wrap}
+  .res{min-width:72px;border:1px solid var(--line);border-radius:8px;padding:6px 8px;background:var(--card);text-align:center}
+  .res.W{border-color:#2d6b4e}
+  .res.L{border-color:#7a3535}
+  .res .mark{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px}
+  .res.W .mark{color:var(--open)}
+  .res.L .mark{color:var(--threat)}
+  .res .opp{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-family:'Saira Condensed',sans-serif}
+  .res .sc{font-size:11px;color:var(--ink)}
+  .strip{display:flex;flex-wrap:wrap;gap:6px}
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 9px;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  .badge.out{border-color:rgba(255,93,93,.55);color:#ffc9c9}
+  .badge.back{border-color:rgba(86,214,158,.4);color:#d7f6e8}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+  .timeline{display:flex;flex-direction:column;gap:0;margin-top:8px}
+  .tl{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line-soft);font-size:13px}
+  .tl:last-child{border-bottom:none}
+  .tl .when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--them);padding-top:2px}
+  .charts{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:800px){.charts{grid-template-columns:1fr 1fr}}
+  .chart{background:var(--card);border:1px solid var(--line-soft);border-radius:10px;padding:12px}
+  .chart h3{font-family:'Saira Condensed',sans-serif;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+  .chart .cap{font-size:11.5px;color:var(--dim);margin-bottom:8px}
+  .row{display:grid;grid-template-columns:118px 1fr 36px;gap:8px;align-items:center;margin:4px 0;font-size:12px}
+  .row .nm{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .track{height:10px;background:#1A222A;border-radius:99px;overflow:hidden;border:1px solid #2A3640}
+  .fill{height:100%;background:var(--bar);border-radius:99px}
+  .fill.b{background:var(--bar-2)}
+  .row .n{font-family:'JetBrains Mono',monospace;font-size:11px;text-align:right;color:var(--txt)}
+  .split{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .split .g{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line-soft);border-radius:10px;padding:8px}
+  .stack{display:flex;height:14px;border-radius:99px;overflow:hidden;border:1px solid #2A3640;margin-top:6px}
+  .stack .f{background:var(--fwd)}
+  .stack .b{background:var(--them)}
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+  .fbtn{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--muted);background:#0D1217;border:1px solid var(--line);padding:7px 12px;border-radius:8px;cursor:pointer}
+  .fbtn.on{color:var(--txt);border-color:var(--us);background:rgba(243,245,247,.06)}
+  #detail{background:linear-gradient(180deg,var(--panel),#0F141A);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;min-height:72px}
+  .empty{padding:18px;text-align:center;color:var(--dim);font-size:13px}
+  .dcard-top{display:flex;gap:14px;padding:16px;border-bottom:1px solid var(--line-soft);align-items:flex-start}
+  .dhead .nm{font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:26px;letter-spacing:.02em;line-height:1}
+  .dhead .pos{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--them);font-family:'Saira Condensed',sans-serif;margin-top:3px}
+  .dhead .sum{font-size:13.5px;color:var(--ink);margin-top:8px;max-width:75ch}
+  .mini{display:flex;gap:4px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line-soft)}
+  .cell{width:46px;text-align:center;border:1px solid var(--line);border-radius:6px;padding:3px 0 4px;background:var(--card)}
+  .cell.start{border-color:#8B97A3}
+  .cell.bench{border-color:#3d4c59}
+  .cell .k{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700}
+  .cell .o{font-size:9px;color:var(--dim);letter-spacing:.04em}
+  .cell .p{font-size:10px;color:var(--call)}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  th{font-family:'Saira Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--dim);font-weight:600}
+  td.pts{font-family:'JetBrains Mono',monospace;white-space:nowrap}
+  .learn{padding:12px 0;border-bottom:1px solid var(--line-soft)}
+  .learn:last-child{border-bottom:none}
+  .tag{font-family:'Saira Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:11px;margin-right:6px}
+  .tag.worked{color:var(--open)}
+  .tag.missed{color:var(--watch)}
+  .tag.cue{color:var(--call)}
+  .learn h3{font-size:16px;font-family:'Saira Condensed',sans-serif;font-weight:700;margin:2px 0 6px}
+  .learn p{font-size:13.5px;color:var(--ink)}
+  .srcs{font-size:11.5px;color:var(--dim);margin-top:6px}
+  .unit{margin:14px 0 8px}
+  .unit-h{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--fwd);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .unit-h.back{color:var(--them)}
+  .unit-h::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:8px}
+  .pchip{display:flex;align-items:flex-start;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px;cursor:pointer;text-align:left;color:inherit;font:inherit;width:100%}
+  .pchip:hover{border-color:#33414d}
+  .pchip.on{border-color:var(--us);background:rgba(243,245,247,.06)}
+  .pchip .pn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);width:34px;flex:0 0 auto;line-height:1.25}
+  .pchip .pnm{font-size:13px;color:#D2DAE2;line-height:1.15}
+  .pchip .ppos{font-size:10px;color:var(--dim);font-family:'JetBrains Mono',monospace}
+  .pchip.out{border-color:rgba(255,93,93,.45)}
+  .pchip.omitted{border-color:rgba(231,194,75,.4)}
+  .flag{display:inline-block;font-family:'Saira Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
+  .flag.out{background:rgba(255,93,93,.15);color:#ffb4b4}
+  .flag.c{background:rgba(255,138,43,.15);color:#ffc79a}
+  .flag.omit{background:rgba(231,194,75,.12);color:#f0e2a8}
+  ul.plain{margin:6px 0 0 18px;color:var(--ink);font-size:13px}
+  ul.plain li{margin:4px 0}
+  .foot{margin-top:16px;text-align:center;font-size:11px;color:var(--dim);line-height:1.6}
+  .print-only{display:none}
+  @media print{
+    :root{
+      --bg:#fff;--panel:#fff;--line:#c5ced6;--line-soft:#dde3e8;
+      --txt:#14202b;--muted:#3c4a56;--dim:#52616d;--ink:#243140;--card:#fff;--us:#14202b;
+    }
+    body{background:#fff;color:#14202b;padding:0}
+    .screen-only{display:none !important}
+    .print-only{display:block !important}
+    a{color:#0b3a44;text-decoration:underline}
+    .topbar,.note,.panel,#detail,.chart,.res,.badge,.pchip,.cell,.g{background:#fff !important;color:#14202b}
+    .track{background:#e6ebef}
+    h2,.brand .name{color:#14202b}
+    .fill,.stack .f,.stack .b{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  body.pack-preview{
+    --bg:#f4f6f8;--panel:#fff;--line:#c5ced6;--line-soft:#dde3e8;
+    --txt:#14202b;--muted:#3c4a56;--dim:#52616d;--ink:#243140;--card:#fff;--us:#14202b;
+    background:#f4f6f8;color:#14202b;
+  }
+  body.pack-preview .screen-only{display:none !important}
+  body.pack-preview .print-only{display:block !important}
+  body.pack-preview a{color:#0b5f6e}
+  body.pack-preview .topbar,
+  body.pack-preview .note,
+  body.pack-preview .panel,
+  body.pack-preview #detail,
+  body.pack-preview .chart,
+  body.pack-preview .res,
+  body.pack-preview .g,
+  body.pack-preview .cell,
+  body.pack-preview .badge{background:#fff !important;color:#14202b}
+  body.pack-preview .track{background:#e6ebef}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <svg class="fern" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C12 2 12 22 12 22M12 22C9 18 5 16 5 16M12 18C9.5 15 6.5 14 6.5 14M12 14C10 12 8 11.5 8 11.5M12 10C10.5 8.7 9.5 8.5 9.5 8.5M12 22C15 18 19 16 19 16M12 18C14.5 15 17.5 14 17.5 14M12 14C14 12 16 11.5 16 11.5M12 10C13.5 8.7 14.5 8.5 14.5 8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <div><div class="name">MATAKITE</div><div class="sub">Player dossier · All Blacks</div></div>
+    </div>
+    <div class="actions">
+      <a class="home" href="matakite-poc.html">Main page</a>
+      <button class="act ghost" id="preview-btn" type="button">Preview coaching pack</button>
+      <button class="act" id="print-btn" type="button">Download coaching pack</button>
+    </div>
+  </div>
+
+  <div class="note" id="honesty"></div>
+  <div id="error" class="banner" hidden></div>
+
+  <h2>Test form</h2>
+  <div class="panel">
+    <div class="form" id="form"></div>
+    <p class="note" id="record" style="margin-bottom:0"></p>
+  </div>
+
+  <h2 id="injuries">Who is available</h2>
+  <div class="panel">
+    <div class="strip" id="injury-strip"></div>
+    <div class="timeline" id="timeline"></div>
+    <p class="note" id="returned" style="margin-bottom:0"></p>
+  </div>
+
+  <h2 id="charts">From the Test score sheets</h2>
+  <div class="charts">
+    <div class="chart"><h3>Try scorers</h3><p class="cap" id="try-cap"></p><div id="chart-tries"></div></div>
+    <div class="chart"><h3>Points scorers</h3><p class="cap" id="pts-cap"></p><div id="chart-points"></div></div>
+  </div>
+  <div class="panel" style="margin-top:10px">
+    <h3 style="font-family:'Saira Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:14px">Tries by unit, each Test</h3>
+    <p class="cap" id="unit-cap" style="color:var(--dim);font-size:11.5px;margin:4px 0 8px"></p>
+    <div class="split" id="chart-split"></div>
+    <div id="chart-units" style="margin-top:12px"></div>
+  </div>
+
+  <h2 class="screen-only">Squad</h2>
+  <p class="note screen-only" style="margin-top:0">S is times named to start. B is times named on the bench. Both are out of the seven Tests. A bench spot is not minutes.</p>
+  <div class="filters screen-only" id="filters"></div>
+  <div id="detail"><div class="empty">Choose a player. The card uses team sheets and the score sheet only.</div></div>
+  <div id="squad" class="screen-only"></div>
+
+  <h2 id="learnings">What to take into the meeting</h2>
+  <div class="panel" id="learn-list"></div>
+
+  <h2>Not verified</h2>
+  <div class="panel"><ul class="plain" id="unverified"></ul></div>
+
+  <h2 class="print-only">Squad list for the pack</h2>
+  <div class="panel print-only" id="pack-table"></div>
+
+  <p class="foot" id="foot"></p>
+</div>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+    });
+  }
+  function links(list) {
+    return (list || []).map(function (s) {
+      return '<a href="' + esc(s.url) + '">' + esc(s.name) + "</a>";
+    }).join(" · ");
+  }
+  function slug(name) {
+    return String(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  var dossier, season, tests, byId, players, selected = null, filter = "ALL";
+
+  function sheetPoints(test, name) {
+    var tries = 0, cons = 0, pens = 0;
+    (test.nzTries || []).forEach(function (item) {
+      if (item.player === name && !item.penaltyTry) tries += Number(item.count) || 0;
+    });
+    (test.nzKickers || []).forEach(function (k) {
+      if (k.player === name) {
+        cons += Number(k.conversions) || 0;
+        pens += Number(k.penalties) || 0;
+      }
+    });
+    return { tries: tries, cons: cons, pens: pens, points: tries * 5 + cons * 2 + pens * 3 };
+  }
+
+  function playedTests() {
+    return season.tests.filter(function (t) { return t.status === "played" && t.kind !== "tour"; });
+  }
+
+  function resultLetter(t) {
+    if (t.nzScore > t.oppScore) return "W";
+    if (t.nzScore < t.oppScore) return "L";
+    return "D";
+  }
+
+  function unitOf(name) {
+    var p = players.filter(function (x) { return x.name === name; })[0];
+    return p ? p.unit : null;
+  }
+  function sideOf(unit) {
+    var u = dossier.units.filter(function (x) { return x.id === unit; })[0];
+    return u ? u.side : null;
+  }
+
+  function renderForm() {
+    $("form").innerHTML = playedTests().map(function (t) {
+      var letter = resultLetter(t);
+      var meta = dossier.tests.filter(function (x) { return x.id === t.id; })[0];
+      var short = meta ? meta.short : t.opponent;
+      return '<div class="res ' + letter + '"><div class="opp">' + esc(short) + '</div><div class="mark">' + letter + '</div><div class="sc">' + t.nzScore + "–" + t.oppScore + "</div></div>";
+    }).join("");
+    $("record").innerHTML = "<b>" + esc(dossier.meta.recordLine) + "</b> " + esc(dossier.meta.next) + " Captain: " + esc(dossier.meta.captain);
+  }
+
+  function renderInjuries() {
+    $("injury-strip").innerHTML = dossier.injuries.map(function (inj) {
+      return '<span class="badge out"><span class="dot"></span>' + esc(inj.player) + " · " + esc(inj.issue.split(".")[0]) + "</span>";
+    }).join("") + dossier.returned.slice(0, 3).map(function (r) {
+      return '<span class="badge back"><span class="dot"></span>' + esc(r.player) + " · back in the squad</span>";
+    }).join("");
+
+    var events = [];
+    dossier.injuries.forEach(function (inj) {
+      (inj.events || []).forEach(function (ev) {
+        events.push({ date: ev.date, text: "<b>" + esc(inj.player) + ".</b> " + esc(ev.text) });
+      });
+    });
+    var order = { "5 Sep 2026": 1, "12 Sep 2026": 2, "21 Sep 2026": 3, "29 Sep 2026": 4, "4 Oct 2026": 5 };
+    events.sort(function (a, b) { return (order[a.date] || 9) - (order[b.date] || 9); });
+    $("timeline").innerHTML = events.map(function (ev) {
+      return '<div class="tl"><div class="when">' + esc(ev.date) + "</div><div>" + ev.text + "</div></div>";
+    }).join("");
+    $("returned").innerHTML = "<b>Back in the 29 September squad, after an earlier problem.</b> " +
+      dossier.returned.map(function (r) { return esc(r.player) + ": " + esc(r.text); }).join(" ");
+  }
+
+  function barRows(rows, key, max) {
+    return rows.map(function (r) {
+      var w = max ? Math.max(4, Math.round(100 * r[key] / max)) : 0;
+      return '<div class="row"><div class="nm">' + esc(r.player) + '</div><div class="track"><div class="fill' + (key === "points" ? "" : " b") + '" style="width:' + w + '%"></div></div><div class="n">' + r[key] + "</div></div>";
+    }).join("");
+  }
+
+  function renderCharts() {
+    var tally = {};
+    function bucket(name) {
+      if (!tally[name]) tally[name] = { player: name, tries: 0, points: 0 };
+      return tally[name];
+    }
+    var unitTries = {};
+    dossier.units.forEach(function (u) { unitTries[u.id] = 0; });
+    var perTest = [];
+    var trySum = 0;
+    var unknown = [];
+    playedTests().forEach(function (t) {
+      var fwd = 0, back = 0;
+      (t.nzTries || []).forEach(function (item) {
+        if (item.penaltyTry) return;
+        var n = Number(item.count) || 0;
+        trySum += n;
+        bucket(item.player).tries += n;
+        bucket(item.player).points += n * 5;
+        var unit = unitOf(item.player);
+        if (!unit) unknown.push(item.player);
+        else {
+          unitTries[unit] += n;
+          if (sideOf(unit) === "forwards") fwd += n;
+          else back += n;
+        }
+      });
+      (t.nzKickers || []).forEach(function (k) {
+        var pts = (Number(k.conversions) || 0) * 2 + (Number(k.penalties) || 0) * 3;
+        bucket(k.player).points += pts;
+        if (!unitOf(k.player)) unknown.push(k.player);
+      });
+      var meta = dossier.tests.filter(function (x) { return x.id === t.id; })[0];
+      perTest.push({ short: meta ? meta.short : t.opponent, letter: resultLetter(t), fwd: fwd, back: back, score: t.nzScore + "–" + t.oppScore });
+    });
+    if (unknown.length || trySum !== season.derived.triesFor) {
+      $("error").hidden = false;
+      $("error").textContent = "Chart check failed. Try total on the cards is " + trySum + " and the season file says " + season.derived.triesFor + ". Unknown names: " + (unknown.join(", ") || "none") + ".";
+    }
+    var tryRows = Object.keys(tally).map(function (k) { return tally[k]; }).filter(function (r) { return r.tries > 0; })
+      .sort(function (a, b) { return b.tries - a.tries || b.points - a.points || a.player.localeCompare(b.player); });
+    var ptRows = Object.keys(tally).map(function (k) { return tally[k]; }).filter(function (r) { return r.points > 0; })
+      .sort(function (a, b) { return b.points - a.points || b.tries - a.tries || a.player.localeCompare(b.player); });
+    $("try-cap").textContent = "Seven Tests. A try is 5 points. Tour matches are not in this chart.";
+    $("pts-cap").textContent = "Tries, conversions and penalties on the same sheets. Try 5, conversion 2, penalty 3.";
+    $("chart-tries").innerHTML = barRows(tryRows, "tries", tryRows.length ? tryRows[0].tries : 1);
+    $("chart-points").innerHTML = barRows(ptRows, "points", ptRows.length ? ptRows[0].points : 1);
+    $("unit-cap").textContent = "Forward tries are front row, locks and loose forwards. Back tries are halfback, first five, midfield and the back three. A player is counted in the unit on this page, which is the job they are in for the Bledisloe squad or the job they played.";
+    $("chart-split").innerHTML = perTest.map(function (g) {
+      var tot = g.fwd + g.back || 1;
+      return '<div class="g"><div class="mono" style="font-size:12px"><b>' + esc(g.short) + "</b> " + g.letter + " " + esc(g.score) + '</div><div class="stack"><div class="f" style="width:' + (100 * g.fwd / tot) + '%"></div><div class="b" style="width:' + (100 * g.back / tot) + '%"></div></div><div style="font-size:11px;margin-top:4px;color:var(--dim)">Forwards ' + g.fwd + " · Backs " + g.back + "</div></div>";
+    }).join("");
+    var unitRows = dossier.units.map(function (u) {
+      return { player: u.label, tries: unitTries[u.id] || 0 };
+    }).filter(function (r) { return r.tries > 0; }).sort(function (a, b) { return b.tries - a.tries; });
+    var maxU = unitRows.length ? unitRows[0].tries : 1;
+    $("chart-units").innerHTML = "<div style='font-size:12px;margin-bottom:6px;color:var(--muted)'>Season tries by unit</div>" + barRows(unitRows, "tries", maxU);
+  }
+
+  function injuryFor(name) {
+    return dossier.injuries.filter(function (i) { return i.player === name; })[0] || null;
+  }
+
+  function flag(p) {
+    if (p.captain) return '<span class="flag c">captain</span>';
+    if (p.squad === "injured") return '<span class="flag out">out</span>';
+    if (p.squad === "omitted") return '<span class="flag omit">not selected</span>';
+    return "";
+  }
+
+  function renderFilters() {
+    var buttons = [{ id: "ALL", label: "All" }].concat(dossier.units.map(function (u) {
+      return { id: u.id, label: u.label };
+    })).concat([{ id: "OUT", label: "Unavailable" }]);
+    $("filters").innerHTML = buttons.map(function (b) {
+      return '<button class="fbtn' + (filter === b.id ? " on" : "") + '" data-f="' + b.id + '" type="button">' + esc(b.label) + "</button>";
+    }).join("");
+    Array.prototype.forEach.call($("filters").querySelectorAll(".fbtn"), function (btn) {
+      btn.addEventListener("click", function () {
+        filter = btn.getAttribute("data-f");
+        renderFilters();
+        renderSquad();
+      });
+    });
+  }
+
+  function visible(p) {
+    if (filter === "ALL") return true;
+    if (filter === "OUT") return p.squad === "injured";
+    return p.unit === filter;
+  }
+
+  function renderSquad() {
+    var html = "";
+    dossier.units.forEach(function (u) {
+      var list = players.filter(function (p) { return p.unit === u.id && visible(p); });
+      if (!list.length) return;
+      html += '<div class="unit"><div class="unit-h' + (u.side === "backs" ? " back" : "") + '">' + esc(u.label) + '</div><div class="pgrid">';
+      list.forEach(function (p) {
+        var cls = "pchip" + (p.squad === "injured" ? " out" : "") + (p.squad === "omitted" ? " omitted" : "") + (selected === p.name ? " on" : "");
+        var starts = p.sheets.filter(function (s) { return s.role === "start"; }).length;
+        var bench = p.sheets.length - starts;
+        html += '<button class="' + cls + '" type="button" data-n="' + esc(p.name) + '"><span class="pn">' + starts + "S<br>" + bench + 'B</span><span><span class="pnm">' + esc(p.name) + flag(p) + '</span><br><span class="ppos">' + esc(p.pos) + "</span></span></button>";
+      });
+      html += "</div></div>";
+    });
+    $("squad").innerHTML = html;
+    Array.prototype.forEach.call($("squad").querySelectorAll(".pchip"), function (btn) {
+      btn.addEventListener("click", function () { select(btn.getAttribute("data-n")); });
+    });
+  }
+
+  function select(name) {
+    selected = name;
+    var p = players.filter(function (x) { return x.name === name; })[0];
+    if (!p) return;
+    location.hash = slug(name);
+    var inj = injuryFor(name);
+    var starts = p.sheets.filter(function (s) { return s.role === "start"; }).length;
+    var bench = p.sheets.length - starts;
+    var totalPts = 0;
+    var cells = dossier.tests.map(function (meta) {
+      var test = byId[meta.id];
+      var sheet = p.sheets.filter(function (s) { return s.testId === meta.id; })[0];
+      var pts = test ? sheetPoints(test, p.name) : { points: 0, tries: 0, cons: 0, pens: 0 };
+      totalPts += pts.points;
+      var role = sheet ? sheet.role : "out";
+      var mark = sheet ? (sheet.role === "start" ? "S" : "B") : "·";
+      return '<div class="cell ' + role + '"><div class="o">' + esc(meta.short) + '</div><div class="k">' + mark + '</div>' + (pts.points ? '<div class="p">' + pts.points + "p</div>" : "") + "</div>";
+    }).join("");
+
+    var rows = p.sheets.map(function (sheet) {
+      var test = byId[sheet.testId];
+      var meta = dossier.tests.filter(function (t) { return t.id === sheet.testId; })[0];
+      var pts = sheetPoints(test, p.name);
+      var bits = [];
+      if (pts.tries) bits.push(pts.tries + (pts.tries === 1 ? " try" : " tries"));
+      if (pts.cons) bits.push(pts.cons + " con");
+      if (pts.pens) bits.push(pts.pens + " pen");
+      var score = bits.length ? bits.join(", ") + " · " + pts.points + " pts" : "No points on the sheet";
+      var field = sheet.role === "start" ? "Named to start" : "Named on the bench";
+      if (pts.points) field += ". On the field: the score sheet has points.";
+      else if (sheet.note && /debuted|came on|Scored|on the field/i.test(sheet.note)) field += ". A report says he took the field.";
+      else if (sheet.role === "bench") field += ". Minutes not verified.";
+      var letter = resultLetter(test);
+      return "<tr><td>" + esc(test.dateLabel) + "</td><td>" + esc(test.opponent) + "</td><td>" + letter + " " + test.nzScore + "–" + test.oppScore + "</td><td>" + field + "</td><td class='pts'>" + esc(score) + "</td><td>" + esc(sheet.note || "") + "</td></tr>";
+    }).join("");
+
+    var injHtml = "";
+    if (inj) {
+      injHtml = '<div style="padding:12px 16px;background:rgba(255,93,93,.08);border-bottom:1px solid var(--line-soft)"><div class="tag missed">Injury</div><p style="margin-top:4px">' + esc(inj.issue) + " " + esc(inj.status) + "</p><p style='margin-top:6px'><b>Return:</b> " + esc(inj.return) + "</p><p class='srcs'>Sources: " + links(inj.sources) + "</p></div>";
+    }
+
+    var notes = (p.notes || []).map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("");
+    $("detail").innerHTML =
+      '<div class="dcard-top"><div class="dhead"><div class="nm">' + esc(p.name) + flag(p) + '</div><div class="pos">' + esc(p.pos) + "</div><div class='sum'>" + esc(p.summary) + "</div></div></div>" +
+      injHtml +
+      '<div class="mini">' + cells + "</div>" +
+      '<div style="padding:8px 16px;font-size:12.5px;color:var(--muted)">S means named to start. B means named on the bench. A dot means not in that match-day 23. Named in ' + p.sheets.length + " of 7 Tests (" + starts + " starts, " + bench + " bench). Test points on the score sheets: <b>" + totalPts + "</b>. " + esc(dossier.meta.sheetNote) + "</div>" +
+      (rows ? '<div style="overflow-x:auto"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>What the sheet says</th><th>Points</th><th>Note</th></tr></thead><tbody>' + rows + "</tbody></table></div>" : '<p style="padding:12px 16px;color:var(--muted)">Not in the seven Test match-day 23s checked. No Test points are shown.</p>') +
+      (notes ? '<ul class="plain" style="padding:8px 16px 12px 32px">' + notes + "</ul>" : "") +
+      '<p class="srcs" style="padding:0 16px 14px">Team sheets and squad: ' + links(p.sources) + "</p>";
+    renderSquad();
+    if (!document.body.classList.contains("pack-preview")) {
+      $("detail").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function renderLearnings() {
+    $("learn-list").innerHTML = dossier.learnings.map(function (L) {
+      return '<article class="learn"><span class="tag ' + esc(L.kind) + '">' + esc(L.kind) + "</span><span class='tag' style='color:var(--them)'>" + esc(L.unit) + "</span><h3>" + esc(L.title) + "</h3><p>" + esc(L.text) + '</p><p class="srcs">Sources: ' + links(L.sources) + "</p></article>";
+    }).join("");
+  }
+
+  function renderRest() {
+    $("honesty").innerHTML = "<b>Checked " + esc(dossier.meta.asOfLabel) + ".</b> " + esc(dossier.meta.honesty) + " " + esc(dossier.meta.checked) + " The old mockup profiles, with strengths and cue lines, were a simulation. They are not on this page. <span class='screen-only'>Download opens the print window. Choose Save as PDF.</span>";
+    $("unverified").innerHTML = dossier.notVerified.map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("");
+    $("foot").innerHTML = "Matakite · player dossier · " + esc(dossier.meta.asOfLabel) + " · <a href='data/SOURCES.md'>Sources</a> · <a href='data/player-dossier-2026.json'>Dossier data</a> · <a href='data/all-blacks-2026.json'>Season file</a>";
+    var head = "<table><thead><tr><th>Player</th><th>Position</th><th>Status</th><th>Named</th><th>Test points</th></tr></thead><tbody>";
+    head += players.map(function (p) {
+      var status = p.squad === "injured" ? "Out" : (p.squad === "omitted" ? "Not in the Bledisloe squad" : "In the squad");
+      var inj = injuryFor(p.name);
+      if (inj) status = inj.issue.split(".")[0];
+      var pts = 0;
+      p.sheets.forEach(function (s) { pts += sheetPoints(byId[s.testId], p.name).points; });
+      var starts = p.sheets.filter(function (s) { return s.role === "start"; }).length;
+      return "<tr><td>" + esc(p.name) + "</td><td>" + esc(p.pos) + "</td><td>" + esc(status) + "</td><td>" + starts + " starts / " + p.sheets.length + " named</td><td class='pts'>" + pts + "</td></tr>";
+    }).join("");
+    $("pack-table").innerHTML = head + "</tbody></table><p class='srcs' style='margin-top:8px'>Points are from the seven Test score sheets only. Named is the match-day 23, not minutes.</p>";
+  }
+
+  function boot(d, s) {
+    dossier = d;
+    season = s;
+    players = d.players;
+    tests = playedTests();
+    byId = {};
+    season.tests.forEach(function (t) { byId[t.id] = t; });
+    d.tests.forEach(function (t) {
+      if (!byId[t.id]) throw new Error("Missing season test " + t.id);
+    });
+    renderForm();
+    renderInjuries();
+    renderCharts();
+    renderFilters();
+    renderSquad();
+    renderLearnings();
+    renderRest();
+    var hash = (location.hash || "").replace("#", "");
+    if (hash) {
+      var found = players.filter(function (p) { return slug(p.name) === hash; })[0];
+      if (found) select(found.name);
+      else if (hash === "learnings" || hash === "charts" || hash === "injuries") {
+        var el = $(hash);
+        if (el) el.scrollIntoView();
+      }
+    }
+  }
+
+  if (/[?&]pack=1(?:&|$)/.test(location.search)) {
+    document.body.classList.add("pack-preview");
+  }
+  $("preview-btn").addEventListener("click", function () {
+    document.body.classList.toggle("pack-preview");
+    $("preview-btn").textContent = document.body.classList.contains("pack-preview") ? "Back to dossier" : "Preview coaching pack";
+  });
+  if (document.body.classList.contains("pack-preview")) {
+    $("preview-btn").textContent = "Back to dossier";
+  }
+  $("print-btn").addEventListener("click", function () {
+    document.body.classList.add("pack-preview");
+    $("preview-btn").textContent = "Back to dossier";
+    setTimeout(function () { window.print(); }, 50);
+  });
+
+  Promise.all([
+    fetch("data/player-dossier-2026.json").then(function (r) { if (!r.ok) throw new Error("dossier " + r.status); return r.json(); }),
+    fetch("data/all-blacks-2026.json").then(function (r) { if (!r.ok) throw new Error("season " + r.status); return r.json(); })
+  ]).then(function (pair) { boot(pair[0], pair[1]); }).catch(function (err) {
+    $("error").hidden = false;
+    $("error").textContent = "The dossier data did not load (" + err.message + "). No sample players are shown.";
+  });
+})();
+</script>
+</body>
+</html>

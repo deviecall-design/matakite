@@ -1,6 +1,8 @@
 # Sources for the 2026 All Blacks record
 
-Checked on 28 September 2026. Every score on the page is New Zealand first, then the opponent. Rugby Database lists the home side first, so away results are flipped to keep New Zealand first.
+Checked on 28 September 2026. Checked again on 7 October 2026 for the player dossier. The Rugby Database games list and the ESPN New Zealand results page still ended at Baltimore on 12 September. The seven Test scores still agree. The Bledisloe Tests on 10 and 17 October had not been played. No new result was added.
+
+The player dossier is `player-dossier.html`. It reads `data/player-dossier-2026.json` and this season file. Every score on the page is New Zealand first, then the opponent. Rugby Database lists the home side first, so away results are flipped to keep New Zealand first.
 
 The page reads `data/all-blacks-2026.json`. `data/compute_season_stats.py` adds the season totals and stops if a Test score sheet does not add up to the final score. The page does the same sum again when it loads.
 
@@ -105,6 +107,35 @@ Compiled from public reporting on 28 Sep 2026. This is not an AI analysis.
 - Series review, attack, scrum penalties, lineout, high ball, and wingers in midfield: [ESPN, Liam Napier, 20 Sep 2026](https://www.espn.com/rugby/story/_/id/49995477/all-blacks-rgr-review-working-not-lies-ahead).
 - All Blacks site on the series, the bench, and the Bledisloe: [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe).
 - Rennie before July, on counter-attack: [SABC Sport](https://www.sabcsport.com/rugby/news/dave-rennie-outlines-what-he-s-looking-for-in-new-all-blacks), [RugbyPass](https://www.rugbypass.com/news/stephen-donald-unpacks-what-dave-rennies-comments-reveal-about-his-game-plan/).
+
+## Player dossier, checked 7 October 2026
+
+The page is for coaches. It lists the 29 September Bledisloe squad, the eight players left out injured, and Sam Darry, who RNZ said missed the cut and who has no injury on that list. Each Test row is a published match-day 23. It is not a minute count. Points and tries are added from the seven Test score sheets in `data/all-blacks-2026.json`. Tour matches stay off the player charts because this file has no tour try list.
+
+Squad and injuries:
+
+- Squad, captain Codie Taylor, and the unavailable list: [RNZ, 29 Sep 2026](https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back), [Super Rugby](https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/), [ESPN](https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury).
+- Injury windows as at 21 September: [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe).
+- Savea's operation and a Super Rugby 2027 return, in Dave Rennie's words, plus the report that Ruben Love is out for the rest of the season: [Planet Rugby, 4 Oct 2026](https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing).
+- Savea surgery confirmed earlier: [RNZ](https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed).
+
+Match-day 23s:
+
+| Test | Sheet |
+|---|---|
+| France, 4 Jul | [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-team-to-play-france-in-christchurch) |
+| Italy, 11 Jul | [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington) |
+| Ireland, 18 Jul | [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-ireland-in-auckland) |
+| South Africa, 22 Aug | [1News](https://www.1news.co.nz/2026/08/20/key-all-blacks-trio-named-to-start-first-test-against-boks/), late change [SABC Sport](https://www.sabcsport.com/rugby/news/all-blacks-forced-into-late-change-for-springboks-clash-at-ellis-park) |
+| South Africa, 29 Aug | [Super Rugby](https://super.rugby/therugbychampionship/news/all-blacks-team-announced-for-second-rgr-test/), [BBC Sport line-up](https://www.bbc.com/sport/rugby-union/articles/c1mvred1l7do) |
+| South Africa, 5 Sep | [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-team-to-play-south-africa-in-third-test-in-johannesburg) |
+| South Africa, 12 Sep | [Super Rugby](https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/) |
+
+RNZ's 29 September unavailable line bunches Anton Lienert-Brown, Billy Proctor and Caleb Clarke before the word shoulder. The All Blacks list of 21 September, and ESPN on 29 September, separate them: Lienert-Brown knee, Proctor shoulder, Clarke shoulder, Norris knee. The dossier follows that split.
+
+The meeting notes cite the same public reports as the game-plan section, plus the score sheets. They are not a private All Blacks review.
+
+The earlier player mockup (strengths, development areas, pre-match cues, a six-from-six record, Ellis Park still to come) was a simulation. It is not used.
 
 ## Not used as fact
 
