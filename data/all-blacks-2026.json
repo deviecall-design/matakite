@@ -3,10 +3,10 @@
     "team": "New Zealand",
     "nickname": "All Blacks",
     "season": 2026,
-    "asOf": "2026-10-07",
-    "asOfLabel": "7 Oct 2026",
+    "asOf": "2026-10-12",
+    "asOfLabel": "12 Oct 2026",
     "scoreConvention": "Every score on this page is New Zealand first, then the opponent. Rugby Database lists the home side first. Away wins are flipped so New Zealand stays first.",
-    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. The Australia fixtures are the Bledisloe Cup and are not on the Rugby Database list yet.",
+    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. The Eden Park Bledisloe Test is on the Rugby Database list as Bledisloe Cup - 2026. The Sydney Test on 17 October is not on that list.",
     "headCoach": {
       "name": "Dave Rennie",
       "detail": "Appointed All Blacks head coach on 4 March 2026, through to the 2027 Rugby World Cup. Scott Robertson had departed in January 2026.",
@@ -22,14 +22,14 @@
       ]
     },
     "captain": {
-      "summary": "Ardie Savea captained the Tests he started, through Soweto. He dislocated a shoulder in that match. Codie Taylor captained Baltimore, then was named captain of the 34-man Bledisloe squad on 29 September 2026. A captain for the November Tests had not been named in the sources checked on 7 Oct 2026.",
+      "summary": "Ardie Savea captained the Tests he started, through Soweto. He dislocated a shoulder in that match. Codie Taylor captained Baltimore, was named captain of the 34-man Bledisloe squad on 29 September 2026, and captained Eden Park on 10 October. A captain for the November Tests had not been named in the sources checked on 12 Oct 2026.",
       "sources": [
         {
-          "name": "All Blacks — Italy team",
+          "name": "All Blacks \u2014 Italy team",
           "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-italy-in-wellington"
         },
         {
-          "name": "All Blacks — Bledisloe buildup",
+          "name": "All Blacks \u2014 Bledisloe buildup",
           "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
         },
         {
@@ -37,7 +37,7 @@
           "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
         },
         {
-          "name": "RNZ — Bledisloe squad",
+          "name": "RNZ \u2014 Bledisloe squad",
           "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
         }
       ]
@@ -45,13 +45,13 @@
     "primarySource": {
       "name": "Rugby Database",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-      "note": "Primary source for 2026 results, venues and crowds. The games list was read on 28 Sep 2026 and again on 7 Oct 2026. It still ended at Baltimore on 12 Sep."
+      "note": "Primary source for 2026 results, venues and crowds. The games list was read on 12 Oct 2026. The newest game is Eden Park, All Blacks 50-19 Australia, game 30265. Baltimore is the game before it. Sydney on 17 October is not on the list."
     },
     "crossCheckSource": {
       "name": "ESPN",
       "teamUrl": "https://www.espn.com.au/rugby/team/_/id/8/new-zealand",
       "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
-      "note": "ESPN's New Zealand results page listed the seven Tests. Scores agree. It did not list the four tour matches. Its team-page scorer module is labelled The Rugby Championship and was not used."
+      "note": "The ESPN Australia match page for Eden Park shows New Zealand 50-19 Australia. A direct fetch of the ESPN Australia pages was blocked by a bot check from this machine. The match page was read from its indexed text, and an ESPN match story states the same 50-19 score. The four tour matches are still not treated as ESPN results."
     }
   },
   "tests": [
@@ -1046,34 +1046,126 @@
       "id": "2026-10-10-australia-eden-park",
       "date": "2026-10-10",
       "dateLabel": "10 Oct",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. 7.10pm New Zealand time, as published by allblacks.com.",
+      "dateNote": "Score agrees. Rugby Database and the ESPN match page both say Eden Park. Rugby Database kick-off is Sat 10th Oct 2026, 7:10pm. allblacks.com says 7.10pm New Zealand time. The ESPN match page game info says 5:10 PM, October 10, 2026. That is the Australian edition clock, not a second match. BBC says the Bledisloe Cup was retained for a 23rd straight year. Sky says a 24th year, and the All Blacks say the cup has been held since 2003. The page does not pick a year count.",
       "opponent": "Australia",
-      "venue": "Eden Park, Auckland",
-      "competition": "Bledisloe Cup",
-      "status": "upcoming",
-      "nzScore": null,
-      "oppScore": null,
-      "halfTimeNz": null,
-      "halfTimeOpp": null,
-      "nzTries": [],
-      "oppTries": [],
-      "nzKickers": [],
-      "oppKickers": [],
+      "venue": "Eden Park",
+      "competition": "Bledisloe Cup - 2026",
+      "status": "played",
+      "nzScore": 50,
+      "oppScore": 19,
+      "halfTimeNz": 17,
+      "halfTimeOpp": 14,
+      "nzTries": [
+        {
+          "player": "Peter Lakai",
+          "count": 1
+        },
+        {
+          "player": "Tupou Vaa'i",
+          "count": 1
+        },
+        {
+          "player": "Cam Roigard",
+          "count": 1
+        },
+        {
+          "player": "Codie Taylor",
+          "count": 1
+        },
+        {
+          "player": "Leroy Carter",
+          "count": 1
+        },
+        {
+          "player": "Josh Moorby",
+          "count": 1
+        },
+        {
+          "player": "Will Jordan",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Tom Wright",
+          "count": 1
+        },
+        {
+          "player": "Harry Wilson",
+          "count": 1
+        },
+        {
+          "player": "Josh Nasser",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Damian McKenzie",
+          "conversions": 6,
+          "penalties": 1
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Ryan Lonergan",
+          "conversions": 2,
+          "penalties": 0
+        }
+      ],
       "sources": [
         {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30265",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/match/_/gameId/603463/league/289234/australia-new-zealand"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year"
+        },
+        {
           "name": "All Blacks",
-          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         }
       ],
       "kind": "test",
-      "crowd": null,
-      "crowdLabel": null
+      "crowd": 46352,
+      "crowdLabel": "46,352",
+      "kickOffLabel": "Sat 10th Oct 2026, 7:10pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=30265",
+        "gameId": 30265,
+        "crowd": 46352,
+        "venue": "Eden Park",
+        "kickOffLabel": "Sat 10th Oct 2026, 7:10pm"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "matchUrl": "https://www.espn.com.au/rugby/match/_/gameId/603463/league/289234/australia-new-zealand",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "New Zealand 50-19 Australia",
+        "dateLabel": "Sat, Oct 10",
+        "venue": "Eden Park",
+        "note": "Score agrees. The ESPN match page commentary ends with Will Jordan's try at 48-19 and Damian McKenzie's conversion at 50-19. Game info says 5:10 PM, October 10, 2026. Rugby Database says 7:10pm. A direct fetch of the ESPN Australia HTML was blocked by a bot check. The match page text was read from an index, and the ESPN story states the same score and a 17-14 half-time."
+      }
     },
     {
       "id": "2026-10-17-australia-sydney",
       "date": "2026-10-17",
       "dateLabel": "17 Oct",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
+      "dateNote": "Not on the Rugby Database games list checked on 12 Oct 2026. The list's newest game is Eden Park on 10 October. This Test had not been played. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local. Sky Sports lists the Sydney kick-off as 6am BST.",
       "opponent": "Australia",
       "venue": "Accor Stadium, Sydney",
       "competition": "Bledisloe Cup",
@@ -1104,7 +1196,7 @@
       "id": "2026-11-07-scotland",
       "date": "2026-11-07",
       "dateLabel": "07 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
       "opponent": "Scotland",
       "venue": "Murrayfield, Edinburgh",
       "competition": "Nations Championship",
@@ -1131,7 +1223,7 @@
       "id": "2026-11-14-wales",
       "date": "2026-11-14",
       "dateLabel": "14 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
       "opponent": "Wales",
       "venue": "Principality Stadium, Cardiff",
       "competition": "Nations Championship",
@@ -1158,7 +1250,7 @@
       "id": "2026-11-21-england",
       "date": "2026-11-21",
       "dateLabel": "21 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026 and again on 7 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
       "opponent": "England",
       "venue": "Twickenham Stadium, London",
       "competition": "Nations Championship",
@@ -1185,10 +1277,10 @@
   "cards": {
     "southAfrica": {
       "title": "South Africa",
-      "meta": "Series finished · South Africa won 3–1",
+      "meta": "Series finished \u00b7 South Africa won 3\u20131",
       "facts": [
-        "The four-Test series is finished. South Africa won it 3–1. Nothing in this series is live.",
-        "New Zealand won the first Test 33–16 at Emirates Airline Park on 22 August (ESPN calls that ground Ellis Park, Johannesburg), then lost 26–33 at Cape Town Stadium on 29 August (ESPN says DHL Stadium, Cape Town), 24–29 at First National Bank Stadium on 5 September (ESPN says FNB Stadium, Johannesburg), and 28–43 at M&T Bank Stadium in Baltimore on 12 September. The scores are the same on Rugby Database and ESPN.",
+        "The four-Test series is finished. South Africa won it 3\u20131. Nothing in this series is live.",
+        "New Zealand won the first Test 33\u201316 at Emirates Airline Park on 22 August (ESPN calls that ground Ellis Park, Johannesburg), then lost 26\u201333 at Cape Town Stadium on 29 August (ESPN says DHL Stadium, Cape Town), 24\u201329 at First National Bank Stadium on 5 September (ESPN says FNB Stadium, Johannesburg), and 28\u201343 at M&T Bank Stadium in Baltimore on 12 September. The scores are the same on Rugby Database and ESPN.",
         "Codie Taylor captained the Baltimore Test. Ardie Savea had already gone home with a dislocated shoulder."
       ],
       "sources": [
@@ -1216,51 +1308,80 @@
     },
     "australia": {
       "title": "Australia",
-      "meta": "Bledisloe Cup · still to be played · no prediction",
+      "meta": "Bledisloe Cup \u00b7 Eden Park played \u00b7 Sydney still to come \u00b7 no prediction",
       "facts": [
-        "Saturday 10 October, Eden Park, Auckland, 7.10pm New Zealand time. Saturday 17 October, Accor Stadium, Sydney.",
-        "The Sydney kick-off is not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local.",
-        "allblacks.com says New Zealand have held the Bledisloe Cup since 2003.",
-        "Australia beat South Africa 42–38 in Perth on 27 September 2026.",
-        "The Bledisloe squad was named on 29 September 2026. Codie Taylor is captain. Ardie Savea (shoulder, surgery done) and Luke Jacobson (elbow) are out, with Ruben Love (ankle), Patrick Tuipulotu (calf), Anton Lienert-Brown (knee), Billy Proctor (shoulder), Caleb Clarke (shoulder) and Ollie Norris (knee). On 4 October Dave Rennie said Savea will not return until Super Rugby in 2027, and he is not sure that will be the start of Super Rugby. The player dossier has the sheet-by-sheet detail.",
-        "allblacks.com reported that Wallabies flyhalf Carter Gordon fractured his leg and is expected to miss the series, and that Jordan Petaia has been called into the wider Wallabies squad. Cheslin Kolbe plays for South Africa. He is not in this fixture.",
+        "Saturday 10 October, Eden Park: New Zealand won 50\u201319. Half-time was 17\u201314. Rugby Database crowd 46,352. Kick-off 7.10pm New Zealand time.",
+        "New Zealand tries: Peter Lakai, Tupou Vaa'i, Cam Roigard, Codie Taylor, Leroy Carter, Josh Moorby, Will Jordan. Damian McKenzie kicked six conversions and one penalty. Australia tries: Tom Wright, Harry Wilson, Josh Nasser. Ryan Lonergan kicked two conversions.",
+        "The cup was retained. allblacks.com says New Zealand have held it since 2003. BBC says a 23rd straight year. Sky and an ESPN story say a 24th year. This page does not pick a year count.",
+        "BBC and the ESPN story both say the defeat ended a six-game unbeaten run for Australia under Les Kiss. That is their count of the Wallabies' run, not a figure re-counted here.",
+        "BBC and the ESPN story both say the defeat ended a six-game unbeaten run for Australia under Les Kiss. That is their count of the Wallabies' run, not a figure re-counted here.",
+        "Saturday 17 October, Accor Stadium, Sydney, is still to be played. It is not on the Rugby Database list. The kick-off is not verified: allblacks.com says 6.00pm New Zealand time, Accor Stadium says 3.45pm local, and Sky Sports says 6am BST.",
+        "Codie Taylor captained. Damian McKenzie started at first five. Beauden Barrett started at fullback. Scott Barrett and Quinn Tupaea started. Shannon Frizell was on the bench.",
+        "On 11 October the All Blacks said Leroy Carter (high ankle sprain), Asafo Aumua and Anton Segner (failed a second head-injury assessment, minimum 12-day stand-down) and Ethan Blackadder (calf, hurt in the warm-up) will not travel to Sydney. Replacements: Anton Lienert-Brown, George Bell, Du'Plessis Kirifi and Jamie Hannah.",
+        "Richie Mo'unga was unavailable at Eden Park with a calf strain and was said to be likely to miss Sydney. Fehi Fineanganofo was unavailable with concussion and a hamstring. The 11 October travel note did not say whether Fineanganofo went to Sydney.",
         "No win percentage is shown. There is no prediction model on this page."
       ],
       "sources": [
         {
-          "name": "All Blacks",
-          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30265"
         },
         {
           "name": "BBC Sport",
-          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cx05r4gg209ro"
+          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
         },
         {
           "name": "RNZ",
-          "url": "https://www.rnz.co.nz/news/sport/1621006/wallabies-hold-on-with-11-men-to-beat-springboks"
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         },
         {
-          "name": "Accor Stadium",
-          "url": "https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks"
-        },
-        {
-          "name": "RNZ — Bledisloe squad",
-          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
-        },
-        {
-          "name": "Planet Rugby",
-          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
         }
       ]
     }
   },
   "gamePlan": {
     "heading": "All Blacks game plan (public reporting)",
-    "label": "Compiled from public reporting on 28 Sep 2026. This is not AI analysis, and it is not an internal All Blacks document.",
+    "label": "Compiled from public reporting. The South Africa notes were collected on 28 Sep 2026. The Eden Park notes were added on 12 Oct 2026. This is not AI analysis, and it is not an internal All Blacks document.",
     "bullets": [
       {
+        "topic": "Eden Park, 10 October",
+        "text": "New Zealand led 17\u201314 at half-time and won 50\u201319. Five tries came after the break. On 1News, Dave Rennie said a quality performance was coming, that the first half was an arm wrestle, and that a few opportunities were left out there. He said Cam Roigard's kicking was excellent, that they kicked more off nine than they had been, and that the side won kicks in the air or picked up the scraps. He said areas that needed to be better after South Africa showed shifts. An ESPN story quoted him crediting mindset, work rate and brutality, and saying the Wallabies would be hurting. The same story quoted Les Kiss saying New Zealand won the aerial battle and that Roigard's kicking was pinpoint.",
+        "sources": [
+          {
+            "name": "1News",
+            "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year"
+          }
+        ]
+      },
+      {
         "topic": "Attack shape",
-        "text": "The All Blacks site, reviewing the South Africa series, said the attack can trouble the Springboks, but that New Zealand too often needed long passages of possession to score. ESPN's Liam Napier wrote on 20 Sep 2026 that Dave Rennie and Mike Blair have aimed the attack at pace and at space out wide, and he reported 35 tries in seven Tests. The score sheets in this file also add up to 35 tries.",
+        "text": "The All Blacks site, reviewing the South Africa series, said the attack can trouble the Springboks, but that New Zealand too often needed long passages of possession to score. ESPN's Liam Napier wrote on 20 Sep 2026 that Dave Rennie and Mike Blair have aimed the attack at pace and at space out wide, and he reported 35 tries in seven Tests. The score sheets added up to 35 tries at that date. With the Eden Park Test they add up to 42.",
         "sources": [
           {
             "name": "All Blacks",
@@ -1334,7 +1455,7 @@
       },
       {
         "topic": "What the results showed",
-        "text": "The side won its first four Tests, including 33–16 at Ellis Park, then lost the next three. South Africa won the series 3–1. Rennie said the tour was meant to teach them about their game model, that the Baltimore result hurts, and that he still feels they are tracking in the right direction while needing to be better against a side like the Springboks.",
+        "text": "The side won its first four Tests, including 33\u201316 at Ellis Park, then lost the next three. South Africa won the series 3\u20131. Rennie said the tour was meant to teach them about their game model, that the Baltimore result hurts, and that he still feels they are tracking in the right direction while needing to be better against a side like the Springboks. On 10 October they won 50\u201319 against Australia at Eden Park. Half-time was 17\u201314, and five of the seven New Zealand tries came after the break.",
         "sources": [
           {
             "name": "Planet Rugby",
@@ -1343,6 +1464,10 @@
           {
             "name": "Sky Sports",
             "url": "https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
           }
         ]
       },
@@ -1363,17 +1488,25 @@
     ]
   },
   "notVerified": [
-    "Sydney kick-off on 17 October. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Rugby Database and the ESPN results list do not include this fixture yet.",
-    "A captain for the November Tests. Codie Taylor is captain of the Bledisloe squad named on 29 September 2026. Nothing checked on 7 October names a captain past those two Tests.",
+    "Sydney kick-off on 17 October. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Sky Sports says 6am BST. Rugby Database does not list this fixture yet. It had not been played on 12 October 2026.",
+    "A captain for the November Tests. Codie Taylor captained Eden Park. Nothing checked on 12 October names a captain past the Sydney Test.",
+    "How many years the Bledisloe Cup has been held. allblacks.com says since 2003. BBC says a 23rd straight year. Sky and ESPN say a 24th year. No count is shown.",
+    "Leroy Carter's return date. RNZ said a high ankle sprain, a likely long spell out, and that the November Tests in Britain are in doubt. No calendar day.",
+    "Whether Fehi Fineanganofo travelled to Sydney. He was unavailable at Eden Park with concussion and a hamstring. The 11 October list of four players staying home does not name him.",
+    "Richie Mo'unga's return date. A calf strain kept him out of Eden Park. The All Blacks selection story said he is likely to miss Sydney. No calendar day.",
+    "Ethan Blackadder's return date. A calf injury in the Eden Park warm-up keeps him out of Sydney. RNZ said it is not thought to be serious. No calendar day.",
+    "Asafo Aumua and Anton Segner's return dates. Both failed a second head-injury assessment. The stand-down is a minimum of 12 days. No calendar day was published.",
+    "Scott Barrett's minutes at Eden Park. He started, left the field, failed a head-injury assessment that night, then passed a second assessment and travelled. The minute he left is not on the score sheet.",
+    "Will Jordan's career try total. 1News said the Eden Park try moved his tally to 56. That is not re-counted here. The Test sheets in this file give him 11 tries.",
+    "Tackle counts in the 1News report: Jordie Barrett 16 tackles, Australia 200 tackles, New Zealand 144. Reported, not re-counted here.",
     "Ardie Savea's exact return date. On 4 October Dave Rennie said Savea will not be back until Super Rugby in 2027, and he is not sure that will be in time for the start. There is no calendar day.",
     "ESPN's series counts from Liam Napier's review: 14 scrum penalties, a lineout at 86 percent, eight lost lineouts, and 24 high-ball turnovers for Will Jordan. Reported, not re-counted here.",
-    "How long Australia's unbeaten run is. BBC and RNZ reported the 42–38 win in Perth. They do not agree on five or six matches, so no streak length is shown.",
-    "Nations Championship Finals Weekend, 27–29 November in London. The opponent is not known, so it is not a fixture.",
+    "Nations Championship Finals Weekend, 27\u201329 November in London. The opponent is not known, so it is not a fixture.",
     "Try scorers for the four tour matches. Rugby Database's games list has the score, venue and crowd. It does not list tries. They are left blank.",
     "ESPN's New Zealand team page has a 2026 Top Scorers module labelled The Rugby Championship. Damian McKenzie is listed on 33 points. Will Jordan is not the leading try scorer in that module. It does not match the Test score sheets, so it is not used.",
     "The Rugby Championship table on that same ESPN page is empty.",
     "Crowds other than Baltimore. ESPN match pages store attendance as 0, so they are not a crowd check. Baltimore's 68,173 matches BBC Sport as well as Rugby Database. The other crowds are Rugby Database only.",
-    "A Dubai Telegraph line that called the France Test 32–30. Rugby Database, ESPN, the All Blacks and BBC Sport say 34–32.",
+    "A Dubai Telegraph line that called the France Test 32\u201330. Rugby Database, ESPN, the All Blacks and BBC Sport say 34\u201332.",
     "Surnames printed without a first name on the Baltimore score sheet: van den Berg, Hanekom and Libbok.",
     "No official All Blacks statistical leaderboard was used. Test try and points leaders are added up from published score sheets. Try 5, conversion 2, penalty goal 3. A penalty try is 7 points and is not given to a player."
   ],
@@ -1423,29 +1556,29 @@
     "note": "A penalty try is worth 7 and is not given to a player. It still counts as a try for or against."
   },
   "derived": {
-    "played": 7,
-    "upcoming": 5,
-    "won": 4,
+    "played": 8,
+    "upcoming": 4,
+    "won": 5,
     "lost": 3,
     "drawn": 0,
-    "pointsFor": 232,
-    "pointsAgainst": 191,
-    "pointsDifference": 41,
-    "triesFor": 35,
-    "triesAgainst": 23,
+    "pointsFor": 282,
+    "pointsAgainst": 210,
+    "pointsDifference": 72,
+    "triesFor": 42,
+    "triesAgainst": 26,
     "topTryScorer": {
       "player": "Will Jordan",
-      "tries": 10,
+      "tries": 11,
       "conversions": 0,
       "penalties": 0,
-      "points": 50
+      "points": 55
     },
     "topPointsScorer": {
       "player": "Will Jordan",
-      "tries": 10,
+      "tries": 11,
       "conversions": 0,
       "penalties": 0,
-      "points": 50
+      "points": 55
     },
     "results": [
       {
@@ -1458,7 +1591,7 @@
         "result": "W",
         "nzScore": 34,
         "oppScore": 32,
-        "line": "W 34–32",
+        "line": "W 34\u201332",
         "triesFor": 5,
         "triesAgainst": 4,
         "sources": [
@@ -1495,7 +1628,7 @@
         "result": "W",
         "nzScore": 47,
         "oppScore": 17,
-        "line": "W 47–17",
+        "line": "W 47\u201317",
         "triesFor": 7,
         "triesAgainst": 2,
         "sources": [
@@ -1532,7 +1665,7 @@
         "result": "W",
         "nzScore": 40,
         "oppScore": 21,
-        "line": "W 40–21",
+        "line": "W 40\u201321",
         "triesFor": 6,
         "triesAgainst": 3,
         "sources": [
@@ -1565,7 +1698,7 @@
         "result": "W",
         "nzScore": 33,
         "oppScore": 16,
-        "line": "W 33–16",
+        "line": "W 33\u201316",
         "triesFor": 5,
         "triesAgainst": 1,
         "sources": [
@@ -1598,7 +1731,7 @@
         "result": "L",
         "nzScore": 26,
         "oppScore": 33,
-        "line": "L 26–33",
+        "line": "L 26\u201333",
         "triesFor": 4,
         "triesAgainst": 3,
         "sources": [
@@ -1635,7 +1768,7 @@
         "result": "L",
         "nzScore": 24,
         "oppScore": 29,
-        "line": "L 24–29",
+        "line": "L 24\u201329",
         "triesFor": 4,
         "triesAgainst": 4,
         "sources": [
@@ -1668,7 +1801,7 @@
         "result": "L",
         "nzScore": 28,
         "oppScore": 43,
-        "line": "L 28–43",
+        "line": "L 28\u201343",
         "triesFor": 4,
         "triesAgainst": 6,
         "sources": [
@@ -1694,15 +1827,52 @@
             "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
           }
         ]
+      },
+      {
+        "id": "2026-10-10-australia-eden-park",
+        "date": "2026-10-10",
+        "dateLabel": "10 Oct",
+        "opponent": "Australia",
+        "venue": "Eden Park",
+        "competition": "Bledisloe Cup - 2026",
+        "result": "W",
+        "nzScore": 50,
+        "oppScore": 19,
+        "line": "W 50\u201319",
+        "triesFor": 7,
+        "triesAgainst": 3,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=30265",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/match/_/gameId/603463/league/289234/australia-new-zealand"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
+          }
+        ]
       }
     ],
     "allGames": {
-      "played": 11,
-      "won": 8,
+      "played": 12,
+      "won": 9,
       "lost": 3,
       "drawn": 0,
-      "pointsFor": 415,
-      "pointsAgainst": 266,
+      "pointsFor": 465,
+      "pointsAgainst": 285,
       "note": "Tests plus the four tour matches on the Rugby Database list. Try counts are Tests only."
     },
     "rules": "Tests only for tries and points scorers. try 5, conversion 2, penalty goal 3, penalty try 7 (counts as a try, no player credited). Tour matches have no score sheet here, so they are in the all-games record only."
@@ -1747,6 +1917,30 @@
       "espn": "Results list: Sat, Sep 12. Match summary title: 13 Sep 2026. Game info: 7:00 AM, September 13, 2026.",
       "scoresAgree": true,
       "note": "Not a second match. BBC and Sky reported Saturday 12 September in Baltimore. The 13 Sep clock is the ESPN Australia edition."
+    },
+    {
+      "game": "10 Oct, Australia",
+      "field": "Kick-off clock",
+      "rugbyDatabase": "Sat 10th Oct 2026, 7:10pm",
+      "espn": "Game info: 5:10 PM, October 10, 2026",
+      "scoresAgree": true,
+      "note": "Same match. allblacks.com says 7.10pm New Zealand time. The 5:10 PM label is the ESPN Australia clock."
+    },
+    {
+      "game": "10 Oct, Australia",
+      "field": "Bledisloe year count",
+      "rugbyDatabase": "Not a Rugby Database field. allblacks.com, before the match: held since 2003.",
+      "espn": "ESPN story: a 24-year grip, held since 2003. Sky: a 24th year, and 2002 as the last year Australia held it. BBC: a 23rd straight year.",
+      "scoresAgree": true,
+      "note": "The score is not in dispute. The page does not choose 23 or 24."
+    },
+    {
+      "game": "10 Oct, Australia",
+      "field": "Bench name",
+      "rugbyDatabase": "Rieko Ioane on the bench",
+      "espn": "Not an ESPN field. BBC's reserve list prints Loane. The All Blacks team page says Rieko Ioane.",
+      "scoresAgree": true,
+      "note": "The page uses Rieko Ioane."
     }
   ]
 }

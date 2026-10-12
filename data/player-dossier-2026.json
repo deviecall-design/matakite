@@ -1,18 +1,18 @@
 {
   "meta": {
-    "asOf": "2026-10-07",
-    "asOfLabel": "7 Oct 2026",
+    "asOf": "2026-10-12",
+    "asOfLabel": "12 Oct 2026",
     "title": "Player dossier",
     "team": "New Zealand",
     "honesty": "Selections come from published match-day 23s. Points and tries come from the Test score sheets in data/all-blacks-2026.json. Injuries come from All Blacks, RNZ, ESPN and Planet Rugby. Nothing on this page is a rating, a prediction, or a guess at minutes.",
-    "checked": "On 7 October 2026 the Rugby Database games list and the ESPN New Zealand results page still ended at Baltimore on 12 September. Scores on the seven Tests still agree. The Bledisloe Tests on 10 and 17 October had not been played. No new result was added to the season file.",
-    "next": "Saturday 10 October, Australia, Eden Park, 7.10pm New Zealand time. Saturday 17 October, Accor Stadium, Sydney. The Sydney kick-off is not verified.",
-    "recordLine": "Tests: played 7, won 4, lost 3. South Africa won the series 3–1. Tour matches are on the main page and are not in the player charts.",
-    "captain": "Codie Taylor, for the Bledisloe squad named 29 September 2026. Ardie Savea captained the Tests he started, through Soweto.",
+    "checked": "On 12 October 2026 the Rugby Database games list had one new game after Baltimore: Eden Park, All Blacks 50-19 Australia, on 10 October. The ESPN match page shows the same score. Sydney on 17 October is not on the Rugby Database list and had not been played.",
+    "next": "Saturday 17 October, Australia, Accor Stadium, Sydney. The kick-off is not verified. Eden Park on 10 October is played: New Zealand 50\u201319 Australia.",
+    "recordLine": "Tests: played 8, won 5, lost 3. Eden Park was won 50\u201319. South Africa won that series 3\u20131. Tour matches are on the main page and are not in the player charts.",
+    "captain": "Codie Taylor captained Eden Park and the Bledisloe squad named 29 September 2026. Ardie Savea captained the Tests he started, through Soweto.",
     "coach": "Dave Rennie",
     "squadNamed": "29 Sep 2026",
     "squadSize": 34,
-    "scoringNote": "Try 5, conversion 2, penalty goal 3. A penalty try is 7 and is not given to a player. Charts use the seven Tests only.",
+    "scoringNote": "Try 5, conversion 2, penalty goal 3. A penalty try is 7 and is not given to a player. Charts use the eight Tests only.",
     "sheetNote": "Start and bench mean the player was named in that match-day 23. It is not a minute count.",
     "sources": [
       {
@@ -30,8 +30,21 @@
       {
         "name": "All Blacks injury list",
         "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+      },
+      {
+        "name": "All Blacks team",
+        "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
+      },
+      {
+        "name": "All Blacks injury update",
+        "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+      },
+      {
+        "name": "RNZ",
+        "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
       }
-    ]
+    ],
+    "squadNote": "34 players were named on 29 September. On 11 October four did not travel to Sydney and four replacements were added. The travelling group is still described as a squad. A fresh head count was not published as a new number."
   },
   "units": [
     {
@@ -193,6 +206,27 @@
         }
       ],
       "note": "Ardie Savea, Luke Jacobson and Quinn Tupaea were ruled out injured. Fabian Holland was unavailable with illness. Codie Taylor captained."
+    },
+    {
+      "id": "2026-10-10-australia-eden-park",
+      "short": "AUS",
+      "dateLabel": "10 Oct",
+      "opponent": "Australia",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1791509/all-blacks-damian-mckenzie-at-no-10-as-beauden-barrett-comes-back-in-from-the-cold"
+        },
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30265"
+        }
+      ],
+      "note": "Codie Taylor captained. Damian McKenzie started at first five and Beauden Barrett at fullback. BBC's reserve list prints Loane. The All Blacks sheet and Rugby Database say Rieko Ioane."
     }
   ],
   "players": [
@@ -201,7 +235,7 @@
       "pos": "Loosehead prop",
       "unit": "FR",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at loosehead in five of the seven Tests. Left out of Cape Town and Soweto while he was in concussion protocols, then named to start again in Baltimore.",
+      "summary": "In the Bledisloe squad. Named to start at loosehead against France, Italy, Ireland, Ellis Park, Baltimore and Eden Park. Left out of Cape Town and Soweto while he was in concussion protocols.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -221,6 +255,10 @@
         },
         {
           "testId": "2026-09-12-south-africa-baltimore",
+          "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
           "role": "start"
         }
       ],
@@ -259,7 +297,7 @@
       "pos": "Loosehead prop",
       "unit": "FR",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. On the bench against Italy and at Ellis Park, then named to start at Cape Town and Soweto.",
+      "summary": "In the Bledisloe squad. On the bench against Italy, at Ellis Park and at Eden Park. Named to start at Cape Town and Soweto.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -276,6 +314,10 @@
         {
           "testId": "2026-09-05-south-africa-fnb",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench"
         }
       ],
       "sources": [
@@ -347,7 +389,7 @@
       "unit": "FR",
       "squad": "squad",
       "captain": true,
-      "summary": "Captain of the 34-man Bledisloe squad, named on 29 September 2026. Started at hooker in six of the seven Tests and captained Baltimore, his first Test as captain. Left out of the Soweto match-day 23.",
+      "summary": "Captain of the 34-man Bledisloe squad, named on 29 September 2026, and captain at Eden Park. Started at hooker against France, Italy, Ireland, Ellis Park, Cape Town, Baltimore and Eden Park, and scored at Eden Park. Baltimore was his first Test as captain. Left out of the Soweto match-day 23.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -373,6 +415,11 @@
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start",
           "note": "Captained this Test."
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Captained. Scored."
         }
       ],
       "sources": [
@@ -398,8 +445,8 @@
       "name": "Asafo Aumua",
       "pos": "Hooker",
       "unit": "FR",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad. Named on the bench for France, Ireland, Ellis Park, Cape Town and Baltimore. Named to start at Soweto.",
+      "squad": "injured",
+      "summary": "Named on the bench at Eden Park. He then failed a second head-injury assessment and has a minimum 12-day stand-down, so he does not travel to Sydney. George Bell was called in. Before Eden Park he was named on the bench for France, Ireland, Ellis Park, Cape Town and Baltimore, and named to start at Soweto.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -424,6 +471,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench",
+          "note": "Failed a second head-injury assessment. Minimum 12-day stand-down."
         }
       ],
       "sources": [
@@ -438,6 +490,28 @@
         {
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        }
+      ]
+    },
+    {
+      "name": "George Bell",
+      "pos": "Hooker",
+      "unit": "FR",
+      "squad": "squad",
+      "summary": "Added on 11 October as the Sydney injury replacement for Asafo Aumua. No 2026 Test match-day 23 in this file.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         }
       ]
     },
@@ -528,7 +602,7 @@
       "pos": "Tighthead prop",
       "unit": "FR",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start against France and in Baltimore. On the bench for Ireland, Ellis Park, Cape Town and Soweto. Not in the Italy match-day 23.",
+      "summary": "In the Bledisloe squad. Named to start against France, in Baltimore and at Eden Park. On the bench for Ireland, Ellis Park, Cape Town and Soweto. Not in the Italy match-day 23.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -553,6 +627,10 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start"
         }
       ],
       "sources": [
@@ -575,10 +653,14 @@
       "pos": "Tighthead prop",
       "unit": "FR",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named on the bench against Italy. Not in the other six Test match-day 23s checked.",
+      "summary": "In the Bledisloe squad. Named on the bench against Italy and at Eden Park.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
           "role": "bench"
         }
       ],
@@ -624,8 +706,14 @@
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. RNZ said he had not been picked in black in 2026 before this squad. He had back surgery, then returned for Taranaki. No 2026 Test match-day 23 includes him.",
-      "sheets": [],
+      "summary": "Named to start at Eden Park, his first 2026 Test. He had back surgery, then returned for Taranaki, and was in the 29 September squad. He left the field in the second half. 1News reported he failed a head-injury assessment that night. RNZ reported on 11 October that he passed a second assessment and travelled with the squad.",
+      "sheets": [
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Left the field in the second half. Failed a head-injury assessment that night. Passed a second assessment on 11 October and travelled."
+        }
+      ],
       "sources": [
         {
           "name": "RNZ",
@@ -642,6 +730,28 @@
         {
           "name": "All Blacks",
           "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        }
+      ]
+    },
+    {
+      "name": "Jamie Hannah",
+      "pos": "Lock",
+      "unit": "LK",
+      "squad": "squad",
+      "summary": "Added on 11 October as the Sydney injury replacement for Ethan Blackadder. RNZ described him as a lock. No 2026 Test match-day 23 in this file.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         }
       ]
     },
@@ -650,7 +760,7 @@
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start against France and Ireland and at Ellis Park, and on the bench against Italy and in Baltimore. Left out of Cape Town and Soweto in concussion protocols.",
+      "summary": "In the Bledisloe squad. Named to start against France, Ireland, Ellis Park and Eden Park, and on the bench against Italy and in Baltimore. Left out of Cape Town and Soweto in concussion protocols.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -671,6 +781,10 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start"
         }
       ],
       "notes": [
@@ -758,7 +872,7 @@
       "pos": "Lock / blindside",
       "unit": "LK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Ruled out of the France Test with concussion, then named in the next six match-day 23s. Started at lock, at blindside, and back at lock.",
+      "summary": "In the Bledisloe squad. Ruled out of the France Test with concussion, then named in every Test since, including Eden Park. He has started at lock and at blindside. At Eden Park he started at blindside and scored.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -789,6 +903,11 @@
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start",
           "note": "Blindside flanker."
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Blindside flanker. Scored."
         }
       ],
       "notes": [
@@ -936,8 +1055,14 @@
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. RNZ said this is his first All Blacks squad since the 2023 World Cup, after three years in Japan. No 2026 Test match-day 23 includes him.",
-      "sheets": [],
+      "summary": "In the Bledisloe squad. RNZ said the 29 September squad was his first since the 2023 World Cup, after three years in Japan. Named on the Eden Park bench. No points on the sheet, so minutes are not verified.",
+      "sheets": [
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench",
+          "note": "No points on the sheet. Minutes not verified."
+        }
+      ],
       "sources": [
         {
           "name": "RNZ",
@@ -957,8 +1082,8 @@
       "name": "Anton Segner",
       "pos": "Loose forward",
       "unit": "LF",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to debut on the bench against Italy, and on the bench against Ireland. Originally named on the Ellis Park bench, then replaced by Simon Parker before kick-off. The 21 September injury list gave him ankle-joint inflammation and a likely return of one to two weeks. He was back in the squad on 29 September.",
+      "squad": "injured",
+      "summary": "Named on the Eden Park bench. He failed a second head-injury assessment and has a minimum 12-day stand-down, so he does not travel to Sydney. Du'Plessis Kirifi was called in. Earlier he was named to debut on the bench against Italy and was on the bench against Ireland. He was originally named on the Ellis Park bench, then replaced by Simon Parker before kick-off. A 21 September ankle-joint problem had cleared enough for the 29 September squad.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -968,6 +1093,11 @@
         {
           "testId": "2026-07-18-ireland",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench",
+          "note": "Failed a second head-injury assessment. Minimum 12-day stand-down."
         }
       ],
       "notes": [
@@ -993,6 +1123,28 @@
         {
           "name": "SABC Sport",
           "url": "https://www.sabcsport.com/rugby/news/all-blacks-forced-into-late-change-for-springboks-clash-at-ellis-park"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        }
+      ]
+    },
+    {
+      "name": "Du'Plessis Kirifi",
+      "pos": "Loose forward",
+      "unit": "LF",
+      "squad": "squad",
+      "summary": "Added on 11 October as the Sydney injury replacement for Anton Segner. RNZ said this is his first All Blacks squad of 2026, after a debut in 2025. No 2026 Test match-day 23 in this file. The All Blacks injury update spells the surname Du'plessis.",
+      "sheets": [],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         }
       ]
     },
@@ -1000,8 +1152,8 @@
       "name": "Ethan Blackadder",
       "pos": "Loose forward",
       "unit": "LF",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at openside in Baltimore. RNZ, when naming the Cape Town team, said he was man of the match against the Lions. That was a tour match. This page has no Lions score sheet.",
+      "squad": "injured",
+      "summary": "In the 29 September squad and named to start at openside in Baltimore. Not in the Eden Park 23. He injured a calf in the warm-up and does not travel to Sydney. RNZ said it is not thought to be serious. Jamie Hannah was called in. No return date was given. A Lions man-of-the-match line from RNZ is a tour match. This page has no Lions score sheet.",
       "sheets": [
         {
           "testId": "2026-09-12-south-africa-baltimore",
@@ -1024,6 +1176,10 @@
         {
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1154291/bower-parker-and-carter-into-all-blacks-starting-xv-for-second-test-against-springboks"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
         }
       ]
     },
@@ -1032,7 +1188,7 @@
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at blindside against France and at Soweto, on the bench against Ireland, Ellis Park and Cape Town, and named to start at No. 8 in Baltimore.",
+      "summary": "In the Bledisloe squad. Named to start at blindside against France and at Soweto, on the bench against Ireland, Ellis Park and Cape Town, at No. 8 in Baltimore, and at openside at Eden Park, where he scored.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1058,6 +1214,11 @@
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start",
           "note": "No. 8."
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Openside flanker. Scored."
         }
       ],
       "sources": [
@@ -1080,7 +1241,7 @@
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start against Italy, on the bench against France, Soweto and Baltimore. Not in the Ireland, Ellis Park or Cape Town match-day 23s.",
+      "summary": "In the Bledisloe squad. Named to start against Italy and at No. 8 at Eden Park. On the bench against France, at Soweto and in Baltimore. Not in the Ireland, Ellis Park or Cape Town match-day 23s.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1097,6 +1258,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Number 8."
         }
       ],
       "sources": [
@@ -1227,7 +1393,7 @@
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at halfback in all seven Tests.",
+      "summary": "In the Bledisloe squad. Named to start at halfback in all eight Tests. Scored at Eden Park. After the match, on 1News, Rennie said his kicking was excellent and that the side kicked more off nine than they had been.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1256,6 +1422,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Scored."
         }
       ],
       "sources": [
@@ -1317,7 +1488,7 @@
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named on the bench for all four Springboks Tests. Not in the July match-day 23s. The Baltimore announcement said he had featured in the earlier games of the tour. Minutes are not on these sheets. He did not score in a Test, so the score sheets do not confirm he entered the field.",
+      "summary": "In the Bledisloe squad. Named on the bench for all four Springboks Tests and at Eden Park. Not in the July match-day 23s. The Baltimore announcement said he had featured in the earlier games of the tour. Minutes are not on these sheets. He has not scored in a Test, so the score sheets do not confirm he entered the field.",
       "sheets": [
         {
           "testId": "2026-08-22-south-africa-ellis-park",
@@ -1333,6 +1504,10 @@
         },
         {
           "testId": "2026-09-12-south-africa-baltimore",
+          "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
           "role": "bench"
         }
       ],
@@ -1367,8 +1542,8 @@
       "name": "Richie Mo'unga",
       "pos": "First five",
       "unit": "FH",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad, listed as a first five with Josh Jacomb. Named to start at first five in Baltimore. Planet Rugby said that was his first Test since the 2023 World Cup final. Joined the South Africa tour as an injury replacement.",
+      "squad": "injured",
+      "summary": "Was in the 29 September squad as a first five, and started at first five in Baltimore. Planet Rugby said that was his first Test since the 2023 World Cup final. The Eden Park team page listed him unavailable with a calf. The All Blacks selection story said he had been in line to start and is likely to miss Sydney. No return date was given.",
       "sheets": [
         {
           "testId": "2026-09-12-south-africa-baltimore",
@@ -1395,6 +1570,10 @@
         {
           "name": "Super Rugby",
           "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         }
       ]
     },
@@ -1468,7 +1647,7 @@
       "pos": "Second five",
       "unit": "MF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at second five in all seven Tests.",
+      "summary": "In the Bledisloe squad. Named to start at second five in all eight Tests. 1News quoted Rennie saying he was substituted with about 10 minutes to go at Eden Park. Other minutes are not on the sheet.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1497,6 +1676,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "1News quoted Rennie saying he was substituted with about 10 minutes to go."
         }
       ],
       "sources": [
@@ -1519,7 +1703,7 @@
       "pos": "Centre",
       "unit": "MF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at centre against France, Ireland and the first three Springboks Tests. Billy Proctor started against Italy. Tupaea missed Baltimore with a knee injury. The 21 September list said an MCL sprain and a likely return of one to two weeks. He was named in the 29 September squad.",
+      "summary": "Named to start at centre at Eden Park, his return after missing Baltimore with a knee injury. The 21 September list said an MCL sprain and a likely return of one to two weeks, and he was in the 29 September squad. Before that he was named to start against France, Ireland and the first three Springboks Tests. Billy Proctor started against Italy.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1540,6 +1724,11 @@
         {
           "testId": "2026-09-05-south-africa-fnb",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Return from the knee injury that kept him out of Baltimore."
         }
       ],
       "sources": [
@@ -1592,11 +1781,16 @@
       "pos": "Midfielder / outside back",
       "unit": "MF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad, listed with the midfielders. Named on the Baltimore bench as backline cover. Not in the other six Test 23s. The score sheet does not show a try, so it does not confirm he entered the field.",
+      "summary": "In the Bledisloe squad, listed with the midfielders. Named on the bench in Baltimore and at Eden Park. Not in the other six Test 23s. No try on the score sheets, so they do not confirm he entered the field. BBC's Eden Park reserve list prints Loane. The All Blacks sheet and Rugby Database say Rieko Ioane.",
       "sheets": [
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench",
+          "note": "BBC printed Loane. The All Blacks sheet says Rieko Ioane."
         }
       ],
       "sources": [
@@ -1661,8 +1855,8 @@
       "name": "Anton Lienert-Brown",
       "pos": "Centre",
       "unit": "MF",
-      "squad": "injured",
-      "summary": "Not in the Bledisloe squad. Knee injury. The 21 September list said an MCL injury and a likely return of four to six weeks, and that it did not appear to be an ACL. Still omitted on 29 September. No newer date was found. Named on the bench from Italy through Soweto, and named to start in Baltimore.",
+      "squad": "squad",
+      "summary": "Left out of the 29 September squad with a knee injury. The 21 September list said an MCL injury, a likely return of four to six weeks, and that it did not appear to be an ACL. On 11 October the All Blacks brought him into the Sydney squad as Leroy Carter's replacement. He was not in the Eden Park 23. Named on the bench from Italy through Soweto, and named to start in Baltimore.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -1701,6 +1895,10 @@
         {
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
         }
       ]
     },
@@ -1708,8 +1906,8 @@
       "name": "Fehi Fineanganofo",
       "pos": "Wing",
       "unit": "BK",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad. Named on the France bench. Rennie later said he debuted in that Test. Unavailable against Italy with a shoulder strain, and unavailable against Ireland with a shoulder injury. Not in the four Springboks Test 23s.",
+      "squad": "injured",
+      "summary": "Was in the 29 September squad. The Eden Park team page listed him unavailable with concussion and a hamstring. The 11 October note of four players staying home does not name him, so whether he travelled to Sydney is not verified. Named on the France bench. Rennie later said he debuted in that Test. Unavailable against Italy with a shoulder strain and against Ireland with a shoulder injury. Not in the four Springboks Test 23s.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1744,6 +1942,10 @@
         {
           "name": "Super Rugby",
           "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-to-play-ireland-in-nations-championship-round-3/"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         }
       ]
     },
@@ -1751,8 +1953,8 @@
       "name": "Leroy Carter",
       "pos": "Wing",
       "unit": "BK",
-      "squad": "squad",
-      "summary": "In the Bledisloe squad. Unavailable for Ireland with a shoulder injury, then named on the Ellis Park bench and named to start at Cape Town and Soweto.",
+      "squad": "injured",
+      "summary": "Named to start on the wing at Eden Park and scored. He suffered a high ankle sprain scoring that try and does not travel to Sydney. RNZ said he is likely to be out for a long time, and that next month's Tests in Britain are in doubt. No return date was given. Before Eden Park he missed Ireland with a shoulder injury, was on the Ellis Park bench, and started at Cape Town and Soweto.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -1769,6 +1971,11 @@
         {
           "testId": "2026-09-05-south-africa-fnb",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Scored, then left with a high ankle sprain."
         }
       ],
       "notes": [
@@ -1794,6 +2001,10 @@
         {
           "name": "Super Rugby",
           "url": "https://super.rugby/therugbychampionship/news/all-blacks-team-to-play-ireland-in-nations-championship-round-3/"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
         }
       ]
     },
@@ -1802,7 +2013,7 @@
       "pos": "Wing",
       "unit": "BK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to debut on the bench against Italy, then named to start against Ireland, at Ellis Park and in Baltimore. On the bench at Cape Town and Soweto.",
+      "summary": "In the Bledisloe squad. Named to debut on the bench against Italy, then named to start against Ireland, at Ellis Park and in Baltimore. On the bench at Cape Town, Soweto and Eden Park. Scored at Eden Park, so he was on the field.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -1828,6 +2039,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "bench",
+          "note": "Scored, so he was on the field."
         }
       ],
       "sources": [
@@ -1850,7 +2066,7 @@
       "pos": "Wing / fullback",
       "unit": "BK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start in all seven Tests, on the wing. Leading Test try scorer and leading Test points scorer on the published score sheets: 10 tries, 50 points.",
+      "summary": "In the Bledisloe squad. Named to start on the wing in all eight Tests, and scored at Eden Park. On these Test score sheets he has 11 tries and 55 points, the most of both.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1879,6 +2095,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Scored."
         }
       ],
       "sources": [
@@ -1901,12 +2122,17 @@
       "pos": "Outside back",
       "unit": "BK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad, listed with the outside backs, not as a first five. His only 2026 Test match-day 23 is the Baltimore bench. He scored a try in that Test, and Planet Rugby said he came on in the second half, his first Test of the year. Rennie said he still has a lot to offer, and that he expects to use him more at fullback.",
+      "summary": "In the Bledisloe squad, listed with the outside backs. Named on the Baltimore bench, where he scored, and named to start at fullback at Eden Park. The All Blacks team page said that Eden Park start was his 150th match for the All Blacks, after 145 Tests and four other games. Cap counts are not added up on this page, because reports do not use the same numbers.",
       "sheets": [
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench",
           "note": "Scored, so he was on the field. Planet Rugby: came on in the second half."
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "Fullback."
         }
       ],
       "sources": [
@@ -1929,6 +2155,10 @@
         {
           "name": "Planet Rugby",
           "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         }
       ]
     },
@@ -1937,7 +2167,7 @@
       "pos": "Fullback",
       "unit": "BK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad, listed with the outside backs. Named to start at fullback in all seven Tests.",
+      "summary": "In the 29 September squad he was listed with the outside backs, and he started at fullback in the first seven Tests. At Eden Park he started at first five, the first time this season, after Richie Mo'unga was unavailable with a calf strain. He kicked six conversions and one penalty.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1966,6 +2196,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-10-australia-eden-park",
+          "role": "start",
+          "note": "First five. Six conversions and one penalty."
         }
       ],
       "sources": [
@@ -1980,6 +2215,10 @@
         {
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         }
       ]
     },
@@ -2057,7 +2296,8 @@
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1496364/all-blacks-captain-ardie-savea-faces-lengthy-spell-on-sideline-after-surgery-confirmed"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Luke Jacobson",
@@ -2092,7 +2332,8 @@
           "name": "Super Rugby",
           "url": "https://super.rugby/therugbychampionship/news/mounga-to-start-at-10-against-springboks-in-final-rgr-test/"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Ruben Love",
@@ -2123,7 +2364,8 @@
           "name": "Planet Rugby",
           "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Patrick Tuipulotu",
@@ -2150,13 +2392,14 @@
           "name": "Super Rugby",
           "url": "https://super.rugby/therugbychampionship/news/all-blacks-squad-names-for-two-match-bledilsoe-cup-series/"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Anton Lienert-Brown",
       "issue": "Knee. The 21 September list said MCL, and that it did not look like an ACL.",
-      "status": "Out of the Bledisloe squad.",
-      "return": "The 21 September list said about four to six weeks. He was still omitted on 29 September. No newer date was found by 7 October.",
+      "status": "Called into the Sydney squad on 11 October as the injury replacement for Leroy Carter. He did not play at Eden Park.",
+      "return": "He is travelling. The 21 September window was about four to six weeks. No newer medical date was published on 11 October.",
       "returnKnown": false,
       "events": [
         {
@@ -2170,6 +2413,10 @@
         {
           "date": "29 Sep 2026",
           "text": "Still unavailable. RNZ's punctuation on the body part is messy. The All Blacks list says knee."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "Brought into the Sydney squad as Leroy Carter's replacement. The All Blacks did not publish a new scan result."
         }
       ],
       "sources": [
@@ -2184,8 +2431,17 @@
         {
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         }
-      ]
+      ],
+      "availability": "back"
     },
     {
       "player": "Billy Proctor",
@@ -2216,7 +2472,8 @@
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Caleb Clarke",
@@ -2247,7 +2504,8 @@
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
         }
-      ]
+      ],
+      "availability": "out"
     },
     {
       "player": "Ollie Norris",
@@ -2278,17 +2536,218 @@
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
         }
+      ],
+      "availability": "out"
+    },
+    {
+      "player": "Richie Mo'unga",
+      "issue": "Calf strain.",
+      "status": "Unavailable for Eden Park. The selection story said he is likely to miss Sydney as well.",
+      "return": "Not verified. No calendar date.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "8 Oct 2026",
+          "text": "The Eden Park team page listed him unavailable with a calf. The All Blacks selection story said he had been in line to start and is likely to miss the return Test."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/why-this-was-rennie-s-hardest-all-blacks-team-to-pick-yet"
+        }
+      ]
+    },
+    {
+      "player": "Fehi Fineanganofo",
+      "issue": "Concussion and a hamstring.",
+      "status": "Unavailable for Eden Park. The 11 October travel note did not say if he went to Sydney.",
+      "return": "Not verified.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "8 Oct 2026",
+          "text": "The Eden Park team page listed him unavailable with concussion and a hamstring."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
+        }
+      ]
+    },
+    {
+      "player": "Leroy Carter",
+      "issue": "High ankle sprain.",
+      "status": "Out of the Sydney trip. RNZ said a long spell is likely, and that the November Tests in Britain are in doubt.",
+      "return": "Not verified. No calendar date.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "10 Oct 2026",
+          "text": "Hurt while scoring at Eden Park. Rennie told 1News it did not look good and could be a reasonably serious ankle injury, after a tackle he described as a hip-drop."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "All Blacks: high ankle sprain, does not travel. Replaced in the squad by Anton Lienert-Brown. RNZ: left on crutches with a badly swollen left ankle."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        },
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        }
+      ]
+    },
+    {
+      "player": "Asafo Aumua",
+      "issue": "Failed a second head-injury assessment.",
+      "status": "Out of the Sydney trip. Minimum 12-day stand-down. George Bell comes in.",
+      "return": "Not verified as a calendar date. The published stand-down is a minimum of 12 days.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "10 Oct 2026",
+          "text": "Came on from the bench at Eden Park."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "Failed a second head-injury assessment. Minimum 12-day stand-down. RNZ said Anton Segner was similarly sidelined after also coming off the bench."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        }
+      ]
+    },
+    {
+      "player": "Anton Segner",
+      "issue": "Failed a second head-injury assessment.",
+      "status": "Out of the Sydney trip. Minimum 12-day stand-down. Du'Plessis Kirifi comes in.",
+      "return": "Not verified as a calendar date. The published stand-down is a minimum of 12 days.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "10 Oct 2026",
+          "text": "Came on from the bench at Eden Park."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "Failed a second head-injury assessment. Minimum 12-day stand-down."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        }
+      ]
+    },
+    {
+      "player": "Ethan Blackadder",
+      "issue": "Calf, hurt in the Eden Park warm-up.",
+      "status": "Out of the Sydney trip. Not in the Eden Park 23. Jamie Hannah comes in.",
+      "return": "Not verified. RNZ said it is not thought to be serious. No calendar date.",
+      "returnKnown": false,
+      "availability": "out",
+      "events": [
+        {
+          "date": "10 Oct 2026",
+          "text": "Not named in the match-day 23. Injured a calf in the warm-up."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "Does not travel. RNZ said the calf is not thought to be serious."
+        }
+      ],
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        }
+      ]
+    },
+    {
+      "player": "Scott Barrett",
+      "issue": "Head knock at Eden Park. Passed a second assessment.",
+      "status": "Travelled with the squad. He is not one of the four players ruled out of Sydney.",
+      "return": "Cleared to travel on 11 October. A later failure was not reported.",
+      "returnKnown": true,
+      "availability": "back",
+      "events": [
+        {
+          "date": "10 Oct 2026",
+          "text": "Started. Left the field in the second half. 1News reported he failed a head-injury assessment that night. Rennie was confident he could be an option for Sydney if he passed the week's protocols."
+        },
+        {
+          "date": "11 Oct 2026",
+          "text": "RNZ: passed a second head-injury assessment and travelled with the squad."
+        }
+      ],
+      "sources": [
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        }
       ]
     }
   ],
   "returned": [
     {
       "player": "Quinn Tupaea",
-      "text": "Knee (MCL) on the 21 September list, likely one to two weeks. Named in the 29 September squad."
+      "text": "Missed Baltimore with a knee injury. Named in the 29 September squad and named to start at centre at Eden Park."
     },
     {
-      "player": "Anton Segner",
-      "text": "Ankle-joint inflammation on the 21 September list, likely one to two weeks. Named in the squad."
+      "player": "Scott Barrett",
+      "text": "No 2026 Test before Eden Park. Named to start. Failed a head-injury assessment that night, passed a second one, and travelled on 11 October."
+    },
+    {
+      "player": "Anton Lienert-Brown",
+      "text": "Out of the 29 September squad with a knee injury. Called into the Sydney squad on 11 October. He did not play at Eden Park."
+    },
+    {
+      "player": "Shannon Frizell",
+      "text": "First All Blacks squad since the 2023 World Cup, named on 29 September. On the Eden Park bench. Minutes not verified."
     },
     {
       "player": "Cortez Ratima",
@@ -2305,27 +2764,82 @@
     {
       "player": "Tupou Vaa'i",
       "text": "Missed France with concussion. Named in the next six Tests. In the Bledisloe squad."
-    },
-    {
-      "player": "Leroy Carter",
-      "text": "Missed Ireland with a shoulder injury. Started Cape Town and Soweto. In the Bledisloe squad."
-    },
-    {
-      "player": "Fehi Fineanganofo",
-      "text": "Shoulder strain for Italy, shoulder injury for Ireland. In the Bledisloe squad. No Springboks Test 23."
-    },
-    {
-      "player": "Scott Barrett",
-      "text": "Back surgery, then a return for Taranaki. In the Bledisloe squad. No 2026 Test 23."
     }
   ],
   "learnings": [
+    {
+      "id": "eden-park",
+      "kind": "worked",
+      "unit": "Whole team",
+      "title": "Eden Park was won after a tight first half",
+      "text": "New Zealand 50\u201319 Australia. Half-time 17\u201314. Seven tries to three. The tries were Peter Lakai, Tupou Vaa'i, Cam Roigard, Codie Taylor, Leroy Carter, Josh Moorby and Will Jordan. Damian McKenzie kicked six conversions and one penalty. Sky and BBC both have five of the seven tries after the break. On 1News, Rennie said the first half was an arm wrestle and that opportunities were left out there, then that the areas which needed to be better after South Africa showed shifts. An ESPN story quoted him on mindset, work rate and brutality.",
+      "sources": [
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year"
+        },
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park"
+        },
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30265"
+        }
+      ]
+    },
+    {
+      "id": "eden-kicking",
+      "kind": "worked",
+      "unit": "Backs",
+      "title": "The high ball, the review item after South Africa, was the thing Rennie praised",
+      "text": "On 1News, Rennie said Cam Roigard's kicking was excellent, that they kicked more off nine than they had been, and that receiving those kicks is difficult. He said the players did an excellent job of winning the ball in the air or picking up the scraps. Les Kiss, in an ESPN story, said New Zealand won the aerial battle and credited Roigard's kicking. This is the coach's reading of one Test. It is not a contest count.",
+      "sources": [
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park"
+        }
+      ]
+    },
+    {
+      "id": "eden-cost",
+      "kind": "missed",
+      "unit": "Whole team",
+      "title": "The win cost four players for Sydney",
+      "text": "The All Blacks injury update on 11 October named four players who will not travel. Leroy Carter, high ankle sprain, suffered while scoring. Asafo Aumua and Anton Segner each failed a second head-injury assessment and have a minimum 12-day stand-down. Ethan Blackadder injured a calf in the warm-up and was not in the 23. The replacements travelling are Anton Lienert-Brown, George Bell, Du'Plessis Kirifi and Jamie Hannah. Scott Barrett failed an assessment on the night and passed a second one. He travelled. Use the injury list for who is actually available. Do not brief Sydney as the Eden Park 23.",
+      "sources": [
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        },
+        {
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
+        }
+      ]
+    },
     {
       "id": "ellis-park",
       "kind": "worked",
       "unit": "Whole team",
       "title": "Ellis Park is the pattern that worked against this Springboks side",
-      "text": "The only win of the series was 33–16 at Emirates Airline Park on 22 August. New Zealand scored five tries to one: Will Jordan two, Josh Moorby, Fabian Holland and Luke Jacobson. Ruben Love kicked four conversions and no penalties. Half-time was 12–13, so the lead was built after the break. The All Blacks site, reviewing the series, said the attack can trouble the Springboks. This is the match that showed it. It is also the last Test the side won.",
+      "text": "The only win of the series was 33\u201316 at Emirates Airline Park on 22 August. New Zealand scored five tries to one: Will Jordan two, Josh Moorby, Fabian Holland and Luke Jacobson. Ruben Love kicked four conversions and no penalties. Half-time was 12\u201313, so the lead was built after the break. The All Blacks site, reviewing the series, said the attack can trouble the Springboks. This is the match that showed it. It was the last win of the South Africa series. The next win was Eden Park, against Australia, on 10 October.",
       "sources": [
         {
           "name": "All Blacks",
@@ -2346,7 +2860,7 @@
       "kind": "missed",
       "unit": "Whole team",
       "title": "Points took too long, and South Africa punished the mistakes",
-      "text": "The All Blacks site said the attack can trouble the Springboks, but New Zealand too often needed long passages of possession to score. In Baltimore, Will Jordan's try finished a patient 32-phase attack. The same report said South Africa were more ruthless after penalties and turnovers. Cape Town was 14–24 at half-time and finished 26–33. Soweto was 12–12 at half-time and finished 24–29, with a penalty try to South Africa. Baltimore finished 28–43. The series was lost 1–3 after the Ellis Park win.",
+      "text": "The All Blacks site said the attack can trouble the Springboks, but New Zealand too often needed long passages of possession to score. In Baltimore, Will Jordan's try finished a patient 32-phase attack. The same report said South Africa were more ruthless after penalties and turnovers. Cape Town was 14\u201324 at half-time and finished 26\u201333. Soweto was 12\u201312 at half-time and finished 24\u201329, with a penalty try to South Africa. Baltimore finished 28\u201343. The series was lost 1\u20133 after the Ellis Park win.",
       "sources": [
         {
           "name": "All Blacks",
@@ -2405,19 +2919,19 @@
       "kind": "cue",
       "unit": "Forwards",
       "title": "The loose-forward meeting is about replacing Savea and Jacobson, not about a new system",
-      "text": "Savea started the first six Tests at No. 8 and captained them. He scored once at Cape Town and twice at Soweto before leaving the field. Jacobson started all six of those Tests at openside and scored at Ellis Park. Both are out of the Bledisloe squad. The loose forwards named on 29 September are Simon Parker, Shannon Frizell, Anton Segner, Ethan Blackadder, Peter Lakai and Wallace Sititi. Frizell has no 2026 Test in these sheets. Rennie said Savea is hard to replace, and that the gap is a chance to give other players time. Codie Taylor is the captain for these two Tests.",
+      "text": "Savea started the first six Tests at No. 8 and captained them. He scored once at Cape Town and twice at Soweto before leaving the field. Jacobson started all six of those Tests at openside and scored at Ellis Park. Both missed Eden Park. The Eden Park loose forwards were Tupou Vaa'i at blindside, Peter Lakai at openside and Wallace Sititi at No. 8, with Shannon Frizell and Anton Segner on the bench. Lakai and Vaa'i scored. Segner then failed a head-injury assessment and does not travel to Sydney. Du'Plessis Kirifi was called in. Ethan Blackadder hurt a calf in the warm-up and also stays home. Codie Taylor captained.",
       "sources": [
         {
-          "name": "RNZ",
-          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
-        },
-        {
-          "name": "Planet Rugby",
-          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         },
         {
           "name": "All Blacks",
-          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
+        },
+        {
+          "name": "RNZ",
+          "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
         }
       ]
     },
@@ -2447,7 +2961,7 @@
       "kind": "cue",
       "unit": "Backs",
       "title": "Smaller wingers defending in midfield were moved off the ball",
-      "text": "ESPN's series review said Leroy Carter and Josh Moorby, stationed in midfield, were pushed off the ball and that this led to three tries. Both are in the Bledisloe squad. Caleb Clarke, the power wing, is out with a shoulder tendon injury. The meeting point is a defensive one: if Carter or Moorby is in the 13 channel, the collision beside him has to be planned. The three tries are ESPN's reading of the series. They are not listed try-by-try on this page.",
+      "text": "ESPN's series review said Leroy Carter and Josh Moorby, stationed in midfield, were pushed off the ball and that this led to three tries. Both are in the Bledisloe squad. Caleb Clarke, the power wing, is out with a shoulder tendon injury. The meeting point is a defensive one: if Carter or Moorby is in the 13 channel, the collision beside him has to be planned. The three tries are ESPN's reading of the series. They are not listed try-by-try on this page. That note is about the South Africa series. At Eden Park, Carter started on the wing, scored, and then suffered a high ankle sprain that rules him out of Sydney. Moorby came off the bench and scored.",
       "sources": [
         {
           "name": "ESPN",
@@ -2456,6 +2970,10 @@
         {
           "name": "All Blacks",
           "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-injury-update-x2281"
         }
       ]
     },
@@ -2463,20 +2981,20 @@
       "id": "ten",
       "kind": "cue",
       "unit": "Backs",
-      "title": "First five for the Bledisloe is Mo'unga and Jacomb, with Barrett and McKenzie still in the squad",
-      "text": "Ruben Love started the first six Tests at first five and is out for the rest of the season. Richie Mo'unga started Baltimore, his first Test since the 2023 World Cup final. The 29 September squad names Mo'unga and Josh Jacomb as the first fives. Jacomb is uncapped. Beauden Barrett and Damian McKenzie are in the outside backs. Barrett's only Test 23 this year is the Baltimore bench, where he scored. McKenzie started all seven Tests at fullback. Rennie said in September he was happy with Barrett off the bench in Baltimore, and on 4 October he said he expects to use Barrett more at fullback. There is no published match-day 23 for Eden Park yet.",
+      "title": "Eden Park was McKenzie at 10 and Beauden Barrett at fullback",
+      "text": "Ruben Love started the first six Tests at first five and is out for the rest of the season. Richie Mo'unga started Baltimore, then missed Eden Park with a calf strain and is likely to miss Sydney. Damian McKenzie, who had started the first seven Tests at fullback, started at first five and kicked 15 points. Beauden Barrett started at fullback. Josh Jacomb is still uncapped in these sheets. The All Blacks selection story said McKenzie had been training at first five, and that Barrett's most recent games had been at fullback.",
       "sources": [
         {
-          "name": "RNZ",
-          "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
         },
         {
-          "name": "Planet Rugby",
-          "url": "https://www.planetrugby.com/news/all-blacks-dave-rennie-why-ardie-saveas-might-be-a-good-thing"
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/why-this-was-rennie-s-hardest-all-blacks-team-to-pick-yet"
         },
         {
-          "name": "Planet Rugby",
-          "url": "https://www.planetrugby.com/news/why-dave-rennie-believes-all-blacks-are-tracking-in-right-direction-despite-3-1-series-defeat-to-the-springboks-and-the-dumb-stuff-he-wants-to-get-out-of-the-game"
+          "name": "1News",
+          "url": "https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/"
         }
       ]
     },
@@ -2485,7 +3003,7 @@
       "kind": "cue",
       "unit": "Backs",
       "title": "Counter-attack was the plan in July. These sheets do not show whether the tries came that way.",
-      "text": "Before the July Tests, Rennie said he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The score sheets list who scored. They do not list the phase. So the plan is on the record, and the 35 Test tries are on the record. How many of those 35 started from a kick return is not verified.",
+      "text": "Before the July Tests, Rennie said he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The score sheets list who scored. They do not list the phase. So the plan is on the record, and the 42 Test tries are on the record. How many of those 42 started from a kick return is not verified.",
       "sources": [
         {
           "name": "SABC Sport",
@@ -2502,7 +3020,7 @@
       "kind": "worked",
       "unit": "Whole team",
       "title": "The July block was three wins. It is not a six-from-six season.",
-      "text": "France 34–32, Italy 47–17, Ireland 40–21, then the Ellis Park win, then three losses. The four tour matches were also wins, and they are not Tests. Their try scorers are not in this file. The mockup that said six from six, and that the Ellis Park Test was still to come, is out of date. Do not brief the team on that record.",
+      "text": "France 34\u201332, Italy 47\u201317, Ireland 40\u201321, then the Ellis Park win, then three losses. The four tour matches were also wins, and they are not Tests. Their try scorers are not in this file. The mockup that said six from six, and that the Ellis Park Test was still to come, is out of date. Do not brief the team on that record.",
       "sources": [
         {
           "name": "Rugby Database",
@@ -2516,19 +3034,27 @@
     }
   ],
   "notVerified": [
-    "A match-day 23 for Australia at Eden Park on 10 October, or for Sydney on 17 October. The 34-man squad is named. The run-on side is not, in the sources checked on 7 October 2026.",
-    "A captain for the November Tests. Codie Taylor is captain for the Bledisloe squad. Nothing checked names a captain past those two Tests.",
-    "Return dates, as a calendar day, for Luke Jacobson, Ruben Love, Patrick Tuipulotu, Anton Lienert-Brown, Billy Proctor, Caleb Clarke and Ollie Norris. The windows above are the published estimates. They are not a date a coach can write on a board as fact.",
+    "Sydney match-day 23 on 17 October. Eden Park's 23 is the All Blacks team page. Sydney's is not named in the sources checked on 12 October.",
+    "A captain for the November Tests. Codie Taylor captained Eden Park. Nothing checked names a captain past Sydney.",
+    "Return dates, as a calendar day, for Leroy Carter, Asafo Aumua, Anton Segner, Ethan Blackadder, Richie Mo'unga, Fehi Fineanganofo, Luke Jacobson, Ruben Love, Patrick Tuipulotu, Billy Proctor, Caleb Clarke and Ollie Norris. The words above are the published estimates. They are not a date a coach can write on a board as fact.",
+    "Whether Fehi Fineanganofo is on the Sydney trip. Unavailable at Eden Park. Not on the list of four players staying home.",
+    "Anton Lienert-Brown's knee result on 11 October. He was added to the squad. No new scan was published.",
     "Minutes played. A row on a player card is a named spot in the match-day 23. A try, or a sentence in a report, is what shows the player was on the field. Bench minutes are otherwise not verified.",
+    "The minute Scott Barrett left Eden Park. He started, left in the second half, failed an assessment that night and passed the next one.",
     "Tour-match team sheets and tour try scorers, including the Bulls, Sharks, Stormers and Lions games. Scores for those games are on the main page. They are not used as player form here.",
     "Which two franchise games Josh Jacomb played on tour. RNZ said he played two. It did not name them.",
-    "Test caps. Reports do not use the same numbers, so no cap count is shown.",
-    "The player Rennie called Jamie, who he said debuted against France, when he named the Italy team. Jamie is not in the France match-day 23 collected here, so that debut is not on a card.",
-    "Rennie's line that Beauden Barrett played a fair bit of fullback in South Africa. The seven Test sheets have Damian McKenzie starting at fullback. Barrett's only Test 23 is the Baltimore bench. Tour games at 15 were not collected game by game.",
-    "ESPN's count of 14 scrum penalties, a lineout at 86 percent, eight lost throws, 24 high-ball turnovers for Will Jordan, and three tries from wingers being pushed off in midfield. Reported by ESPN. Not re-counted here.",
-    "ESPN's New Zealand team-page scorer module. It still does not match these Test score sheets, so it is not used. The same was true on 28 September.",
-    "Sydney kick-off on 17 October. allblacks.com has said 6.00pm New Zealand time. Accor Stadium has said 3.45pm local. Not settled here.",
-    "Predicted teams, including any Eden Park XV published as an opinion. They are not team sheets.",
+    "Test caps. The Eden Park team page gives caps in brackets, and says Beauden Barrett's start was a 150th All Blacks match after 145 Tests and four other games. Other reports use other numbers, so no cap count is shown as a total.",
+    "The player Rennie called Jamie, who he said debuted against France, when he named the Italy team. Jamie is not in the France match-day 23 collected here, so that debut is not on a card. Jamie Hannah, added on 11 October, is a different player.",
+    "Rennie's line that Beauden Barrett played a fair bit of fullback in South Africa. The Test sheets have Damian McKenzie starting at fullback until Eden Park, where Barrett started at 15. Tour games at 15 were not collected game by game.",
+    "ESPN's count of 14 scrum penalties, a lineout at 86 percent, eight lost throws, 24 high-ball turnovers for Will Jordan, and three tries from wingers being pushed off in midfield. Reported by ESPN about the South Africa series. Not re-counted here.",
+    "1News tackle counts from Eden Park: Jordie Barrett 16, Australia 200, New Zealand 144. Not re-counted here.",
+    "Will Jordan's career try total of 56, as stated by 1News. The sheets on this page give him 11 Test tries in 2026.",
+    "How many years the Bledisloe Cup has been held. Held since 2003 on allblacks.com. BBC says a 23rd year. Sky and ESPN say a 24th. No count is shown.",
+    "ESPN's New Zealand team-page scorer module. It was not used on 28 September because it did not match the sheets. It was not re-opened as a scoring source on 12 October. The match page score was used.",
+    "Sydney kick-off on 17 October. allblacks.com has said 6.00pm New Zealand time. Accor Stadium has said 3.45pm local. Sky Sports has said 6am BST. Not settled here.",
+    "The spelling Du'plessis on the All Blacks injury update. RNZ writes Du'Plessis Kirifi. The card uses the RNZ spelling.",
+    "BBC's reserve surname Loane. The card uses Rieko Ioane.",
+    "Predicted teams for Sydney. They are not team sheets.",
     "Strengths, target areas, and pre-match cue lines from the earlier mockup. Those were modelled, not sourced. They have been removed."
   ]
 }

@@ -199,7 +199,7 @@
   </div>
 
   <h2 class="screen-only">Squad</h2>
-  <p class="note screen-only" style="margin-top:0">S is times named to start. B is times named on the bench. Both are out of the seven Tests. A bench spot is not minutes.</p>
+  <p class="note screen-only" style="margin-top:0">S is times named to start. B is times named on the bench. The count is the Tests on this page. A bench spot is not minutes.</p>
   <div class="filters screen-only" id="filters"></div>
   <div id="detail"><div class="empty">Choose a player. The card uses team sheets and the score sheet only.</div></div>
   <div id="squad" class="screen-only"></div>
@@ -279,9 +279,13 @@
   }
 
   function renderInjuries() {
+    var badged = {};
     $("injury-strip").innerHTML = dossier.injuries.map(function (inj) {
-      return '<span class="badge out"><span class="dot"></span>' + esc(inj.player) + " · " + esc(inj.issue.split(".")[0]) + "</span>";
-    }).join("") + dossier.returned.slice(0, 3).map(function (r) {
+      badged[inj.player] = true;
+      var back = inj.availability === "back";
+      var label = back ? " · back with the group" : "";
+      return '<span class="badge ' + (back ? "back" : "out") + '"><span class="dot"></span>' + esc(inj.player) + " · " + esc(inj.issue.split(".")[0]) + label + "</span>";
+    }).join("") + dossier.returned.filter(function (r) { return !badged[r.player]; }).map(function (r) {
       return '<span class="badge back"><span class="dot"></span>' + esc(r.player) + " · back in the squad</span>";
     }).join("");
 
@@ -291,12 +295,17 @@
         events.push({ date: ev.date, text: "<b>" + esc(inj.player) + ".</b> " + esc(ev.text) });
       });
     });
-    var order = { "5 Sep 2026": 1, "12 Sep 2026": 2, "21 Sep 2026": 3, "29 Sep 2026": 4, "4 Oct 2026": 5 };
-    events.sort(function (a, b) { return (order[a.date] || 9) - (order[b.date] || 9); });
+    function whenKey(label) {
+      var months = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8, Sep: 9, Oct: 10, Nov: 11, Dec: 12 };
+      var m = String(label).match(/(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})/);
+      if (!m) return 0;
+      return Number(m[3]) * 10000 + (months[m[2]] || 0) * 100 + Number(m[1]);
+    }
+    events.sort(function (a, b) { return whenKey(a.date) - whenKey(b.date) || a.text.localeCompare(b.text); });
     $("timeline").innerHTML = events.map(function (ev) {
       return '<div class="tl"><div class="when">' + esc(ev.date) + "</div><div>" + ev.text + "</div></div>";
     }).join("");
-    $("returned").innerHTML = "<b>Back in the 29 September squad, after an earlier problem.</b> " +
+    $("returned").innerHTML = "<b>Returns, and the players added since 29 September.</b> " +
       dossier.returned.map(function (r) { return esc(r.player) + ": " + esc(r.text); }).join(" ");
   }
 
@@ -350,7 +359,7 @@
       .sort(function (a, b) { return b.tries - a.tries || b.points - a.points || a.player.localeCompare(b.player); });
     var ptRows = Object.keys(tally).map(function (k) { return tally[k]; }).filter(function (r) { return r.points > 0; })
       .sort(function (a, b) { return b.points - a.points || b.tries - a.tries || a.player.localeCompare(b.player); });
-    $("try-cap").textContent = "Seven Tests. A try is 5 points. Tour matches are not in this chart.";
+    $("try-cap").textContent = playedTests().length + " Tests. A try is 5 points. Tour matches are not in this chart.";
     $("pts-cap").textContent = "Tries, conversions and penalties on the same sheets. Try 5, conversion 2, penalty 3.";
     $("chart-tries").innerHTML = barRows(tryRows, "tries", tryRows.length ? tryRows[0].tries : 1);
     $("chart-points").innerHTML = barRows(ptRows, "points", ptRows.length ? ptRows[0].points : 1);
@@ -465,8 +474,8 @@
       '<div class="dcard-top"><div class="dhead"><div class="nm">' + esc(p.name) + flag(p) + '</div><div class="pos">' + esc(p.pos) + "</div><div class='sum'>" + esc(p.summary) + "</div></div></div>" +
       injHtml +
       '<div class="mini">' + cells + "</div>" +
-      '<div style="padding:8px 16px;font-size:12.5px;color:var(--muted)">S means named to start. B means named on the bench. A dot means not in that match-day 23. Named in ' + p.sheets.length + " of 7 Tests (" + starts + " starts, " + bench + " bench). Test points on the score sheets: <b>" + totalPts + "</b>. " + esc(dossier.meta.sheetNote) + "</div>" +
-      (rows ? '<div style="overflow-x:auto"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>What the sheet says</th><th>Points</th><th>Note</th></tr></thead><tbody>' + rows + "</tbody></table></div>" : '<p style="padding:12px 16px;color:var(--muted)">Not in the seven Test match-day 23s checked. No Test points are shown.</p>') +
+      '<div style="padding:8px 16px;font-size:12.5px;color:var(--muted)">S means named to start. B means named on the bench. A dot means not in that match-day 23. Named in ' + p.sheets.length + " of " + dossier.tests.length + " Tests (" + starts + " starts, " + bench + " bench). Test points on the score sheets: <b>" + totalPts + "</b>. " + esc(dossier.meta.sheetNote) + "</div>" +
+      (rows ? '<div style="overflow-x:auto"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>What the sheet says</th><th>Points</th><th>Note</th></tr></thead><tbody>' + rows + "</tbody></table></div>" : '<p style="padding:12px 16px;color:var(--muted)">Not in the Test match-day 23s on this page. No Test points are shown.</p>') +
       (notes ? '<ul class="plain" style="padding:8px 16px 12px 32px">' + notes + "</ul>" : "") +
       '<p class="srcs" style="padding:0 16px 14px">Team sheets and squad: ' + links(p.sources) + "</p>";
     renderSquad();
@@ -495,7 +504,7 @@
       var starts = p.sheets.filter(function (s) { return s.role === "start"; }).length;
       return "<tr><td>" + esc(p.name) + "</td><td>" + esc(p.pos) + "</td><td>" + esc(status) + "</td><td>" + starts + " starts / " + p.sheets.length + " named</td><td class='pts'>" + pts + "</td></tr>";
     }).join("");
-    $("pack-table").innerHTML = head + "</tbody></table><p class='srcs' style='margin-top:8px'>Points are from the seven Test score sheets only. Named is the match-day 23, not minutes.</p>";
+    $("pack-table").innerHTML = head + "</tbody></table><p class='srcs' style='margin-top:8px'>Points are from the " + dossier.tests.length + " Test score sheets only. Named is the match-day 23, not minutes.</p>";
   }
 
   function boot(d, s) {
