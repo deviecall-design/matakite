@@ -206,6 +206,11 @@
   .cell .o, .cell .p { font-size: 12px; color: var(--muted); }
   td.sticky .profile { display: block; font-size: 13px; font-weight: 600; }
   .foot { color: var(--muted); font-size: 14px; margin-top: 28px; }
+  .test-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; max-width: 100%; position: relative; }
+  .test-scroll .fbtn { flex: 0 0 auto; white-space: nowrap; }
+  button.res { font: inherit; cursor: pointer; color: inherit; }
+  tr.picked td { background: #1C2832; }
+  .phase { font-family: "Saira Condensed", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--call); font-size: 14px; margin: 0 0 6px; }
   [hidden] { display: none !important; }
   @media (min-width: 720px) {
     .kpis { grid-template-columns: 1fr 1fr; }
@@ -240,13 +245,11 @@
     </div>
     <nav class="nav-row" aria-label="Page sections">
       <a href="#record">Record</a>
-      <a href="#sydney">Sydney</a>
-      <a href="#players">Players</a>
-      <a href="#compare">Compare</a>
+      <a href="#cycle">This Test</a>
+      <a href="#pre-match">Pre-match</a>
+      <a href="#post-match">Post-match</a>
       <a href="#trends">Trends</a>
-      <a href="#meetings">Meetings</a>
-      <a href="#fixtures">Fixtures</a>
-      <a href="#notes">Notes</a>
+      <a href="#players">Players</a>
     </nav>
   </header>
 
@@ -263,9 +266,16 @@
     <div class="panel" id="coach"></div>
   </section>
 
-  <section id="sydney">
-    <h2 id="sydney-title">Next Test</h2>
-    <div id="forecast"></div>
+  <section id="cycle">
+    <h2>This Test</h2>
+    <p class="note" id="cycle-note">Weekly cycle for one Test: pre-match, then post-match, then the running season view. In-game coverage is not on this page. It is future work.</p>
+    <div class="test-scroll" id="test-select" role="tablist" aria-label="Tests"></div>
+    <p class="phase">1 · Pre-match</p>
+    <h2 id="pre-title">Pre-match</h2>
+    <div id="pre-match"></div>
+    <p class="phase">2 · Post-match</p>
+    <h2 id="post-title">Post-match</h2>
+    <div id="post-match"></div>
   </section>
 
   <section id="players">
@@ -308,8 +318,9 @@
   </section>
 
   <section id="trends">
+    <p class="phase">3 · Trends</p>
     <h2>Trends</h2>
-    <p class="note">Every bar is a count or a score from the files. Tour matches are off the try chart because this file has no tour try list.</p>
+    <p class="note" id="trends-note">Running view of the season: results, margins, scorers and the injury notes. Every number is from the files. The selected Test is marked when it has been played.</p>
     <div class="filters">
       <button class="fbtn on" type="button" id="games-tests">Tests only</button>
       <button class="fbtn" type="button" id="games-all">Tests and tour matches</button>
@@ -318,8 +329,8 @@
   </section>
 
   <section id="meetings">
-    <h2>Match learnings</h2>
-    <p class="note">Notes from published reports. They are not an internal review and not a model.</p>
+    <h2>All match learnings</h2>
+    <p class="note">The full list stays here. Notes tied to the Test selected above are repeated in Pre-match, when that Test has not been played, or in Post-match, beside the score sheet. They are published reports. They are not an internal review and not a model.</p>
     <div class="filters" id="learn-filters"></div>
     <div id="learn-list"></div>
     <h2>Game plan, from public reporting</h2>
@@ -415,7 +426,7 @@
     return num(value, 2);
   }
 
-  var season, dossier, forecast, coverage, rugbySnapshot, live, byId, rows = [], sortKey = "points", sortDir = -1;
+  var season, dossier, forecast, coverage, rugbySnapshot, rankings, live, byId, rows = [], sortKey = "points", sortDir = -1, selectedTestId = "";
   var gameMode = "tests";
   var learnFilter = "ALL";
   var charts = {};
@@ -580,8 +591,15 @@
       var letter = letterOf(test);
       var meta = (dossier.tests || []).filter(function (item) { return item.id === test.id; })[0];
       var short = meta ? meta.short : test.opponent;
-      return '<a class="res ' + letter + '" href="#fixture-' + esc(test.id) + '"><div class="opp">' + esc(short) + '</div><div class="mark">' + letter + '</div><div class="sc">' + test.nzScore + "\u2013" + test.oppScore + "</div></a>";
+      return '<button class="res ' + letter + '" type="button" data-test="' + esc(test.id) + '"><div class="opp">' + esc(short) + '</div><div class="mark">' + letter + '</div><div class="sc">' + test.nzScore + "\u2013" + test.oppScore + "</div></button>";
     }).join("");
+    Array.prototype.forEach.call($("form").querySelectorAll("button"), function (button) {
+      button.addEventListener("click", function () {
+        selectTest(button.getAttribute("data-test"));
+        var target = $("post-match");
+        if (target && target.scrollIntoView) target.scrollIntoView({ block: "start" });
+      });
+    });
     var games = live.allGames;
     $("all-games").textContent = "All games on the Rugby Database list: " + games.played + " played, " + games.won + " wins, " + games.lost + " losses, " + games.pointsFor + " points for, " + games.pointsAgainst + " against. Try totals above are the " + live.played + " Tests. The tour matches have no try list in this file.";
     var coach = season.meta.headCoach, captain = season.meta.captain;
@@ -590,79 +608,368 @@
     $("score-convention").textContent = season.scoringRules.note + " " + season.meta.scoreConvention;
   }
 
-  function renderForecast() {
-    var box = $("forecast");
-    var fixture = forecast && forecast.nextTest;
-    if (fixture && fixture.opponent && fixture.dateLabel) {
-      $("sydney-title").textContent = fixture.opponent + ", " + fixture.dateLabel;
+  var SIDE_ALIAS = { "all blacks": "new zealand", "wallabies": "australia", "springboks": "south africa", "les bleus": "france", "pumas": "argentina" };
+  var SA_IDS = ["2026-08-22-south-africa-ellis-park", "2026-08-29-south-africa-cape-town", "2026-09-05-south-africa-fnb", "2026-09-12-south-africa-baltimore"];
+  var JULY_IDS = ["2026-07-04-france", "2026-07-11-italy", "2026-07-18-ireland"];
+  var BLED_IDS = ["2026-10-10-australia-eden-park", "2026-10-17-australia-sydney"];
+  var LEARNING_TESTS = {
+    "eden-park": ["2026-10-10-australia-eden-park"],
+    "eden-kicking": BLED_IDS,
+    "eden-cost": BLED_IDS,
+    "ellis-park": ["2026-08-22-south-africa-ellis-park"],
+    "long-phases": ["2026-08-29-south-africa-cape-town", "2026-09-05-south-africa-fnb", "2026-09-12-south-africa-baltimore"],
+    "discipline": SA_IDS,
+    "set-piece": ["2026-09-12-south-africa-baltimore"],
+    "loose-forward": BLED_IDS,
+    "high-ball": BLED_IDS,
+    "wingers-midfield": BLED_IDS,
+    "ten": BLED_IDS,
+    "counter": JULY_IDS,
+    "july": JULY_IDS
+  };
+  var PLAN_TESTS = {
+    "Eden Park, 10 October": BLED_IDS,
+    "Attack shape": SA_IDS.concat(["2026-10-17-australia-sydney"]),
+    "Kicking game": SA_IDS.concat(["2026-10-17-australia-sydney"]),
+    "Set piece": SA_IDS.concat(["2026-10-17-australia-sydney"]),
+    "Defence": SA_IDS.concat(["2026-10-17-australia-sydney"]),
+    "Bench use": SA_IDS.concat(["2026-10-17-australia-sydney"]),
+    "What the results showed": ["2026-10-10-australia-eden-park"],
+    "What Rennie said he wanted, before July": JULY_IDS
+  };
+  var MONTHS = { jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06", jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12" };
+
+  function sideKey(value) {
+    var key = String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    return SIDE_ALIAS[key] || key;
+  }
+  function sameSide(a, b) {
+    return sideKey(a) !== "" && sideKey(a) === sideKey(b);
+  }
+  function testsOnly() {
+    return season.tests.filter(function (test) { return (test.kind || "test") === "test"; });
+  }
+  function defaultTestId() {
+    var tests = testsOnly();
+    var upcoming = tests.filter(function (test) { return test.status !== "played"; })[0];
+    if (upcoming) return upcoming.id;
+    var played = tests.filter(function (test) { return test.status === "played"; });
+    return played.length ? played[played.length - 1].id : (tests[0] ? tests[0].id : "");
+  }
+  function selectedTest() {
+    return byId[selectedTestId] || null;
+  }
+  function inRunningWindow(item, test) {
+    if (!item || item.status !== "played") return false;
+    if (!test) return true;
+    if (test.status === "played") return item.date <= test.date;
+    return item.date < test.date;
+  }
+  function learningsFor(id) {
+    return (dossier.learnings || []).filter(function (item) {
+      var ids = LEARNING_TESTS[item.id] || [];
+      return ids.indexOf(id) !== -1;
+    });
+  }
+  function plansFor(id) {
+    return ((season.gamePlan && season.gamePlan.bullets) || []).filter(function (bullet) {
+      var ids = PLAN_TESTS[bullet.topic] || [];
+      return ids.indexOf(id) !== -1;
+    });
+  }
+  function isoDate(text) {
+    var match = String(text || "").trim().match(/^(\d{1,2})\s+([A-Za-z]{3,})\s+(\d{4})$/);
+    if (!match) return null;
+    var month = MONTHS[match[2].slice(0, 3).toLowerCase()];
+    if (!month) return null;
+    var day = Number(match[1]);
+    if (day < 1 || day > 31) return null;
+    return match[3] + "-" + month + "-" + (day < 10 ? "0" : "") + day;
+  }
+  function resultRow(id) {
+    return (live.results || []).filter(function (item) { return item.id === id; })[0] || null;
+  }
+  function marginLabel(nz, opp) {
+    var margin = Number(nz) - Number(opp);
+    if (!isFinite(margin)) return "Not in this file";
+    return margin > 0 ? "+" + margin : String(margin);
+  }
+  function rankingEntry(name) {
+    var entries = (rankings && rankings.entries) || [];
+    for (var i = 0; i < entries.length; i++) if (entries[i].team === name) return entries[i];
+    return null;
+  }
+  function cardFor(opponent) {
+    if (!season.cards) return null;
+    if (opponent === "South Africa") return season.cards.southAfrica || null;
+    if (opponent === "Australia") return season.cards.australia || null;
+    return null;
+  }
+  function snapshotMatch(id) {
+    return ((rugbySnapshot && rugbySnapshot.matches) || []).filter(function (match) { return match.seasonId === id; })[0] || null;
+  }
+  function eventLabel(type) {
+    var names = { try: "Try", penalty_try: "Penalty try", conversion: "Conversion", penalty_goal: "Penalty goal", drop_goal: "Drop goal", yellow_card: "Yellow card", red_card: "Red card" };
+    return names[type] || (type ? String(type) : "Event");
+  }
+  function scoreBit(score) {
+    if (score == null || score === "") return "";
+    if (typeof score === "string" || typeof score === "number") return String(score);
+    if (typeof score === "object" && score.home != null && score.away != null) return score.home + "\u2013" + score.away;
+    return "";
+  }
+  function runningScorers(test) {
+    var players = {};
+    function bucket(name) {
+      if (!players[name]) players[name] = { player: name, tries: 0, conversions: 0, penalties: 0, points: 0 };
+      return players[name];
     }
-    if (!forecast) {
-      box.innerHTML = '<div class="banner bad">The forecast file did not load. No win probability is shown.</div>';
+    season.tests.forEach(function (item) {
+      if ((item.kind || "test") !== "test" || !inRunningWindow(item, test)) return;
+      (item.nzTries || []).forEach(function (tryItem) {
+        if (tryItem.penaltyTry) return;
+        var row = bucket(tryItem.player);
+        row.tries += Number(tryItem.count) || 0;
+        row.points += TRY_POINTS * (Number(tryItem.count) || 0);
+      });
+      (item.nzKickers || []).forEach(function (kicker) {
+        var row = bucket(kicker.player);
+        var cons = Number(kicker.conversions) || 0, pens = Number(kicker.penalties) || 0;
+        row.conversions += cons;
+        row.penalties += pens;
+        row.points += cons * CONVERSION_POINTS + pens * PENALTY_POINTS;
+      });
+    });
+    return Object.keys(players).map(function (name) { return players[name]; }).sort(function (a, b) {
+      return b.points - a.points || b.tries - a.tries || a.player.localeCompare(b.player);
+    });
+  }
+
+  function noteBlock(item, mode) {
+    if (mode === "plan") {
+      return '<article class="panel learn"><span class="tag">Game-plan note</span><h3>' + esc(item.topic) + "</h3><p>" + esc(item.text) + "</p><p class='srcs'>Sources: " + links(item.sources) + "</p></article>";
+    }
+    return '<article class="panel learn"><span class="tag ' + esc(item.kind) + '">' + esc(item.kind) + '</span> <span class="tag">' + esc(item.unit) + "</span><h3>" + esc(item.title) + "</h3><p>" + esc(item.text) + "</p><p class='srcs'>Sources: " + links(item.sources) + "</p></article>";
+  }
+  function publishedNotes(test) {
+    var learnings = learningsFor(test.id);
+    var plans = plansFor(test.id);
+    if (!learnings.length && !plans.length) {
+      return "<p>No published learning or game-plan note in this file is tied to this Test.</p>";
+    }
+    var html = "";
+    if (season.gamePlan && season.gamePlan.label && plans.length) html += "<p class='srcs'>" + esc(season.gamePlan.label) + "</p>";
+    html += "<p class='srcs'>The worked, missed and cue tags are the labels already in the dossier. This page does not add a new verdict.</p>";
+    learnings.forEach(function (item) { html += noteBlock(item, "learning"); });
+    plans.forEach(function (item) { html += noteBlock(item, "plan"); });
+    return html;
+  }
+
+  function selectTest(id) {
+    if (!byId[id] || (byId[id].kind || "test") !== "test") return;
+    selectedTestId = id;
+    renderCycle();
+    if (history.replaceState) history.replaceState(null, "", "#test-" + id);
+  }
+
+  function renderCycle() {
+    var tests = testsOnly();
+    var current = selectedTest();
+    $("test-select").innerHTML = tests.map(function (test) {
+      var letter = letterOf(test);
+      var on = test.id === selectedTestId;
+      return '<button class="fbtn' + (on ? " on" : "") + '" type="button" role="tab" aria-selected="' + (on ? "true" : "false") + '" data-test="' + esc(test.id) + '">' + esc(test.dateLabel + " · " + test.opponent + " · " + (letter || "Upcoming")) + "</button>";
+    }).join("");
+    Array.prototype.forEach.call($("test-select").querySelectorAll("button"), function (button) {
+      button.addEventListener("click", function () { selectTest(button.getAttribute("data-test")); });
+    });
+    if (!current) {
+      $("pre-match").innerHTML = '<div class="banner bad">No Test is in the season file.</div>';
+      $("post-match").innerHTML = "";
       return;
     }
-    fixture = forecast.nextTest || {};
-    var wr = forecast.worldRugby || {};
-    var gap = wr.rankingGap;
-    var gapOk = false;
-    if (gap && typeof gap.homePoints === "number" && typeof gap.awayPoints === "number") {
-      var rebuilt = gap.awayPoints - (gap.homePoints + gap.homeAdvantagePoints);
-      gapOk = Math.abs(rebuilt - gap.awayMinusHomeAdjusted) < 0.001;
-    }
-    var html = '<p class="banner"><strong>' + esc(forecast.label || "Model estimate, not a guarantee") + '.</strong> ';
-    if (forecast.prediction) {
-      html += "The figure below is the fitted estimate for this fixture.";
-    } else {
-      html += "No win probability and no expected margin are shown.";
-    }
-    html += "</p>";
-    html += '<div class="panel"><p class="lede">' + esc(fixture.dateLabel || "17 Oct") + " · " + esc(fixture.venue || "") + "</p>";
-    html += "<p>" + esc(fixture.homeReason || "") + "</p>";
-    if (fixture.dateNote) html += '<p><strong>Kick-off: Not verified.</strong> ' + esc(fixture.dateNote) + "</p>";
-    html += '<p class="srcs">Fixture source: ' + esc(fixture.source || "data/all-blacks-2026.json") + "</p></div>";
+    $("pre-title").textContent = "Pre-match · " + current.opponent + ", " + current.dateLabel;
+    $("post-title").textContent = "Post-match · " + current.opponent + ", " + current.dateLabel;
+    renderPreMatch(current);
+    renderPostMatch(current);
+    renderCharts();
+    var picked = $("test-select").querySelector("[aria-selected='true']");
+    var scroller = $("test-select");
+    if (picked && scroller) scroller.scrollLeft = Math.max(0, picked.offsetLeft - 8);
+  }
 
-    if (forecast.prediction && forecast.prediction.available) {
-      var pred = forecast.prediction;
-      var nzProb = pred.away === "New Zealand" ? pred.awayWinProbability : pred.homeWinProbability;
-      var oppProb = pred.away === "New Zealand" ? pred.homeWinProbability : pred.awayWinProbability;
-      var margin = pred.expectedMarginHomeMinusAway;
-      var nzMargin = pred.home === "New Zealand" ? margin : -margin;
-      var marginText = nzMargin === 0 ? "Level" : (nzMargin > 0 ? "New Zealand by " + num(nzMargin, 1) : pred.home + " by " + num(Math.abs(nzMargin), 1));
+  function renderPreMatch(test) {
+    var html = '<article class="panel"><p class="lede">' + esc(test.dateLabel) + " · " + esc(test.venue || "Venue not in this file") + "</p>";
+    html += "<p>" + esc(test.competition || "") + " · " + (test.status === "played" ? "Played" : "Not played") + "</p>";
+    if (test.dateNote) html += "<p><strong>Not verified.</strong> " + esc(test.dateNote) + "</p>";
+    var next = forecast && forecast.nextTest;
+    if (next && next.id === test.id && next.homeReason) html += "<p>" + esc(next.homeReason) + "</p>";
+    html += "<p class='srcs'>Sources: " + links(test.sources) + "</p></article>";
+    html += opponentProfile(test);
+    html += modelPanel(test);
+    if (test.status !== "played") {
+      html += '<article class="panel"><h3>Published game-plan notes already on the record</h3>' + publishedNotes(test) + "</article>";
+    }
+    html += howCalculated();
+    $("pre-match").innerHTML = html;
+  }
+
+  function opponentProfile(test) {
+    var earlier = testsOnly().filter(function (item) {
+      return item.status === "played" && item.opponent === test.opponent && item.date < test.date;
+    });
+    var html = '<article class="panel"><h3>Opponent profile · ' + esc(test.opponent) + "</h3>";
+    html += "<p class='srcs'>Head-to-head in this file. This is not a full opponent season.</p>";
+    if (!earlier.length) {
+      html += "<p>No earlier 2026 Test against " + esc(test.opponent) + " is in this file.</p>";
+    } else {
+      var won = 0, lost = 0, drawn = 0, pointsFor = 0, pointsAgainst = 0;
+      earlier.forEach(function (item) {
+        var letter = letterOf(item);
+        if (letter === "W") won += 1; else if (letter === "L") lost += 1; else drawn += 1;
+        pointsFor += Number(item.nzScore); pointsAgainst += Number(item.oppScore);
+      });
+      html += "<p class='mono'>" + won + "\u2013" + lost + "\u2013" + drawn + " · " + pointsFor + "\u2013" + pointsAgainst + "</p>";
+      html += "<ul class='plain'>";
+      earlier.forEach(function (item) {
+        html += "<li><strong>" + esc(item.dateLabel) + " · " + esc(letterOf(item)) + " " + item.nzScore + "\u2013" + item.oppScore + " · margin " + marginLabel(item.nzScore, item.oppScore) + ".</strong> " + esc(item.venue || "Venue not in this file") + ". " + esc(scorerLine(item)) + "</li>";
+      });
+      html += "</ul>";
+    }
+    html += rankingBlock(test);
+    html += formBlock(test.opponent);
+    html += cardBlock(test.opponent);
+    html += "</article>";
+    return html;
+  }
+
+  function rankingBlock(test) {
+    if (!rankings || !rankings.entries) return "<p><strong>World Rugby rankings.</strong> The stored table did not load. No ranking points are shown.</p>";
+    var nz = rankingEntry("New Zealand");
+    var opp = rankingEntry(test.opponent);
+    var effective = rankings.effective || "";
+    var html = "<h3>World Rugby men's rankings</h3>";
+    if (!effective) {
+      html += "<p>The table date is not in the file, so these points are not used as a pre-match rating.</p>";
+    } else if (test.date <= effective) {
+      html += "<p>This table is dated " + esc(effective) + ", which is on or after this Test. It is not the pre-match rating.</p>";
+    } else {
+      html += "<p>This is the latest table in the file, dated " + esc(effective) + ", before this Test. These points are not a win probability.</p>";
+    }
+    html += '<div class="split">';
+    html += rankCard("New Zealand", nz);
+    html += rankCard(test.opponent, opp);
+    html += "</div>";
+    html += '<p class="srcs"><a href="' + esc(rankings.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a>';
+    if (rankings.explanation) html += ' · <a href="' + esc(rankings.explanation) + '">How the rankings are calculated</a>';
+    html += "</p><p class='srcs'>" + esc(rankings.licenceNote || "World Rugby publishes these ranking points. They are not a prediction.") + "</p>";
+    return html;
+  }
+  function rankCard(name, row) {
+    if (!row) return '<article class="panel rank-card"><h3>' + esc(name) + "</h3><p>Not in the stored table.</p></article>";
+    return '<article class="panel rank-card"><h3>' + esc(name) + '</h3><p class="value mono">' + esc(String(row.position)) + " · " + pointsLabel(row.points) + '</p><p class="srcs">Previous points ' + pointsLabel(row.previousPoints) + "</p></article>";
+  }
+  function formBlock(opponent) {
+    if (!rugbySnapshot || !rugbySnapshot.connected) {
+      return "<p><strong>Opponent form.</strong> Not in the rugbyAPI snapshot. " + esc(rugbyStatus()) + " A missing snapshot is not filled in.</p>";
+    }
+    var form = rugbySnapshot.form;
+    if (!form || !form.available) {
+      return "<p><strong>Opponent form.</strong> Not in the rugbyAPI snapshot. " + esc((form && form.reason) || "No form was stored.") + "</p>";
+    }
+    var rows = (form.matches || []).filter(function (match) {
+      var home = match.home && match.home.name;
+      var away = match.away && match.away.name;
+      return sameSide(home, opponent) || sameSide(away, opponent);
+    });
+    var html = "<p><strong>rugbyAPI form rows that name " + esc(opponent) + ".</strong> The stored form is the All Blacks string" + (form.form ? " (" + esc(form.form) + ")" : "") + ". It does not replace the season file, and it is not an opponent season.</p>";
+    if (!rows.length) {
+      html += "<p>No stored form row names " + esc(opponent) + ".</p>";
+      return html;
+    }
+    html += "<ul class='plain'>";
+    rows.forEach(function (match) {
+      var home = match.home && match.home.name || "Home not in this row";
+      var away = match.away && match.away.name || "Away not in this row";
+      var homeScore = match.home && match.home.score;
+      var awayScore = match.away && match.away.score;
+      var score = homeScore != null && awayScore != null ? homeScore + "\u2013" + awayScore : "No score in this row";
+      html += "<li>" + esc(match.date || "Date not in this row") + " · " + esc(match.result || "Result not in this row") + " · " + esc(home) + " " + esc(score) + " " + esc(away) + ". " + esc(match.crossCheckNote || "") + "</li>";
+    });
+    html += "</ul>";
+    return html;
+  }
+  function cardBlock(opponent) {
+    var card = cardFor(opponent);
+    if (!card) return "<p>No opponent card is stored for " + esc(opponent) + ".</p>";
+    var seen = {};
+    var facts = [];
+    (card.facts || []).forEach(function (fact) {
+      if (seen[fact]) return;
+      if (/no prediction model|no win percentage/i.test(fact)) return;
+      seen[fact] = true;
+      facts.push("<li>" + esc(fact) + "</li>");
+    });
+    return "<h3>" + esc(card.title) + "</h3><p class='srcs'>" + esc(card.meta || "") + "</p><ul class='plain'>" + facts.join("") + "</ul><p class='srcs'>Sources: " + links(card.sources) + "</p>";
+  }
+
+  function gapOk(gap) {
+    if (!gap || typeof gap.homePoints !== "number" || typeof gap.awayPoints !== "number" || typeof gap.homeAdvantagePoints !== "number") return false;
+    var rebuilt = gap.awayPoints - (gap.homePoints + gap.homeAdvantagePoints);
+    return Math.abs(rebuilt - gap.awayMinusHomeAdjusted) < 0.001;
+  }
+  function modelPanel(test) {
+    var next = forecast && forecast.nextTest;
+    var isNext = next && next.id === test.id;
+    var prediction = forecast && forecast.prediction;
+    var html = '<article class="panel"><h3>Win probability and expected margin</h3>';
+    html += "<p><strong>" + esc((forecast && forecast.label) || "Model estimate, not a guarantee") + ".</strong></p>";
+    if (isNext && prediction && prediction.available) {
+      var nzProb = prediction.away === "New Zealand" ? prediction.awayWinProbability : prediction.homeWinProbability;
+      var margin = prediction.expectedMarginHomeMinusAway;
+      var nzMargin = prediction.home === "New Zealand" ? margin : -margin;
+      var marginText = nzMargin === 0 ? "Level" : (nzMargin > 0 ? "New Zealand by " + num(nzMargin, 1) : (prediction.home || "Home") + " by " + num(Math.abs(nzMargin), 1));
       html += '<div class="kpis">' +
         kpi("New Zealand win chance", num(nzProb * 100, 1) + "%", "Model estimate, not a guarantee", "nz-win") +
-        kpi(pred.home + " win chance", num((pred.home === "New Zealand" ? nzProb : oppProb) * 100, 1) + "%", "Home side on this fixture", "home-win") +
         kpi("Expected margin", marginText, "New Zealand score minus opponent. Fitted, not a guarantee", "margin") +
         "</div>";
       if (forecast.backtest) {
         var back = forecast.backtest;
-        html += '<div class="panel"><h3>Backtest</h3><p>' + back.correctWinner + " of " + back.matches + " later matches had the winner the model expected (" + num(back.correctWinnerShare * 100, 1) + "%). Mean absolute margin error " + num(back.meanAbsoluteMarginError, 1) + " points. " + esc(back.note) + "</p><p class='srcs'>" + esc(back.from) + " to " + esc(back.to) + ".</p></div>";
+        html += "<p>Backtest: " + back.correctWinner + " of " + back.matches + " later matches had the winner the model expected (" + num(back.correctWinnerShare * 100, 1) + "%). Mean absolute margin error " + num(back.meanAbsoluteMarginError, 1) + " points. " + esc(back.note || "") + "</p>";
       }
     } else {
-      html += '<div class="panel"><h3>Win probability</h3><p class="value" style="font-size:28px;margin:6px 0">Not calculated</p><p>' + esc(forecast.reason || "") + "</p></div>";
+      html += '<p class="value" style="font-size:28px;margin:6px 0">Not calculated</p>';
+      if (isNext) html += "<p>" + esc((forecast && forecast.reason) || "No probability was stored for this match.") + "</p>";
+      else html += "<p>This file only fits a probability for the next Test, and only after the gate passes. No probability was stored for this match.</p>";
     }
-
-    if (wr.newZealand && wr.australia) {
-      html += '<div class="split"><article class="panel rank-card"><h3>New Zealand</h3><p class="meta">World Rugby men\'s ranking, effective ' + esc(wr.effective || "Not in this file") + "</p><p class=\"value mono\">" + esc(String(wr.newZealand.position)) + " · " + pointsLabel(wr.newZealand.points) + '</p><p class="srcs">Previous points ' + pointsLabel(wr.newZealand.previousPoints) + "</p></article>";
-      html += '<article class="panel rank-card"><h3>Australia</h3><p class="meta">Same table</p><p class="value mono">' + esc(String(wr.australia.position)) + " · " + pointsLabel(wr.australia.points) + '</p><p class="srcs">Previous points ' + pointsLabel(wr.australia.previousPoints) + "</p></article></div>";
+    if (isNext && forecast && forecast.worldRugby && forecast.worldRugby.rankingGap) {
+      var gap = forecast.worldRugby.rankingGap;
+      if (gapOk(gap) && next.home === gap.home && next.away === gap.away) {
+        html += '<div class="gap-box"><h3>Ranking gap, not a prediction</h3><p>' + esc(gap.home) + " at home are treated as " + pointsLabel(gap.homePoints) + " + " + num(gap.homeAdvantagePoints, 0) + " = " + pointsLabel(gap.homeAdjustedPoints) + ". " + esc(gap.away) + " are on " + pointsLabel(gap.awayPoints) + ". The difference is " + pointsLabel(gap.awayMinusHomeAdjusted) + " ranking points toward " + esc(gap.away) + ".</p><p>" + esc(gap.note || "") + "</p></div>";
+      } else if (!gapOk(gap)) {
+        html += '<div class="banner bad">The ranking gap in the file does not match the published points. It is not shown.</div>';
+      }
     }
-    if (gap && gapOk) {
-      html += '<div class="gap-box"><h3>Ranking gap, not a prediction</h3><p>Australia at home are treated as ' + pointsLabel(gap.homePoints) + " + " + num(gap.homeAdvantagePoints, 0) + " = " + pointsLabel(gap.homeAdjustedPoints) + ". New Zealand are on " + pointsLabel(gap.awayPoints) + ". The difference is " + pointsLabel(gap.awayMinusHomeAdjusted) + " ranking points toward New Zealand.</p><p>" + esc(gap.note) + "</p></div>";
-    } else if (gap) {
-      html += '<div class="banner bad">The ranking gap in the file does not match the published points. It is not shown.</div>';
-    }
+    html += "</article>";
+    return html;
+  }
+  function howCalculated() {
+    if (!forecast) return '<div class="banner bad">The forecast file did not load. No win probability is shown.</div>';
     var how = forecast.howCalculated || {};
-    html += '<div class="panel"><h3>How this is calculated</h3><p>' + esc(how.summary || "") + "</p><ol>";
+    var wr = forecast.worldRugby || {};
+    var html = "<details><summary>How this is calculated</summary><div class='panel'><p>" + esc(how.summary || "") + "</p><ol>";
     (how.steps || []).forEach(function (step) { html += "<li>" + esc(step) + "</li>"; });
     html += "</ol>";
     if (how.formulaCheck) {
       html += "<p>Formula check: " + esc(how.formulaCheck.example) + " This script gets " + num(how.formulaCheck.computedExchange, 2) + ". " + (how.formulaCheck.passed ? "The check passed." : "The check failed, so do not trust a probability from this file.") + "</p>";
     }
     var gate = how.gate || {};
-    html += "<p class='srcs'>Gate: " + esc(String(gate.minimumMatches || "")) + " scored matches with a home side, " + esc(String(gate.minimumTrain || "")) + " before " + esc(gate.trainEnd || "") + ", " + esc(String(gate.minimumBacktest || "")) + " after it, and " + esc(String(gate.minimumMatchesPerSide || "")) + " each for New Zealand and Australia.</p>";
+    html += "<p class='srcs'>Gate: " + esc(String(gate.minimumMatches != null ? gate.minimumMatches : "")) + " scored matches with a home side, " + esc(String(gate.minimumTrain != null ? gate.minimumTrain : "")) + " before " + esc(gate.trainEnd || "") + ", " + esc(String(gate.minimumBacktest != null ? gate.minimumBacktest : "")) + " after it, and " + esc(String(gate.minimumMatchesPerSide != null ? gate.minimumMatchesPerSide : "")) + " each for New Zealand and Australia.</p>";
     var counts = (forecast.wikidata || {}).counts || {};
     html += "<p>Wikidata, CC0: " + esc(String(counts.rugbyMatchItems != null ? counts.rugbyMatchItems : "Not in this file")) + " rugby union match items, " + esc(String(counts.scoredRugbyMatches != null ? counts.scoredRugbyMatches : "Not in this file")) + " with two scores, " + esc(String(counts.scoredNationalMatches != null ? counts.scoredNationalMatches : "Not in this file")) + " scored rows between national-team items. Items typed as a Test: " + esc(String(counts.testMatchItems != null ? counts.testMatchItems : "Not in this file")) + ".</p>";
-    html += "<p>Live results use the rugbyAPI snapshot, not this forecast file. " + esc(rugbyStatus()) + "</p>";
+    html += "<p>Live results use the rugbyAPI snapshot, not this forecast file. " + esc(rugbyStatus()) + " In-game coverage is future work.</p>";
     html += '<p class="srcs"><a href="' + esc(wr.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a> · <a href="' + esc(wr.explanation || "https://www.world.rugby/rankings/explanation") + '">How the rankings are calculated</a> · <a href="data/forecast.json">forecast.json</a> · <a href="data/wikidata-rugby-coverage.json">Wikidata extract</a> · <a href="data/build_forecast.py">Forecast script</a> · <a href="data/rugbyapi-snapshot.json">rugbyAPI snapshot</a></p>';
-    html += "<p>" + esc(wr.licenceNote || "") + "</p></div>";
+    html += "<p>" + esc(wr.licenceNote || "") + "</p>";
     if (coverage && coverage.matches) {
       html += "<details><summary>Scored rugby rows Wikidata returned (" + coverage.matches.length + ")</summary><ul class='plain'>";
       coverage.matches.forEach(function (match) {
@@ -671,7 +978,59 @@
       html += "</ul></details>";
     }
     (forecast.notUsed || []).forEach(function (line) { html += '<p class="srcs">' + esc(line) + "</p>"; });
-    box.innerHTML = html;
+    html += "</div></details>";
+    return html;
+  }
+
+  function renderPostMatch(test) {
+    if (test.status !== "played") {
+      $("post-match").innerHTML = '<article class="panel"><h3>Result</h3><p>Not played. No result, no team KPIs, and no scoring timeline.</p></article>';
+      return;
+    }
+    var letter = letterOf(test);
+    var row = resultRow(test.id);
+    var triesFor = row ? row.triesFor : "Not in this file";
+    var triesAgainst = row ? row.triesAgainst : "Not in this file";
+    var half = typeof test.halfTimeNz === "number" && typeof test.halfTimeOpp === "number" ? test.halfTimeNz + "\u2013" + test.halfTimeOpp : "Not in this file";
+    var html = '<div class="kpis">' +
+      kpi("Result", letter + " " + test.nzScore + "\u2013" + test.oppScore, test.opponent + " · " + (test.venue || ""), "result") +
+      kpi("Margin", marginLabel(test.nzScore, test.oppScore), "New Zealand score minus opponent", "result-margin") +
+      kpi("Tries", triesFor + "\u2013" + triesAgainst, "For\u2013against, from the score sheet", "result-tries") +
+      kpi("Points", test.nzScore + "\u2013" + test.oppScore, "Final score on the season file", "result-points") +
+      kpi("Half-time", half, half === "Not in this file" ? "Not in this file" : "From the season file", "half-time") +
+      "</div>";
+    html += '<article class="panel"><h3>Score sheet</h3><p>' + esc(scorerLine(test)) + "</p>";
+    if (test.crowdLabel) html += "<p>Crowd " + esc(test.crowdLabel) + ".</p>";
+    html += "<p class='srcs'>Sources: " + links(test.sources) + "</p></article>";
+    html += timelineBlock(test);
+    html += '<div class="split"><article class="panel"><h3>Compared with the published notes</h3><p>The score sheet is the result. The notes beside it were already published. This page does not add a judgement.</p></article><div>' + publishedNotes(test) + "</div></div>";
+    $("post-match").innerHTML = html;
+  }
+  function timelineBlock(test) {
+    var html = '<article class="panel"><h3>Scoring timeline</h3>';
+    var match = snapshotMatch(test.id);
+    if (!rugbySnapshot || !rugbySnapshot.connected) {
+      html += "<p>Scoring timeline: not in the rugbyAPI snapshot. " + esc(rugbyStatus()) + "</p></article>";
+      return html;
+    }
+    if (match && match.timelineUsed && match.timeline && match.timeline.length) {
+      html += "<p>Shown because the snapshot marked the timeline complete and the event points matched the final score. The season file stays the result.</p><ul class='plain'>";
+      match.timeline.forEach(function (event) {
+        var side = event.side === "home" ? (match.home && match.home.name) : event.side === "away" ? (match.away && match.away.name) : event.side;
+        var player = event.player && event.player.name ? event.player.name : "Player not in this event";
+        var minute = event.minute == null ? "Minute not in this event" : String(event.minute) + (event.minuteExtra ? "+" + event.minuteExtra : "") + "'";
+        var points = event.points == null ? "" : " · " + event.points + " pts";
+        var score = scoreBit(event.score);
+        html += "<li>" + esc(minute) + " · " + esc(eventLabel(event.type)) + " · " + esc(side || "Side not in this event") + " · " + esc(player) + esc(points) + (score ? " · " + esc(score) : "") + "</li>";
+      });
+      html += "</ul></article>";
+      return html;
+    }
+    html += "<p>Scoring timeline: not in the rugbyAPI snapshot.</p>";
+    if (match && match.timelineReason) html += "<p>" + esc(match.timelineReason) + "</p>";
+    if (match && match.crossCheck === "disagree") html += "<p>" + esc(match.crossCheckNote || "The rugbyAPI score disagrees with the season file and is not copied onto this card.") + "</p>";
+    html += "</article>";
+    return html;
   }
 
   function visibleRows() {
@@ -888,23 +1247,30 @@
   }
 
   function renderCharts() {
-    ["points", "tries", "injuries", "learnings"].forEach(function (key) {
+    ["points", "tries", "margin", "injuries"].forEach(function (key) {
       if (charts[key]) { charts[key].destroy(); charts[key] = null; }
     });
+    var current = selectedTest();
     var tests = season.tests.filter(function (test) {
-      if (test.status !== "played") return false;
+      if (!inRunningWindow(test, current)) return false;
       if (gameMode === "tests") return (test.kind || "test") === "test";
       return true;
     });
+    var tryTests = tests.filter(function (test) { return (test.kind || "test") === "test"; });
+    var windowNote = current && current.status !== "played"
+      ? "The running view stops at the last played result. " + current.opponent + " on " + current.dateLabel + " has not been played."
+      : "Played results up to and including the selected Test.";
+    if ($("trends-note")) $("trends-note").textContent = "Running view of the season: results, margins, scorers and the injury notes. Every number is from the files. " + windowNote;
     var labels = tests.map(function (test) { return test.dateLabel + " " + test.opponent; });
+    var pointsCaption = (gameMode === "tests" ? "Tests only. " : "Tests and tour matches. Tour try scorers are not in this file. ") + windowNote;
     $("chart-grid").innerHTML =
-      chartCard("chart-points", "Points, recent games", gameMode === "tests" ? "Eight Tests. New Zealand first." : "Tests and the four tour matches. Tour try scorers are not in this file.") +
-      chartCard("chart-tries", "Tries, recent Tests", "Tries from the score sheets. Tour matches stay off this chart.") +
-      chartCard("chart-injuries", "Injury list", "Count of records in the dossier injury list. Not a diagnosis.") +
-      chartCard("chart-learnings", "Match learnings", "Count of meeting notes by the tag in the dossier. Not a performance score.");
+      chartCard("chart-points", "Points", pointsCaption) +
+      chartCard("chart-tries", "Tries", "Tries from the Test score sheets in this window. Tour matches stay off this chart.") +
+      chartCard("chart-margin", "Margin", "New Zealand score minus the opponent. From the same games as the points chart.") +
+      chartCard("chart-injuries", "Injury list, as checked", "Count of records in the dossier injury list on " + ((dossier.meta && dossier.meta.asOfLabel) || "the check date") + ". This is not the state on the selected Test date, and it is not a diagnosis.");
     if (!window.Chart) {
       $("chart-grid").insertAdjacentHTML("beforeend", '<p class="banner">The chart library did not load. The tables below still have the numbers.</p>');
-    } else {
+    } else if (tests.length) {
       charts.points = new Chart($("chart-points"), {
         type: "bar",
         data: { labels: labels, datasets: [
@@ -913,16 +1279,20 @@
         ] },
         options: { responsive: true, maintainAspectRatio: false, scales: scaleOptions() }
       });
-      var tryTests = season.tests.filter(function (test) { return test.status === "played" && (test.kind || "test") === "test"; });
       charts.tries = new Chart($("chart-tries"), {
         type: "bar",
         data: {
           labels: tryTests.map(function (test) { return test.dateLabel; }),
           datasets: [
-            { label: "Tries for", data: tryTests.map(function (test) { var row = live.results.filter(function (item) { return item.id === test.id; })[0]; return row ? row.triesFor : 0; }), backgroundColor: "#8FDBE4" },
-            { label: "Tries against", data: tryTests.map(function (test) { var row = live.results.filter(function (item) { return item.id === test.id; })[0]; return row ? row.triesAgainst : 0; }), backgroundColor: "#FF9B9B" }
+            { label: "Tries for", data: tryTests.map(function (test) { var row = resultRow(test.id); return row ? row.triesFor : 0; }), backgroundColor: "#8FDBE4" },
+            { label: "Tries against", data: tryTests.map(function (test) { var row = resultRow(test.id); return row ? row.triesAgainst : 0; }), backgroundColor: "#FF9B9B" }
           ]
         },
+        options: { responsive: true, maintainAspectRatio: false, scales: scaleOptions() }
+      });
+      charts.margin = new Chart($("chart-margin"), {
+        type: "bar",
+        data: { labels: labels, datasets: [{ label: "Margin", data: tests.map(function (test) { return Number(test.nzScore) - Number(test.oppScore); }), backgroundColor: "#FFB067" }] },
         options: { responsive: true, maintainAspectRatio: false, scales: scaleOptions() }
       });
       var injuryCounts = {};
@@ -935,20 +1305,53 @@
         data: { labels: Object.keys(injuryCounts).map(function (key) { return key === "out" ? "Out" : key === "back" ? "Back with the group" : key; }), datasets: [{ label: "Players on the list", data: Object.values(injuryCounts), backgroundColor: "#FFB067" }] },
         options: { responsive: true, maintainAspectRatio: false, scales: scaleOptions() }
       });
-      var learnCounts = {};
-      (dossier.learnings || []).forEach(function (item) { learnCounts[item.kind] = (learnCounts[item.kind] || 0) + 1; });
-      charts.learnings = new Chart($("chart-learnings"), {
-        type: "bar",
-        data: { labels: Object.keys(learnCounts), datasets: [{ label: "Notes", data: Object.values(learnCounts), backgroundColor: "#8EE8C0" }] },
-        options: { responsive: true, maintainAspectRatio: false, indexAxis: "y", scales: scaleOptions() }
-      });
     }
-    var table = '<div class="table-scroll" style="margin-top:12px"><table><caption class="note" style="caption-side:bottom;text-align:left">Numbers behind the points chart.</caption><thead><tr><th>Date</th><th>Opponent</th><th class="num">NZ</th><th class="num">Opp</th><th>Result</th><th>Kind</th></tr></thead><tbody>';
+    var table = '<div class="table-scroll" style="margin-top:12px"><table><caption class="note" style="caption-side:bottom;text-align:left">Running record. The selected Test is marked when it has been played.</caption><thead><tr><th>Date</th><th>Opponent</th><th class="num">NZ</th><th class="num">Opp</th><th class="num">Margin</th><th>Result</th><th>Running record</th><th>Kind</th></tr></thead><tbody>';
+    var won = 0, lost = 0, drawn = 0;
     tests.forEach(function (test) {
-      table += "<tr><td>" + esc(test.dateLabel) + "</td><td>" + esc(test.opponent) + "</td><td class='num'>" + test.nzScore + "</td><td class='num'>" + test.oppScore + "</td><td>" + esc(letterOf(test) + " " + test.nzScore + "\u2013" + test.oppScore) + "</td><td>" + esc(test.kind || "test") + "</td></tr>";
+      var letter = letterOf(test);
+      if (letter === "W") won += 1; else if (letter === "L") lost += 1; else drawn += 1;
+      var picked = current && test.id === current.id ? " class='picked'" : "";
+      table += "<tr" + picked + "><td>" + esc(test.dateLabel) + "</td><td>" + esc(test.opponent) + "</td><td class='num'>" + test.nzScore + "</td><td class='num'>" + test.oppScore + "</td><td class='num'>" + marginLabel(test.nzScore, test.oppScore) + "</td><td>" + esc(letter + " " + test.nzScore + "\u2013" + test.oppScore) + "</td><td class='mono'>" + won + "\u2013" + lost + "\u2013" + drawn + "</td><td>" + esc(test.kind || "test") + "</td></tr>";
     });
     table += "</tbody></table></div>";
+    var scorers = runningScorers(current);
+    var through = current ? current.dateLabel + (current.status === "played" ? ", including this Test" : ", stopping before this Test") : "the season file";
+    table += '<div class="table-scroll" style="margin-top:12px"><table><caption class="note" style="caption-side:bottom;text-align:left">Scorers through ' + esc(through) + '. Tries, conversions and penalties on the Test score sheets. Tour matches have no try list. A try is 5, a conversion is 2, a penalty goal is 3.</caption><thead><tr><th>Player</th><th class="num">Tries</th><th class="num">Con</th><th class="num">Pen</th><th class="num">Points</th></tr></thead><tbody>';
+    if (!scorers.length) table += '<tr><td colspan="5">No Test score sheet falls in this window.</td></tr>';
+    scorers.forEach(function (player) {
+      table += "<tr><td>" + esc(player.player) + "</td><td class='num'>" + player.tries + "</td><td class='num'>" + player.conversions + "</td><td class='num'>" + player.penalties + "</td><td class='num'>" + player.points + "</td></tr>";
+    });
+    table += "</tbody></table></div>";
+    table += injuryEvents(current);
     $("chart-grid").insertAdjacentHTML("beforeend", table);
+  }
+
+  function injuryEvents(test) {
+    var cutoff = test ? test.date : "9999-12-31";
+    var shown = [];
+    var unread = 0;
+    (dossier.injuries || []).forEach(function (injury) {
+      (injury.events || []).forEach(function (event) {
+        var iso = isoDate(event.date);
+        if (!iso) { unread += 1; return; }
+        if (iso <= cutoff) shown.push({ iso: iso, player: injury.player, date: event.date, text: event.text, issue: injury.issue });
+      });
+    });
+    shown.sort(function (a, b) { return a.iso < b.iso ? -1 : a.iso > b.iso ? 1 : a.player.localeCompare(b.player); });
+    var html = '<div class="panel" style="margin-top:12px"><h3>Injury notes dated on or before this Test</h3>';
+    html += "<p class='srcs'>The dossier list was checked " + esc((dossier.meta && dossier.meta.asOfLabel) || "on the file date") + ". It is not a week-by-week availability history. A player is not marked out for this Test unless a note is dated on or before it.</p>";
+    if (!shown.length) html += "<p>No injury note in this file has a date on or before this Test.</p>";
+    else {
+      html += "<ul class='plain'>";
+      shown.forEach(function (event) {
+        html += "<li><strong>" + esc(event.date) + " · " + esc(event.player) + ".</strong> " + esc(event.issue) + " " + esc(event.text) + "</li>";
+      });
+      html += "</ul>";
+    }
+    if (unread) html += "<p>Some injury dates could not be read and are not placed on this list.</p>";
+    html += "</div>";
+    return html;
   }
 
   function renderLearnings() {
@@ -1069,16 +1472,19 @@
     }
     buildRows();
     renderRecord();
-    renderForecast();
     fillFilters();
     renderPlayers();
     renderCompare();
-    renderCharts();
     renderLearnings();
     renderFixtures();
     renderRugby();
     renderNotes();
     var hash = (location.hash || "").replace("#", "");
+    var fromTest = hash.indexOf("test-") === 0 ? hash.slice(5) : "";
+    if (fromTest && byId[fromTest] && (byId[fromTest].kind || "test") === "test") selectedTestId = fromTest;
+    else selectedTestId = defaultTestId();
+    renderCycle();
+    if ((!hash || hash.indexOf("test-") === 0) && history.replaceState) history.replaceState(null, "", "#test-" + selectedTestId);
     if (hash.indexOf("player-") === 0 || rows.some(function (player) { return slug(player.name) === hash; })) {
       var found = rows.filter(function (player) { return slug(player.name) === hash || "player-" + slug(player.name) === hash; })[0];
       if (found) openDrawer(found.name);
@@ -1109,11 +1515,13 @@
       MatakiteData.createPlayerProvider({ provider: "static-json" }).load(),
       fetch("data/forecast.json").then(function (response) { if (!response.ok) throw new Error("forecast " + response.status); return response.json(); }),
       fetch("data/wikidata-rugby-coverage.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; }),
-      fetch("data/rugbyapi-snapshot.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; })
+      fetch("data/rugbyapi-snapshot.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; }),
+      fetch("data/world-rugby-rankings.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; })
     ]).then(function (parts) {
       forecast = parts[1];
       coverage = parts[2];
       rugbySnapshot = parts[3];
+      rankings = parts[4];
       boot(parts[0]);
     }).catch(function (error) {
       $("load-error").hidden = false;
