@@ -1,0 +1,111 @@
+{
+  "status": "unavailable",
+  "label": "Model estimate, not a guarantee",
+  "generatedAt": "2026-10-13T07:26:38+00:00",
+  "generatedBy": "data/build_forecast.py",
+  "reason": "No scored Test series with a marked home side was available, so no win probability and no expected margin were calculated. Wikidata has 22 rugby union match items with scores for two teams. Of the sport-wide scored rows, 17 are between items typed as national rugby union teams. 1 scored rugby union match item marks a home team. Home advantage is not fitted from a list that short. 13 of the 22 stored scored rows do not have a national team in the name. API_SPORTS_KEY is not set. No request was sent. Current fixtures stay on data/all-blacks-2026.json.",
+  "nextTest": {
+    "known": true,
+    "id": "2026-10-17-australia-sydney",
+    "date": "2026-10-17",
+    "dateLabel": "17 Oct",
+    "opponent": "Australia",
+    "venue": "Accor Stadium, Sydney",
+    "competition": "Bledisloe Cup",
+    "dateNote": "Not on the Rugby Database games list checked on 12 Oct 2026. The list's newest game is Eden Park on 10 October. This Test had not been played. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local. Sky Sports lists the Sydney kick-off as 6am BST.",
+    "kickOff": "Not verified",
+    "home": "Australia",
+    "away": "New Zealand",
+    "homeReason": "The venue on the season file is in Sydney, and the opponent is Australia, so Australia are at home. New Zealand are away.",
+    "source": "data/all-blacks-2026.json"
+  },
+  "prediction": null,
+  "backtest": null,
+  "model": null,
+  "howCalculated": {
+    "summary": "Ranking points move with the exchange World Rugby publish. Home sides are treated as three points stronger. A win probability and an expected margin are fitted only after a long scored series exists. They are not typed in.",
+    "steps": [
+      "Take scored matches that name a home team and an away team.",
+      "Start a team at 30 ranking points the first time it appears. That is the published starting point for a new full member, not a predicted score.",
+      "After each match, move points with the published exchange. The home rating is three points higher while the exchange is calculated.",
+      "A win by more than 15 points multiplies the exchange by 1.5. A Rugby World Cup Finals match doubles it.",
+      "On matches before 2024, fit the chance of a home win from the pre-match gap, and fit the margin with a straight line.",
+      "Check that fit on later matches: the share of correct winners, and the average absolute margin error.",
+      "Use the ratings after the last match for the next fixture. If the series is too short, write no probability."
+    ],
+    "gate": {
+      "minimumMatches": 200,
+      "minimumTrain": 80,
+      "minimumBacktest": 30,
+      "trainEnd": "2024-01-01",
+      "minimumMatchesPerSide": 8
+    },
+    "formulaCheck": {
+      "example": "Wales 76.92 at home against Scotland 76.36, Wales won 23-10. World Rugby's explanation gives an exchange of 0.64.",
+      "computedExchange": 0.6439999999999998,
+      "passed": true
+    }
+  },
+  "wikidata": {
+    "licence": "CC0-1.0",
+    "file": "data/wikidata-rugby-coverage.json",
+    "counts": {
+      "testMatchItems": 5,
+      "rugbyMatchItems": 540,
+      "scoredRugbyMatches": 22,
+      "scoredNationalMatches": 17
+    },
+    "scoredMatchesWithHomeRole": 1,
+    "errors": {},
+    "matchRowsStored": 22
+  },
+  "worldRugby": {
+    "page": "https://www.world.rugby/rankings/mru",
+    "api": "https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en",
+    "explanation": "https://www.world.rugby/rankings/explanation",
+    "effective": "2026-10-12",
+    "error": null,
+    "newZealand": {
+      "position": 2,
+      "team": "New Zealand",
+      "abbreviation": "NZL",
+      "points": 91.80693483436683,
+      "previousPoints": 91.14644633904142,
+      "previousPosition": 2
+    },
+    "australia": {
+      "position": 6,
+      "team": "Australia",
+      "abbreviation": "AUS",
+      "points": 84.88921447921875,
+      "previousPoints": 85.54970297454416,
+      "previousPosition": 6
+    },
+    "rankingGap": {
+      "home": "Australia",
+      "away": "New Zealand",
+      "homePoints": 84.88921447921875,
+      "awayPoints": 91.80693483436683,
+      "homeAdvantagePoints": 3.0,
+      "homeAdjustedPoints": 87.88921447921875,
+      "awayMinusHomeAdjusted": 3.9177203551480773,
+      "note": "Difference of published ranking points after the published three-point home adjustment. Not a win probability and not an expected margin."
+    },
+    "licenceNote": "World Rugby publishes these ranking points. They are not CC0. The numbers are stored with attribution and are not a prediction."
+  },
+  "apiSports": {
+    "host": "https://v1.rugby.api-sports.io",
+    "header": "x-apisports-key",
+    "requestsSent": 0,
+    "requestCap": 12,
+    "licenceNote": "API-Sports results are covered by API-Sports terms, not CC0. Raw responses are not committed. This file only records whether the feed was used.",
+    "connected": false,
+    "reason": "API_SPORTS_KEY is not set. No request was sent. Current fixtures stay on data/all-blacks-2026.json.",
+    "matchCount": 0
+  },
+  "notUsed": [
+    "The Kaggle international Test dataset is CC BY-NC-SA and was not used.",
+    "ESPN's hidden site API was not used.",
+    "No Opta feed is connected, and no Opta percentage is shown."
+  ]
+}

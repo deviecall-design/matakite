@@ -41,7 +41,9 @@ python3 fusion_server.py
 
 | File | Purpose |
 |------|---------|
-| `matakite-poc.html` | Full dashboard (7 tabs: Overview, Game Model, Forecast, Dossier, Calibration, Data Feeds, Live) |
+| `matakite-poc.html` | All Blacks dashboard: record, players, comparison, trends, and the Sydney forecast gate |
+| `player-dossier.html` | Player dossier. Loads through `src/data/player-provider.js` |
+| `data/build_forecast.py` | Wikidata + World Rugby rankings forecast. Optional `API_SPORTS_KEY`. Writes `data/forecast.json` |
 | `fusion_server.py` | Python WebSocket server + HTTP dashboard server |
 | `src/matakite-ontology.ts` | TypeScript data model with provenance tagging |
 | `docs/` | Operating model + deployment guide |

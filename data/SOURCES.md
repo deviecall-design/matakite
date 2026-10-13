@@ -168,4 +168,24 @@ The earlier player mockup (strengths, development areas, pre-match cues, a six-f
 - ESPN match attendance stored as 0 is missing data, not a crowd.
 - A Dubai Telegraph report called the France Test 32–30. Rugby Database, ESPN, the All Blacks, BBC Sport and the NZ Herald say 34–32.
 - ESPN league 242041 is Super Rugby Pacific. It is not the All Blacks Test feed. The page does not use it.
-- There is no prediction model, so there are no win percentages, Brier scores, or hit rates.
+- There is no hand-typed prediction. `data/build_forecast.py` is the only place a win probability can be produced, and it writes one only after a scored Test series clears its gate.
+
+## Forecast model, licences, and what was not used
+
+Checked again on 13 October 2026 while rebuilding the dashboard.
+
+| Source | Used for | Licence / terms |
+|---|---|---|
+| [Wikidata Query Service](https://query.wikidata.org/sparql) | Scored rugby matches. The extract is `data/wikidata-rugby-coverage.json`. | CC0 |
+| [World Rugby men's rankings](https://www.world.rugby/rankings/mru) | Ranking points. The snapshot is `data/world-rugby-rankings.json`. The public feed is `https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en`. | World Rugby's published figures. Not CC0. Stored with attribution. Not a prediction. |
+| [World Rugby rankings explanation](https://www.world.rugby/rankings/explanation) | The three-point home adjustment, the points exchange, the 15-point margin weighting, and the World Cup weighting. | Quoted as the method. The worked example is Wales 76.92 at home to Scotland 76.36, won 23–10, exchange 0.64. |
+| API-Sports API-Rugby | Optional current fixtures and results. Host `https://v1.rugby.api-sports.io`. Header `x-apisports-key`. | API-Sports terms. The key is read from `API_SPORTS_KEY` and is never committed. If the variable is missing, no request is sent. |
+| Goalserve | Not used. `src/data/player-provider.js` is the seam a later paid feed would implement. | No Goalserve payload is in the repo. |
+
+Not used, on purpose:
+
+- The Kaggle international Test dataset. Its licence is CC BY-NC-SA.
+- ESPN's hidden site API.
+- Any Opta or Stats Perform feed. The old sample feed name remains in the data file as "Not connected". The page does not show an Opta model.
+
+The script replays the published points exchange and can fit a win chance and a margin. It does that only when it has at least 200 scored matches with a home side, enough of them before and after 1 January 2024, and at least eight usable matches each for New Zealand and Australia. The Wikidata extract does not meet that gate. The page then shows the ranking points and the three-point home adjustment, and it does not show a win probability or an expected margin.
