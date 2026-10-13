@@ -204,6 +204,7 @@
   .cell { width: 58px; text-align: center; border: 1px solid var(--line); border-radius: 8px; padding: 4px 0; background: var(--card); }
   .cell .k { font-family: "JetBrains Mono", ui-monospace, monospace; font-weight: 700; }
   .cell .o, .cell .p { font-size: 12px; color: var(--muted); }
+  td.sticky .profile { display: block; font-size: 13px; font-weight: 600; }
   .foot { color: var(--muted); font-size: 14px; margin-top: 28px; }
   [hidden] { display: none !important; }
   @media (min-width: 720px) {
@@ -269,7 +270,7 @@
 
   <section id="players">
     <h2>Players</h2>
-    <p class="note">Starts and bench are match-day 23s, not minutes. Points are tries, conversions and penalties on the eight Test score sheets. A try is 5, a conversion is 2, a penalty goal is 3. A penalty try is not given to a player.</p>
+    <p class="note">Starts and bench are match-day 23s, not minutes. Points are tries, conversions and penalties on the eight Test score sheets. A try is 5, a conversion is 2, a penalty goal is 3. A penalty try is not given to a player. NZ Rugby Stats opens the official profile. Those pages are links only. Their figures are not copied into this table.</p>
     <div class="filters">
       <label class="field">Search
         <input id="player-search" type="search" placeholder="Name or position" autocomplete="off">
@@ -328,6 +329,7 @@
   <section id="fixtures">
     <h2>Results and fixtures</h2>
     <p class="note" id="score-convention"></p>
+    <div id="rugbyapi"></div>
     <div class="cards" id="fixture-cards"></div>
   </section>
 
@@ -368,6 +370,40 @@
       return '<a href="' + esc(source.url) + '">' + esc(source.name) + "</a>";
     }).join(" · ");
   }
+  function profileLink(player) {
+    var profile = player && player.officialProfile;
+    if (!profile || !profile.url) return "";
+    return '<a class="profile" href="' + esc(profile.url) + '" target="_blank" rel="noopener noreferrer">NZ Rugby Stats</a>';
+  }
+  function personKey(value) {
+    return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  }
+  function rugbyStatus() {
+    if (!rugbySnapshot) return "The snapshot file did not load. Fixtures stay on the season file. This page does not hold a key.";
+    if (!rugbySnapshot.connected) return rugbySnapshot.reason || "The snapshot is not connected. Fixtures stay on the season file.";
+    return rugbySnapshot.reason || "Snapshot loaded.";
+  }
+  function nzLineup(match) {
+    if (!match || !match.lineups) return null;
+    var home = match.home && match.home.name || "";
+    var away = match.away && match.away.name || "";
+    if (/new zealand|all blacks/i.test(home)) return match.lineups.home || [];
+    if (/new zealand|all blacks/i.test(away)) return match.lineups.away || [];
+    return null;
+  }
+  function rugbyLineupLine(name) {
+    if (!rugbySnapshot || !rugbySnapshot.connected) return "";
+    var hits = [];
+    (rugbySnapshot.matches || []).forEach(function (match) {
+      if (!match.lineupsUsed) return;
+      (nzLineup(match) || []).forEach(function (player) {
+        if (personKey(player.name) !== personKey(name)) return;
+        hits.push((player.role === "starter" ? "Named to start" : "Named as a replacement") + " on " + (match.date || "a listed match"));
+      });
+    });
+    if (!hits.length) return "";
+    return "<strong>rugbyAPI lineup.</strong> " + esc(hits.join(". ")) + ". Stored only because the lineups flag was complete.";
+  }
   function slug(name) {
     return String(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
@@ -379,7 +415,7 @@
     return num(value, 2);
   }
 
-  var season, dossier, forecast, coverage, live, byId, rows = [], sortKey = "points", sortDir = -1;
+  var season, dossier, forecast, coverage, rugbySnapshot, live, byId, rows = [], sortKey = "points", sortDir = -1;
   var gameMode = "tests";
   var learnFilter = "ALL";
   var charts = {};
@@ -624,8 +660,8 @@
     html += "<p class='srcs'>Gate: " + esc(String(gate.minimumMatches || "")) + " scored matches with a home side, " + esc(String(gate.minimumTrain || "")) + " before " + esc(gate.trainEnd || "") + ", " + esc(String(gate.minimumBacktest || "")) + " after it, and " + esc(String(gate.minimumMatchesPerSide || "")) + " each for New Zealand and Australia.</p>";
     var counts = (forecast.wikidata || {}).counts || {};
     html += "<p>Wikidata, CC0: " + esc(String(counts.rugbyMatchItems != null ? counts.rugbyMatchItems : "Not in this file")) + " rugby union match items, " + esc(String(counts.scoredRugbyMatches != null ? counts.scoredRugbyMatches : "Not in this file")) + " with two scores, " + esc(String(counts.scoredNationalMatches != null ? counts.scoredNationalMatches : "Not in this file")) + " scored rows between national-team items. Items typed as a Test: " + esc(String(counts.testMatchItems != null ? counts.testMatchItems : "Not in this file")) + ".</p>";
-    html += "<p>API-Sports: " + (forecast.apiSports && forecast.apiSports.connected ? "connected" : "not connected") + ". " + esc((forecast.apiSports && forecast.apiSports.reason) || "") + "</p>";
-    html += '<p class="srcs"><a href="' + esc(wr.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a> · <a href="' + esc(wr.explanation || "https://www.world.rugby/rankings/explanation") + '">How the rankings are calculated</a> · <a href="data/forecast.json">forecast.json</a> · <a href="data/wikidata-rugby-coverage.json">Wikidata extract</a> · <a href="data/build_forecast.py">Build script</a></p>';
+    html += "<p>Live results use the rugbyAPI snapshot, not this forecast file. " + esc(rugbyStatus()) + "</p>";
+    html += '<p class="srcs"><a href="' + esc(wr.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a> · <a href="' + esc(wr.explanation || "https://www.world.rugby/rankings/explanation") + '">How the rankings are calculated</a> · <a href="data/forecast.json">forecast.json</a> · <a href="data/wikidata-rugby-coverage.json">Wikidata extract</a> · <a href="data/build_forecast.py">Forecast script</a> · <a href="data/rugbyapi-snapshot.json">rugbyAPI snapshot</a></p>';
     html += "<p>" + esc(wr.licenceNote || "") + "</p></div>";
     if (coverage && coverage.matches) {
       html += "<details><summary>Scored rugby rows Wikidata returned (" + coverage.matches.length + ")</summary><ul class='plain'>";
@@ -672,7 +708,7 @@
       var status = statusOf(player);
       var tagClass = status === "Out" ? "out" : status === "Back with the group" ? "back" : "";
       return "<tr>" +
-        '<td class="sticky"><button class="linkish" type="button" data-player="' + esc(player.name) + '">' + esc(player.name) + "</button>" + (player.captain ? ' <span class="tag">captain</span>' : "") + "</td>" +
+        '<td class="sticky"><button class="linkish" type="button" data-player="' + esc(player.name) + '">' + esc(player.name) + "</button>" + (player.captain ? ' <span class="tag">captain</span>' : "") + profileLink(player) + "</td>" +
         "<td>" + esc(player.pos) + "</td><td>" + esc(unitLabel(player.unit)) + "</td>" +
         '<td><span class="tag ' + tagClass + '">' + esc(status) + "</span></td>" +
         '<td class="num">' + player.starts + '</td><td class="num">' + player.bench + "</td>" +
@@ -729,6 +765,11 @@
     body += '<div class="mini">' + cells + "</div>";
     body += "<p class='note'>S is named to start. B is named on the bench. A dot is not in that match-day 23. Points on the sheets: <strong>" + player.points + "</strong>.</p>";
     body += '<p><a href="player-dossier.html#' + slug(player.name) + '">Open the full dossier</a></p>';
+    if (player.officialProfile && player.officialProfile.url) {
+      body += '<p><a href="' + esc(player.officialProfile.url) + '" target="_blank" rel="noopener noreferrer">Official profile on NZ Rugby Stats</a>. Link only. Figures on that page are not copied here.</p>';
+    }
+    var liveLine = rugbyLineupLine(player.name);
+    if (liveLine) body += "<p>" + liveLine + "</p>";
     var matchRows = (player.sheets || []).map(function (sheet) {
       var test = byId[sheet.testId];
       if (!test) return "";
@@ -811,7 +852,7 @@
       testRows + "</tbody></table></div>" +
       '<div class="panel"><h3>Points on each Test sheet</h3><p class="srcs">A zero is no points on that sheet. The table says whether the player was in the 23.</p><div class="chart-box"><canvas id="compare-chart" aria-label="Points by player on each Test"></canvas></div></div>' +
       "<p>" + chosen.map(function (player) {
-        return '<a href="player-dossier.html#' + slug(player.name) + '">' + esc(player.name) + " dossier</a>";
+        return '<a href="player-dossier.html#' + slug(player.name) + '">' + esc(player.name) + " dossier</a>" + profileLink(player);
       }).join(" · ") + "</p>";
     drawCompareChart(chosen, tests);
   }
@@ -945,6 +986,40 @@
     return [tries ? "Tries: " + tries : "", kicks].filter(Boolean).join(". ");
   }
 
+  function renderRugby() {
+    var box = $("rugbyapi");
+    if (!box) return;
+    var html = '<article class="panel"><h3>rugbyAPI snapshot</h3>';
+    html += "<p>" + esc(rugbyStatus()) + "</p>";
+    if (!rugbySnapshot || !rugbySnapshot.connected) {
+      html += "<p class='srcs'>Refresh from the repo with <code>node scripts/fetch-rugbyapi.mjs</code> after <code>RUGBYAPI_KEY</code> is set in the environment. The key is not stored in the snapshot and this page never reads it. A free key covers 11 endpoints and yesterday onwards. Lineups, timelines, form and player profiles need Archive, and a refusal is recorded instead of invented.</p>";
+      html += '<p class="srcs"><a href="https://rugbyapi.com/documentation">rugbyAPI documentation</a> · <a href="data/SOURCES.md">Sources and licences</a></p></article>';
+      box.innerHTML = html;
+      return;
+    }
+    html += "<p class='srcs'>" + esc(rugbySnapshot.qualityPolicy || "") + "</p>";
+    var rows = rugbySnapshot.matches || [];
+    if (!rows.length) {
+      html += "<p>No All Blacks Test row was stored.</p>";
+    } else {
+      html += "<ul class='plain'>";
+      rows.forEach(function (match) {
+        var home = match.home && match.home.name || "";
+        var away = match.away && match.away.name || "";
+        var score = (match.home && match.home.score != null && match.away && match.away.score != null) ? match.home.score + "–" + match.away.score : "No final score";
+        html += "<li><strong>" + esc(match.date || "") + " · " + esc(home) + " v " + esc(away) + " · " + esc(score) + ".</strong> " + esc(match.crossCheckNote || "") + " Timeline: " + esc(match.timelineReason || "") + " Lineups: " + esc(match.lineupsReason || "") + "</li>";
+      });
+      html += "</ul>";
+    }
+    if (rugbySnapshot.form && rugbySnapshot.form.available && rugbySnapshot.form.form) {
+      html += "<p>Form string from rugbyAPI: " + esc(rugbySnapshot.form.form) + ". A result here does not replace the season file.</p>";
+    } else if (rugbySnapshot.form && rugbySnapshot.form.reason) {
+      html += "<p>" + esc(rugbySnapshot.form.reason) + "</p>";
+    }
+    html += '<p class="srcs"><a href="data/rugbyapi-snapshot.json">Snapshot file</a> · <a href="https://rugbyapi.com/documentation">rugbyAPI documentation</a></p></article>';
+    box.innerHTML = html;
+  }
+
   function renderFixtures() {
     var ordered = season.tests.slice().reverse();
     $("fixture-cards").innerHTML = ordered.map(function (test) {
@@ -978,7 +1053,7 @@
       return "<li><strong>" + esc(feed.name) + ".</strong> " + esc(feed.status) + ". Sample label, not a live source.</li>";
     }).join("");
     $("sample-block").innerHTML = "<ul class='plain'><li><strong>Direction, Collection, Analysis, Fusion, Counter-Intel, Dissemination.</strong> Sample names for a cell that has not been built.</li>" + feeds + "</ul>";
-    $("foot").innerHTML = "Matakite · " + esc(season.meta.asOfLabel) + " · <a href='player-dossier.html'>Player dossier</a> · <a href='data/SOURCES.md'>Sources and licences</a> · <a href='data/forecast.json'>Forecast file</a>";
+    $("foot").innerHTML = "Matakite · " + esc(season.meta.asOfLabel) + " · <a href='player-dossier.html'>Player dossier</a> · <a href='data/SOURCES.md'>Sources and licences</a> · <a href='data/forecast.json'>Forecast file</a> · <a href='data/rugbyapi-snapshot.json'>rugbyAPI snapshot</a>";
   }
 
   function boot(pack) {
@@ -1001,6 +1076,7 @@
     renderCharts();
     renderLearnings();
     renderFixtures();
+    renderRugby();
     renderNotes();
     var hash = (location.hash || "").replace("#", "");
     if (hash.indexOf("player-") === 0 || rows.some(function (player) { return slug(player.name) === hash; })) {
@@ -1032,10 +1108,12 @@
     Promise.all([
       MatakiteData.createPlayerProvider({ provider: "static-json" }).load(),
       fetch("data/forecast.json").then(function (response) { if (!response.ok) throw new Error("forecast " + response.status); return response.json(); }),
-      fetch("data/wikidata-rugby-coverage.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; })
+      fetch("data/wikidata-rugby-coverage.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; }),
+      fetch("data/rugbyapi-snapshot.json").then(function (response) { if (!response.ok) return null; return response.json(); }).catch(function () { return null; })
     ]).then(function (parts) {
       forecast = parts[1];
       coverage = parts[2];
+      rugbySnapshot = parts[3];
       boot(parts[0]);
     }).catch(function (error) {
       $("load-error").hidden = false;

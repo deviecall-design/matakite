@@ -179,13 +179,40 @@ Checked again on 13 October 2026 while rebuilding the dashboard.
 | [Wikidata Query Service](https://query.wikidata.org/sparql) | Scored rugby matches. The extract is `data/wikidata-rugby-coverage.json`. | CC0 |
 | [World Rugby men's rankings](https://www.world.rugby/rankings/mru) | Ranking points. The snapshot is `data/world-rugby-rankings.json`. The public feed is `https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en`. | World Rugby's published figures. Not CC0. Stored with attribution. Not a prediction. |
 | [World Rugby rankings explanation](https://www.world.rugby/rankings/explanation) | The three-point home adjustment, the points exchange, the 15-point margin weighting, and the World Cup weighting. | Quoted as the method. The worked example is Wales 76.92 at home to Scotland 76.36, won 23–10, exchange 0.64. |
-| API-Sports API-Rugby | Optional current fixtures and results. Host `https://v1.rugby.api-sports.io`. Header `x-apisports-key`. | API-Sports terms. The key is read from `API_SPORTS_KEY` and is never committed. If the variable is missing, no request is sent. |
+| [rugbyAPI](https://rugbyapi.com/documentation) | Current fixtures, results, lineups and timelines. Base `https://api.rugbyapi.com/v1`. The refresh script is `scripts/fetch-rugbyapi.mjs`. The site reads `data/rugbyapi-snapshot.json`. | rugbyAPI terms. The key is read from `RUGBYAPI_KEY` and is never committed. If the variable is missing, no request is sent. A free key covers 11 endpoints and 50 lookups a day, from yesterday forward, without `include`. `GET /v1/matches/{id}?include=lineups,timeline`, `GET /v1/teams/{id}/form` and `GET /v1/players/{id}` need Archive. A `403 plan_required` is stored and nothing is invented. Quality flags decide what is kept: a timeline only when `complete` and the events add up to the score, lineups only when `complete` and no player is on both sides. Scores that disagree with this season file are listed and are not copied onto the season card. |
+| [NZ Rugby Stats](https://stats.allblacks.com/all-players) | Official player profile links on the dashboard and the dossier. | Links only. Career figures on those pages are not copied into the JSON. |
 | Goalserve | Not used. `src/data/player-provider.js` is the seam a later paid feed would implement. | No Goalserve payload is in the repo. |
 
 Not used, on purpose:
 
 - The Kaggle international Test dataset. Its licence is CC BY-NC-SA.
 - ESPN's hidden site API.
+- API-Sports API-Rugby. Damien chose rugbyAPI for live results, lineups and timelines.
 - Any Opta or Stats Perform feed. The old sample feed name remains in the data file as "Not connected". The page does not show an Opta model.
 
 The script replays the published points exchange and can fit a win chance and a margin. It does that only when it has at least 200 scored matches with a home side, enough of them before and after 1 January 2024, and at least eight usable matches each for New Zealand and Australia. The Wikidata extract does not meet that gate. The page then shows the ranking points and the three-point home adjustment, and it does not show a win probability or an expected margin.
+
+## Refresh the rugbyAPI snapshot
+
+The dashboard and the dossier do not call rugbyAPI. They read `data/rugbyapi-snapshot.json`. Until that file has `"connected": true`, the pages keep the season file and say the snapshot is not connected.
+
+From the repo root, with the key only in the environment:
+
+```bash
+export RUGBYAPI_KEY='your key'
+node scripts/fetch-rugbyapi.mjs
+```
+
+Then commit `data/rugbyapi-snapshot.json` and push it. Do not commit `.env` or the key. Running the script without `RUGBYAPI_KEY` sends no request. If a connected snapshot is already in the file, that run leaves it in place.
+
+`node scripts/fetch-rugbyapi.mjs --self-check` checks the quality rules and the cross-check without a key and without writing the snapshot.
+
+What the refresh calls:
+
+- `GET /v1/search?q=New Zealand` and `GET /v1/teams/{id}` to confirm the national side. Both are on the free key.
+- `GET /v1/fixtures?days=60` for upcoming Tests.
+- `GET /v1/matches?team={id}` for 2026 finished matches. A free key returns `403 plan_required` for dates before yesterday.
+- `GET /v1/matches/{id}?include=lineups,timeline`. A free key returns `403 plan_required`. The script then asks for the match without `include`.
+- `GET /v1/teams/{id}/form?last=12` and `GET /v1/players/{id}` when a usable lineup has a player id. Both need Archive.
+
+A free key allows 50 lookups a day. The script stops at 24 unless `RUGBYAPI_MAX_REQUESTS` is set lower. Refused calls do not count on rugbyAPI's side, and they are still listed in the snapshot.

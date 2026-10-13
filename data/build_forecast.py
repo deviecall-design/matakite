@@ -5,7 +5,8 @@ Sources
 - Wikidata Query Service (CC0): scored rugby matches.
 - World Rugby men's rankings feed, plus the published explanation of the
   three-point home adjustment and the points exchange.
-- Optional API-Sports rugby API, only when API_SPORTS_KEY is set.
+- Current fixtures, lineups and timelines are not fetched here. They are
+  refreshed by scripts/fetch-rugbyapi.mjs into data/rugbyapi-snapshot.json.
 
 The script never writes a win probability unless the scored-match gate
 passes. A short series, a missing key, or a failed fetch becomes
@@ -53,7 +54,6 @@ WD_API = "https://www.wikidata.org/w/api.php"
 RANKINGS_API = "https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en"
 RANKINGS_PAGE = "https://www.world.rugby/rankings/mru"
 RANKINGS_EXPLANATION = "https://www.world.rugby/rankings/explanation"
-API_SPORTS_HOST = "https://v1.rugby.api-sports.io"
 
 HOME_ADVANTAGE = 3.0
 INITIAL_RATING = 30.0
@@ -63,7 +63,6 @@ MIN_NAMED_TEAM = 8
 MIN_TRAIN = 80
 MIN_BACKTEST = 30
 TRAIN_END = "2024-01-01"
-API_SPORTS_REQUEST_CAP = 12
 
 RUGBY_MATCH = "Q47089371"
 NATIONAL_TEAM = "Q58840819"
@@ -74,10 +73,12 @@ def utc_now() -> str:
 
 
 def redact(text: str) -> str:
-    key = os.environ.get("API_SPORTS_KEY", "").strip()
-    if key and key in text:
-        return text.replace(key, "[redacted]")
-    return text
+    out = text
+    for name in ("API_SPORTS_KEY", "RUGBYAPI_KEY"):
+        key = os.environ.get(name, "").strip()
+        if key and key in out:
+            out = out.replace(key, "[redacted]")
+    return out
 
 
 def fetch(url: str, headers: dict | None = None, data: bytes | None = None, timeout: int = 90) -> bytes:
@@ -198,19 +199,6 @@ def fit_line(xs: list[float], ys: list[float]) -> tuple[float, float]:
     covariance = sum((x_value - mean_x) * (y_value - mean_y) for x_value, y_value in zip(xs, ys))
     slope = covariance / variance
     return mean_y - slope * mean_x, slope
-
-
-def short_team(label: str) -> str:
-    text = label.strip()
-    for suffix in (
-        " national rugby union team",
-        " national rugby team",
-        " men's rugby union team",
-        " rugby union team",
-    ):
-        if text.lower().endswith(suffix):
-            text = text[: -len(suffix)]
-    return text.strip()
 
 
 def replay(matches: list[dict]) -> list[dict]:
@@ -521,116 +509,6 @@ def wikidata_coverage(home_role: str | None) -> dict:
     }
 
 
-def api_sports() -> dict:
-    key = os.environ.get("API_SPORTS_KEY", "").strip()
-    base = {
-        "host": API_SPORTS_HOST,
-        "header": "x-apisports-key",
-        "requestsSent": 0,
-        "requestCap": API_SPORTS_REQUEST_CAP,
-        "licenceNote": "API-Sports results are covered by API-Sports terms, not CC0. Raw responses are not committed. This file only records whether the feed was used.",
-    }
-    if not key:
-        return {
-            **base,
-            "connected": False,
-            "reason": "API_SPORTS_KEY is not set. No request was sent. Current fixtures stay on data/all-blacks-2026.json.",
-            "matches": [],
-        }
-    headers = {"x-apisports-key": key}
-    matches: list[dict] = []
-    sent = 0
-
-    def get(path: str) -> dict:
-        nonlocal sent
-        if sent >= API_SPORTS_REQUEST_CAP:
-            raise RuntimeError("Stopped at the request cap so the free daily allowance is not used up.")
-        sent += 1
-        raw = fetch(API_SPORTS_HOST + path, headers=headers)
-        payload = json.loads(raw.decode())
-        if payload.get("errors"):
-            raise RuntimeError(redact(json.dumps(payload.get("errors"))))
-        return payload
-
-    try:
-        status = get("/status")
-        leagues = get("/leagues")
-        chosen = []
-        for item in leagues.get("response") or []:
-            league = item.get("league") or item
-            name = str(league.get("name") or "")
-            if any(word in name.lower() for word in ("international", "nations championship", "rugby championship", "bledisloe", "test")):
-                chosen.append(league)
-        chosen = chosen[:4]
-        for league in chosen:
-            league_id = league.get("id")
-            seasons = league.get("seasons") or []
-            years = []
-            for season in seasons:
-                year = season.get("season") if isinstance(season, dict) else season
-                if isinstance(year, int):
-                    years.append(year)
-            if not years:
-                years = [2025, 2026]
-            for year in sorted(set(years))[-2:]:
-                if sent >= API_SPORTS_REQUEST_CAP:
-                    break
-                games = get(f"/games?league={league_id}&season={year}")
-                for game in games.get("response") or []:
-                    parsed = parse_api_game(game)
-                    if parsed:
-                        matches.append(parsed)
-        return {
-            **base,
-            "connected": True,
-            "requestsSent": sent,
-            "statusAccount": {k: status.get(k) for k in ("results", "errors") if k in status},
-            "leaguesUsed": [league.get("name") for league in chosen],
-            "matches": matches,
-            "reason": None if matches else "The key was accepted, but no finished international games were recognised in the leagues that were queried.",
-        }
-    except Exception as error:  # noqa: BLE001
-        return {
-            **base,
-            "connected": False,
-            "requestsSent": sent,
-            "reason": redact(str(error)),
-            "matches": [],
-        }
-
-
-def parse_api_game(game: dict) -> dict | None:
-    teams = game.get("teams") or {}
-    scores = game.get("scores") or {}
-    home = (teams.get("home") or {}).get("name")
-    away = (teams.get("away") or {}).get("name")
-    home_score = scores.get("home")
-    away_score = scores.get("away")
-    status = ((game.get("status") or {}).get("short") or "").upper()
-    date = (game.get("date") or "")[:10]
-    if not home or not away or not date:
-        return None
-    if status not in {"FT", "AET", "FINISHED"} and (home_score is None or away_score is None):
-        return None
-    if home_score is None or away_score is None:
-        return None
-    try:
-        home_points = int(home_score)
-        away_points = int(away_score)
-    except (TypeError, ValueError):
-        return None
-    return {
-        "date": date,
-        "home": short_team(str(home)),
-        "away": short_team(str(away)),
-        "homeScore": home_points,
-        "awayScore": away_points,
-        "worldCup": "world cup" in str((game.get("league") or {}).get("name") or "").lower(),
-        "source": "API-Sports",
-        "sourceId": game.get("id"),
-    }
-
-
 def usable_wikidata_matches(coverage: dict) -> list[dict]:
     """Wikidata rows are not given a home side unless the item marks one."""
     if coverage.get("scoredMatchesWithHomeRole"):
@@ -684,9 +562,8 @@ def main() -> int:
     except Exception as error:  # noqa: BLE001
         rankings = {"entries": [], "error": redact(str(error))}
         rankings_error = rankings["error"]
-    sports = api_sports()
     wikidata_matches = usable_wikidata_matches(coverage)
-    model_matches = wikidata_matches + [row for row in sports.get("matches", []) if row.get("source") == "API-Sports"]
+    model_matches = wikidata_matches
     # Drop duplicate date/home/away keys, preferring a later source only as an extra row check.
     deduped = []
     seen = set()
@@ -748,8 +625,9 @@ def main() -> int:
             f"New Zealand appear in {named.get('New Zealand', 0)} usable matches and Australia in {named.get('Australia', 0)}. "
             f"Each side needs {MIN_NAMED_TEAM} before a Sydney probability is written."
         )
-    if sports.get("connected") is False:
-        reason_parts.append(sports.get("reason") or "API-Sports was not used.")
+    reason_parts.append(
+        "API-Sports is not used. Current fixtures, lineups and timelines are refreshed by scripts/fetch-rugbyapi.mjs into data/rugbyapi-snapshot.json."
+    )
     gap = ranking_gap(rankings, fixture) if rankings.get("entries") else None
     forecast = {
         "status": "ok" if prediction else "unavailable",
@@ -814,10 +692,14 @@ def main() -> int:
             "rankingGap": gap,
             "licenceNote": rankings.get("licenceNote"),
         },
-        "apiSports": {key: value for key, value in sports.items() if key != "matches"} | {
-            "matchCount": len(sports.get("matches") or []),
+        "liveResults": {
+            "provider": "rugbyAPI",
+            "snapshot": "data/rugbyapi-snapshot.json",
+            "script": "scripts/fetch-rugbyapi.mjs",
+            "note": "This forecast file does not call rugbyAPI. The dashboard reads the snapshot. API-Sports is not used.",
         },
         "notUsed": [
+            "API-Sports API-Rugby was not used.",
             "The Kaggle international Test dataset is CC BY-NC-SA and was not used.",
             "ESPN's hidden site API was not used.",
             "No Opta feed is connected, and no Opta percentage is shown.",
@@ -836,7 +718,7 @@ def main() -> int:
         nz = team_points(rankings, "New Zealand")
         au = team_points(rankings, "Australia")
         print(f"rankings effective {rankings.get('effective')} NZ {nz and nz.get('points')} AU {au and au.get('points')}")
-    print(f"api-sports connected={sports.get('connected')} matches={len(sports.get('matches') or [])}")
+    print("live results: data/rugbyapi-snapshot.json")
     return 0
 
 

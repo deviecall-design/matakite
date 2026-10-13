@@ -232,6 +232,12 @@
   "players": [
     {
       "name": "Ethan de Groot",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Ethan-de-Groot-AB-1197",
+        "allBlackNumber": 1197,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loosehead prop",
       "unit": "FR",
       "squad": "squad",
@@ -294,6 +300,12 @@
     },
     {
       "name": "George Bower",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/George-Bower-AB-1194",
+        "allBlackNumber": 1194,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loosehead prop",
       "unit": "FR",
       "squad": "squad",
@@ -337,6 +349,12 @@
     },
     {
       "name": "Xavier Numia",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Xavier-Numia-AB-1233",
+        "allBlackNumber": 1233,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loosehead prop",
       "unit": "FR",
       "squad": "squad",
@@ -385,6 +403,12 @@
     },
     {
       "name": "Codie Taylor",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Codie-Taylor-AB-1143",
+        "allBlackNumber": 1143,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Hooker",
       "unit": "FR",
       "squad": "squad",
@@ -443,6 +467,12 @@
     },
     {
       "name": "Asafo Aumua",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Asafo-Aumua-AB-1163",
+        "allBlackNumber": 1163,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Hooker",
       "unit": "FR",
       "squad": "injured",
@@ -499,6 +529,12 @@
     },
     {
       "name": "George Bell",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/George-Bell-AB-1217",
+        "allBlackNumber": 1217,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Hooker",
       "unit": "FR",
       "squad": "squad",
@@ -517,6 +553,12 @@
     },
     {
       "name": "Samisoni Taukei'aho",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Samisoni-Taukei'aho-AB-1198",
+        "allBlackNumber": 1198,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Hooker",
       "unit": "FR",
       "squad": "squad",
@@ -548,6 +590,12 @@
     },
     {
       "name": "Tyrel Lomax",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Tyrel-Lomax-AB-1180",
+        "allBlackNumber": 1180,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Tighthead prop",
       "unit": "FR",
       "squad": "squad",
@@ -599,6 +647,12 @@
     },
     {
       "name": "Fletcher Newell",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Fletcher-Newell-AB-1205",
+        "allBlackNumber": 1205,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Tighthead prop",
       "unit": "FR",
       "squad": "squad",
@@ -650,6 +704,12 @@
     },
     {
       "name": "Pasilio Tosi",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Pasilio-Tosi-AB-1219",
+        "allBlackNumber": 1219,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Tighthead prop",
       "unit": "FR",
       "squad": "squad",
@@ -681,6 +741,12 @@
     },
     {
       "name": "Ollie Norris",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Ollie-Norris-AB-1227",
+        "allBlackNumber": 1227,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Prop",
       "unit": "FR",
       "squad": "injured",
@@ -703,6 +769,12 @@
     },
     {
       "name": "Scott Barrett",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Scott-Barrett-AB-1155",
+        "allBlackNumber": 1155,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
@@ -739,6 +811,12 @@
     },
     {
       "name": "Jamie Hannah",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Jamie-Hannah-AB-1235",
+        "allBlackNumber": 1235,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
@@ -757,6 +835,12 @@
     },
     {
       "name": "Josh Lord",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Josh-Lord-AB-1199",
+        "allBlackNumber": 1199,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
@@ -819,6 +903,12 @@
     },
     {
       "name": "Fabian Holland",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Fabian-Holland-AB-1224",
+        "allBlackNumber": 1224,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "squad",
@@ -869,6 +959,12 @@
     },
     {
       "name": "Tupou Vaa'i",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Tupou-Vaa'i-AB-1188",
+        "allBlackNumber": 1188,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock / blindside",
       "unit": "LK",
       "squad": "squad",
@@ -938,6 +1034,12 @@
     },
     {
       "name": "Patrick Tuipulotu",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Patrick-Tuipulotu-AB-1133",
+        "allBlackNumber": 1133,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "injured",
@@ -977,6 +1079,12 @@
     },
     {
       "name": "Sam Darry",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Sam-Darry-AB-1220",
+        "allBlackNumber": 1220,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Lock",
       "unit": "LK",
       "squad": "omitted",
@@ -1008,6 +1116,12 @@
     },
     {
       "name": "Simon Parker",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Simon-Parker-AB-1230",
+        "allBlackNumber": 1230,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
@@ -1052,6 +1166,12 @@
     },
     {
       "name": "Shannon Frizell",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Shannon-Frizell-AB-1172",
+        "allBlackNumber": 1172,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
@@ -1080,6 +1200,12 @@
     },
     {
       "name": "Anton Segner",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Anton-Segner-AB-1237",
+        "allBlackNumber": 1237,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "injured",
@@ -1132,6 +1258,12 @@
     },
     {
       "name": "Du'Plessis Kirifi",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Du'Plessis-Kirifi-AB-1226",
+        "allBlackNumber": 1226,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
@@ -1150,6 +1282,12 @@
     },
     {
       "name": "Ethan Blackadder",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Ethan-Blackadder-AB-1195",
+        "allBlackNumber": 1195,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "injured",
@@ -1185,6 +1323,12 @@
     },
     {
       "name": "Peter Lakai",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Peter-Lakai-AB-1222",
+        "allBlackNumber": 1222,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
@@ -1238,6 +1382,12 @@
     },
     {
       "name": "Wallace Sititi",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Wallace-Sititi-AB-1218",
+        "allBlackNumber": 1218,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "squad",
@@ -1282,6 +1432,12 @@
     },
     {
       "name": "Ardie Savea",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Ardie-Savea-AB-1147",
+        "allBlackNumber": 1147,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "No. 8",
       "unit": "LF",
       "squad": "injured",
@@ -1343,6 +1499,12 @@
     },
     {
       "name": "Luke Jacobson",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Luke-Jacobson-AB-1183",
+        "allBlackNumber": 1183,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Loose forward",
       "unit": "LF",
       "squad": "injured",
@@ -1390,6 +1552,12 @@
     },
     {
       "name": "Cam Roigard",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Cameron-Roigard-AB-1210",
+        "allBlackNumber": 1210,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
@@ -1446,6 +1614,12 @@
     },
     {
       "name": "Cortez Ratima",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Cortez-Ratima-AB-1214",
+        "allBlackNumber": 1214,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
@@ -1485,6 +1659,12 @@
     },
     {
       "name": "Kyle Preston",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Kyle-Preston-AB-1231",
+        "allBlackNumber": 1231,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
@@ -1540,6 +1720,12 @@
     },
     {
       "name": "Richie Mo'unga",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Richie-Mo'unga-AB-1167",
+        "allBlackNumber": 1167,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "First five",
       "unit": "FH",
       "squad": "injured",
@@ -1579,6 +1765,12 @@
     },
     {
       "name": "Josh Jacomb",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Josh-Jacomb-AB-1239",
+        "allBlackNumber": 1239,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "First five",
       "unit": "FH",
       "squad": "squad",
@@ -1593,6 +1785,12 @@
     },
     {
       "name": "Ruben Love",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Ruben-Love-AB-1223",
+        "allBlackNumber": 1223,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "First five",
       "unit": "FH",
       "squad": "injured",
@@ -1644,6 +1842,12 @@
     },
     {
       "name": "Jordie Barrett",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Jordie-Barrett-AB-1159",
+        "allBlackNumber": 1159,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Second five",
       "unit": "MF",
       "squad": "squad",
@@ -1700,6 +1904,12 @@
     },
     {
       "name": "Quinn Tupaea",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Quinn-Tupaea-AB-1193",
+        "allBlackNumber": 1193,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Centre",
       "unit": "MF",
       "squad": "squad",
@@ -1756,6 +1966,12 @@
     },
     {
       "name": "Timoci Tavatavanawai",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Timoci-Tavatavanawai-AB-1228",
+        "allBlackNumber": 1228,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Midfielder",
       "unit": "MF",
       "squad": "squad",
@@ -1778,6 +1994,12 @@
     },
     {
       "name": "Rieko Ioane",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Rieko-Ioane-AB-1156",
+        "allBlackNumber": 1156,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Midfielder / outside back",
       "unit": "MF",
       "squad": "squad",
@@ -1822,6 +2044,12 @@
     },
     {
       "name": "Billy Proctor",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Billy-Proctor-AB-1215",
+        "allBlackNumber": 1215,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Centre",
       "unit": "MF",
       "squad": "injured",
@@ -1853,6 +2081,12 @@
     },
     {
       "name": "Anton Lienert-Brown",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Anton-Lienert-Brown-AB-1153",
+        "allBlackNumber": 1153,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Centre",
       "unit": "MF",
       "squad": "squad",
@@ -1904,6 +2138,12 @@
     },
     {
       "name": "Fehi Fineanganofo",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Fehi-Fineanganofo-AB-1234",
+        "allBlackNumber": 1234,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Wing",
       "unit": "BK",
       "squad": "injured",
@@ -1951,6 +2191,12 @@
     },
     {
       "name": "Leroy Carter",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Leroy-Carter-AB-1232",
+        "allBlackNumber": 1232,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Wing",
       "unit": "BK",
       "squad": "injured",
@@ -2010,6 +2256,12 @@
     },
     {
       "name": "Josh Moorby",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Josh-Moorby-AB-1236",
+        "allBlackNumber": 1236,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Wing",
       "unit": "BK",
       "squad": "squad",
@@ -2063,6 +2315,12 @@
     },
     {
       "name": "Will Jordan",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Will-Jordan-AB-1191",
+        "allBlackNumber": 1191,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Wing / fullback",
       "unit": "BK",
       "squad": "squad",
@@ -2119,6 +2377,12 @@
     },
     {
       "name": "Beauden Barrett",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Beauden-Barrett-AB-1115",
+        "allBlackNumber": 1115,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Outside back",
       "unit": "BK",
       "squad": "squad",
@@ -2164,6 +2428,12 @@
     },
     {
       "name": "Damian McKenzie",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Damian-McKenzie-AB-1154",
+        "allBlackNumber": 1154,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Fullback",
       "unit": "BK",
       "squad": "squad",
@@ -2224,6 +2494,12 @@
     },
     {
       "name": "Caleb Clarke",
+      "officialProfile": {
+        "name": "NZ Rugby Stats",
+        "url": "https://stats.allblacks.com/all-players/profile/Caleb-Clarke-AB-1187",
+        "allBlackNumber": 1187,
+        "note": "Link only. Career figures on that page are not copied into this file."
+      },
       "pos": "Wing",
       "unit": "BK",
       "squad": "injured",

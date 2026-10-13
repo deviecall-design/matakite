@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-13T07:51:10.218Z",
+  "generatedBy": "scripts/fetch-rugbyapi.mjs",
+  "source": {
+    "name": "rugbyAPI",
+    "base": "https://api.rugbyapi.com/v1",
+    "docs": "https://rugbyapi.com/documentation",
+    "terms": "https://rugbyapi.com/legal/terms",
+    "freeEndpoints": [
+      "/v1/matches",
+      "/v1/matches/{id}",
+      "/v1/fixtures",
+      "/v1/results",
+      "/v1/competitions",
+      "/v1/seasons/{id}/standings",
+      "/v1/teams/{id}",
+      "/v1/rankings",
+      "/v1/search",
+      "/v1/usage",
+      "/v1/status"
+    ],
+    "freeLookupsPerDay": 50,
+    "archiveNeeded": [
+      "GET /v1/matches/{id}?include=lineups,timeline",
+      "GET /v1/teams/{id}/form",
+      "GET /v1/players/{id}"
+    ],
+    "licenceNote": "rugbyAPI terms. This file is a snapshot. It does not contain an API key."
+  },
+  "connected": false,
+  "keyPresent": false,
+  "reason": "RUGBYAPI_KEY is not set. No request was sent. The dashboard keeps data/all-blacks-2026.json.",
+  "requests": [],
+  "team": null,
+  "fixtures": [],
+  "matches": [],
+  "form": null,
+  "players": [],
+  "disagreements": [],
+  "qualityPolicy": "Timeline events are stored only when quality.timeline is complete and the event points add up to the final score. Lineups are stored only when quality.lineups is complete and no player is on both sides. duplicate_of records are not canonical. A score that disagrees with data/all-blacks-2026.json is listed and is not copied onto the season card.",
+  "notUsed": [
+    "API-Sports API-Rugby is not called.",
+    "The Kaggle international Test dataset is not used.",
+    "ESPN's hidden site API is not used."
+  ]
+}

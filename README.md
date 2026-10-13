@@ -43,7 +43,8 @@ python3 fusion_server.py
 |------|---------|
 | `matakite-poc.html` | All Blacks dashboard: record, players, comparison, trends, and the Sydney forecast gate |
 | `player-dossier.html` | Player dossier. Loads through `src/data/player-provider.js` |
-| `data/build_forecast.py` | Wikidata + World Rugby rankings forecast. Optional `API_SPORTS_KEY`. Writes `data/forecast.json` |
+| `data/build_forecast.py` | Wikidata + World Rugby rankings forecast. Writes `data/forecast.json`. It does not call a live results API |
+| `scripts/fetch-rugbyapi.mjs` | Optional rugbyAPI refresh. Reads `RUGBYAPI_KEY` and writes `data/rugbyapi-snapshot.json`. The site reads the snapshot and never the key |
 | `fusion_server.py` | Python WebSocket server + HTTP dashboard server |
 | `src/matakite-ontology.ts` | TypeScript data model with provenance tagging |
 | `docs/` | Operating model + deployment guide |
@@ -101,7 +102,7 @@ See `docs/deployment-guide.md`. Summary:
 |----------|----------|------|
 | Highlightly | `https://rugby.highlightly.net` | Free → Paid |
 | Data Sports Group | Sports XML feed | Paid (RWC teams) |
-| API-Sports | REST API | $10/mo |
+| rugbyAPI | `https://api.rugbyapi.com/v1` | Free key for current fixtures. Archive for lineups and timelines |
 | Opta/Stats Perform | Licensed feed | Enterprise |
 
 ---

@@ -2,7 +2,9 @@
    Pages ask a provider for the dossier and the season file.
    StaticJsonProvider reads the JSON already in this repo.
    GoalserveProvider is the seam for a later paid feed. It does not
-   invent players, and it does not run from the browser with a key. */
+   invent players, and it does not run from the browser with a key.
+   rugbyAPI is not a browser provider. scripts/fetch-rugbyapi.mjs writes
+   data/rugbyapi-snapshot.json, and the pages read that file. */
 (function (global) {
   "use strict";
 

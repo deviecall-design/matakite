@@ -3,7 +3,7 @@
   "label": "Model estimate, not a guarantee",
   "generatedAt": "2026-10-13T07:26:38+00:00",
   "generatedBy": "data/build_forecast.py",
-  "reason": "No scored Test series with a marked home side was available, so no win probability and no expected margin were calculated. Wikidata has 22 rugby union match items with scores for two teams. Of the sport-wide scored rows, 17 are between items typed as national rugby union teams. 1 scored rugby union match item marks a home team. Home advantage is not fitted from a list that short. 13 of the 22 stored scored rows do not have a national team in the name. API_SPORTS_KEY is not set. No request was sent. Current fixtures stay on data/all-blacks-2026.json.",
+  "reason": "No scored Test series with a marked home side was available, so no win probability and no expected margin were calculated. Wikidata has 22 rugby union match items with scores for two teams. Of the sport-wide scored rows, 17 are between items typed as national rugby union teams. 1 scored rugby union match item marks a home team. Home advantage is not fitted from a list that short. 13 of the 22 stored scored rows do not have a national team in the name. API-Sports is not used. Current fixtures, lineups and timelines are refreshed by scripts/fetch-rugbyapi.mjs into data/rugbyapi-snapshot.json.",
   "nextTest": {
     "known": true,
     "id": "2026-10-17-australia-sydney",
@@ -93,19 +93,16 @@
     },
     "licenceNote": "World Rugby publishes these ranking points. They are not CC0. The numbers are stored with attribution and are not a prediction."
   },
-  "apiSports": {
-    "host": "https://v1.rugby.api-sports.io",
-    "header": "x-apisports-key",
-    "requestsSent": 0,
-    "requestCap": 12,
-    "licenceNote": "API-Sports results are covered by API-Sports terms, not CC0. Raw responses are not committed. This file only records whether the feed was used.",
-    "connected": false,
-    "reason": "API_SPORTS_KEY is not set. No request was sent. Current fixtures stay on data/all-blacks-2026.json.",
-    "matchCount": 0
-  },
   "notUsed": [
+    "API-Sports API-Rugby was not used.",
     "The Kaggle international Test dataset is CC BY-NC-SA and was not used.",
     "ESPN's hidden site API was not used.",
     "No Opta feed is connected, and no Opta percentage is shown."
-  ]
+  ],
+  "liveResults": {
+    "provider": "rugbyAPI",
+    "snapshot": "data/rugbyapi-snapshot.json",
+    "script": "scripts/fetch-rugbyapi.mjs",
+    "note": "This forecast file does not call rugbyAPI. The dashboard reads the snapshot. API-Sports is not used."
+  }
 }
