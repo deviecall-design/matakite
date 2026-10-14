@@ -922,10 +922,11 @@
     var next = forecast && forecast.nextTest;
     var isNext = next && next.id === test.id;
     var prediction = forecast && forecast.prediction;
-    var html = '<article class="panel"><h3>Win probability and expected margin</h3>';
+    var html = '<article class="panel" id="prediction-panel"><h3>Win probability and expected margin</h3>';
     html += "<p><strong>" + esc((forecast && forecast.label) || "Model estimate, not a guarantee") + ".</strong></p>";
     if (isNext && prediction && prediction.available) {
       var nzProb = prediction.away === "New Zealand" ? prediction.awayWinProbability : prediction.homeWinProbability;
+      var oppProb = prediction.home === "New Zealand" ? prediction.awayWinProbability : prediction.homeWinProbability;
       var margin = prediction.expectedMarginHomeMinusAway;
       var nzMargin = prediction.home === "New Zealand" ? margin : -margin;
       var marginText = nzMargin === 0 ? "Level" : (nzMargin > 0 ? "New Zealand by " + num(nzMargin, 1) : (prediction.home || "Home") + " by " + num(Math.abs(nzMargin), 1));
@@ -933,6 +934,11 @@
         kpi("New Zealand win chance", num(nzProb * 100, 1) + "%", "Model estimate, not a guarantee", "nz-win") +
         kpi("Expected margin", marginText, "New Zealand score minus opponent. Fitted, not a guarantee", "margin") +
         "</div>";
+      html += "<p>" + esc(prediction.home || "Home") + " win chance " + num(oppProb * 100, 1) + "%. Draw chance " + num(prediction.drawProbability * 100, 1) + "%.";
+      if (forecast.model && typeof forecast.model.homeAdvantagePoints === "number") {
+        html += " Fitted home advantage on this estimate is " + num(forecast.model.homeAdvantagePoints, 1) + " points.";
+      }
+      html += "</p>";
       if (forecast.backtest) {
         var back = forecast.backtest;
         html += "<p>Backtest: " + back.correctWinner + " of " + back.matches + " later matches had the winner the model expected (" + num(back.correctWinnerShare * 100, 1) + "%). Mean absolute margin error " + num(back.meanAbsoluteMarginError, 1) + " points. " + esc(back.note || "") + "</p>";
@@ -957,7 +963,10 @@
     if (!forecast) return '<div class="banner bad">The forecast file did not load. No win probability is shown.</div>';
     var how = forecast.howCalculated || {};
     var wr = forecast.worldRugby || {};
-    var html = "<details><summary>How this is calculated</summary><div class='panel'><p>" + esc(how.summary || "") + "</p><ol>";
+    var history = forecast.history || {};
+    var counts = history.counts || {};
+    var dropped = counts.dropped || {};
+    var html = '<details id="how-calculated"><summary>How this is calculated</summary><div class="panel"><p>' + esc(how.summary || "") + "</p><ol>";
     (how.steps || []).forEach(function (step) { html += "<li>" + esc(step) + "</li>"; });
     html += "</ol>";
     if (how.formulaCheck) {
@@ -965,18 +974,16 @@
     }
     var gate = how.gate || {};
     html += "<p class='srcs'>Gate: " + esc(String(gate.minimumMatches != null ? gate.minimumMatches : "")) + " scored matches with a home side, " + esc(String(gate.minimumTrain != null ? gate.minimumTrain : "")) + " before " + esc(gate.trainEnd || "") + ", " + esc(String(gate.minimumBacktest != null ? gate.minimumBacktest : "")) + " after it, and " + esc(String(gate.minimumMatchesPerSide != null ? gate.minimumMatchesPerSide : "")) + " each for New Zealand and Australia.</p>";
-    var counts = (forecast.wikidata || {}).counts || {};
-    html += "<p>Wikidata, CC0: " + esc(String(counts.rugbyMatchItems != null ? counts.rugbyMatchItems : "Not in this file")) + " rugby union match items, " + esc(String(counts.scoredRugbyMatches != null ? counts.scoredRugbyMatches : "Not in this file")) + " with two scores, " + esc(String(counts.scoredNationalMatches != null ? counts.scoredNationalMatches : "Not in this file")) + " scored rows between national-team items. Items typed as a Test: " + esc(String(counts.testMatchItems != null ? counts.testMatchItems : "Not in this file")) + ".</p>";
-    html += "<p>Live results use the rugbyAPI snapshot, not this forecast file. " + esc(rugbyStatus()) + " In-game coverage is future work.</p>";
-    html += '<p class="srcs"><a href="' + esc(wr.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a> · <a href="' + esc(wr.explanation || "https://www.world.rugby/rankings/explanation") + '">How the rankings are calculated</a> · <a href="data/forecast.json">forecast.json</a> · <a href="data/wikidata-rugby-coverage.json">Wikidata extract</a> · <a href="data/build_forecast.py">Forecast script</a> · <a href="data/rugbyapi-snapshot.json">rugbyAPI snapshot</a></p>';
+    html += "<p>History: " + esc(history.source || "Source not in this file") + ", retrieved " + esc(history.retrievedAt || "date not in this file") + ". " + esc(String(counts.kept != null ? counts.kept : (history.matches != null ? history.matches : "Not in this file"))) + " scored Tests kept from " + esc(String(counts.testListRows != null ? counts.testListRows : "Not in this file")) + " list rows. Dropped before the file was written: women's " + esc(String(dropped.womens != null ? dropped.womens : "not in this file")) + ", XV " + esc(String(dropped.xv != null ? dropped.xv : "not in this file")) + ", invitational " + esc(String(dropped.invitational != null ? dropped.invitational : "not in this file")) + ".</p>";
+    var tour = history.tourMatchesExcluded || {};
+    if (tour.note) html += "<p>" + esc(tour.note) + "</p>";
+    if (history.seasonScoreCheck) html += "<p>" + esc(typeof history.seasonScoreCheck === "string" ? history.seasonScoreCheck : "The season-file check is in forecast.json.") + "</p>";
+    if (forecast.model && forecast.model.homeAdvantageSource) html += "<p>" + esc(forecast.model.homeAdvantageSource) + "</p>";
+    html += "<p>" + esc((forecast.wikidata && forecast.wikidata.note) || "Wikidata is not the series for this probability.") + "</p>";
+    html += "<p>rugbyAPI did not supply this history. A free key only covers yesterday onward. " + esc(rugbyStatus()) + " In-game coverage is future work.</p>";
+    var historyUrl = history.url || "https://www.rugbydatabase.com.au/test-rugby/games-list.php";
+    html += '<p class="srcs"><a href="' + esc(historyUrl) + '">Rugby Database Test list</a> · <a href="' + esc(history.file || "data/rugbydatabase-tests.json") + '">Test history file</a> · <a href="' + esc(wr.page || "https://www.world.rugby/rankings/mru") + '">World Rugby rankings</a> · <a href="' + esc(wr.explanation || "https://www.world.rugby/rankings/explanation") + '">How the rankings are calculated</a> · <a href="data/forecast.json">forecast.json</a> · <a href="data/build_forecast.py">Forecast script</a> · <a href="data/wikidata-rugby-coverage.json">Wikidata extract, not used for this probability</a> · <a href="data/rugbyapi-snapshot.json">rugbyAPI snapshot</a></p>';
     html += "<p>" + esc(wr.licenceNote || "") + "</p>";
-    if (coverage && coverage.matches) {
-      html += "<details><summary>Scored rugby rows Wikidata returned (" + coverage.matches.length + ")</summary><ul class='plain'>";
-      coverage.matches.forEach(function (match) {
-        html += "<li>" + esc(match.date || "No date") + " · " + esc(match.label) + " · " + esc(match.teamA) + " " + esc(match.pointsA) + ", " + esc(match.teamB) + " " + esc(match.pointsB) + ". Home side not taken from this row.</li>";
-      });
-      html += "</ul></details>";
-    }
     (forecast.notUsed || []).forEach(function (line) { html += '<p class="srcs">' + esc(line) + "</p>"; });
     html += "</div></details>";
     return html;
@@ -1456,7 +1463,7 @@
       return "<li><strong>" + esc(feed.name) + ".</strong> " + esc(feed.status) + ". Sample label, not a live source.</li>";
     }).join("");
     $("sample-block").innerHTML = "<ul class='plain'><li><strong>Direction, Collection, Analysis, Fusion, Counter-Intel, Dissemination.</strong> Sample names for a cell that has not been built.</li>" + feeds + "</ul>";
-    $("foot").innerHTML = "Matakite · " + esc(season.meta.asOfLabel) + " · <a href='player-dossier.html'>Player dossier</a> · <a href='data/SOURCES.md'>Sources and licences</a> · <a href='data/forecast.json'>Forecast file</a> · <a href='data/rugbyapi-snapshot.json'>rugbyAPI snapshot</a>";
+    $("foot").innerHTML = "Matakite · " + esc(season.meta.asOfLabel) + " · <a href='player-dossier.html'>Player dossier</a> · <a href='data/SOURCES.md'>Sources and licences</a> · <a href='data/forecast.json'>Forecast file</a> · <a href='data/rugbydatabase-tests.json'>Test history</a> · <a href='data/rugbyapi-snapshot.json'>rugbyAPI snapshot</a>";
   }
 
   function boot(pack) {
