@@ -1,0 +1,258 @@
+{
+  "status": "ok",
+  "label": "Model estimate, not a guarantee",
+  "generatedAt": "2026-10-14T00:59:39+00:00",
+  "generatedBy": "data/build_forecast.py",
+  "reason": "Fitted on 4912 Rugby Database Tests. Home advantage fitted at 1.2 points. Backtest 300 of 417 (2024-02-02 to 2026-10-10). Model estimate, not a guarantee. rugbyAPI was not used for this history. A free key only covers yesterday onward. API-Sports is not used. Current fixtures, lineups and timelines are refreshed by scripts/fetch-rugbyapi.mjs into data/rugbyapi-snapshot.json.",
+  "nextTest": {
+    "known": true,
+    "id": "2026-10-17-australia-sydney",
+    "date": "2026-10-17",
+    "dateLabel": "17 Oct",
+    "opponent": "Australia",
+    "venue": "Accor Stadium, Sydney",
+    "competition": "Bledisloe Cup",
+    "dateNote": "Not on the Rugby Database games list checked on 12 Oct 2026. The list's newest game is Eden Park on 10 October. This Test had not been played. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local. Sky Sports lists the Sydney kick-off as 6am BST.",
+    "kickOff": "Not verified",
+    "home": "Australia",
+    "away": "New Zealand",
+    "homeReason": "The venue on the season file is in Sydney, and the opponent is Australia, so Australia are at home. New Zealand are away.",
+    "source": "data/all-blacks-2026.json"
+  },
+  "prediction": {
+    "available": true,
+    "home": "Australia",
+    "away": "New Zealand",
+    "gapAfterHomeAdvantage": -5.250979226820277,
+    "homeWinProbability": 0.2963845200890026,
+    "awayWinProbability": 0.6677007773296281,
+    "drawProbability": 0.03591470258136925,
+    "expectedMarginHomeMinusAway": -8.79177968465534,
+    "ratingHome": 44.3609810772908,
+    "ratingAway": 50.81196030411108,
+    "label": "Model estimate, not a guarantee"
+  },
+  "backtest": {
+    "matches": 417,
+    "from": "2024-02-02",
+    "to": "2026-10-10",
+    "correctWinner": 300,
+    "correctWinnerShare": 0.7194244604316546,
+    "meanAbsoluteMarginError": 16.305505686100442,
+    "note": "Walk-forward on matches on or after the training cut-off, and before the next Test. A draw counts as an incorrect winner. The margin error is in points, home score minus away score."
+  },
+  "model": {
+    "name": "World Rugby points exchange, replayed on Rugby Database Tests, with a fitted home advantage. A logistic win chance and a straight-line margin are fitted on the replay.",
+    "homeAdvantagePoints": 1.2,
+    "homeAdvantageSource": "Home advantage of 1.2 points was the value from 0 to 12.0, in steps of 0.1, with the best training likelihood. Likelihood at 0 was -2200.2. Likelihood at the published 3 points was -2208.5. The chosen value's likelihood was -2194.3. It is applied on 3588 matches whose venue, before 2024-01-01, had at least 3 Tests and one side at home in at least 70 percent of them. Other matches stay in the series with no home advantage.",
+    "publishedHomeAdvantagePoints": 3.0,
+    "publishedHomeAdvantageSource": "https://www.world.rugby/rankings/explanation",
+    "initialRating": 30.0,
+    "initialRatingSource": "World Rugby explanation: a new full member starts at 30 ranking points. These replay ratings are not the published World Rugby table.",
+    "logistic": {
+      "intercept": 0.31502718714088385,
+      "slope": 0.21466656177172527
+    },
+    "margin": {
+      "intercept": 2.62640996274839,
+      "slope": 2.174487682046687
+    },
+    "drawRate": 0.03591470258136925,
+    "trainMatches": 4455,
+    "homeAdvantageMatches": 3588
+  },
+  "howCalculated": {
+    "summary": "The series is Rugby Database's Test list, with a home side on every row. Ratings move with the published points exchange. Home advantage is fitted from matches before 2024, not typed in as three points. A win probability and an expected margin are written only after the gate passes. They are a model estimate, not a guarantee.",
+    "steps": [
+      "Read scored Tests from data/rugbydatabase-tests.json. The home side is the side Rugby Database lists at home, and the venue is the venue on that row.",
+      "Drop women's matches, XV sides, and invitational sides before the file is written. Tour matches against provinces are not on the Test list, so they are not in the file.",
+      "Treat a venue as a home ground when, before 2024, it has at least three Tests and one side is home in at least 70 percent of them. Home advantage applies only when that side is home. One-off venues, including M&T Bank Stadium, get no home advantage.",
+      "Start a team at 30 replay points the first time it appears. That starting point is the published figure for a new full member. It is not the published World Rugby ranking.",
+      "After each match, move points with the published exchange, using the fitted home advantage instead of the published three points. A win by more than 15 points multiplies the exchange by 1.5.",
+      "Rugby World Cup finals are not marked separately on this list, so the published doubling for a final is not applied.",
+      "On matches before 2024, fit the chance of a home win from the pre-match gap, and fit the margin with a straight line. The home-advantage amount is the one with the best training likelihood.",
+      "Check that fit on later matches, up to but not including the next Test: the share of correct winners, and the average absolute margin error.",
+      "Use the ratings after the last played match for Sydney. Australia are at home because the venue is in Sydney. If the series is too short, or a season-file score disagrees, write no probability."
+    ],
+    "gate": {
+      "minimumMatches": 200,
+      "minimumTrain": 80,
+      "minimumBacktest": 30,
+      "trainEnd": "2024-01-01",
+      "minimumMatchesPerSide": 8
+    },
+    "formulaCheck": {
+      "example": "Wales 76.92 at home against Scotland 76.36, Wales won 23-10, using the published three-point home adjustment. World Rugby's explanation gives an exchange of 0.64. This checks the exchange. It is not the home advantage used for Sydney.",
+      "computedExchange": 0.6439999999999998,
+      "passed": true
+    }
+  },
+  "history": {
+    "file": "data/rugbydatabase-tests.json",
+    "source": "Rugby Database",
+    "url": "https://www.rugbydatabase.com.au/test-rugby/games-list.php",
+    "retrievedAt": "2026-10-14T00:59:34+00:00",
+    "matches": 4912,
+    "counts": {
+      "testListRows": 5821,
+      "kept": 4912,
+      "duplicateGameIds": 0,
+      "sameScoreSameDayDropped": 0,
+      "dropped": {
+        "womens": 879,
+        "xv": 15,
+        "invitational": 15
+      }
+    },
+    "tier1Lists": [
+      {
+        "teamId": 3,
+        "name": "New Zealand",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "listedGames": 1401,
+        "alsoOnTestList": 669,
+        "notOnTestList": 732
+      },
+      {
+        "teamId": 37,
+        "name": "Australia",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=37",
+        "listedGames": 874,
+        "alsoOnTestList": 685,
+        "notOnTestList": 189
+      },
+      {
+        "teamId": 38,
+        "name": "South Africa",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=38",
+        "listedGames": 671,
+        "alsoOnTestList": 564,
+        "notOnTestList": 107
+      },
+      {
+        "teamId": 36,
+        "name": "Argentina",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=36",
+        "listedGames": 464,
+        "alsoOnTestList": 421,
+        "notOnTestList": 43
+      },
+      {
+        "teamId": 43,
+        "name": "England",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=43",
+        "listedGames": 879,
+        "alsoOnTestList": 818,
+        "notOnTestList": 61
+      },
+      {
+        "teamId": 45,
+        "name": "France",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=45",
+        "listedGames": 922,
+        "alsoOnTestList": 831,
+        "notOnTestList": 91
+      },
+      {
+        "teamId": 42,
+        "name": "Ireland",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=42",
+        "listedGames": 819,
+        "alsoOnTestList": 774,
+        "notOnTestList": 45
+      },
+      {
+        "teamId": 54,
+        "name": "Scotland",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=54",
+        "listedGames": 816,
+        "alsoOnTestList": 773,
+        "notOnTestList": 43
+      },
+      {
+        "teamId": 44,
+        "name": "Wales",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=44",
+        "listedGames": 841,
+        "alsoOnTestList": 806,
+        "notOnTestList": 35
+      },
+      {
+        "teamId": 47,
+        "name": "Italy",
+        "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=47",
+        "listedGames": 406,
+        "alsoOnTestList": 374,
+        "notOnTestList": 32
+      }
+    ],
+    "tourMatchesExcluded": {
+      "gameIds": [
+        29376,
+        29377,
+        29378,
+        29380
+      ],
+      "onNewZealandTeamList": true,
+      "onTestList": false,
+      "newZealandListError": null,
+      "note": "Stormers, Sharks, Bulls and Lions in 2026 are on the New Zealand games list and are not Tests."
+    },
+    "seasonScoreCheck": "The eight played 2026 Tests match data/all-blacks-2026.json.",
+    "error": null
+  },
+  "wikidata": {
+    "usedForProbability": false,
+    "licence": "CC0-1.0",
+    "file": "data/wikidata-rugby-coverage.json",
+    "note": "Not the series for this probability. The earlier extract marked a home side on too few scored matches."
+  },
+  "worldRugby": {
+    "page": "https://www.world.rugby/rankings/mru",
+    "api": "https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en",
+    "explanation": "https://www.world.rugby/rankings/explanation",
+    "effective": "2026-10-12",
+    "error": null,
+    "newZealand": {
+      "position": 2,
+      "team": "New Zealand",
+      "abbreviation": "NZL",
+      "points": 91.80693483436683,
+      "previousPoints": 91.14644633904142,
+      "previousPosition": 2
+    },
+    "australia": {
+      "position": 6,
+      "team": "Australia",
+      "abbreviation": "AUS",
+      "points": 84.88921447921875,
+      "previousPoints": 85.54970297454416,
+      "previousPosition": 6
+    },
+    "rankingGap": {
+      "home": "Australia",
+      "away": "New Zealand",
+      "homePoints": 84.88921447921875,
+      "awayPoints": 91.80693483436683,
+      "homeAdvantagePoints": 3.0,
+      "homeAdjustedPoints": 87.88921447921875,
+      "awayMinusHomeAdjusted": 3.9177203551480773,
+      "note": "Difference of published ranking points after the published three-point home adjustment. Not a win probability and not an expected margin."
+    },
+    "licenceNote": "World Rugby publishes these ranking points. They are not CC0. The numbers are stored with attribution and are not a prediction."
+  },
+  "liveResults": {
+    "provider": "rugbyAPI",
+    "snapshot": "data/rugbyapi-snapshot.json",
+    "script": "scripts/fetch-rugbyapi.mjs",
+    "note": "This forecast file does not call rugbyAPI. The free key cannot supply the historical Tests. The dashboard reads the snapshot for current fixtures only. API-Sports is not used."
+  },
+  "notUsed": [
+    "rugbyAPI was not used for the historical series. A free key only covers yesterday onward.",
+    "API-Sports API-Rugby was not used.",
+    "The Kaggle international Test dataset is CC BY-NC-SA and was not used.",
+    "ESPN's hidden site API was not used.",
+    "No Opta feed is connected, and no Opta percentage is shown.",
+    "Wikidata was not used for this probability."
+  ]
+}

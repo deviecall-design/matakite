@@ -168,4 +168,63 @@ The earlier player mockup (strengths, development areas, pre-match cues, a six-f
 - ESPN match attendance stored as 0 is missing data, not a crowd.
 - A Dubai Telegraph report called the France Test 32–30. Rugby Database, ESPN, the All Blacks, BBC Sport and the NZ Herald say 34–32.
 - ESPN league 242041 is Super Rugby Pacific. It is not the All Blacks Test feed. The page does not use it.
-- There is no prediction model, so there are no win percentages, Brier scores, or hit rates.
+- There is no hand-typed prediction. `data/build_forecast.py` is the only place a win probability can be produced, and it writes one only after a scored Test series clears its gate.
+
+## Forecast model, licences, and what was not used
+
+Checked again on 14 October 2026. The probability reads `data/forecast.json`, which `data/build_forecast.py` writes from `data/rugbydatabase-tests.json`. The page does not type a percentage.
+
+| Source | Used for | Licence / terms |
+|---|---|---|
+| [Rugby Database, All Test Match Games](https://www.rugbydatabase.com.au/test-rugby/games-list.php) | The scored Test history, with venue and home side. Retrieved 14 October 2026 (`retrievedAt` `2026-10-14T00:59:34+00:00`). The file is `data/rugbydatabase-tests.json`. Refresh with `python data/build_forecast.py --fetch-history`. | Rugby Database's published list. Stored with the source URL and the retrieval time. |
+| [Rugby Database team games lists](https://www.rugbydatabase.com.au/team/games-list.php?teamId=3) | Coverage cross-check for the Tier 1 unions, including New Zealand (`teamId=3`) and Australia (`teamId=37`). | Same site. The New Zealand list includes tour matches. Those tours are not the model history. |
+| [Wikidata Query Service](https://query.wikidata.org/sparql) | Not the series for this probability. The earlier extract is still `data/wikidata-rugby-coverage.json`. It marked a home side on too few scored matches. | CC0 |
+| [World Rugby men's rankings](https://www.world.rugby/rankings/mru) | The ranking-gap box only. The snapshot is `data/world-rugby-rankings.json`, effective 12 October 2026. The public feed is `https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en`. | World Rugby's published figures. Not CC0. Stored with attribution. Not a prediction. |
+| [World Rugby rankings explanation](https://www.world.rugby/rankings/explanation) | The points exchange, the 15-point margin weighting, and the Wales check (76.92 at home to Scotland 76.36, won 23–10, exchange 0.64). The published three-point home adjustment is that ranking fact and that formula check. | Quoted as the method. |
+| [rugbyAPI](https://rugbyapi.com/documentation) | Not this history. A free key covers 11 endpoints and 50 lookups a day, from yesterday forward, without `include`, so it cannot supply the Test series. Current fixtures, results, lineups and timelines still go through `scripts/fetch-rugbyapi.mjs` into `data/rugbyapi-snapshot.json`. | rugbyAPI terms. The key is read from `RUGBYAPI_KEY` and is never committed. If the variable is missing, no request is sent. `GET /v1/matches/{id}?include=lineups,timeline`, `GET /v1/teams/{id}/form` and `GET /v1/players/{id}` need Archive. A `403 plan_required` is stored and nothing is invented. Quality flags decide what is kept: a timeline only when `complete` and the events add up to the score, lineups only when `complete` and no player is on both sides. Scores that disagree with this season file are listed and are not copied onto the season card. |
+| [NZ Rugby Stats](https://stats.allblacks.com/all-players) | Official player profile links on the dashboard and the dossier. | Links only. Career figures on those pages are not copied into the JSON. |
+| Goalserve | Not used. `src/data/player-provider.js` is the seam a later paid feed would implement. | No Goalserve payload is in the repo. |
+
+The Test list had 5,821 rows. The history file keeps 4,912 scored Tests. It drops 879 women's matches, 15 XV sides, and 15 invitational sides (Barbarians, World XV, British Army, British Empire Services, Queensland, NZEF Kiwis, South America). Duplicate game ids dropped: 0. "All Blacks" is stored as New Zealand. Western Samoa is stored as Samoa. Pacific Islanders, Great Britain, Arabian Gulf, and New Zealand Maori stay as their own sides.
+
+The 2026 tour games 29376, 29377, 29378 and 29380 (Stormers, Sharks, Bulls, Lions) are on the New Zealand team list and are not on the Test list, so they are not in the history. The eight played 2026 Tests in `data/all-blacks-2026.json` match the Test list, read home-first. No Test-list row is dated after 10 October 2026. Sydney on 17 October is not in the history.
+
+The script replays the published points exchange on that file. A venue is a home ground when, before 1 January 2024, it has at least three Tests and one side is home in at least 70 percent of them. Home advantage applies only when that side is the listed home. Other matches stay in the series with advantage 0. The fitted home advantage in this run is 1.2 points (the best training likelihood from 0 to 12, in steps of 0.1). Likelihood at 0 was −2200.2. Likelihood at the published 3 points was −2208.5. Likelihood at 1.2 was −2194.3. It applies on 3,588 matches. Rugby World Cup finals are not marked separately on this list, so the published doubling for a final is not applied. Replay ratings are not the published World Rugby table.
+
+The gate is 200 scored matches with a home side, 80 before 1 January 2024, 30 on or after that date, and 8 each for New Zealand and Australia. This file clears it. The backtest is the 417 matches from 2 February 2024 through 10 October 2026, held out of the fit: 300 winners correct (71.9 percent). Mean absolute margin error 16.3 points. A draw counts as an incorrect winner. The slope of the win line is positive (0.215).
+
+Sydney, 17 October 2026, Australia at home because the venue is in Sydney: `data/forecast.json` stores a New Zealand win chance of 66.8 percent, an Australia win chance of 29.6 percent, a draw chance of 3.6 percent, and an expected margin of New Zealand by 8.8 points. The label on the page is "Model estimate, not a guarantee". The ranking-gap box still uses the published three-point adjustment and is labelled "Ranking gap, not a prediction". If a later run fails the gate, or a played season score disagrees with the Test list, the script writes no probability and the page shows "Not calculated" with that reason.
+
+Not used, on purpose:
+
+- rugbyAPI, for this history. A free key only covers yesterday onward.
+- The Kaggle international Test dataset. Its licence is CC BY-NC-SA.
+- ESPN's hidden site API.
+- API-Sports API-Rugby.
+- Any Opta or Stats Perform feed. The old sample feed name remains in the data file as "Not connected". The page does not show an Opta model.
+- Wikidata, for this probability.
+
+## Refresh the rugbyAPI snapshot
+
+The dashboard and the dossier do not call rugbyAPI. They read `data/rugbyapi-snapshot.json`. Until that file has `"connected": true`, the pages keep the season file and say the snapshot is not connected.
+
+From the repo root, with the key only in the environment:
+
+```bash
+export RUGBYAPI_KEY='your key'
+node scripts/fetch-rugbyapi.mjs
+```
+
+Then commit `data/rugbyapi-snapshot.json` and push it. Do not commit `.env` or the key. Running the script without `RUGBYAPI_KEY` sends no request. If a connected snapshot is already in the file, that run leaves it in place.
+
+`node scripts/fetch-rugbyapi.mjs --self-check` checks the quality rules and the cross-check without a key and without writing the snapshot.
+
+What the refresh calls:
+
+- `GET /v1/search?q=New Zealand` and `GET /v1/teams/{id}` to confirm the national side. Both are on the free key.
+- `GET /v1/fixtures?days=60` for upcoming Tests.
+- `GET /v1/matches?team={id}` for 2026 finished matches. A free key returns `403 plan_required` for dates before yesterday.
+- `GET /v1/matches/{id}?include=lineups,timeline`. A free key returns `403 plan_required`. The script then asks for the match without `include`.
+- `GET /v1/teams/{id}/form?last=12` and `GET /v1/players/{id}` when a usable lineup has a player id. Both need Archive.
+
+A free key allows 50 lookups a day. The script stops at 24 unless `RUGBYAPI_MAX_REQUESTS` is set lower. Refused calls do not count on rugbyAPI's side, and they are still listed in the snapshot.
