@@ -4,16 +4,16 @@
     "list": "All Test Match Games",
     "url": "https://www.rugbydatabase.com.au/test-rugby/games-list.php",
     "teamListExample": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-    "retrievedAt": "2026-10-14T00:59:34+00:00",
+    "retrievedAt": "2026-10-18T21:32:34+00:00",
     "note": "The New Zealand team games list includes tour matches against provinces. This file keeps games on Rugby Database's Test match list. Women's matches, XV sides, and invitational sides are not in the model history. All Blacks is stored as New Zealand. Western Samoa is stored as Samoa. A free rugbyAPI key only covers yesterday onward, so it is not this history."
   },
   "counts": {
-    "testListRows": 5821,
-    "kept": 4912,
+    "testListRows": 5822,
+    "kept": 4910,
     "duplicateGameIds": 0,
     "sameScoreSameDayDropped": 0,
     "dropped": {
-      "womens": 879,
+      "womens": 882,
       "xv": 15,
       "invitational": 15
     }
@@ -23,17 +23,17 @@
       "teamId": 3,
       "name": "New Zealand",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-      "listedGames": 1401,
-      "alsoOnTestList": 669,
+      "listedGames": 1402,
+      "alsoOnTestList": 670,
       "notOnTestList": 732
     },
     {
       "teamId": 37,
       "name": "Australia",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=37",
-      "listedGames": 874,
-      "alsoOnTestList": 685,
-      "notOnTestList": 189
+      "listedGames": 875,
+      "alsoOnTestList": 683,
+      "notOnTestList": 192
     },
     {
       "teamId": 38,
@@ -12176,54 +12176,6 @@
       "venue": "Stade Yves-du-Manoir ",
       "venueId": 591,
       "competition": "Five Nations Championship - 1957"
-    },
-    {
-      "gameId": 22856,
-      "date": "1958-06-14",
-      "dateLabel": "Sat 14th Jun 1958, 2:30pm",
-      "home": "Australia",
-      "homeListed": "Australia",
-      "homeId": 37,
-      "away": "New Zealand Maori",
-      "awayListed": "New Zealand Maori",
-      "awayId": 51,
-      "homeScore": 15,
-      "awayScore": 14,
-      "venue": "Brisbane Showgrounds",
-      "venueId": 592,
-      "competition": "New Zealand Maori in Australia - 1958"
-    },
-    {
-      "gameId": 22857,
-      "date": "1958-06-28",
-      "dateLabel": "Sat 28th Jun 1958, 2:30pm",
-      "home": "Australia",
-      "homeListed": "Australia",
-      "homeId": 37,
-      "away": "New Zealand Maori",
-      "awayListed": "New Zealand Maori",
-      "awayId": 51,
-      "homeScore": 3,
-      "awayScore": 3,
-      "venue": "Sydney Cricket Ground",
-      "venueId": 16,
-      "competition": "New Zealand Maori in Australia - 1958"
-    },
-    {
-      "gameId": 22858,
-      "date": "1958-07-05",
-      "dateLabel": "Sat 5th Jul 1958, 2:30pm",
-      "home": "Australia",
-      "homeListed": "Australia",
-      "homeId": 37,
-      "away": "New Zealand Maori",
-      "awayListed": "New Zealand Maori",
-      "awayId": 51,
-      "homeScore": 6,
-      "awayScore": 13,
-      "venue": "Olympic Park Stadium",
-      "venueId": 294,
-      "competition": "New Zealand Maori in Australia - 1958"
     },
     {
       "gameId": 22876,
@@ -78703,6 +78655,22 @@
       "awayScore": 19,
       "venue": "Eden Park",
       "venueId": 2,
+      "competition": "Bledisloe Cup - 2026"
+    },
+    {
+      "gameId": 30266,
+      "date": "2026-10-17",
+      "dateLabel": "Sat 17th Oct 2026, 3:45pm",
+      "home": "Australia",
+      "homeListed": "Australia",
+      "homeId": 37,
+      "away": "New Zealand",
+      "awayListed": "All Blacks",
+      "awayId": 3,
+      "homeScore": 21,
+      "awayScore": 43,
+      "venue": "Accor Stadium",
+      "venueId": 37,
       "competition": "Bledisloe Cup - 2026"
     }
   ]

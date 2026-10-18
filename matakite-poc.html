@@ -280,7 +280,7 @@
 
   <section id="players">
     <h2>Players</h2>
-    <p class="note">Starts and bench are match-day 23s, not minutes. Points are tries, conversions and penalties on the eight Test score sheets. A try is 5, a conversion is 2, a penalty goal is 3. A penalty try is not given to a player. NZ Rugby Stats opens the official profile. Those pages are links only. Their figures are not copied into this table.</p>
+    <p class="note">Starts and bench are match-day 23s, not minutes. Points are tries, conversions and penalties on the Test score sheets. A try is 5, a conversion is 2, a penalty goal is 3. A penalty try is not given to a player. NZ Rugby Stats opens the official profile. Those pages are links only. Their figures are not copied into this table.</p>
     <div class="filters">
       <label class="field">Search
         <input id="player-search" type="search" placeholder="Name or position" autocomplete="off">
@@ -843,6 +843,13 @@
     return html;
   }
 
+  function rankingsStaleFor(test) {
+    var effective = rankings && rankings.effective || "";
+    if (!effective || !test) return false;
+    return testsOnly().some(function (item) {
+      return item.status === "played" && item.date > effective && item.date < test.date;
+    });
+  }
   function rankingBlock(test) {
     if (!rankings || !rankings.entries) return "<p><strong>World Rugby rankings.</strong> The stored table did not load. No ranking points are shown.</p>";
     var nz = rankingEntry("New Zealand");
@@ -853,6 +860,8 @@
       html += "<p>The table date is not in the file, so these points are not used as a pre-match rating.</p>";
     } else if (test.date <= effective) {
       html += "<p>This table is dated " + esc(effective) + ", which is on or after this Test. It is not the pre-match rating.</p>";
+    } else if (rankingsStaleFor(test)) {
+      html += "<p>This table is dated " + esc(effective) + ". A Test has been played since that date, so these points are not the pre-match rating for this fixture. They are not a win probability.</p>";
     } else {
       html += "<p>This is the latest table in the file, dated " + esc(effective) + ", before this Test. These points are not a win probability.</p>";
     }
@@ -951,7 +960,9 @@
     if (isNext && forecast && forecast.worldRugby && forecast.worldRugby.rankingGap) {
       var gap = forecast.worldRugby.rankingGap;
       if (gapOk(gap) && next.home === gap.home && next.away === gap.away) {
-        html += '<div class="gap-box"><h3>Ranking gap, not a prediction</h3><p>' + esc(gap.home) + " at home are treated as " + pointsLabel(gap.homePoints) + " + " + num(gap.homeAdvantagePoints, 0) + " = " + pointsLabel(gap.homeAdjustedPoints) + ". " + esc(gap.away) + " are on " + pointsLabel(gap.awayPoints) + ". The difference is " + pointsLabel(gap.awayMinusHomeAdjusted) + " ranking points toward " + esc(gap.away) + ".</p><p>" + esc(gap.note || "") + "</p></div>";
+        html += '<div class="gap-box"><h3>Ranking gap, not a prediction</h3><p>' + esc(gap.home) + " at home are treated as " + pointsLabel(gap.homePoints) + " + " + num(gap.homeAdvantagePoints, 0) + " = " + pointsLabel(gap.homeAdjustedPoints) + ". " + esc(gap.away) + " are on " + pointsLabel(gap.awayPoints) + ". The difference is " + pointsLabel(gap.awayMinusHomeAdjusted) + " ranking points toward " + esc(gap.away) + ".</p><p>" + esc(gap.note || "") + "</p>";
+        if (rankingsStaleFor(next)) html += "<p>The stored table is dated " + esc((forecast.worldRugby && forecast.worldRugby.effective) || "") + ". A Test has been played since that date, so this gap is not the pre-match rating.</p>";
+        html += "</div>";
       } else if (!gapOk(gap)) {
         html += '<div class="banner bad">The ranking gap in the file does not match the published points. It is not shown.</div>';
       }
@@ -989,6 +1000,17 @@
     return html;
   }
 
+  function modelVsActual(test) {
+    var estimate = test && test.modelEstimate;
+    if (!estimate || typeof estimate.nzWinProbability !== "number" || typeof estimate.expectedMarginNzMinusOpponent !== "number") return "";
+    var actual = Number(test.nzScore) - Number(test.oppScore);
+    var actualText = actual === 0 ? "Level" : (actual > 0 ? "New Zealand by " + num(actual, 0) : (test.opponent || "Opponent") + " by " + num(Math.abs(actual), 0));
+    var expected = estimate.expectedMarginNzMinusOpponent;
+    var expectedText = expected === 0 ? "Level" : (expected > 0 ? "New Zealand by " + num(expected, 1) : (test.opponent || "Opponent") + " by " + num(Math.abs(expected), 1));
+    return '<article class="panel" id="model-vs-actual"><h3>Model versus the result</h3><p><strong>' + esc(estimate.label || "Model estimate, not a guarantee") + ".</strong> This is the estimate stored before the match. It is not recalculated from the result.</p>" +
+      "<p>Predicted New Zealand win chance " + num(estimate.nzWinProbability * 100, 1) + "%. Predicted margin " + esc(expectedText) + ". Actual result " + esc(letterOf(test) + " " + test.nzScore + "\u2013" + test.oppScore) + ", margin " + esc(actualText) + ".</p>" +
+      "<p class='srcs'>" + esc(estimate.note || "") + "</p></article>";
+  }
   function renderPostMatch(test) {
     if (test.status !== "played") {
       $("post-match").innerHTML = '<article class="panel"><h3>Result</h3><p>Not played. No result, no team KPIs, and no scoring timeline.</p></article>';
@@ -1006,6 +1028,7 @@
       kpi("Points", test.nzScore + "\u2013" + test.oppScore, "Final score on the season file", "result-points") +
       kpi("Half-time", half, half === "Not in this file" ? "Not in this file" : "From the season file", "half-time") +
       "</div>";
+    html += modelVsActual(test);
     html += '<article class="panel"><h3>Score sheet</h3><p>' + esc(scorerLine(test)) + "</p>";
     if (test.crowdLabel) html += "<p>Crowd " + esc(test.crowdLabel) + ".</p>";
     html += "<p class='srcs'>Sources: " + links(test.sources) + "</p></article>";

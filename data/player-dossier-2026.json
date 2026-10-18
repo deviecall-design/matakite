@@ -1,18 +1,18 @@
 {
   "meta": {
-    "asOf": "2026-10-12",
-    "asOfLabel": "12 Oct 2026",
+    "asOf": "2026-10-19",
+    "asOfLabel": "19 Oct 2026",
     "title": "Player dossier",
     "team": "New Zealand",
     "honesty": "Selections come from published match-day 23s. Points and tries come from the Test score sheets in data/all-blacks-2026.json. Injuries come from All Blacks, RNZ, ESPN and Planet Rugby. Nothing on this page is a rating, a prediction, or a guess at minutes.",
-    "checked": "On 12 October 2026 the Rugby Database games list had one new game after Baltimore: Eden Park, All Blacks 50-19 Australia, on 10 October. The ESPN match page shows the same score. Sydney on 17 October is not on the Rugby Database list and had not been played.",
-    "next": "Saturday 17 October, Australia, Accor Stadium, Sydney. The kick-off is not verified. Eden Park on 10 October is played: New Zealand 50\u201319 Australia.",
-    "recordLine": "Tests: played 8, won 5, lost 3. Eden Park was won 50\u201319. South Africa won that series 3\u20131. Tour matches are on the main page and are not in the player charts.",
+    "checked": "On 19 October 2026 (Sydney) the Rugby Database New Zealand games list and the All Test Match list both had Australia 21, All Blacks 43, at Accor Stadium on 17 October, game 30266. The ESPN results list shows Australia 21-43 New Zealand at the same ground.",
+    "next": "Saturday 7 November local, Scotland, Murrayfield, Edinburgh. allblacks.com heads this as Sunday 8 November, 3.10am New Zealand time. Sydney on 17 October is played: New Zealand 43–21 Australia.",
+    "recordLine": "Tests: played 9, won 6, lost 3. Sydney was won 43–21. Eden Park was won 50–19. South Africa won that series 3–1. Tour matches are on the main page and are not in the player charts.",
     "captain": "Codie Taylor captained Eden Park and the Bledisloe squad named 29 September 2026. Ardie Savea captained the Tests he started, through Soweto.",
     "coach": "Dave Rennie",
     "squadNamed": "29 Sep 2026",
     "squadSize": 34,
-    "scoringNote": "Try 5, conversion 2, penalty goal 3. A penalty try is 7 and is not given to a player. Charts use the eight Tests only.",
+    "scoringNote": "Try 5, conversion 2, penalty goal 3. A penalty try is 7 and is not given to a player. Charts use the Test score sheets only.",
     "sheetNote": "Start and bench mean the player was named in that match-day 23. It is not a minute count.",
     "sources": [
       {
@@ -227,6 +227,19 @@
         }
       ],
       "note": "Codie Taylor captained. Damian McKenzie started at first five and Beauden Barrett at fullback. BBC's reserve list prints Loane. The All Blacks sheet and Rugby Database say Rieko Ioane."
+    },
+    {
+      "id": "2026-10-17-australia-sydney",
+      "short": "SYD",
+      "dateLabel": "17 Oct",
+      "opponent": "Australia",
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266"
+        }
+      ],
+      "note": "Match-day 23 from Rugby Database game 30266. The page lists Cameron Roigard; the card uses Cam Roigard. It does not name a captain."
     }
   ],
   "players": [
@@ -330,6 +343,11 @@
         {
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -380,6 +398,11 @@
         {
           "testId": "2026-09-12-south-africa-baltimore",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -444,6 +467,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Captained. Scored."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -571,6 +599,11 @@
         {
           "testId": "2026-09-05-south-africa-fnb",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -685,6 +718,11 @@
         {
           "testId": "2026-10-10-australia-eden-park",
           "role": "start"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -722,6 +760,11 @@
         {
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -784,6 +827,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Left the field in the second half. Failed a head-injury assessment that night. Passed a second assessment on 11 October and travelled."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -925,6 +973,11 @@
         {
           "testId": "2026-09-05-south-africa-fnb",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "notes": [
@@ -1004,6 +1057,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Blindside flanker. Scored."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "notes": [
@@ -1181,6 +1239,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench",
           "note": "No points on the sheet. Minutes not verified."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -1268,7 +1331,13 @@
       "unit": "LF",
       "squad": "squad",
       "summary": "Added on 11 October as the Sydney injury replacement for Anton Segner. RNZ said this is his first All Blacks squad of 2026, after a debut in 2025. No 2026 Test match-day 23 in this file. The All Blacks injury update spells the surname Du'plessis.",
-      "sheets": [],
+      "sheets": [
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
+        }
+      ],
       "sources": [
         {
           "name": "All Blacks",
@@ -1363,6 +1432,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Openside flanker. Scored."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -1413,6 +1487,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Number 8."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -1561,7 +1640,7 @@
       "pos": "Halfback",
       "unit": "HB",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at halfback in all eight Tests. Scored at Eden Park. After the match, on 1News, Rennie said his kicking was excellent and that the side kicked more off nine than they had been.",
+      "summary": "In the Bledisloe squad. Named to start at halfback in the Tests through Sydney. Rugby Database game 30266 lists him as Cameron Roigard. Scored at Eden Park. After that match, on 1News, Rennie said his kicking was excellent and that the side kicked more off nine than they had been.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1595,6 +1674,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Scored."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Rugby Database game 30266 lists Cameron Roigard."
         }
       ],
       "sources": [
@@ -1636,6 +1720,11 @@
         {
           "testId": "2026-07-18-ireland",
           "role": "bench"
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -1851,7 +1940,7 @@
       "pos": "Second five",
       "unit": "MF",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start at second five in all eight Tests. 1News quoted Rennie saying he was substituted with about 10 minutes to go at Eden Park. Other minutes are not on the sheet.",
+      "summary": "In the Bledisloe squad. Named to start at second five in the eight Tests through Eden Park. Rugby Database game 30266 does not name him in the Sydney match-day 23. 1News quoted Rennie saying he was substituted with about 10 minutes to go at Eden Park. Other minutes are not on the sheet.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -1939,6 +2028,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Return from the knee injury that kept him out of Baltimore."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -1976,7 +2070,13 @@
       "unit": "MF",
       "squad": "squad",
       "summary": "In the Bledisloe squad, listed with the midfielders. Not in any of the seven Test match-day 23s checked. No 2026 Test stats are shown.",
-      "sheets": [],
+      "sheets": [
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
+        }
+      ],
       "sources": [
         {
           "name": "RNZ",
@@ -2013,6 +2113,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench",
           "note": "BBC printed Loane. The All Blacks sheet says Rieko Ioane."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -2296,6 +2401,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench",
           "note": "Scored, so he was on the field."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -2324,7 +2434,7 @@
       "pos": "Wing / fullback",
       "unit": "BK",
       "squad": "squad",
-      "summary": "In the Bledisloe squad. Named to start on the wing in all eight Tests, and scored at Eden Park. On these Test score sheets he has 11 tries and 55 points, the most of both.",
+      "summary": "In the Bledisloe squad. Named to start on the wing in the Tests through Sydney, and scored at Eden Park. He did not score in Sydney. On these Test score sheets he has 11 tries and 55 points, the most of both.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -2358,6 +2468,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Scored."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -2397,6 +2512,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "Fullback."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -2471,6 +2591,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "First five. Six conversions and one penalty."
+        },
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "start",
+          "note": "Named on Rugby Database game 30266."
         }
       ],
       "sources": [
@@ -2526,6 +2651,26 @@
         {
           "name": "ESPN",
           "url": "https://www.espn.com.sg/rugby/story/_/id/50056066/bledisloe-cup-shannon-frizell-back-all-blacks-lose-star-10-injury"
+        }
+      ]
+    },
+    {
+      "name": "Chay Fihaki",
+      "pos": "Reserve on the Sydney list. A playing position is not on that row.",
+      "unit": "",
+      "squad": "squad",
+      "summary": "Named as reserve 23 on Rugby Database game 30266, Australia v All Blacks, 17 October 2026. No official profile link is stored. He did not score on that score sheet.",
+      "sheets": [
+        {
+          "testId": "2026-10-17-australia-sydney",
+          "role": "bench",
+          "note": "Named on Rugby Database game 30266."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266"
         }
       ]
     }
@@ -3048,7 +3193,7 @@
       "kind": "worked",
       "unit": "Whole team",
       "title": "Eden Park was won after a tight first half",
-      "text": "New Zealand 50\u201319 Australia. Half-time 17\u201314. Seven tries to three. The tries were Peter Lakai, Tupou Vaa'i, Cam Roigard, Codie Taylor, Leroy Carter, Josh Moorby and Will Jordan. Damian McKenzie kicked six conversions and one penalty. Sky and BBC both have five of the seven tries after the break. On 1News, Rennie said the first half was an arm wrestle and that opportunities were left out there, then that the areas which needed to be better after South Africa showed shifts. An ESPN story quoted him on mindset, work rate and brutality.",
+      "text": "New Zealand 50–19 Australia. Half-time 17–14. Seven tries to three. The tries were Peter Lakai, Tupou Vaa'i, Cam Roigard, Codie Taylor, Leroy Carter, Josh Moorby and Will Jordan. Damian McKenzie kicked six conversions and one penalty. Sky and BBC both have five of the seven tries after the break. On 1News, Rennie said the first half was an arm wrestle and that opportunities were left out there, then that the areas which needed to be better after South Africa showed shifts. An ESPN story quoted him on mindset, work rate and brutality.",
       "sources": [
         {
           "name": "BBC Sport",
@@ -3115,7 +3260,7 @@
       "kind": "worked",
       "unit": "Whole team",
       "title": "Ellis Park is the pattern that worked against this Springboks side",
-      "text": "The only win of the series was 33\u201316 at Emirates Airline Park on 22 August. New Zealand scored five tries to one: Will Jordan two, Josh Moorby, Fabian Holland and Luke Jacobson. Ruben Love kicked four conversions and no penalties. Half-time was 12\u201313, so the lead was built after the break. The All Blacks site, reviewing the series, said the attack can trouble the Springboks. This is the match that showed it. It was the last win of the South Africa series. The next win was Eden Park, against Australia, on 10 October.",
+      "text": "The only win of the series was 33–16 at Emirates Airline Park on 22 August. New Zealand scored five tries to one: Will Jordan two, Josh Moorby, Fabian Holland and Luke Jacobson. Ruben Love kicked four conversions and no penalties. Half-time was 12–13, so the lead was built after the break. The All Blacks site, reviewing the series, said the attack can trouble the Springboks. This is the match that showed it. It was the last win of the South Africa series. The next win was Eden Park, against Australia, on 10 October.",
       "sources": [
         {
           "name": "All Blacks",
@@ -3136,7 +3281,7 @@
       "kind": "missed",
       "unit": "Whole team",
       "title": "Points took too long, and South Africa punished the mistakes",
-      "text": "The All Blacks site said the attack can trouble the Springboks, but New Zealand too often needed long passages of possession to score. In Baltimore, Will Jordan's try finished a patient 32-phase attack. The same report said South Africa were more ruthless after penalties and turnovers. Cape Town was 14\u201324 at half-time and finished 26\u201333. Soweto was 12\u201312 at half-time and finished 24\u201329, with a penalty try to South Africa. Baltimore finished 28\u201343. The series was lost 1\u20133 after the Ellis Park win.",
+      "text": "The All Blacks site said the attack can trouble the Springboks, but New Zealand too often needed long passages of possession to score. In Baltimore, Will Jordan's try finished a patient 32-phase attack. The same report said South Africa were more ruthless after penalties and turnovers. Cape Town was 14–24 at half-time and finished 26–33. Soweto was 12–12 at half-time and finished 24–29, with a penalty try to South Africa. Baltimore finished 28–43. The series was lost 1–3 after the Ellis Park win.",
       "sources": [
         {
           "name": "All Blacks",
@@ -3279,7 +3424,7 @@
       "kind": "cue",
       "unit": "Backs",
       "title": "Counter-attack was the plan in July. These sheets do not show whether the tries came that way.",
-      "text": "Before the July Tests, Rennie said he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The score sheets list who scored. They do not list the phase. So the plan is on the record, and the 42 Test tries are on the record. How many of those 42 started from a kick return is not verified.",
+      "text": "Before the July Tests, Rennie said he treats counter-attack as a set piece because so much possession arrives from kicks, and that he wanted more tries from counter-attack and turnover ball than the year before. The score sheets list who scored. They do not list the phase. So the plan is on the record, and the 49 Test tries through Sydney are on the record. How many of those 49 started from a kick return is not verified.",
       "sources": [
         {
           "name": "SABC Sport",
@@ -3296,7 +3441,7 @@
       "kind": "worked",
       "unit": "Whole team",
       "title": "The July block was three wins. It is not a six-from-six season.",
-      "text": "France 34\u201332, Italy 47\u201317, Ireland 40\u201321, then the Ellis Park win, then three losses. The four tour matches were also wins, and they are not Tests. Their try scorers are not in this file. The mockup that said six from six, and that the Ellis Park Test was still to come, is out of date. Do not brief the team on that record.",
+      "text": "France 34–32, Italy 47–17, Ireland 40–21, then the Ellis Park win, then three losses. The four tour matches were also wins, and they are not Tests. Their try scorers are not in this file. The mockup that said six from six, and that the Ellis Park Test was still to come, is out of date. Do not brief the team on that record.",
       "sources": [
         {
           "name": "Rugby Database",
@@ -3310,8 +3455,7 @@
     }
   ],
   "notVerified": [
-    "Sydney match-day 23 on 17 October. Eden Park's 23 is the All Blacks team page. Sydney's is not named in the sources checked on 12 October.",
-    "A captain for the November Tests. Codie Taylor captained Eden Park. Nothing checked names a captain past Sydney.",
+    "Sydney's captain. Rugby Database game 30266 lists the match-day 23 and does not name a captain. A captain for the November Tests is also not named in the sources checked on 19 October 2026.",
     "Return dates, as a calendar day, for Leroy Carter, Asafo Aumua, Anton Segner, Ethan Blackadder, Richie Mo'unga, Fehi Fineanganofo, Luke Jacobson, Ruben Love, Patrick Tuipulotu, Billy Proctor, Caleb Clarke and Ollie Norris. The words above are the published estimates. They are not a date a coach can write on a board as fact.",
     "Whether Fehi Fineanganofo is on the Sydney trip. Unavailable at Eden Park. Not on the list of four players staying home.",
     "Anton Lienert-Brown's knee result on 11 October. He was added to the squad. No new scan was published.",
@@ -3327,10 +3471,9 @@
     "Will Jordan's career try total of 56, as stated by 1News. The sheets on this page give him 11 Test tries in 2026.",
     "How many years the Bledisloe Cup has been held. Held since 2003 on allblacks.com. BBC says a 23rd year. Sky and ESPN say a 24th. No count is shown.",
     "ESPN's New Zealand team-page scorer module. It was not used on 28 September because it did not match the sheets. It was not re-opened as a scoring source on 12 October. The match page score was used.",
-    "Sydney kick-off on 17 October. allblacks.com has said 6.00pm New Zealand time. Accor Stadium has said 3.45pm local. Sky Sports has said 6am BST. Not settled here.",
+    "Sydney half-time. Rugby Database game 30266 does not list one. A Rugby Australia report says 36-7 at the break. Sky Sports lists try minutes that do not add to 36 in the first half. No half-time is shown.",
     "The spelling Du'plessis on the All Blacks injury update. RNZ writes Du'Plessis Kirifi. The card uses the RNZ spelling.",
     "BBC's reserve surname Loane. The card uses Rieko Ioane.",
-    "Predicted teams for Sydney. They are not team sheets.",
     "Strengths, target areas, and pre-match cue lines from the earlier mockup. Those were modelled, not sourced. They have been removed."
   ]
 }

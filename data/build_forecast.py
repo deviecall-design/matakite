@@ -433,9 +433,22 @@ def load_next_test() -> dict:
     opponent = fixture.get("opponent") or ""
     home = None
     home_reason = "Not verified. The season file does not mark a home side."
-    if "Sydney" in venue and opponent == "Australia":
-        home = "Australia"
-        home_reason = "The venue on the season file is in Sydney, and the opponent is Australia, so Australia are at home. New Zealand are away."
+    # The season file already names the ground. Home is that union when the opponent matches it.
+    venue_homes = (
+        ("Sydney", "Australia"),
+        ("Murrayfield", "Scotland"),
+        ("Principality", "Wales"),
+        ("Cardiff", "Wales"),
+        ("Twickenham", "England"),
+    )
+    for needle, side in venue_homes:
+        if needle in venue and opponent == side:
+            home = side
+            home_reason = (
+                f"The venue on the season file includes {needle}, and the opponent is {side}, "
+                f"so {side} are at home. New Zealand are away."
+            )
+            break
     return {
         "known": True,
         "id": fixture.get("id"),
@@ -1001,7 +1014,7 @@ def main(argv: list[str] | None = None) -> int:
                 "Rugby World Cup finals are not marked separately on this list, so the published doubling for a final is not applied.",
                 "On matches before 2024, fit the chance of a home win from the pre-match gap, and fit the margin with a straight line. The home-advantage amount is the one with the best training likelihood.",
                 "Check that fit on later matches, up to but not including the next Test: the share of correct winners, and the average absolute margin error.",
-                "Use the ratings after the last played match for Sydney. Australia are at home because the venue is in Sydney. If the series is too short, or a season-file score disagrees, write no probability.",
+                "Use the ratings after the last played match for the next Test in the season file. The home side is the union named by that venue. If the series is too short, the home side is not marked, or a season-file score disagrees, write no probability.",
             ],
             "gate": {
                 "minimumMatches": MIN_MATCHES,
@@ -1011,7 +1024,7 @@ def main(argv: list[str] | None = None) -> int:
                 "minimumMatchesPerSide": MIN_NAMED_TEAM,
             },
             "formulaCheck": {
-                "example": "Wales 76.92 at home against Scotland 76.36, Wales won 23-10, using the published three-point home adjustment. World Rugby's explanation gives an exchange of 0.64. This checks the exchange. It is not the home advantage used for Sydney.",
+                "example": "Wales 76.92 at home against Scotland 76.36, Wales won 23-10, using the published three-point home adjustment. World Rugby's explanation gives an exchange of 0.64. This checks the exchange. It is not the fitted home advantage used for the next Test.",
                 "computedExchange": exchange(76.92, 76.36, 23, 10, False),
                 "passed": abs(exchange(76.92, 76.36, 23, 10, False) - 0.644) < 0.001,
             },
@@ -1025,7 +1038,10 @@ def main(argv: list[str] | None = None) -> int:
             "counts": None if not history else history.get("counts"),
             "tier1Lists": None if not history else history.get("tier1Lists"),
             "tourMatchesExcluded": None if not history else history.get("tourMatchesExcluded"),
-            "seasonScoreCheck": disagreements or "The eight played 2026 Tests match data/all-blacks-2026.json.",
+            "seasonScoreCheck": disagreements or (
+                f"The {sum(1 for test in json.loads(SEASON_PATH.read_text()).get('tests', []) if test.get('status') == 'played' and (test.get('kind') or 'test') == 'test')} "
+                "played 2026 Tests match data/all-blacks-2026.json."
+            ),
             "error": history_error,
         },
         "wikidata": {
@@ -1064,13 +1080,16 @@ def main(argv: list[str] | None = None) -> int:
     print(forecast["status"])
     print(forecast["reason"])
     if prediction:
+        nz_is_away = prediction["away"] == "New Zealand"
+        nz_prob = prediction["awayWinProbability"] if nz_is_away else prediction["homeWinProbability"]
+        nz_margin = -prediction["expectedMarginHomeMinusAway"] if nz_is_away else prediction["expectedMarginHomeMinusAway"]
         print(
             "NZ",
-            round(prediction["awayWinProbability"] * 100, 1),
-            "AU",
+            round(nz_prob * 100, 1),
+            prediction["home"],
             round(prediction["homeWinProbability"] * 100, 1),
-            "margin",
-            round(-prediction["expectedMarginHomeMinusAway"], 2),
+            "nzMargin",
+            round(nz_margin, 2),
             "H",
             model["homeAdvantagePoints"],
         )

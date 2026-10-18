@@ -3,10 +3,10 @@
     "team": "New Zealand",
     "nickname": "All Blacks",
     "season": 2026,
-    "asOf": "2026-10-12",
-    "asOfLabel": "12 Oct 2026",
+    "asOf": "2026-10-19",
+    "asOfLabel": "19 Oct 2026",
     "scoreConvention": "Every score on this page is New Zealand first, then the opponent. Rugby Database lists the home side first. Away wins are flipped so New Zealand stays first.",
-    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. The Eden Park Bledisloe Test is on the Rugby Database list as Bledisloe Cup - 2026. The Sydney Test on 17 October is not on that list.",
+    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. Eden Park and Sydney are on the Rugby Database list as Bledisloe Cup - 2026.",
     "headCoach": {
       "name": "Dave Rennie",
       "detail": "Appointed All Blacks head coach on 4 March 2026, through to the 2027 Rugby World Cup. Scott Robertson had departed in January 2026.",
@@ -45,13 +45,13 @@
     "primarySource": {
       "name": "Rugby Database",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-      "note": "Primary source for 2026 results, venues and crowds. The games list was read on 12 Oct 2026. The newest game is Eden Park, All Blacks 50-19 Australia, game 30265. Baltimore is the game before it. Sydney on 17 October is not on the list."
+      "note": "Primary source for 2026 results, venues and crowds. The New Zealand games list and the All Test Match list were read on 19 Oct 2026 (Sydney). The newest All Blacks game is Sydney, Australia 21-43 All Blacks, Accor Stadium, game 30266, crowd 73,399, kick-off 3:45pm."
     },
     "crossCheckSource": {
       "name": "ESPN",
       "teamUrl": "https://www.espn.com.au/rugby/team/_/id/8/new-zealand",
       "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
-      "note": "The ESPN Australia match page for Eden Park shows New Zealand 50-19 Australia. A direct fetch of the ESPN Australia pages was blocked by a bot check from this machine. The match page was read from its indexed text, and an ESPN match story states the same 50-19 score. The four tour matches are still not treated as ESPN results."
+      "note": "The ESPN Australia results list was fetched on 19 Oct 2026 (Sydney) and shows Australia 21-43 New Zealand at Accor Stadium on Sat, Oct 17. Sky Sports shows the same final score."
     }
   },
   "tests": [
@@ -1165,32 +1165,124 @@
       "id": "2026-10-17-australia-sydney",
       "date": "2026-10-17",
       "dateLabel": "17 Oct",
-      "dateNote": "Not on the Rugby Database games list checked on 12 Oct 2026. The list's newest game is Eden Park on 10 October. This Test had not been played. Kick-off not verified. allblacks.com lists 6.00pm New Zealand time. The Accor Stadium event page lists 3.45pm local. Sky Sports lists the Sydney kick-off as 6am BST.",
+      "dateNote": "Half-time is not shown. Rugby Database game 30266 does not list one. A Rugby Australia report says New Zealand led 36-7 at the break. Sky Sports lists try minutes that do not add to 36 before half-time, so no half-time is stored.",
       "opponent": "Australia",
-      "venue": "Accor Stadium, Sydney",
-      "competition": "Bledisloe Cup",
-      "status": "upcoming",
-      "nzScore": null,
-      "oppScore": null,
+      "venue": "Accor Stadium",
+      "competition": "Bledisloe Cup - 2026",
+      "status": "played",
+      "nzScore": 43,
+      "oppScore": 21,
       "halfTimeNz": null,
       "halfTimeOpp": null,
-      "nzTries": [],
-      "oppTries": [],
-      "nzKickers": [],
-      "oppKickers": [],
-      "sources": [
+      "nzTries": [
         {
-          "name": "All Blacks",
-          "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+          "player": "Josh Moorby",
+          "count": 2
         },
         {
-          "name": "Accor Stadium",
-          "url": "https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks"
+          "player": "Beauden Barrett",
+          "count": 2
+        },
+        {
+          "player": "Peter Lakai",
+          "count": 1
+        },
+        {
+          "player": "Rieko Ioane",
+          "count": 1
+        },
+        {
+          "player": "Wallace Sititi",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Jeremy Williams",
+          "count": 1
+        },
+        {
+          "player": "Tom Wright",
+          "count": 1
+        },
+        {
+          "player": "Filipo Daugunu",
+          "count": 1
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Damian McKenzie",
+          "conversions": 4,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Ryan Lonergan",
+          "conversions": 2,
+          "penalties": 0
+        },
+        {
+          "player": "Declan Meredith",
+          "conversions": 1,
+          "penalties": 0
+        }
+      ],
+      "sources": [
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266",
+          "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/australia-vs-new-zealand/111860"
+        },
+        {
+          "name": "Rugby Australia",
+          "url": "https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017"
         }
       ],
       "kind": "test",
-      "crowd": null,
-      "crowdLabel": null
+      "crowd": 73399,
+      "crowdLabel": "73,399",
+      "kickOffLabel": "Sat 17th Oct 2026, 3:45pm",
+      "primarySource": {
+        "name": "Rugby Database",
+        "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
+        "testListUrl": "https://www.rugbydatabase.com.au/test-rugby/games-list.php",
+        "gameUrl": "https://www.rugbydatabase.com.au/game.php?gameId=30266",
+        "gameId": 30266,
+        "crowd": 73399,
+        "venue": "Accor Stadium",
+        "kickOffLabel": "Sat 17th Oct 2026, 3:45pm",
+        "retrieved": "2026-10-19 Sydney (page fetched 2026-10-18 UTC)"
+      },
+      "crossCheck": {
+        "name": "ESPN",
+        "resultsUrl": "https://www.espn.com.au/rugby/results/_/team/8/",
+        "listed": true,
+        "scoreAgrees": true,
+        "score": "Australia 21-43 New Zealand",
+        "dateLabel": "Sat, Oct 17",
+        "venue": "Accor Stadium, Sydney",
+        "note": "Fetched 19 Oct 2026 Sydney time. The ESPN results list says Sat, Oct 17, Australia 21-43 New Zealand, full time, Accor Stadium, Sydney. Sky Sports says Australia 21-43 New Zealand. Rugby Australia says the All Blacks won 43-21 in Sydney."
+      },
+      "modelEstimate": {
+        "label": "Model estimate, not a guarantee",
+        "writtenAt": "2026-10-14T00:59:39+00:00",
+        "source": "data/forecast.json",
+        "nzWinProbability": 0.6677007773296281,
+        "australiaWinProbability": 0.2963845200890026,
+        "drawProbability": 0.03591470258136925,
+        "expectedMarginNzMinusOpponent": 8.79177968465534,
+        "note": "Stored from data/forecast.json before this match was added to the history. The page formats the win chance and the margin. It does not type a new percentage after the result."
+      }
     },
     {
       "id": "2026-11-07-scotland",
@@ -1308,18 +1400,15 @@
     },
     "australia": {
       "title": "Australia",
-      "meta": "Bledisloe Cup \u00b7 Eden Park played \u00b7 Sydney still to come \u00b7 no prediction",
+      "meta": "Bledisloe Cup \u00b7 Eden Park and Sydney played",
       "facts": [
         "Saturday 10 October, Eden Park: New Zealand won 50\u201319. Half-time was 17\u201314. Rugby Database crowd 46,352. Kick-off 7.10pm New Zealand time.",
-        "New Zealand tries: Peter Lakai, Tupou Vaa'i, Cam Roigard, Codie Taylor, Leroy Carter, Josh Moorby, Will Jordan. Damian McKenzie kicked six conversions and one penalty. Australia tries: Tom Wright, Harry Wilson, Josh Nasser. Ryan Lonergan kicked two conversions.",
-        "The cup was retained. allblacks.com says New Zealand have held it since 2003. BBC says a 23rd straight year. Sky and an ESPN story say a 24th year. This page does not pick a year count.",
-        "BBC and the ESPN story both say the defeat ended a six-game unbeaten run for Australia under Les Kiss. That is their count of the Wallabies' run, not a figure re-counted here.",
-        "BBC and the ESPN story both say the defeat ended a six-game unbeaten run for Australia under Les Kiss. That is their count of the Wallabies' run, not a figure re-counted here.",
-        "Saturday 17 October, Accor Stadium, Sydney, is still to be played. It is not on the Rugby Database list. The kick-off is not verified: allblacks.com says 6.00pm New Zealand time, Accor Stadium says 3.45pm local, and Sky Sports says 6am BST.",
-        "Codie Taylor captained. Damian McKenzie started at first five. Beauden Barrett started at fullback. Scott Barrett and Quinn Tupaea started. Shannon Frizell was on the bench.",
-        "On 11 October the All Blacks said Leroy Carter (high ankle sprain), Asafo Aumua and Anton Segner (failed a second head-injury assessment, minimum 12-day stand-down) and Ethan Blackadder (calf, hurt in the warm-up) will not travel to Sydney. Replacements: Anton Lienert-Brown, George Bell, Du'Plessis Kirifi and Jamie Hannah.",
-        "Richie Mo'unga was unavailable at Eden Park with a calf strain and was said to be likely to miss Sydney. Fehi Fineanganofo was unavailable with concussion and a hamstring. The 11 October travel note did not say whether Fineanganofo went to Sydney.",
-        "No win percentage is shown. There is no prediction model on this page."
+        "Saturday 17 October, Accor Stadium: Australia 21, New Zealand 43. Rugby Database game 30266, crowd 73,399, kick-off 3:45pm. The ESPN results list and Sky Sports show the same final score.",
+        "New Zealand tries at Sydney: Josh Moorby 2, Beauden Barrett 2, Peter Lakai, Rieko Ioane, Wallace Sititi. Damian McKenzie kicked four conversions and no penalties. Australia tries: Jeremy Williams, Tom Wright, Filipo Daugunu. Ryan Lonergan kicked two conversions and Declan Meredith one. Rugby Database lists no penalty tries.",
+        "Half-time is not on the Rugby Database game page. A Rugby Australia report says 36\u20137 at the break. Sky Sports lists try minutes that do not add to 36 before half-time, so no half-time is shown.",
+        "The cup was retained at Eden Park. allblacks.com says New Zealand have held it since 2003. BBC says a 23rd straight year. Sky and an ESPN story say a 24th year. This page does not pick a year count. Rugby Australia's Sydney report calls the result a clean sweep.",
+        "The Sydney match-day 23 is the Rugby Database game page. It does not name a captain.",
+        "On 11 October the All Blacks said Leroy Carter, Asafo Aumua, Anton Segner and Ethan Blackadder would not travel to Sydney. That note is still the injury source. The Sydney game page does not say whether they have returned."
       ],
       "sources": [
         {
@@ -1349,6 +1438,22 @@
         {
           "name": "All Blacks",
           "url": "https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe"
+        },
+        {
+          "name": "Rugby Database",
+          "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266"
+        },
+        {
+          "name": "ESPN results",
+          "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+        },
+        {
+          "name": "Sky Sports",
+          "url": "https://www.skysports.com/rugby-union/australia-vs-new-zealand/111860"
+        },
+        {
+          "name": "Rugby Australia",
+          "url": "https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017"
         }
       ]
     }
@@ -1488,8 +1593,8 @@
     ]
   },
   "notVerified": [
-    "Sydney kick-off on 17 October. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Sky Sports says 6am BST. Rugby Database does not list this fixture yet. It had not been played on 12 October 2026.",
-    "A captain for the November Tests. Codie Taylor captained Eden Park. Nothing checked on 12 October names a captain past the Sydney Test.",
+    "Sydney half-time. Rugby Database game 30266 does not list one. Rugby Australia's report says 36-7 at the break. Sky Sports lists try minutes that do not add to 36 in the first half. No half-time is shown.",
+    "A captain for Sydney and for the November Tests. Rugby Database game 30266 lists the match-day 23 and does not name a captain. Codie Taylor captained Eden Park.",
     "How many years the Bledisloe Cup has been held. allblacks.com says since 2003. BBC says a 23rd straight year. Sky and ESPN say a 24th year. No count is shown.",
     "Leroy Carter's return date. RNZ said a high ankle sprain, a likely long spell out, and that the November Tests in Britain are in doubt. No calendar day.",
     "Whether Fehi Fineanganofo travelled to Sydney. He was unavailable at Eden Park with concussion and a hamstring. The 11 October list of four players staying home does not name him.",
@@ -1556,16 +1661,16 @@
     "note": "A penalty try is worth 7 and is not given to a player. It still counts as a try for or against."
   },
   "derived": {
-    "played": 8,
-    "upcoming": 4,
-    "won": 5,
+    "played": 9,
+    "upcoming": 3,
+    "won": 6,
     "lost": 3,
     "drawn": 0,
-    "pointsFor": 282,
-    "pointsAgainst": 210,
-    "pointsDifference": 72,
-    "triesFor": 42,
-    "triesAgainst": 26,
+    "pointsFor": 325,
+    "pointsAgainst": 231,
+    "pointsDifference": 94,
+    "triesFor": 49,
+    "triesAgainst": 29,
     "topTryScorer": {
       "player": "Will Jordan",
       "tries": 11,
@@ -1864,15 +1969,48 @@
             "url": "https://www.allblacks.com/news/all-blacks/all-blacks-team-named-for-first-bledisloe-cup-test"
           }
         ]
+      },
+      {
+        "id": "2026-10-17-australia-sydney",
+        "date": "2026-10-17",
+        "dateLabel": "17 Oct",
+        "opponent": "Australia",
+        "venue": "Accor Stadium",
+        "competition": "Bledisloe Cup - 2026",
+        "result": "W",
+        "nzScore": 43,
+        "oppScore": 21,
+        "line": "W 43\u201321",
+        "triesFor": 7,
+        "triesAgainst": 3,
+        "sources": [
+          {
+            "name": "Rugby Database",
+            "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266",
+            "listUrl": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+          },
+          {
+            "name": "Sky Sports",
+            "url": "https://www.skysports.com/rugby-union/australia-vs-new-zealand/111860"
+          },
+          {
+            "name": "Rugby Australia",
+            "url": "https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017"
+          }
+        ]
       }
     ],
     "allGames": {
-      "played": 12,
-      "won": 9,
+      "played": 13,
+      "won": 10,
       "lost": 3,
       "drawn": 0,
-      "pointsFor": 465,
-      "pointsAgainst": 285,
+      "pointsFor": 508,
+      "pointsAgainst": 306,
       "note": "Tests plus the four tour matches on the Rugby Database list. Try counts are Tests only."
     },
     "rules": "Tests only for tries and points scorers. try 5, conversion 2, penalty goal 3, penalty try 7 (counts as a try, no player credited). Tour matches have no score sheet here, so they are in the all-games record only."
