@@ -1,0 +1,923 @@
+{
+  "licenceNote": "World Rugby publishes these ranking points. They are not CC0. The numbers are stored with attribution and are not a prediction.",
+  "page": "https://www.world.rugby/rankings/mru",
+  "api": "https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru?language=en",
+  "explanation": "https://www.world.rugby/rankings/explanation",
+  "label": "Mens Rugby Union",
+  "effective": "2026-10-12",
+  "retrievedAt": "2026-10-13T07:26:38+00:00",
+  "entries": [
+    {
+      "position": 1,
+      "team": "South Africa",
+      "abbreviation": "RSA",
+      "points": 93.09175036626566,
+      "previousPoints": 93.09175036626566,
+      "previousPosition": 1
+    },
+    {
+      "position": 2,
+      "team": "New Zealand",
+      "abbreviation": "NZL",
+      "points": 91.80693483436683,
+      "previousPoints": 91.14644633904142,
+      "previousPosition": 2
+    },
+    {
+      "position": 3,
+      "team": "Ireland",
+      "abbreviation": "IRE",
+      "points": 88.07507891841169,
+      "previousPoints": 88.07507891841169,
+      "previousPosition": 3
+    },
+    {
+      "position": 4,
+      "team": "France",
+      "abbreviation": "FRA",
+      "points": 87.42548925673894,
+      "previousPoints": 87.42548925673894,
+      "previousPosition": 4
+    },
+    {
+      "position": 5,
+      "team": "England",
+      "abbreviation": "ENG",
+      "points": 85.68341259649182,
+      "previousPoints": 85.68341259649182,
+      "previousPosition": 5
+    },
+    {
+      "position": 6,
+      "team": "Australia",
+      "abbreviation": "AUS",
+      "points": 84.88921447921875,
+      "previousPoints": 85.54970297454416,
+      "previousPosition": 6
+    },
+    {
+      "position": 7,
+      "team": "Scotland",
+      "abbreviation": "SCO",
+      "points": 84.78186415091567,
+      "previousPoints": 84.78186415091567,
+      "previousPosition": 7
+    },
+    {
+      "position": 8,
+      "team": "Argentina",
+      "abbreviation": "ARG",
+      "points": 82.24458376012659,
+      "previousPoints": 82.24458376012659,
+      "previousPosition": 8
+    },
+    {
+      "position": 9,
+      "team": "Japan",
+      "abbreviation": "JPN",
+      "points": 77.28248968718619,
+      "previousPoints": 77.28248968718619,
+      "previousPosition": 9
+    },
+    {
+      "position": 10,
+      "team": "Fiji",
+      "abbreviation": "FIJ",
+      "points": 76.8063846270742,
+      "previousPoints": 76.8063846270742,
+      "previousPosition": 10
+    },
+    {
+      "position": 11,
+      "team": "Wales",
+      "abbreviation": "WAL",
+      "points": 76.38404174832975,
+      "previousPoints": 76.38404174832975,
+      "previousPosition": 11
+    },
+    {
+      "position": 12,
+      "team": "Italy",
+      "abbreviation": "ITA",
+      "points": 76.30355101890964,
+      "previousPoints": 76.30355101890964,
+      "previousPosition": 12
+    },
+    {
+      "position": 13,
+      "team": "Georgia",
+      "abbreviation": "GEO",
+      "points": 73.94398014603844,
+      "previousPoints": 73.94398014603844,
+      "previousPosition": 13
+    },
+    {
+      "position": 14,
+      "team": "Portugal",
+      "abbreviation": "POR",
+      "points": 69.39199864910687,
+      "previousPoints": 69.39199864910687,
+      "previousPosition": 14
+    },
+    {
+      "position": 15,
+      "team": "USA",
+      "abbreviation": "USA",
+      "points": 67.58247395478487,
+      "previousPoints": 67.58247395478487,
+      "previousPosition": 15
+    },
+    {
+      "position": 16,
+      "team": "Chile",
+      "abbreviation": "CHI",
+      "points": 66.94252638883145,
+      "previousPoints": 66.94252638883145,
+      "previousPosition": 16
+    },
+    {
+      "position": 17,
+      "team": "Spain",
+      "abbreviation": "ESP",
+      "points": 66.83418362427102,
+      "previousPoints": 66.83418362427102,
+      "previousPosition": 17
+    },
+    {
+      "position": 18,
+      "team": "Uruguay",
+      "abbreviation": "URU",
+      "points": 65.74672464145856,
+      "previousPoints": 65.74672464145856,
+      "previousPosition": 18
+    },
+    {
+      "position": 19,
+      "team": "Tonga",
+      "abbreviation": "TGA",
+      "points": 65.13556291165912,
+      "previousPoints": 65.13556291165912,
+      "previousPosition": 19
+    },
+    {
+      "position": 20,
+      "team": "Samoa",
+      "abbreviation": "SAM",
+      "points": 64.73354475680023,
+      "previousPoints": 64.73354475680023,
+      "previousPosition": 20
+    },
+    {
+      "position": 21,
+      "team": "Romania",
+      "abbreviation": "ROU",
+      "points": 62.452210665064264,
+      "previousPoints": 62.452210665064264,
+      "previousPosition": 21
+    },
+    {
+      "position": 22,
+      "team": "Canada",
+      "abbreviation": "CAN",
+      "points": 62.28611634579251,
+      "previousPoints": 62.28611634579251,
+      "previousPosition": 22
+    },
+    {
+      "position": 23,
+      "team": "Belgium",
+      "abbreviation": "BEL",
+      "points": 61.02664182407006,
+      "previousPoints": 61.02664182407006,
+      "previousPosition": 23
+    },
+    {
+      "position": 24,
+      "team": "Hong Kong China",
+      "abbreviation": "HKG",
+      "points": 60.7381881340569,
+      "previousPoints": 60.7381881340569,
+      "previousPosition": 24
+    },
+    {
+      "position": 25,
+      "team": "Zimbabwe",
+      "abbreviation": "ZIM",
+      "points": 57.676648055618614,
+      "previousPoints": 57.676648055618614,
+      "previousPosition": 25
+    },
+    {
+      "position": 26,
+      "team": "Namibia",
+      "abbreviation": "NAM",
+      "points": 56.95622323902014,
+      "previousPoints": 56.95622323902014,
+      "previousPosition": 26
+    },
+    {
+      "position": 27,
+      "team": "Netherlands",
+      "abbreviation": "NED",
+      "points": 56.44477741279684,
+      "previousPoints": 56.44477741279684,
+      "previousPosition": 27
+    },
+    {
+      "position": 28,
+      "team": "Switzerland",
+      "abbreviation": "SUI",
+      "points": 55.47280651404568,
+      "previousPoints": 55.47280651404568,
+      "previousPosition": 28
+    },
+    {
+      "position": 29,
+      "team": "Czechia",
+      "abbreviation": "CZE",
+      "points": 54.78328514781327,
+      "previousPoints": 54.78328514781327,
+      "previousPosition": 29
+    },
+    {
+      "position": 30,
+      "team": "Poland",
+      "abbreviation": "POL",
+      "points": 54.53706216126246,
+      "previousPoints": 54.53706216126246,
+      "previousPosition": 30
+    },
+    {
+      "position": 31,
+      "team": "Paraguay",
+      "abbreviation": "PAR",
+      "points": 52.15194540907321,
+      "previousPoints": 52.15194540907321,
+      "previousPosition": 31
+    },
+    {
+      "position": 32,
+      "team": "Russia",
+      "abbreviation": "RUS",
+      "points": 52.06119262441148,
+      "previousPoints": 52.06119262441148,
+      "previousPosition": 32
+    },
+    {
+      "position": 33,
+      "team": "Brazil",
+      "abbreviation": "BRA",
+      "points": 51.49706521014096,
+      "previousPoints": 51.49706521014096,
+      "previousPosition": 33
+    },
+    {
+      "position": 34,
+      "team": "Sweden",
+      "abbreviation": "SWE",
+      "points": 51.10979264740453,
+      "previousPoints": 51.10979264740453,
+      "previousPosition": 34
+    },
+    {
+      "position": 35,
+      "team": "Germany",
+      "abbreviation": "GER",
+      "points": 50.9200299745633,
+      "previousPoints": 50.9200299745633,
+      "previousPosition": 35
+    },
+    {
+      "position": 36,
+      "team": "Kenya",
+      "abbreviation": "KEN",
+      "points": 50.08791644542441,
+      "previousPoints": 50.08791644542441,
+      "previousPosition": 36
+    },
+    {
+      "position": 37,
+      "team": "Mexico",
+      "abbreviation": "MEX",
+      "points": 49.97383911441897,
+      "previousPoints": 49.97383911441897,
+      "previousPosition": 37
+    },
+    {
+      "position": 38,
+      "team": "Korea",
+      "abbreviation": "KOR",
+      "points": 49.29101317272516,
+      "previousPoints": 49.29101317272516,
+      "previousPosition": 38
+    },
+    {
+      "position": 39,
+      "team": "Morocco",
+      "abbreviation": "MAR",
+      "points": 47.537319971755046,
+      "previousPoints": 47.537319971755046,
+      "previousPosition": 39
+    },
+    {
+      "position": 40,
+      "team": "United Arab Emirates",
+      "abbreviation": "UAE",
+      "points": 47.44613636493621,
+      "previousPoints": 47.44613636493621,
+      "previousPosition": 40
+    },
+    {
+      "position": 41,
+      "team": "Colombia",
+      "abbreviation": "COL",
+      "points": 47.10509415230885,
+      "previousPoints": 47.10509415230885,
+      "previousPosition": 41
+    },
+    {
+      "position": 42,
+      "team": "Cayman Islands",
+      "abbreviation": "CAY",
+      "points": 46.51990388837325,
+      "previousPoints": 46.51990388837325,
+      "previousPosition": 42
+    },
+    {
+      "position": 43,
+      "team": "Philippines",
+      "abbreviation": "PHI",
+      "points": 46.350505133794606,
+      "previousPoints": 46.350505133794606,
+      "previousPosition": 43
+    },
+    {
+      "position": 44,
+      "team": "Malta",
+      "abbreviation": "MLT",
+      "points": 45.83053156566738,
+      "previousPoints": 45.83053156566738,
+      "previousPosition": 44
+    },
+    {
+      "position": 45,
+      "team": "Algeria",
+      "abbreviation": "ALG",
+      "points": 45.8244435014771,
+      "previousPoints": 45.8244435014771,
+      "previousPosition": 45
+    },
+    {
+      "position": 46,
+      "team": "Madagascar",
+      "abbreviation": "MAD",
+      "points": 45.7587432874345,
+      "previousPoints": 45.7587432874345,
+      "previousPosition": 46
+    },
+    {
+      "position": 47,
+      "team": "Senegal",
+      "abbreviation": "SEN",
+      "points": 45.719659885327474,
+      "previousPoints": 45.719659885327474,
+      "previousPosition": 47
+    },
+    {
+      "position": 48,
+      "team": "Tunisia",
+      "abbreviation": "TUN",
+      "points": 45.55773510819324,
+      "previousPoints": 45.55773510819324,
+      "previousPosition": 48
+    },
+    {
+      "position": 49,
+      "team": "Sri Lanka",
+      "abbreviation": "SRI",
+      "points": 45.527949884454415,
+      "previousPoints": 45.527949884454415,
+      "previousPosition": 49
+    },
+    {
+      "position": 50,
+      "team": "Uganda",
+      "abbreviation": "UGA",
+      "points": 45.12219420744046,
+      "previousPoints": 45.12219420744046,
+      "previousPosition": 50
+    },
+    {
+      "position": 51,
+      "team": "Ukraine",
+      "abbreviation": "UKR",
+      "points": 44.99086837844635,
+      "previousPoints": 44.99086837844635,
+      "previousPosition": 51
+    },
+    {
+      "position": 52,
+      "team": "Trinidad & Tobago",
+      "abbreviation": "TTO",
+      "points": 44.26720683414673,
+      "previousPoints": 44.26720683414673,
+      "previousPosition": 52
+    },
+    {
+      "position": 53,
+      "team": "Croatia",
+      "abbreviation": "CRO",
+      "points": 43.5929831923542,
+      "previousPoints": 42.836141553299534,
+      "previousPosition": 56
+    },
+    {
+      "position": 54,
+      "team": "Luxembourg",
+      "abbreviation": "LUX",
+      "points": 43.08779183191246,
+      "previousPoints": 43.08779183191246,
+      "previousPosition": 53
+    },
+    {
+      "position": 55,
+      "team": "Lithuania",
+      "abbreviation": "LTU",
+      "points": 43.018744999194595,
+      "previousPoints": 43.018744999194595,
+      "previousPosition": 54
+    },
+    {
+      "position": 56,
+      "team": "Malaysia",
+      "abbreviation": "MAS",
+      "points": 42.93281134348533,
+      "previousPoints": 42.93281134348533,
+      "previousPosition": 55
+    },
+    {
+      "position": 57,
+      "team": "Moldova",
+      "abbreviation": "MDA",
+      "points": 41.10958231183353,
+      "previousPoints": 41.10958231183353,
+      "previousPosition": 57
+    },
+    {
+      "position": 58,
+      "team": "Denmark",
+      "abbreviation": "DEN",
+      "points": 40.9354176282707,
+      "previousPoints": 40.9354176282707,
+      "previousPosition": 58
+    },
+    {
+      "position": 59,
+      "team": "Kazakhstan",
+      "abbreviation": "KAZ",
+      "points": 40.49407695763477,
+      "previousPoints": 40.49407695763477,
+      "previousPosition": 59
+    },
+    {
+      "position": 60,
+      "team": "Barbados",
+      "abbreviation": "BAR",
+      "points": 40.426248171821435,
+      "previousPoints": 40.426248171821435,
+      "previousPosition": 60
+    },
+    {
+      "position": 61,
+      "team": "Chinese Taipei",
+      "abbreviation": "TPE",
+      "points": 40.26611741292254,
+      "previousPoints": 40.26611741292254,
+      "previousPosition": 62
+    },
+    {
+      "position": 62,
+      "team": "Jamaica",
+      "abbreviation": "JAM",
+      "points": 40.00466139351325,
+      "previousPoints": 40.00466139351325,
+      "previousPosition": 63
+    },
+    {
+      "position": 63,
+      "team": "Israel",
+      "abbreviation": "ISR",
+      "points": 39.966663999822906,
+      "previousPoints": 39.966663999822906,
+      "previousPosition": 64
+    },
+    {
+      "position": 64,
+      "team": "Austria",
+      "abbreviation": "AUT",
+      "points": 39.64771630479145,
+      "previousPoints": 40.404557943846115,
+      "previousPosition": 61
+    },
+    {
+      "position": 65,
+      "team": "Latvia",
+      "abbreviation": "LAT",
+      "points": 39.6293167945877,
+      "previousPoints": 39.6293167945877,
+      "previousPosition": 65
+    },
+    {
+      "position": 66,
+      "team": "Zambia",
+      "abbreviation": "ZAM",
+      "points": 39.24481986983414,
+      "previousPoints": 39.24481986983414,
+      "previousPosition": 66
+    },
+    {
+      "position": 67,
+      "team": "Cook Islands",
+      "abbreviation": "COK",
+      "points": 39.106883747652994,
+      "previousPoints": 39.106883747652994,
+      "previousPosition": 67
+    },
+    {
+      "position": 68,
+      "team": "Cote D'Ivoire",
+      "abbreviation": "CIV",
+      "points": 39.06230545669446,
+      "previousPoints": 39.06230545669446,
+      "previousPosition": 68
+    },
+    {
+      "position": 69,
+      "team": "Bermuda",
+      "abbreviation": "BER",
+      "points": 37.73875085753291,
+      "previousPoints": 37.73875085753291,
+      "previousPosition": 69
+    },
+    {
+      "position": 70,
+      "team": "Serbia",
+      "abbreviation": "SRB",
+      "points": 37.65998278820476,
+      "previousPoints": 37.65998278820476,
+      "previousPosition": 70
+    },
+    {
+      "position": 71,
+      "team": "Thailand",
+      "abbreviation": "THA",
+      "points": 37.546367247906964,
+      "previousPoints": 37.546367247906964,
+      "previousPosition": 71
+    },
+    {
+      "position": 72,
+      "team": "Singapore",
+      "abbreviation": "SGP",
+      "points": 37.300787484919454,
+      "previousPoints": 37.300787484919454,
+      "previousPosition": 72
+    },
+    {
+      "position": 73,
+      "team": "Guyana",
+      "abbreviation": "GUY",
+      "points": 36.84887872020798,
+      "previousPoints": 36.84887872020798,
+      "previousPosition": 73
+    },
+    {
+      "position": 74,
+      "team": "Nigeria",
+      "abbreviation": "NGR",
+      "points": 36.816623595983124,
+      "previousPoints": 36.816623595983124,
+      "previousPosition": 74
+    },
+    {
+      "position": 75,
+      "team": "Venezuela",
+      "abbreviation": "VEN",
+      "points": 36.780649109864626,
+      "previousPoints": 36.780649109864626,
+      "previousPosition": 75
+    },
+    {
+      "position": 76,
+      "team": "Bulgaria",
+      "abbreviation": "BUL",
+      "points": 36.750842369849885,
+      "previousPoints": 36.750842369849885,
+      "previousPosition": 76
+    },
+    {
+      "position": 77,
+      "team": "Finland",
+      "abbreviation": "FIN",
+      "points": 36.35262908571864,
+      "previousPoints": 36.35262908571864,
+      "previousPosition": 77
+    },
+    {
+      "position": 78,
+      "team": "Botswana",
+      "abbreviation": "BOT",
+      "points": 36.21395294232694,
+      "previousPoints": 36.21395294232694,
+      "previousPosition": 78
+    },
+    {
+      "position": 79,
+      "team": "Andorra",
+      "abbreviation": "AND",
+      "points": 35.15201111872708,
+      "previousPoints": 35.15201111872708,
+      "previousPosition": 79
+    },
+    {
+      "position": 80,
+      "team": "Peru",
+      "abbreviation": "PER",
+      "points": 35.049415446168545,
+      "previousPoints": 35.049415446168545,
+      "previousPosition": 80
+    },
+    {
+      "position": 81,
+      "team": "Ghana",
+      "abbreviation": "GHA",
+      "points": 34.378756738469534,
+      "previousPoints": 34.378756738469534,
+      "previousPosition": 81
+    },
+    {
+      "position": 82,
+      "team": "St Vincent and the Grenadines",
+      "abbreviation": "VIN",
+      "points": 33.61582755897451,
+      "previousPoints": 33.61582755897451,
+      "previousPosition": 82
+    },
+    {
+      "position": 83,
+      "team": "Slovenia",
+      "abbreviation": "SLO",
+      "points": 33.52013199281437,
+      "previousPoints": 33.52013199281437,
+      "previousPosition": 83
+    },
+    {
+      "position": 84,
+      "team": "Turkey",
+      "abbreviation": "TUR",
+      "points": 32.65695350944872,
+      "previousPoints": 32.65695350944872,
+      "previousPosition": 84
+    },
+    {
+      "position": 85,
+      "team": "India",
+      "abbreviation": "IND",
+      "points": 31.834276964261466,
+      "previousPoints": 31.834276964261466,
+      "previousPosition": 85
+    },
+    {
+      "position": 86,
+      "team": "Hungary",
+      "abbreviation": "HUN",
+      "points": 31.288998006525762,
+      "previousPoints": 31.288998006525762,
+      "previousPosition": 86
+    },
+    {
+      "position": 87,
+      "team": "Burkina Faso",
+      "abbreviation": "BUR",
+      "points": 31.05,
+      "previousPoints": 31.05,
+      "previousPosition": 87
+    },
+    {
+      "position": 88,
+      "team": "Guam",
+      "abbreviation": "GUM",
+      "points": 30.51176505075062,
+      "previousPoints": 30.51176505075062,
+      "previousPosition": 88
+    },
+    {
+      "position": 89,
+      "team": "Lesotho",
+      "abbreviation": "LES",
+      "points": 30.456155217261962,
+      "previousPoints": 30.456155217261962,
+      "previousPosition": 89
+    },
+    {
+      "position": 90,
+      "team": "Iran",
+      "abbreviation": "IRI",
+      "points": 30.0,
+      "previousPoints": 30.0,
+      "previousPosition": 90
+    },
+    {
+      "position": 91,
+      "team": "Costa Rica",
+      "abbreviation": "CRC",
+      "points": 29.748294784966305,
+      "previousPoints": 29.748294784966305,
+      "previousPosition": 91
+    },
+    {
+      "position": 92,
+      "team": "China",
+      "abbreviation": "CHN",
+      "points": 28.914189759612665,
+      "previousPoints": 28.914189759612665,
+      "previousPosition": 92
+    },
+    {
+      "position": 93,
+      "team": "Bosnia & Herzegovina",
+      "abbreviation": "BIH",
+      "points": 28.357396560873354,
+      "previousPoints": 28.357396560873354,
+      "previousPosition": 93
+    },
+    {
+      "position": 94,
+      "team": "Papua New Guinea",
+      "abbreviation": "PNG",
+      "points": 27.68373495485308,
+      "previousPoints": 27.68373495485308,
+      "previousPosition": 94
+    },
+    {
+      "position": 95,
+      "team": "St Lucia",
+      "abbreviation": "LCA",
+      "points": 27.58374610838924,
+      "previousPoints": 27.58374610838924,
+      "previousPosition": 95
+    },
+    {
+      "position": 96,
+      "team": "Bahamas",
+      "abbreviation": "BAH",
+      "points": 27.45696466947975,
+      "previousPoints": 27.45696466947975,
+      "previousPosition": 96
+    },
+    {
+      "position": 97,
+      "team": "Eswatini",
+      "abbreviation": "SWZ",
+      "points": 25.584879564484446,
+      "previousPoints": 25.584879564484446,
+      "previousPosition": 97
+    },
+    {
+      "position": 98,
+      "team": "Qatar",
+      "abbreviation": "QAT",
+      "points": 25.31491966269572,
+      "previousPoints": 25.31491966269572,
+      "previousPosition": 98
+    },
+    {
+      "position": 99,
+      "team": "Uzbekistan",
+      "abbreviation": "UZB",
+      "points": 25.2828007869781,
+      "previousPoints": 25.2828007869781,
+      "previousPosition": 99
+    },
+    {
+      "position": 100,
+      "team": "Mauritius",
+      "abbreviation": "MRI",
+      "points": 24.5580989461403,
+      "previousPoints": 24.5580989461403,
+      "previousPosition": 100
+    },
+    {
+      "position": 101,
+      "team": "Norway",
+      "abbreviation": "NOR",
+      "points": 24.49986059821276,
+      "previousPoints": 24.49986059821276,
+      "previousPosition": 101
+    },
+    {
+      "position": 102,
+      "team": "Pakistan",
+      "abbreviation": "PAK",
+      "points": 24.131830833302693,
+      "previousPoints": 24.131830833302693,
+      "previousPosition": 102
+    },
+    {
+      "position": 103,
+      "team": "Nepal",
+      "abbreviation": "NEP",
+      "points": 24.0,
+      "previousPoints": 24.0,
+      "previousPosition": 103
+    },
+    {
+      "position": 104,
+      "team": "Rwanda",
+      "abbreviation": "RWA",
+      "points": 23.783758194069794,
+      "previousPoints": 23.783758194069794,
+      "previousPosition": 104
+    },
+    {
+      "position": 105,
+      "team": "Laos",
+      "abbreviation": "LAO",
+      "points": 23.38442912660305,
+      "previousPoints": 23.38442912660305,
+      "previousPosition": 105
+    },
+    {
+      "position": 106,
+      "team": "Cameroon",
+      "abbreviation": "CMR",
+      "points": 23.1200853709647,
+      "previousPoints": 23.1200853709647,
+      "previousPosition": 106
+    },
+    {
+      "position": 107,
+      "team": "Niue Island",
+      "abbreviation": "NIU",
+      "points": 22.62618599821591,
+      "previousPoints": 22.62618599821591,
+      "previousPosition": 107
+    },
+    {
+      "position": 108,
+      "team": "Burundi",
+      "abbreviation": "BDI",
+      "points": 20.15648565369965,
+      "previousPoints": 20.15648565369965,
+      "previousPosition": 108
+    },
+    {
+      "position": 109,
+      "team": "Solomon Islands",
+      "abbreviation": "SOL",
+      "points": 17.972960374916912,
+      "previousPoints": 17.972960374916912,
+      "previousPosition": 109
+    },
+    {
+      "position": 110,
+      "team": "Indonesia",
+      "abbreviation": "INA",
+      "points": 15.948198798661993,
+      "previousPoints": 15.948198798661993,
+      "previousPosition": 110
+    },
+    {
+      "position": 111,
+      "team": "Monaco",
+      "abbreviation": "MON",
+      "points": 11.171558073802641,
+      "previousPoints": 11.171558073802641,
+      "previousPosition": 111
+    },
+    {
+      "position": 112,
+      "team": "Greece",
+      "abbreviation": "GRE",
+      "points": 10.546451727059399,
+      "previousPoints": 10.546451727059399,
+      "previousPosition": 112
+    },
+    {
+      "position": 113,
+      "team": "Vanuatu",
+      "abbreviation": "VAN",
+      "points": 9.289167657403121,
+      "previousPoints": 9.289167657403121,
+      "previousPosition": 113
+    },
+    {
+      "position": 114,
+      "team": "American Samoa",
+      "abbreviation": "ASA",
+      "points": 7.532106726695797,
+      "previousPoints": 7.532106726695797,
+      "previousPosition": 114
+    }
+  ]
+}

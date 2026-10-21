@@ -1,6 +1,6 @@
 # Sources for the 2026 All Blacks record
 
-Checked on 28 September 2026, again on 7 October 2026 for the player dossier, and again on 12 October 2026 after Eden Park. The Rugby Database games list now has one game after Baltimore: 10 October, All Blacks 50–19 Australia at Eden Park, crowd 46,352, game 30265. The ESPN match page shows the same score. Sydney on 17 October is not on the Rugby Database list and had not been played. No other All Blacks game since 12 September is on that list.
+Checked on 28 September 2026, again on 7 October 2026 for the player dossier, again on 12 October 2026 after Eden Park, and again on 19 October 2026 (Sydney) after the Sydney Test. The Rugby Database New Zealand games list and the All Test Match list both now include 17 October, Australia 21–43 All Blacks at Accor Stadium, crowd 73,399, kick-off 3:45pm, game 30266. The ESPN results list, fetched the same day, shows Australia 21–43 New Zealand at Accor Stadium. Sky Sports shows the same final score.
 
 The player dossier is `player-dossier.html`. It reads `data/player-dossier-2026.json` and this season file. Every score on the page is New Zealand first, then the opponent. Rugby Database lists the home side first, so away results are flipped to keep New Zealand first.
 
@@ -19,7 +19,7 @@ These ESPN paths did not give the New Zealand upcoming list, so they were not us
 - `https://www.espn.com.au/rugby/fixtures/_/team/8/` returned a generic rugby fixtures page, not the All Blacks list.
 - `https://www.espn.com.au/rugby/team/fixtures/_/id/8/` and `https://www.espn.com.au/rugby/team/squad/_/id/8/nzl` returned HTTP 404.
 
-Upcoming fixtures stay on allblacks.com. On 12 Oct 2026 the Rugby Database list's newest game was Eden Park. Sydney and the November Tests were not on it.
+Upcoming fixtures stay on allblacks.com. On 19 Oct 2026 (Sydney) the Rugby Database list's newest All Blacks game was Sydney. The November Tests were not on it.
 
 ## Played Tests
 
@@ -33,6 +33,7 @@ Upcoming fixtures stay on allblacks.com. On 12 Oct 2026 the Rugby Database list'
 | 5 Sep 2026 | South Africa | First National Bank Stadium | 85,967 | Lost 24–29 | [game 29382](https://www.rugbydatabase.com.au/game.php?gameId=29382) | [match 603249](https://www.espn.com.au/rugby/match/_/gameId/603249/league/289234) |
 | 12 Sep 2026 | South Africa | M&T Bank Stadium | 68,173 | Lost 28–43 | [game 29383](https://www.rugbydatabase.com.au/game.php?gameId=29383) | [match 603250](https://www.espn.com.au/rugby/match/_/gameId/603250/league/289234) |
 | 10 Oct 2026 | Australia | Eden Park | 46,352 | Won 50–19 | [game 30265](https://www.rugbydatabase.com.au/game.php?gameId=30265) | [match 603463](https://www.espn.com.au/rugby/match/_/gameId/603463/league/289234/australia-new-zealand) |
+| 17 Oct 2026 | Australia | Accor Stadium | 73,399 | Won 43–21 | [game 30266](https://www.rugbydatabase.com.au/game.php?gameId=30266) | [ESPN results list](https://www.espn.com.au/rugby/results/_/team/8/), Sat, Oct 17, Australia 21–43 New Zealand, Accor Stadium. Fetched 19 Oct 2026 (Sydney). |
 
 Try scorers for those Tests come from match reports, not from Rugby Database (its game pages do not list a full try sequence):
 
@@ -44,10 +45,11 @@ Try scorers for those Tests come from match reports, not from Rugby Database (it
 - First National Bank Stadium: [BBC Sport](https://www.bbc.com/sport/rugby-union/articles/c7830m55lklo), [Sky Sports](https://www.skysports.com/rugby-union/news/13582037/south-africa-29-24-new-zealand-springboks-edge-thriller-to-take-2-1-series-lead-in-soweto).
 - Baltimore: [BBC Sport](https://www.bbc.com/sport/rugby-union/articles/c07lmxpmvr9o), [Sky Sports](https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks), [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe).
 - Eden Park: [BBC Sport](https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko), [Sky Sports](https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year), [ESPN](https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park), [1News](https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/). Rugby Database's own game page also lists the try scorers and the kickers, and they match those reports.
+- Sydney: Rugby Database game 30266 lists the tries and kicks. New Zealand: Josh Moorby 2, Beauden Barrett 2, Peter Lakai, Rieko Ioane, Wallace Sititi, Damian McKenzie 4 conversions and no penalties. Australia: Jeremy Williams, Tom Wright, Filipo Daugunu, Ryan Lonergan 2 conversions, Declan Meredith 1 conversion. No penalty tries. That is 43 and 21. [Sky Sports](https://www.skysports.com/rugby-union/australia-vs-new-zealand/111860) lists the same try scorers and the same kicks. [Rugby Australia](https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017) lists the same scorers. Half-time is not on the Rugby Database page. Rugby Australia's report says 36–7 at the break. Sky's listed minutes do not add to 36 in the first half, so the page does not show a half-time.
 
-Series result against South Africa: South Africa won 3–1. The Bledisloe Cup was retained at Eden Park. Australia can still win the Sydney Test. They cannot take the cup from this result.
+Series result against South Africa: South Africa won 3–1. The Bledisloe Cup was retained at Eden Park. Sydney was won 43–21. Rugby Australia calls that a clean sweep. This page does not add a year-count for the cup.
 
-Test record from the score sheets: played 8, won 5, lost 3, drawn 0, points for 282, points against 210, tries for 42, tries against 26. Will Jordan has 11 tries and 55 points, the most of both on those sheets.
+Test record from the score sheets: played 9, won 6, lost 3, drawn 0, points for 325, points against 231, tries for 49, tries against 29. Will Jordan has 11 tries and 55 points, the most of both on those sheets. He did not score in Sydney.
 
 ## Tour matches (not Tests)
 
@@ -60,7 +62,7 @@ These four are on the Rugby Database list under "All Blacks in South Africa & Un
 | 15 Aug 2026 | Bulls | Loftus Versfeld Stadium | 30,930 | Won 50–19 | [game 29378](https://www.rugbydatabase.com.au/game.php?gameId=29378) |
 | 25 Aug 2026 | Lions | Emirates Airline Park | 15,956 | Won 41–35 | [game 29380](https://www.rugbydatabase.com.au/game.php?gameId=29380) |
 
-All games on that list: played 12, won 9, lost 3, drawn 0, points for 465, points against 285. Try totals stay on the eight Tests. Eden Park is the twelfth game.
+All games on that list: played 13, won 10, lost 3, drawn 0, points for 508, points against 306. Try totals stay on the nine Tests. Sydney is the thirteenth game.
 
 ## Where the two sources do not use the same words
 
@@ -87,11 +89,10 @@ A direct fetch of the ESPN Australia HTML on 12 October was blocked by a bot che
 
 ## Still to be played
 
-Eden Park has been played. These were not on the Rugby Database games list on 12 Oct 2026.
+Sydney has been played. These were not on the Rugby Database games list on 19 Oct 2026 (Sydney). The next one on the season file is Scotland.
 
 | Date on the page | Opponent | Venue | Note | Source |
 |---|---|---|---|---|
-| 17 Oct 2026 | Australia | Accor Stadium, Sydney | Not played. Kick-off not verified. allblacks.com says 6.00pm New Zealand time. Accor Stadium says 3.45pm local. Sky Sports says 6am BST. | [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe), [Accor Stadium](https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks), [Sky Sports](https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year) |
 | 7 Nov 2026 local | Scotland | Murrayfield, Edinburgh | allblacks.com heads this as Sunday 8 November, 3.10am NZDT / 2.10pm GMT | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
 | 14 Nov 2026 local | Wales | Principality Stadium, Cardiff | Sunday 15 November, 3.10am NZDT / 2.10pm GMT on allblacks.com | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
 | 21 Nov 2026 local | England | Twickenham Stadium, London | Sunday 22 November, 3.10am NZDT / 2.10pm GMT on allblacks.com | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
@@ -168,4 +169,65 @@ The earlier player mockup (strengths, development areas, pre-match cues, a six-f
 - ESPN match attendance stored as 0 is missing data, not a crowd.
 - A Dubai Telegraph report called the France Test 32–30. Rugby Database, ESPN, the All Blacks, BBC Sport and the NZ Herald say 34–32.
 - ESPN league 242041 is Super Rugby Pacific. It is not the All Blacks Test feed. The page does not use it.
-- There is no prediction model, so there are no win percentages, Brier scores, or hit rates.
+- There is no hand-typed prediction. `data/build_forecast.py` is the only place a win probability can be produced, and it writes one only after a scored Test series clears its gate.
+
+## Forecast model, licences, and what was not used
+
+Checked again on 19 October 2026 (Sydney). The probability reads `data/forecast.json`, which `data/build_forecast.py` writes from `data/rugbydatabase-tests.json`. The page does not type a percentage.
+
+| Source | Used for | Licence / terms |
+|---|---|---|
+| [Rugby Database, All Test Match Games](https://www.rugbydatabase.com.au/test-rugby/games-list.php) | The scored Test history, with venue and home side. Retrieved 19 October 2026 Sydney time (`retrievedAt` `2026-10-18T21:32:34+00:00`). The file is `data/rugbydatabase-tests.json`. Refresh with `python data/build_forecast.py --fetch-history`. | Rugby Database's published list. Stored with the source URL and the retrieval time. |
+| [Rugby Database team games lists](https://www.rugbydatabase.com.au/team/games-list.php?teamId=3) | Coverage cross-check for the Tier 1 unions, including New Zealand (`teamId=3`) and Australia (`teamId=37`). | Same site. The New Zealand list includes tour matches. Those tours are not the model history. |
+| [Wikidata Query Service](https://query.wikidata.org/sparql) | Not the series for this probability. The earlier extract is still `data/wikidata-rugby-coverage.json`. It marked a home side on too few scored matches. | CC0 |
+| [World Rugby men's rankings](https://www.world.rugby/rankings/mru) | The ranking-gap box only. The snapshot is `data/world-rugby-rankings.json`, effective 12 October 2026. The public feed was read again on 19 October 2026 (Sydney) and the effective date was still 12 October 2026, so the file was not replaced. It is not the pre-match rating for Scotland, because Sydney has been played since that date. | World Rugby's published figures. Not CC0. Stored with attribution. Not a prediction. |
+| [World Rugby rankings explanation](https://www.world.rugby/rankings/explanation) | The points exchange, the 15-point margin weighting, and the Wales check (76.92 at home to Scotland 76.36, won 23–10, exchange 0.64). The published three-point home adjustment is that ranking fact and that formula check. | Quoted as the method. |
+| [rugbyAPI](https://rugbyapi.com/documentation) | Not this history. A free key covers 11 endpoints and 50 lookups a day, from yesterday forward, without `include`, so it cannot supply the Test series. Current fixtures, results, lineups and timelines still go through `scripts/fetch-rugbyapi.mjs` into `data/rugbyapi-snapshot.json`. | rugbyAPI terms. The key is read from `RUGBYAPI_KEY` and is never committed. If the variable is missing, no request is sent. `GET /v1/matches/{id}?include=lineups,timeline`, `GET /v1/teams/{id}/form` and `GET /v1/players/{id}` need Archive. A `403 plan_required` is stored and nothing is invented. Quality flags decide what is kept: a timeline only when `complete` and the events add up to the score, lineups only when `complete` and no player is on both sides. Scores that disagree with this season file are listed and are not copied onto the season card. |
+| [NZ Rugby Stats](https://stats.allblacks.com/all-players) | Official player profile links on the dashboard and the dossier. | Links only. Career figures on those pages are not copied into the JSON. |
+| Goalserve | Not used. `src/data/player-provider.js` is the seam a later paid feed would implement. | No Goalserve payload is in the repo. |
+
+The Test list had 5,822 rows on this retrieval. The history file keeps 4,910 scored Tests. It drops 882 women's matches, 15 XV sides, and 15 invitational sides (Barbarians, World XV, British Army, British Empire Services, Queensland, NZEF Kiwis, South America). Duplicate game ids dropped: 0. "All Blacks" is stored as New Zealand. Western Samoa is stored as Samoa. Pacific Islanders, Great Britain, Arabian Gulf, and New Zealand Maori stay as their own sides. Sydney is in the file as Australia 21, New Zealand 43, Accor Stadium, game 30266. No Test-list row is dated after 17 October 2026.
+
+The 2026 tour games 29376, 29377, 29378 and 29380 (Stormers, Sharks, Bulls, Lions) are on the New Zealand team list and are not on the Test list, so they are not in the history. The nine played 2026 Tests in `data/all-blacks-2026.json` match the Test list, read home-first.
+
+The script replays the published points exchange on that file. A venue is a home ground when, before 1 January 2024, it has at least three Tests and one side is home in at least 70 percent of them. Home advantage applies only when that side is the listed home. Other matches stay in the series with advantage 0. The fitted home advantage in this run is 1.2 points (the best training likelihood from 0 to 12, in steps of 0.1). Likelihood at 0 was −2198.9. Likelihood at the published 3 points was −2206.8. Likelihood at 1.2 was −2192.9. It applies on 3,584 matches. Rugby World Cup finals are not marked separately on this list, so the published doubling for a final is not applied. Replay ratings are not the published World Rugby table.
+
+The gate is 200 scored matches with a home side, 80 before 1 January 2024, 30 on or after that date, and 8 each for New Zealand and Australia. This file clears it. The backtest is the 418 matches from 2 February 2024 through 17 October 2026, held out of the fit: 301 winners correct (72.0 percent). Mean absolute margin error 16.3 points. A draw counts as an incorrect winner. The slope of the win line is positive (0.215).
+
+The estimate written on 14 October 2026 for Sydney, before that match was in the history, is kept on the Sydney Test as `modelEstimate`: New Zealand win chance 66.8 percent, expected margin New Zealand by 8.8. The post-match panel compares that stored estimate with the result. It is labelled "Model estimate, not a guarantee". It is not recalculated after the score.
+
+The next Test in the season file is Scotland at Murrayfield on 7 November 2026 local. Scotland are at home because the venue is Murrayfield. `data/forecast.json` stores a New Zealand win chance of 68.9 percent, a Scotland win chance of 27.5 percent, a draw chance of 3.6 percent, and an expected margin of New Zealand by 9.9 points. Those figures are the file, shown to one decimal place. The label is "Model estimate, not a guarantee". The ranking-gap box still uses the published three-point adjustment on the 12 October table and is labelled "Ranking gap, not a prediction". The page also says that table is not the pre-match rating, because Sydney has been played since 12 October. If a later run fails the gate, or a played season score disagrees with the Test list, the script writes no probability and the page shows "Not calculated" with that reason.
+
+Not used, on purpose:
+
+- rugbyAPI, for this history. A free key only covers yesterday onward.
+- The Kaggle international Test dataset. Its licence is CC BY-NC-SA.
+- ESPN's hidden site API.
+- API-Sports API-Rugby.
+- Any Opta or Stats Perform feed. The old sample feed name remains in the data file as "Not connected". The page does not show an Opta model.
+- Wikidata, for this probability.
+
+## Refresh the rugbyAPI snapshot
+
+The dashboard and the dossier do not call rugbyAPI. They read `data/rugbyapi-snapshot.json`. Until that file has `"connected": true`, the pages keep the season file and say the snapshot is not connected.
+
+From the repo root, with the key only in the environment:
+
+```bash
+export RUGBYAPI_KEY='your key'
+node scripts/fetch-rugbyapi.mjs
+```
+
+Then commit `data/rugbyapi-snapshot.json` and push it. Do not commit `.env` or the key. Running the script without `RUGBYAPI_KEY` sends no request. If a connected snapshot is already in the file, that run leaves it in place.
+
+`node scripts/fetch-rugbyapi.mjs --self-check` checks the quality rules and the cross-check without a key and without writing the snapshot.
+
+What the refresh calls:
+
+- `GET /v1/search?q=New Zealand` and `GET /v1/teams/{id}` to confirm the national side. Both are on the free key.
+- `GET /v1/fixtures?days=60` for upcoming Tests.
+- `GET /v1/matches?team={id}` for 2026 finished matches. A free key returns `403 plan_required` for dates before yesterday.
+- `GET /v1/matches/{id}?include=lineups,timeline`. A free key returns `403 plan_required`. The script then asks for the match without `include`.
+- `GET /v1/teams/{id}/form?last=12` and `GET /v1/players/{id}` when a usable lineup has a player id. Both need Archive.
+
+A free key allows 50 lookups a day. The script stops at 24 unless `RUGBYAPI_MAX_REQUESTS` is set lower. Refused calls do not count on rugbyAPI's side, and they are still listed in the snapshot.
