@@ -1,14 +1,14 @@
 {
   "meta": {
-    "asOf": "2026-10-19",
-    "asOfLabel": "19 Oct 2026",
+    "asOf": "2026-11-08",
+    "asOfLabel": "8 Nov 2026",
     "title": "Player dossier",
     "team": "New Zealand",
     "honesty": "Selections come from published match-day 23s. Points and tries come from the Test score sheets in data/all-blacks-2026.json. Injuries come from All Blacks, RNZ, ESPN and Planet Rugby. Nothing on this page is a rating, a prediction, or a guess at minutes.",
-    "checked": "On 19 October 2026 (Sydney) the Rugby Database New Zealand games list and the All Test Match list both had Australia 21, All Blacks 43, at Accor Stadium on 17 October, game 30266. The ESPN results list shows Australia 21-43 New Zealand at the same ground.",
-    "next": "Saturday 7 November local, Scotland, Murrayfield, Edinburgh. allblacks.com heads this as Sunday 8 November, 3.10am New Zealand time. Sydney on 17 October is played: New Zealand 43–21 Australia.",
-    "recordLine": "Tests: played 9, won 6, lost 3. Sydney was won 43–21. Eden Park was won 50–19. South Africa won that series 3–1. Tour matches are on the main page and are not in the player charts.",
-    "captain": "Codie Taylor captained Eden Park and the Bledisloe squad named 29 September 2026. Ardie Savea captained the Tests he started, through Soweto.",
+    "checked": "On 8 November 2026 the All Blacks match report, Scottish Rugby, BBC Sport and the ESPN results list all had Scotland 21, New Zealand 43 at Scottish Gas Murrayfield on Saturday 7 November. www.rugbydatabase.com.au did not resolve.",
+    "next": "Saturday 14 November local, Wales, Principality Stadium, Cardiff. allblacks.com heads this as Sunday 15 November. Scotland on 7 November is played: New Zealand 43–21 Scotland.",
+    "recordLine": "Tests: played 10, won 7, lost 3, points 368–252, tries 56–32. Scotland was won 43–21. Sydney was won 43–21. Will Jordan has 11 tries and 55 points, the most of both on these sheets. Tour matches are not in the player charts.",
+    "captain": "Codie Taylor captained the Scotland Test on 7 November 2026, on the Scottish Rugby live blog and the All Blacks match report. He captained Eden Park. The Sydney game page does not name a captain.",
     "coach": "Dave Rennie",
     "squadNamed": "29 Sep 2026",
     "squadSize": 34,
@@ -240,6 +240,19 @@
         }
       ],
       "note": "Match-day 23 from Rugby Database game 30266. The page lists Cameron Roigard; the card uses Cam Roigard. It does not name a captain."
+    },
+    {
+      "id": "2026-11-07-scotland",
+      "short": "SCO",
+      "dateLabel": "7 Nov",
+      "opponent": "Scotland",
+      "sources": [
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+        }
+      ],
+      "note": "Match-day 23 from the Scottish Rugby live blog. Codie Taylor is marked captain there. The same 23 is on the Scottish Rugby match report."
     }
   ],
   "players": [
@@ -279,6 +292,11 @@
         {
           "testId": "2026-10-10-australia-eden-park",
           "role": "start"
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "notes": [
@@ -348,6 +366,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -436,7 +459,7 @@
       "unit": "FR",
       "squad": "squad",
       "captain": true,
-      "summary": "Captain of the 34-man Bledisloe squad, named on 29 September 2026, and captain at Eden Park. Started at hooker against France, Italy, Ireland, Ellis Park, Cape Town, Baltimore and Eden Park, and scored at Eden Park. Baltimore was his first Test as captain. Left out of the Soweto match-day 23.",
+      "summary": "Captain of the 34-man Bledisloe squad, named on 29 September 2026, and captain at Eden Park. Started at hooker against France, Italy, Ireland, Ellis Park, Cape Town, Baltimore and Eden Park, and scored at Eden Park. Baltimore was his first Test as captain. Left out of the Soweto match-day 23. Scottish Rugby's live blog and the All Blacks report name him captain against Scotland on 7 November 2026.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -472,6 +495,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -503,8 +531,8 @@
       },
       "pos": "Hooker",
       "unit": "FR",
-      "squad": "injured",
-      "summary": "Named on the bench at Eden Park. He then failed a second head-injury assessment and has a minimum 12-day stand-down, so he does not travel to Sydney. George Bell was called in. Before Eden Park he was named on the bench for France, Ireland, Ellis Park, Cape Town and Baltimore, and named to start at Soweto.",
+      "squad": "squad",
+      "summary": "Named on the bench at Eden Park, then stood down from the Sydney trip after a second head-injury assessment. Named as reserve 16 against Scotland on 7 November 2026 and scored. That is the Scottish Rugby live blog, not a medical update.",
       "sheets": [
         {
           "testId": "2026-07-04-france",
@@ -534,6 +562,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench",
           "note": "Failed a second head-injury assessment. Minimum 12-day stand-down."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -723,6 +756,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -765,6 +803,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "bench",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -832,6 +875,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -978,6 +1026,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "notes": [
@@ -1062,6 +1115,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "notes": [
@@ -1271,8 +1329,8 @@
       },
       "pos": "Loose forward",
       "unit": "LF",
-      "squad": "injured",
-      "summary": "Named on the Eden Park bench. He failed a second head-injury assessment and has a minimum 12-day stand-down, so he does not travel to Sydney. Du'Plessis Kirifi was called in. Earlier he was named to debut on the bench against Italy and was on the bench against Ireland. He was originally named on the Ellis Park bench, then replaced by Simon Parker before kick-off. A 21 September ankle-joint problem had cleared enough for the 29 September squad.",
+      "squad": "squad",
+      "summary": "Stood down from the Sydney trip after a second head-injury assessment. Named as reserve 20 against Scotland on 7 November 2026 on the Scottish Rugby live blog. That selection is not a medical update.",
       "sheets": [
         {
           "testId": "2026-07-11-italy",
@@ -1287,6 +1345,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "bench",
           "note": "Failed a second head-injury assessment. Minimum 12-day stand-down."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "notes": [
@@ -1437,6 +1500,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -1492,6 +1560,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -1679,6 +1752,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Rugby Database game 30266 lists Cameron Roigard."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -1725,6 +1803,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "bench",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -1974,6 +2057,11 @@
           "testId": "2026-10-10-australia-eden-park",
           "role": "start",
           "note": "1News quoted Rennie saying he was substituted with about 10 minutes to go."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2033,6 +2121,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2075,6 +2168,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2118,6 +2216,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "bench",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2406,6 +2509,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2473,6 +2581,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2517,6 +2630,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2596,6 +2714,11 @@
           "testId": "2026-10-17-australia-sydney",
           "role": "start",
           "note": "Named on Rugby Database game 30266."
+        },
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "start",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
         }
       ],
       "sources": [
@@ -2671,6 +2794,26 @@
         {
           "name": "Rugby Database",
           "url": "https://www.rugbydatabase.com.au/game.php?gameId=30266"
+        }
+      ]
+    },
+    {
+      "name": "Christian Lio-Willie",
+      "pos": "Reserve 19 on the Scotland list. A playing position is not on that row.",
+      "unit": "",
+      "squad": "squad",
+      "summary": "Named as reserve 19 against Scotland on 7 November 2026 on the Scottish Rugby live blog. No official profile link is stored. He did not score on that score sheet.",
+      "sheets": [
+        {
+          "testId": "2026-11-07-scotland",
+          "role": "bench",
+          "note": "Named on the Scottish Rugby live blog, 7 Nov 2026."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
         }
       ]
     }
@@ -3039,10 +3182,10 @@
     {
       "player": "Asafo Aumua",
       "issue": "Failed a second head-injury assessment.",
-      "status": "Out of the Sydney trip. Minimum 12-day stand-down. George Bell comes in.",
-      "return": "Not verified as a calendar date. The published stand-down is a minimum of 12 days.",
+      "status": "Named on the bench against Scotland on 7 November 2026 and scored. The October stand-down was from the Sydney trip.",
+      "return": "Not a medical clearance. He was in the Scotland match-day 23.",
       "returnKnown": false,
-      "availability": "out",
+      "availability": "named",
       "events": [
         {
           "date": "10 Oct 2026",
@@ -3051,6 +3194,10 @@
         {
           "date": "11 Oct 2026",
           "text": "Failed a second head-injury assessment. Minimum 12-day stand-down. RNZ said Anton Segner was similarly sidelined after also coming off the bench."
+        },
+        {
+          "date": "7 Nov 2026",
+          "text": "Named as reserve 16 on the Scottish Rugby live blog and scored."
         }
       ],
       "sources": [
@@ -3061,16 +3208,20 @@
         {
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        },
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
         }
       ]
     },
     {
       "player": "Anton Segner",
       "issue": "Failed a second head-injury assessment.",
-      "status": "Out of the Sydney trip. Minimum 12-day stand-down. Du'Plessis Kirifi comes in.",
-      "return": "Not verified as a calendar date. The published stand-down is a minimum of 12 days.",
+      "status": "Named on the bench against Scotland on 7 November 2026. The October stand-down was from the Sydney trip.",
+      "return": "Not a medical clearance. He was in the Scotland match-day 23.",
       "returnKnown": false,
-      "availability": "out",
+      "availability": "named",
       "events": [
         {
           "date": "10 Oct 2026",
@@ -3079,6 +3230,10 @@
         {
           "date": "11 Oct 2026",
           "text": "Failed a second head-injury assessment. Minimum 12-day stand-down."
+        },
+        {
+          "date": "7 Nov 2026",
+          "text": "Named as reserve 20 on the Scottish Rugby live blog."
         }
       ],
       "sources": [
@@ -3089,6 +3244,10 @@
         {
           "name": "RNZ",
           "url": "https://www.rnz.co.nz/news/sport/1837508/four-all-blacks-ruled-out-of-sydney-trip-fan-favourite-du-plessis-kirifi-included"
+        },
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
         }
       ]
     },
@@ -3452,9 +3611,36 @@
           "url": "https://www.espn.com.au/rugby/results/_/team/8/"
         }
       ]
+    },
+    {
+      "id": "scotland-review",
+      "kind": "review",
+      "unit": "Whole team",
+      "title": "Murrayfield, 7 November: maul try and two yellow cards. Kicking depth is not shown.",
+      "text": "Checked 8 Nov 2026 from the match reports, not from a model and not from footage. Ashman's first try was a rolling maul. BBC also calls his third a line-out maul; the Scottish report does not. Taylor's try was a New Zealand line-out drive after a penalty. Lakai was binned for offside and Sititi was binned, with BBC saying off his feet and the Scottish report saying a team tally. No report gives a New Zealand kick count or kick depth, so aimless kicking is not a finding. The full reading is on the Scotland post-match card. It is one match.",
+      "sources": [
+        {
+          "name": "Scottish Rugby report",
+          "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+        },
+        {
+          "name": "Scottish Rugby live blog",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+        }
+      ]
     }
   ],
   "notVerified": [
+    "A captain for Wales and England. Codie Taylor captained Scotland on 7 November 2026. Nothing checked on 8 November names a captain after that.",
+    "Scotland crowd and player of the match. Scottish Rugby prints 67,148 as player of the match and Quinn Tupaea as attendance. Those labels do not match the values, so neither is used.",
     "Sydney's captain. Rugby Database game 30266 lists the match-day 23 and does not name a captain. A captain for the November Tests is also not named in the sources checked on 19 October 2026.",
     "Return dates, as a calendar day, for Leroy Carter, Asafo Aumua, Anton Segner, Ethan Blackadder, Richie Mo'unga, Fehi Fineanganofo, Luke Jacobson, Ruben Love, Patrick Tuipulotu, Billy Proctor, Caleb Clarke and Ollie Norris. The words above are the published estimates. They are not a date a coach can write on a board as fact.",
     "Whether Fehi Fineanganofo is on the Sydney trip. Unavailable at Eden Park. Not on the list of four players staying home.",

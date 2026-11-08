@@ -1,6 +1,6 @@
 # Sources for the 2026 All Blacks record
 
-Checked on 28 September 2026, again on 7 October 2026 for the player dossier, again on 12 October 2026 after Eden Park, and again on 19 October 2026 (Sydney) after the Sydney Test. The Rugby Database New Zealand games list and the All Test Match list both now include 17 October, Australia 21–43 All Blacks at Accor Stadium, crowd 73,399, kick-off 3:45pm, game 30266. The ESPN results list, fetched the same day, shows Australia 21–43 New Zealand at Accor Stadium. Sky Sports shows the same final score.
+Checked on 28 September 2026, again on 7 October 2026 for the player dossier, again on 12 October 2026 after Eden Park, again on 19 October 2026 (Sydney) after the Sydney Test, and again on 8 November 2026. Scotland on 7 November is played. www.rugbydatabase.com.au did not resolve that day (DNS NXDOMAIN at 2026-11-08T04:54Z), so Scotland is not taken from Rugby Database.
 
 The player dossier is `player-dossier.html`. It reads `data/player-dossier-2026.json` and this season file. Every score on the page is New Zealand first, then the opponent. Rugby Database lists the home side first, so away results are flipped to keep New Zealand first.
 
@@ -34,6 +34,7 @@ Upcoming fixtures stay on allblacks.com. On 19 Oct 2026 (Sydney) the Rugby Datab
 | 12 Sep 2026 | South Africa | M&T Bank Stadium | 68,173 | Lost 28–43 | [game 29383](https://www.rugbydatabase.com.au/game.php?gameId=29383) | [match 603250](https://www.espn.com.au/rugby/match/_/gameId/603250/league/289234) |
 | 10 Oct 2026 | Australia | Eden Park | 46,352 | Won 50–19 | [game 30265](https://www.rugbydatabase.com.au/game.php?gameId=30265) | [match 603463](https://www.espn.com.au/rugby/match/_/gameId/603463/league/289234/australia-new-zealand) |
 | 17 Oct 2026 | Australia | Accor Stadium | 73,399 | Won 43–21 | [game 30266](https://www.rugbydatabase.com.au/game.php?gameId=30266) | [ESPN results list](https://www.espn.com.au/rugby/results/_/team/8/), Sat, Oct 17, Australia 21–43 New Zealand, Accor Stadium. Fetched 19 Oct 2026 (Sydney). |
+| 7 Nov 2026 local | Scotland | Scottish Gas Murrayfield | Not used | Won 43–21 | Not used. www.rugbydatabase.com.au did not resolve on 8 Nov 2026. | [ESPN results list](https://www.espn.com.au/rugby/results/_/team/8/), fetched 8 Nov 2026: Sat, Nov 7, Scotland 21–43 New Zealand, Scottish Gas Murrayfield. |
 
 Try scorers for those Tests come from match reports, not from Rugby Database (its game pages do not list a full try sequence):
 
@@ -46,10 +47,13 @@ Try scorers for those Tests come from match reports, not from Rugby Database (it
 - Baltimore: [BBC Sport](https://www.bbc.com/sport/rugby-union/articles/c07lmxpmvr9o), [Sky Sports](https://www.skysports.com/rugby-union/news/12321/13584821/south-africa-vs-new-zealand-springboks-show-steel-to-secure-43-28-victory-and-3-1-series-win-against-all-blacks), [All Blacks](https://www.allblacks.com/news/all-blacks/all-blacks-return-to-hilux-npc-as-focus-shifts-to-bledisloe).
 - Eden Park: [BBC Sport](https://www.bbc.co.uk/sport/rugby-union/articles/c9zrdl4028mko), [Sky Sports](https://www.skysports.com/rugby-union/news/13596830/new-zealand-50-19-australia-all-blacks-power-to-eden-park-victory-to-retain-bledisloe-cup-for-24th-year), [ESPN](https://www.espn.com/rugby/story/_/id/50145167/bledisloe-cup-australia-new-zealand-all-blacks-punish-wayward-wallabies-second-half-blowout-eden-park), [1News](https://www.1news.co.nz/2026/10/10/all-blacks-regain-confidence-in-bledisloe-cup-rout/). Rugby Database's own game page also lists the try scorers and the kickers, and they match those reports.
 - Sydney: Rugby Database game 30266 lists the tries and kicks. New Zealand: Josh Moorby 2, Beauden Barrett 2, Peter Lakai, Rieko Ioane, Wallace Sititi, Damian McKenzie 4 conversions and no penalties. Australia: Jeremy Williams, Tom Wright, Filipo Daugunu, Ryan Lonergan 2 conversions, Declan Meredith 1 conversion. No penalty tries. That is 43 and 21. [Sky Sports](https://www.skysports.com/rugby-union/australia-vs-new-zealand/111860) lists the same try scorers and the same kicks. [Rugby Australia](https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017) lists the same scorers. Half-time is not on the Rugby Database page. Rugby Australia's report says 36–7 at the break. Sky's listed minutes do not add to 36 in the first half, so the page does not show a half-time.
+- Scotland, fetched 8 Nov 2026: [All Blacks match report](https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026) scoring summary: Scotland 21 (Ewan Ashman 3 tries, Finn Russell 3 conversions), New Zealand 43 (Wallace Sititi, Ethan de Groot, Codie Taylor, Beauden Barrett 2, Josh Moorby, Asafo Aumua; Damian McKenzie 4 conversions). Half-time 21–24. That is 15+6 and 35+8. [BBC Sport](https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o) lists the same scorers and the same half-time, Scotland (21) 21, New Zealand (24) 43. [Scottish Rugby's live blog](https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/) says full-time Scotland 21–43 New Zealand and half-time Scotland 21–24 New Zealand, and names the same try scorers. Its match report also says five All Blacks tries were converted, and one running score goes from 21–29 back to 21–26. Those two lines do not add up to 43, so they are not used. The kick count used is the All Blacks and BBC count of four conversions. The live blog says kick-off is 2.10pm on Saturday 7 November. That is 1.10am Sunday 8 November in Sydney (AEDT, UTC+11). The match-day 23 is on that live blog. Codie Taylor is marked captain. Crowd is not used: the match report prints 67,148 as player of the match and Quinn Tupaea as attendance.
+
+The Scotland post-match card also has a coaching reading, checked 8 Nov 2026, from those same reports. It is not a model and not a film review. Ashman's first try is a rolling maul in the Scottish report and a driven line-out in the BBC report. BBC also calls his third try a line-out maul. The Scottish report does not. Taylor's try is a line-out maul after a Scotland penalty in the BBC report, and a line-out drive in the All Blacks report. De Groot's try is a tap on the live blog and a kick to touch in the BBC report, so no mechanism is used. Lakai's yellow is repeat offside. Sititi's yellow is off his feet in the BBC report and a team accumulation in the Scottish report. No report gives a New Zealand kick count or kick depth. The All Blacks sentence "they conceded 13 to eight" is not used as a verified penalty total, because the other reports do not give that total. The Welsh fixture uses the same items as preparation priorities, not as a scouted Wales weakness.
 
 Series result against South Africa: South Africa won 3–1. The Bledisloe Cup was retained at Eden Park. Sydney was won 43–21. Rugby Australia calls that a clean sweep. This page does not add a year-count for the cup.
 
-Test record from the score sheets: played 9, won 6, lost 3, drawn 0, points for 325, points against 231, tries for 49, tries against 29. Will Jordan has 11 tries and 55 points, the most of both on those sheets. He did not score in Sydney.
+Test record from the score sheets: played 10, won 7, lost 3, drawn 0, points for 368, points against 252, tries for 56, tries against 32. Will Jordan has 11 tries and 55 points, the most of both on those sheets. He did not score in Sydney or against Scotland.
 
 ## Tour matches (not Tests)
 
@@ -62,7 +66,7 @@ These four are on the Rugby Database list under "All Blacks in South Africa & Un
 | 15 Aug 2026 | Bulls | Loftus Versfeld Stadium | 30,930 | Won 50–19 | [game 29378](https://www.rugbydatabase.com.au/game.php?gameId=29378) |
 | 25 Aug 2026 | Lions | Emirates Airline Park | 15,956 | Won 41–35 | [game 29380](https://www.rugbydatabase.com.au/game.php?gameId=29380) |
 
-All games on that list: played 13, won 10, lost 3, drawn 0, points for 508, points against 306. Try totals stay on the nine Tests. Sydney is the thirteenth game.
+All games on the Rugby Database list through Sydney: played 13, won 10, lost 3, drawn 0, points for 508, points against 306. Scotland is not in that list. The page's all-games line counts every played game in this file, including Scotland.
 
 ## Where the two sources do not use the same words
 
@@ -89,12 +93,11 @@ A direct fetch of the ESPN Australia HTML on 12 October was blocked by a bot che
 
 ## Still to be played
 
-Sydney has been played. These were not on the Rugby Database games list on 19 Oct 2026 (Sydney). The next one on the season file is Scotland.
+Scotland has been played. On 8 Nov 2026 the ESPN results list's newest New Zealand game was that Test. www.rugbydatabase.com.au did not resolve, so these two could not be re-checked there. The next one on the season file is Wales.
 
 | Date on the page | Opponent | Venue | Note | Source |
 |---|---|---|---|---|
-| 7 Nov 2026 local | Scotland | Murrayfield, Edinburgh | allblacks.com heads this as Sunday 8 November, 3.10am NZDT / 2.10pm GMT | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
-| 14 Nov 2026 local | Wales | Principality Stadium, Cardiff | Sunday 15 November, 3.10am NZDT / 2.10pm GMT on allblacks.com | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
+| 14 Nov 2026 local | Wales | Principality Stadium, Cardiff | Sunday 15 November, 3.10am NZDT / 2.10pm GMT on allblacks.com. Not on the ESPN results list fetched 8 Nov 2026. | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
 | 21 Nov 2026 local | England | Twickenham Stadium, London | Sunday 22 November, 3.10am NZDT / 2.10pm GMT on allblacks.com | [All Blacks](https://www.allblacks.com/news/all-blacks/the-nations-championship-explained) |
 
 2.10pm GMT is the previous calendar day in Britain from a 3.10am New Zealand clock. The page uses the local Saturday date and says so.
@@ -196,7 +199,9 @@ The gate is 200 scored matches with a home side, 80 before 1 January 2024, 30 on
 
 The estimate written on 14 October 2026 for Sydney, before that match was in the history, is kept on the Sydney Test as `modelEstimate`: New Zealand win chance 66.8 percent, expected margin New Zealand by 8.8. The post-match panel compares that stored estimate with the result. It is labelled "Model estimate, not a guarantee". It is not recalculated after the score.
 
-The next Test in the season file is Scotland at Murrayfield on 7 November 2026 local. Scotland are at home because the venue is Murrayfield. `data/forecast.json` stores a New Zealand win chance of 68.9 percent, a Scotland win chance of 27.5 percent, a draw chance of 3.6 percent, and an expected margin of New Zealand by 9.9 points. Those figures are the file, shown to one decimal place. The label is "Model estimate, not a guarantee". The ranking-gap box still uses the published three-point adjustment on the 12 October table and is labelled "Ranking gap, not a prediction". The page also says that table is not the pre-match rating, because Sydney has been played since 12 October. If a later run fails the gate, or a played season score disagrees with the Test list, the script writes no probability and the page shows "Not calculated" with that reason.
+The estimate written on 18 October 2026 UTC for Scotland, before the match, is kept on that Test as `modelEstimate`: New Zealand win chance 68.9 percent, Scotland win chance 27.5 percent, draw 3.6 percent, expected margin New Zealand by 9.9. The post-match panel compares that stored estimate with the result. It is labelled "Model estimate, not a guarantee". It is not recalculated after the score.
+
+The next Test in the season file is Wales at Principality Stadium on 14 November 2026 local. A new probability is not written. The committed Rugby Database history ends on 17 October 2026 and has no Scotland row, and www.rugbydatabase.com.au did not resolve on 8 November 2026, so the history file was not refreshed. The page shows "Not calculated" with that reason. The ranking-gap box still uses the published three-point adjustment on the 12 October table and is labelled "Ranking gap, not a prediction". That table is not the pre-match rating for Wales.
 
 Not used, on purpose:
 

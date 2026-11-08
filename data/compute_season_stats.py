@@ -178,7 +178,7 @@ def compute(data: dict) -> dict:
             "drawn": all_drawn,
             "pointsFor": all_for,
             "pointsAgainst": all_against,
-            "note": "Tests plus the four tour matches on the Rugby Database list. Try counts are Tests only.",
+            "note": "Every played game in this file, including the four tour matches and any Test that is not on the committed Rugby Database list. Try counts are Tests only.",
         },
         "rules": "Tests only for tries and points scorers. try 5, conversion 2, penalty goal 3, penalty try 7 (counts as a try, no player credited). Tour matches have no score sheet here, so they are in the all-games record only.",
     }
