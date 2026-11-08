@@ -920,10 +920,27 @@ def main(argv: list[str] | None = None) -> int:
         reason_parts.append(history_error)
     if disagreements:
         model = None
-        reason_parts.append(
-            "No win probability is written because the Rugby Database scores do not match the season file. "
-            + " ".join(disagreements)
-        )
+        missing = [item for item in disagreements if "found 0" in item]
+        mismatched = [item for item in disagreements if item not in missing]
+        if missing:
+            refresh_note = "The history file was not refreshed."
+            try:
+                fetch_html(TEST_LIST_URL)
+                refresh_note = "The Test list could be fetched. This run did not replace the history file. Re-run with --fetch-history before a probability is written."
+            except Exception as error:  # noqa: BLE001
+                detail = redact(str(error))
+                if "Name or service not known" in detail or "nodename nor servname" in detail:
+                    detail = "www.rugbydatabase.com.au did not resolve."
+                refresh_note = "The Test list could not be fetched, so the history file was left as committed. " + detail
+            reason_parts.append(
+                "No win probability is written because the committed Rugby Database history has no row for a played Test in the season file. "
+                + refresh_note + " " + " ".join(missing)
+            )
+        if mismatched:
+            reason_parts.append(
+                "No win probability is written because the Rugby Database scores do not match the season file. "
+                + " ".join(mismatched)
+            )
     if matches and model is None and not disagreements:
         before = sum(1 for row in matches if row["date"] < TRAIN_END)
         after = sum(1 for row in matches if row["date"] >= TRAIN_END)

@@ -601,7 +601,7 @@
       });
     });
     var games = live.allGames;
-    $("all-games").textContent = "All games on the Rugby Database list: " + games.played + " played, " + games.won + " wins, " + games.lost + " losses, " + games.pointsFor + " points for, " + games.pointsAgainst + " against. Try totals above are the " + live.played + " Tests. The tour matches have no try list in this file.";
+    $("all-games").textContent = "Played games in this file: " + games.played + " played, " + games.won + " wins, " + games.lost + " losses, " + games.pointsFor + " points for, " + games.pointsAgainst + " against. Try totals above are the " + live.played + " Tests. The tour matches have no try list in this file. Scotland is in this file from the match reports. It is not in the committed Rugby Database history.";
     var coach = season.meta.headCoach, captain = season.meta.captain;
     $("coach").innerHTML = "<p><strong>Head coach.</strong> " + esc(coach.name) + ". " + esc(coach.detail) + "</p><p class='srcs'>Sources: " + links(coach.sources) + "</p><p><strong>Captain.</strong> " + esc(captain.summary) + "</p><p class='srcs'>Sources: " + links(captain.sources) + "</p>";
     $("honesty").innerHTML = "<strong>Checked " + esc(dossier.meta.asOfLabel) + ".</strong> " + esc(dossier.meta.honesty);
@@ -801,6 +801,7 @@
   function renderPreMatch(test) {
     var html = '<article class="panel"><p class="lede">' + esc(test.dateLabel) + " · " + esc(test.venue || "Venue not in this file") + "</p>";
     html += "<p>" + esc(test.competition || "") + " · " + (test.status === "played" ? "Played" : "Not played") + "</p>";
+    if (test.kickOffLabel) html += "<p>Kick-off " + esc(test.kickOffLabel) + ".</p>";
     if (test.dateNote) html += "<p><strong>Not verified.</strong> " + esc(test.dateNote) + "</p>";
     var next = forecast && forecast.nextTest;
     if (next && next.id === test.id && next.homeReason) html += "<p>" + esc(next.homeReason) + "</p>";
@@ -1026,7 +1027,7 @@
       kpi("Margin", marginLabel(test.nzScore, test.oppScore), "New Zealand score minus opponent", "result-margin") +
       kpi("Tries", triesFor + "\u2013" + triesAgainst, "For\u2013against, from the score sheet", "result-tries") +
       kpi("Points", test.nzScore + "\u2013" + test.oppScore, "Final score on the season file", "result-points") +
-      kpi("Half-time", half, half === "Not in this file" ? "Not in this file" : "From the season file", "half-time") +
+      kpi("Half-time", half, half === "Not in this file" ? "Not in this file" : "New Zealand, then the opponent", "half-time") +
       "</div>";
     html += modelVsActual(test);
     html += '<article class="panel"><h3>Score sheet</h3><p>' + esc(scorerLine(test)) + "</p>";
@@ -1406,17 +1407,26 @@
 
   function scorerLine(test) {
     if (test.nzTries == null) return "Try scorers are not in this file.";
-    var tries = (test.nzTries || []).map(function (item) {
-      if (item.penaltyTry) return item.player;
-      return item.count > 1 ? item.player + " " + item.count : item.player;
-    }).join(", ");
-    var kicks = (test.nzKickers || []).map(function (kicker) {
-      var bits = [];
-      if (kicker.conversions) bits.push(kicker.conversions + " con");
-      if (kicker.penalties) bits.push(kicker.penalties + " pen");
-      return kicker.player + (bits.length ? " " + bits.join(", ") : "");
-    }).join("; ");
-    return [tries ? "Tries: " + tries : "", kicks].filter(Boolean).join(". ");
+    function kickText(list) {
+      return (list || []).map(function (kicker) {
+        var bits = [];
+        if (kicker.conversions) bits.push(kicker.conversions + " con");
+        if (kicker.penalties) bits.push(kicker.penalties + " pen");
+        return kicker.player + (bits.length ? " " + bits.join(", ") : "");
+      }).join("; ");
+    }
+    function tryText(list) {
+      return (list || []).map(function (item) {
+        if (item.penaltyTry) return item.player;
+        return item.count > 1 ? item.player + " " + item.count : item.player;
+      }).join(", ");
+    }
+    var tries = tryText(test.nzTries);
+    var kicks = kickText(test.nzKickers);
+    var oppTries = tryText(test.oppTries);
+    var oppKicks = kickText(test.oppKickers);
+    var opp = [oppTries ? "Tries: " + oppTries : "", oppKicks].filter(Boolean).join(". ");
+    return [tries ? "Tries: " + tries : "", kicks, opp ? "Opponent. " + opp : ""].filter(Boolean).join(". ");
   }
 
   function renderRugby() {

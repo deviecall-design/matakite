@@ -3,10 +3,10 @@
     "team": "New Zealand",
     "nickname": "All Blacks",
     "season": 2026,
-    "asOf": "2026-10-19",
-    "asOfLabel": "19 Oct 2026",
+    "asOf": "2026-11-08",
+    "asOfLabel": "8 Nov 2026",
     "scoreConvention": "Every score on this page is New Zealand first, then the opponent. Rugby Database lists the home side first. Away wins are flipped so New Zealand stays first.",
-    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. Eden Park and Sydney are on the Rugby Database list as Bledisloe Cup - 2026.",
+    "competitionNote": "July Tests and the November fixtures are the Nations Championship. The South Africa Tests and the four tour matches are listed by Rugby Database under All Blacks in South Africa & United States - 2026. Eden Park and Sydney are on the Rugby Database list as Bledisloe Cup - 2026. Scotland on 7 November is from Scottish Rugby, the All Blacks, BBC Sport and the ESPN results list. Rugby Database did not resolve on 8 Nov 2026.",
     "headCoach": {
       "name": "Dave Rennie",
       "detail": "Appointed All Blacks head coach on 4 March 2026, through to the 2027 Rugby World Cup. Scott Robertson had departed in January 2026.",
@@ -22,7 +22,7 @@
       ]
     },
     "captain": {
-      "summary": "Ardie Savea captained the Tests he started, through Soweto. He dislocated a shoulder in that match. Codie Taylor captained Baltimore, was named captain of the 34-man Bledisloe squad on 29 September 2026, and captained Eden Park on 10 October. A captain for the November Tests had not been named in the sources checked on 12 Oct 2026.",
+      "summary": "Ardie Savea captained the Tests he started, through Soweto. Codie Taylor captained Baltimore and Eden Park. The Sydney game page does not name a captain. Scottish Rugby's live blog and the All Blacks match report name Codie Taylor as captain against Scotland on 7 November 2026.",
       "sources": [
         {
           "name": "All Blacks \u2014 Italy team",
@@ -39,13 +39,21 @@
         {
           "name": "RNZ \u2014 Bledisloe squad",
           "url": "https://www.rnz.co.nz/news/sport/1649070/all-blacks-named-for-bledisloe-codie-taylor-captain-scott-barrett-and-shannon-frizell-back"
+        },
+        {
+          "name": "All Blacks \u2014 Scotland",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+        },
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
         }
       ]
     },
     "primarySource": {
       "name": "Rugby Database",
       "url": "https://www.rugbydatabase.com.au/team/games-list.php?teamId=3",
-      "note": "Primary source for 2026 results, venues and crowds. The New Zealand games list and the All Test Match list were read on 19 Oct 2026 (Sydney). The newest All Blacks game is Sydney, Australia 21-43 All Blacks, Accor Stadium, game 30266, crowd 73,399, kick-off 3:45pm."
+      "note": "Primary source for results through Sydney: Rugby Database, last retrieved 19 Oct 2026 Sydney time. On 8 Nov 2026 www.rugbydatabase.com.au did not resolve (NXDOMAIN), so Scotland is not taken from that list."
     },
     "crossCheckSource": {
       "name": "ESPN",
@@ -1288,34 +1296,103 @@
       "id": "2026-11-07-scotland",
       "date": "2026-11-07",
       "dateLabel": "07 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 7 November in Edinburgh and 3.10am Sunday 8 November in New Zealand. The All Blacks page heads this fixture as Sunday 8 November.",
+      "dateNote": "Crowd and player of the match are not shown. Scottish Rugby's match report prints 67,148 under Player of the Match and Quinn Tupaea under Attendance, so those labels do not match the values. www.rugbydatabase.com.au did not resolve on 8 Nov 2026, so this result is not in the committed Test history file.",
       "opponent": "Scotland",
-      "venue": "Murrayfield, Edinburgh",
+      "venue": "Scottish Gas Murrayfield, Edinburgh",
       "competition": "Nations Championship",
-      "status": "upcoming",
-      "nzScore": null,
-      "oppScore": null,
-      "halfTimeNz": null,
-      "halfTimeOpp": null,
-      "nzTries": [],
-      "oppTries": [],
-      "nzKickers": [],
-      "oppKickers": [],
+      "status": "played",
+      "nzScore": 43,
+      "oppScore": 21,
+      "halfTimeNz": 24,
+      "halfTimeOpp": 21,
+      "nzTries": [
+        {
+          "player": "Wallace Sititi",
+          "count": 1
+        },
+        {
+          "player": "Ethan de Groot",
+          "count": 1
+        },
+        {
+          "player": "Codie Taylor",
+          "count": 1
+        },
+        {
+          "player": "Beauden Barrett",
+          "count": 2
+        },
+        {
+          "player": "Josh Moorby",
+          "count": 1
+        },
+        {
+          "player": "Asafo Aumua",
+          "count": 1
+        }
+      ],
+      "oppTries": [
+        {
+          "player": "Ewan Ashman",
+          "count": 3
+        }
+      ],
+      "nzKickers": [
+        {
+          "player": "Damian McKenzie",
+          "conversions": 4,
+          "penalties": 0
+        }
+      ],
+      "oppKickers": [
+        {
+          "player": "Finn Russell",
+          "conversions": 3,
+          "penalties": 0
+        }
+      ],
       "sources": [
         {
           "name": "All Blacks",
-          "url": "https://www.allblacks.com/news/all-blacks/the-nations-championship-explained"
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+        },
+        {
+          "name": "Scottish Rugby",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+        },
+        {
+          "name": "Scottish Rugby report",
+          "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com.au/rugby/results/_/team/8/"
         }
       ],
       "kind": "test",
       "crowd": null,
-      "crowdLabel": null
+      "crowdLabel": null,
+      "kickOffLabel": "2.10pm local, Saturday 7 November 2026. That is 1.10am Sunday 8 November 2026 in Sydney (AEDT, UTC+11).",
+      "modelEstimate": {
+        "label": "Model estimate, not a guarantee",
+        "writtenAt": "2026-10-18T21:32:40+00:00",
+        "source": "data/forecast.json",
+        "nzWinProbability": 0.6890683465722494,
+        "opponentWinProbability": 0.27521736771346494,
+        "drawProbability": 0.03571428571428571,
+        "expectedMarginNzMinusOpponent": 9.855987432184094,
+        "note": "Stored from data/forecast.json before this match was marked played. The page formats the win chance and the margin. It does not type a new percentage after the result."
+      }
     },
     {
       "id": "2026-11-14-wales",
       "date": "2026-11-14",
       "dateLabel": "14 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 14 November in Cardiff and 3.10am Sunday 15 November in New Zealand. The All Blacks page heads this fixture as Sunday 15 November. Checked again on 8 Nov 2026: the ESPN New Zealand results list's newest game was Scotland on 7 November, and www.rugbydatabase.com.au did not resolve.",
       "opponent": "Wales",
       "venue": "Principality Stadium, Cardiff",
       "competition": "Nations Championship",
@@ -1342,7 +1419,7 @@
       "id": "2026-11-21-england",
       "date": "2026-11-21",
       "dateLabel": "21 Nov",
-      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November.",
+      "dateNote": "Not on the Rugby Database games list or the ESPN New Zealand results list checked on 28 Sep 2026, on 7 Oct 2026, and again on 12 Oct 2026. Local kick-off listed by allblacks.com as 2.10pm GMT, which is Saturday 21 November at Twickenham and 3.10am Sunday 22 November in New Zealand. The All Blacks page heads this fixture as Sunday 22 November. Checked again on 8 Nov 2026: the ESPN New Zealand results list's newest game was Scotland on 7 November, and www.rugbydatabase.com.au did not resolve.",
       "opponent": "England",
       "venue": "Twickenham Stadium, London",
       "competition": "Nations Championship",
@@ -1661,16 +1738,16 @@
     "note": "A penalty try is worth 7 and is not given to a player. It still counts as a try for or against."
   },
   "derived": {
-    "played": 9,
-    "upcoming": 3,
-    "won": 6,
+    "played": 10,
+    "upcoming": 2,
+    "won": 7,
     "lost": 3,
     "drawn": 0,
-    "pointsFor": 325,
-    "pointsAgainst": 231,
-    "pointsDifference": 94,
-    "triesFor": 49,
-    "triesAgainst": 29,
+    "pointsFor": 368,
+    "pointsAgainst": 252,
+    "pointsDifference": 116,
+    "triesFor": 56,
+    "triesAgainst": 32,
     "topTryScorer": {
       "player": "Will Jordan",
       "tries": 11,
@@ -2002,16 +2079,52 @@
             "url": "https://www.rugby.com.au/news/all-blacks-complete-bledisloe-cup-sweep-with-sydney-victory-over-wallabies-20261017"
           }
         ]
+      },
+      {
+        "id": "2026-11-07-scotland",
+        "date": "2026-11-07",
+        "dateLabel": "07 Nov",
+        "opponent": "Scotland",
+        "venue": "Scottish Gas Murrayfield, Edinburgh",
+        "competition": "Nations Championship",
+        "result": "W",
+        "nzScore": 43,
+        "oppScore": 21,
+        "line": "W 43\u201321",
+        "triesFor": 7,
+        "triesAgainst": 3,
+        "sources": [
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+          },
+          {
+            "name": "Scottish Rugby",
+            "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+          },
+          {
+            "name": "Scottish Rugby report",
+            "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com.au/rugby/results/_/team/8/"
+          }
+        ]
       }
     ],
     "allGames": {
-      "played": 13,
-      "won": 10,
+      "played": 14,
+      "won": 11,
       "lost": 3,
       "drawn": 0,
-      "pointsFor": 508,
-      "pointsAgainst": 306,
-      "note": "Tests plus the four tour matches on the Rugby Database list. Try counts are Tests only."
+      "pointsFor": 551,
+      "pointsAgainst": 327,
+      "note": "Every played game in this file, including the four tour matches and any Test that is not on the committed Rugby Database list. Try counts are Tests only."
     },
     "rules": "Tests only for tries and points scorers. try 5, conversion 2, penalty goal 3, penalty try 7 (counts as a try, no player credited). Tour matches have no score sheet here, so they are in the all-games record only."
   },
