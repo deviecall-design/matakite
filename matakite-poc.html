@@ -182,8 +182,8 @@
   .loss { color: var(--threat); }
   .learn h3 { margin: 4px 0; }
   .srcs { color: var(--muted); font-size: 14px; }
-  ul.plain { margin: 8px 0 0; padding-left: 1.2em; }
-  ul.plain li { margin: 8px 0; }
+  ul.plain, ol.plain { margin: 8px 0 0; padding-left: 1.2em; }
+  ul.plain li, ol.plain li { margin: 8px 0; }
   details { margin: 10px 0; }
   summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 600; }
   .drawer-back { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55); z-index: 30; }
@@ -625,7 +625,8 @@
     "wingers-midfield": BLED_IDS,
     "ten": BLED_IDS,
     "counter": JULY_IDS,
-    "july": JULY_IDS
+    "july": JULY_IDS,
+    "scotland-review": ["2026-11-07-scotland"]
   };
   var PLAN_TESTS = {
     "Eden Park, 10 October": BLED_IDS,
@@ -635,7 +636,8 @@
     "Defence": SA_IDS.concat(["2026-10-17-australia-sydney"]),
     "Bench use": SA_IDS.concat(["2026-10-17-australia-sydney"]),
     "What the results showed": ["2026-10-10-australia-eden-park"],
-    "What Rennie said he wanted, before July": JULY_IDS
+    "What Rennie said he wanted, before July": JULY_IDS,
+    "Preparation after Scotland, 7 November": ["2026-11-07-scotland", "2026-11-14-wales"]
   };
   var MONTHS = { jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06", jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12" };
 
@@ -759,7 +761,7 @@
     }
     var html = "";
     if (season.gamePlan && season.gamePlan.label && plans.length) html += "<p class='srcs'>" + esc(season.gamePlan.label) + "</p>";
-    html += "<p class='srcs'>The worked, missed and cue tags are the labels already in the dossier. This page does not add a new verdict.</p>";
+    html += "<p class='srcs'>The worked, missed and cue tags are the labels already in the dossier. A review tag is a sourced reading of one match. It is not a model.</p>";
     learnings.forEach(function (item) { html += noteBlock(item, "learning"); });
     plans.forEach(function (item) { html += noteBlock(item, "plan"); });
     return html;
@@ -1012,6 +1014,31 @@
       "<p>Predicted New Zealand win chance " + num(estimate.nzWinProbability * 100, 1) + "%. Predicted margin " + esc(expectedText) + ". Actual result " + esc(letterOf(test) + " " + test.nzScore + "\u2013" + test.oppScore) + ", margin " + esc(actualText) + ".</p>" +
       "<p class='srcs'>" + esc(estimate.note || "") + "</p></article>";
   }
+  function coachingReview(test) {
+    var review = test && test.coachingReview;
+    if (!review || !review.items || !review.items.length) return "";
+    var html = '<article class="panel" id="coaching-review"><h3>Coaching reading</h3>';
+    html += "<p><strong>" + esc(review.label || "") + "</strong></p>";
+    html += "<p>" + esc(review.coverage || "") + "</p>";
+    if (review.checked) html += "<p class='srcs'>Checked " + esc(review.checked) + ".</p>";
+    review.items.forEach(function (item) {
+      html += "<article class='panel'><p class='srcs'><span class='tag'>" + esc(item.status || "") + "</span> <span class='tag'>" + esc(item.confidence || "") + "</span></p>";
+      html += "<h3>" + esc(item.title || "") + "</h3>";
+      html += "<p><strong>What the reports say.</strong> " + esc(item.evidence || "") + "</p>";
+      html += "<p><strong>Reading.</strong> " + esc(item.reading || "") + "</p>";
+      html += "<p><strong>Next step.</strong> " + esc(item.response || "") + "</p>";
+      html += "<p><strong>Practice.</strong> " + esc(item.practice || "") + "</p>";
+      html += "<p><strong>Count next time.</strong> " + esc(item.measure || "") + "</p>";
+      html += "<p class='srcs'>Sources: " + links(item.sources) + "</p></article>";
+    });
+    if (review.plan && review.plan.length) {
+      html += "<h3>Order for this week</h3><ol class='plain'>";
+      review.plan.forEach(function (line) { html += "<li>" + esc(line) + "</li>"; });
+      html += "</ol><p class='srcs'>Wales is the next fixture. These are preparation priorities. They are not a verified Wales weakness.</p>";
+    }
+    html += "</article>";
+    return html;
+  }
   function renderPostMatch(test) {
     if (test.status !== "played") {
       $("post-match").innerHTML = '<article class="panel"><h3>Result</h3><p>Not played. No result, no team KPIs, and no scoring timeline.</p></article>';
@@ -1030,6 +1057,7 @@
       kpi("Half-time", half, half === "Not in this file" ? "Not in this file" : "New Zealand, then the opponent", "half-time") +
       "</div>";
     html += modelVsActual(test);
+    html += coachingReview(test);
     html += '<article class="panel"><h3>Score sheet</h3><p>' + esc(scorerLine(test)) + "</p>";
     if (test.crowdLabel) html += "<p>Crowd " + esc(test.crowdLabel) + ".</p>";
     html += "<p class='srcs'>Sources: " + links(test.sources) + "</p></article>";

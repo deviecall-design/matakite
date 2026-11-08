@@ -1386,6 +1386,175 @@
         "drawProbability": 0.03571428571428571,
         "expectedMarginNzMinusOpponent": 9.855987432184094,
         "note": "Stored from data/forecast.json before this match was marked played. The page formats the win chance and the margin. It does not type a new percentage after the result."
+      },
+      "coachingReview": {
+        "checked": "8 Nov 2026",
+        "label": "Sourced reading of the match reports. Not a model, and not a film review. No footage was watched for this card.",
+        "coverage": "One Test, from articles and the live blog fetched on 8 Nov 2026. A full penalty count, a kick map, and metres gained are not in those pages. Where a report disagrees with another, both are shown.",
+        "items": [
+          {
+            "title": "Scotland scored from a driven line-out",
+            "status": "Observed in this match",
+            "confidence": "Named in more than one report",
+            "evidence": "Ewan Ashman's first try, about 8 minutes, is a rolling maul in the Scottish Rugby report and 'patience at the maul' on the live blog, after Kyle Rowe's 50:22. BBC calls it a driven line-out. Ashman's second, about 26 minutes, is not a maul: BBC says he blasted through Wallace Sititi off a penalty advantage. Ashman's third, about 37 minutes, is a line-out maul in the BBC report. The Scottish Rugby report does not use the word maul for that third try.",
+            "reading": "One Scotland try is a rolling or driven maul on every report that describes it. A second maul try is BBC only. This is one match, not a season trend.",
+            "response": "Stop the first drive while staying on feet. Collapsing a maul is not the action.",
+            "practice": "Coaching suggestion, tied to the scored maul: two defenders, the first on the ball carrier and the second on the drive, both bound and on their feet. World Rugby's law list includes Law 16, Maul. The page did not load the law text, so no subsection is quoted.",
+            "measure": "Proposed count, not a figure from this match: opposition line-out drives that move more than a few metres or score. Murrayfield has no such count in this file.",
+            "sources": [
+              {
+                "name": "Scottish Rugby report",
+                "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+              },
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              },
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "World Rugby laws list",
+                "url": "https://passport.world.rugby/laws-of-the-game/laws-by-number/"
+              }
+            ]
+          },
+          {
+            "title": "New Zealand also scored from the line-out",
+            "status": "Observed in this match",
+            "confidence": "Named in more than one report",
+            "evidence": "Codie Taylor, about 19 or 20 minutes: BBC says a Scotland penalty was kicked and the All Blacks scored from the line-out maul. The All Blacks report says a line-out drive at 19 minutes. The live blog says the penalty count against Scotland was mounting and Taylor dotted down. Wallace Sititi, about 3 or 4 minutes, is not a maul: the live blog says a kick to touch after a Scotland offside, then a corner score; BBC says dummy runners at a close-range line-out.",
+            "reading": "The Taylor score is a penalty kick to touch, then a drive or maul. The Sititi score is a planned line-out, not a rolling maul. Both are New Zealand attacks, not a failure to maul.",
+            "response": "Keep the penalty-to-touch call when the side is inside the opposition 22. Do not treat it as the same skill as stopping Scotland's maul.",
+            "practice": "Coaching suggestion: from a penalty inside the 22, the kicker and the line-out caller name touch or tap before the kick. That habit is not something these reports measured.",
+            "measure": "Proposed count, not a Murrayfield stat: penalties kicked to the corner that end in a retained drive or a score.",
+            "sources": [
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "All Blacks",
+                "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+              },
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              }
+            ]
+          },
+          {
+            "title": "Ethan de Groot's try is not a settled mechanism",
+            "status": "Sources disagree",
+            "confidence": "Do not coach off one version",
+            "evidence": "About 15 or 16 minutes, after Matt Fagerson was penalised. The live blog says a quickly taken tap and de Groot powered through. BBC says New Zealand went to touch and de Groot went over. The Scottish report says he barged over and does not say tap or line-out.",
+            "reading": "It is a try from a Scotland penalty. It is not established as a maul, a tap, or a kick to the corner.",
+            "response": "Leave it out of the maul plan and out of the kicking plan.",
+            "practice": "No drill is attached. A drill would pick a version the sources do not share.",
+            "measure": "None. A mechanism count would invent the method.",
+            "sources": [
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              },
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "Scottish Rugby report",
+                "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+              }
+            ]
+          },
+          {
+            "title": "Two New Zealand yellow cards, and no verified penalty total",
+            "status": "Observed cards. The count is incomplete",
+            "confidence": "Cards are named. The totals are not",
+            "evidence": "Peter Lakai was shown yellow for a run of offsides. BBC, the live blog and the Scottish report agree. Ashman's second try came while Lakai was off, on BBC's account. Wallace Sititi was shown yellow as Lakai returned. BBC says Sititi went off his feet. The Scottish report says a team accumulation of infringements. Ashman's third followed. BBC says those cards cost 14 points, which is the two converted tries, not a separate official table. Sione Tuipulotu, Scotland's captain, was shown yellow for repeated team infringements. Beauden Barrett's second try followed. Before Taylor's try the Scottish report says the penalty count was 5-0 against Scotland. Later the same report says New Zealand had surpassed Scotland's penalty count, with no number. The All Blacks report says, with Scotland as the subject, that they conceded 13 to eight. That 13-8 figure is not in the other reports.",
+            "reading": "The first-half cards are a discipline event in this match. A season trend is not established here. A final penalty count is not cross-checked, so 13-8 is not used as the match total.",
+            "response": "The named offences are offside in one phase, and either off feet or a team tally for Sititi. The next step is to record the offence, not to treat the side as ill-disciplined from the score.",
+            "practice": "Coaching suggestion: in opposed sessions, stop the rep when the whistle is offside or off feet, and restart only after the call is named. This does not use a Murrayfield penalty total.",
+            "measure": "Proposed count for the next Test: penalties and cards in each half, split by offside, off feet, scrum and other. Write it during the match. It is not a stat from Murrayfield.",
+            "sources": [
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              },
+              {
+                "name": "Scottish Rugby report",
+                "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+              },
+              {
+                "name": "All Blacks",
+                "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+              }
+            ]
+          },
+          {
+            "title": "Kicking depth is not shown",
+            "status": "Not in the reports",
+            "confidence": "Do not treat a hypothesis as a finding",
+            "evidence": "No report gives a New Zealand kick count, a share of contestable kicks, or a depth. The kicks that are described are a penalty kick to touch before Sititi's try, Kyle Rowe's 50:22 for Scotland, and Josh Moorby's cover on a Scotland grubber at the end of the half. Damian McKenzie kicked 4 conversions from 7 tries. The live blog says he had missed the attempt before converting Beauden Barrett's second. That is a place-kick, not a territorial kick.",
+            "reading": "Aimless kicking, or kicking too deep, is not established. Saying it from the score would be a guess.",
+            "response": "No kicking-fault plan comes from this match.",
+            "practice": "Generic preparation only, not an observed fault: each kick has a named purpose, touch, contest or territory, and a named chaser. Do not brief it as something Murrayfield proved.",
+            "measure": "Proposed count, not a Murrayfield stat: kicks with a called purpose and a chaser who arrived. It was not recorded here.",
+            "sources": [
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              },
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "All Blacks",
+                "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+              }
+            ]
+          },
+          {
+            "title": "The second half was 19 points to nil",
+            "status": "Observed score split",
+            "confidence": "The split is in the scores. The cause is not",
+            "evidence": "Half-time was Scotland 21, New Zealand 24, on the live blog and the All Blacks scoring summary. Full-time was 21-43. Scotland did not score after the break. New Zealand added 19. BBC says 19-0 in the second half. Josh Moorby scored from scrum pressure, about 48 minutes: the report says the third scrum, and the live blog says they scrummed a penalty inside the five metres. Barrett's second, about 50 or 51 minutes, came after Tuipulotu's yellow. Asafo Aumua's try, about 67 minutes, is a set-piece score in the BBC report. It does not say maul.",
+            "reading": "The reports call the second half one-way. The scoreline agrees. That does not identify maul defence or kicking as the cause.",
+            "response": "For Cardiff, these are preparation priorities, not a verified Wales weakness. Nothing in these reports scouts Wales.",
+            "practice": "Order for the week: legal maul stop first, then the penalty-to-corner call, then a live penalty-and-card tally. Kicking purpose stays a generic habit, labelled as not shown in this match.",
+            "measure": "Proposed for Wales, not a result: drives stopped, penalties kicked to touch that are retained, and cards by offence. Collect them on the day.",
+            "sources": [
+              {
+                "name": "Scottish Rugby live blog",
+                "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+              },
+              {
+                "name": "All Blacks",
+                "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+              },
+              {
+                "name": "BBC Sport",
+                "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+              },
+              {
+                "name": "Scottish Rugby report",
+                "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+              }
+            ]
+          }
+        ],
+        "plan": [
+          "First: legal stop of the first drive. Scotland's opening try was a rolling maul. Do not collapse it.",
+          "Second: keep the penalty kick to touch that led to Taylor's drive. That is an attack, separate from the maul stop.",
+          "Third: log offside and off-feet whistles. Two yellow cards are described. A full penalty total is not.",
+          "Not in the plan as a fault: kicking too deep or without a chase. The reports do not show it."
+        ]
       }
     },
     {
@@ -1537,7 +1706,7 @@
   },
   "gamePlan": {
     "heading": "All Blacks game plan (public reporting)",
-    "label": "Compiled from public reporting. The South Africa notes were collected on 28 Sep 2026. The Eden Park notes were added on 12 Oct 2026. This is not AI analysis, and it is not an internal All Blacks document.",
+    "label": "Compiled from public reporting. The South Africa notes were collected on 28 Sep 2026. The Eden Park notes were added on 12 Oct 2026. The Scotland preparation note was added on 8 Nov 2026 from the match reports. This is not AI analysis, and it is not an internal All Blacks document.",
     "bullets": [
       {
         "topic": "Eden Park, 10 October",
@@ -1664,6 +1833,28 @@
           {
             "name": "RugbyPass",
             "url": "https://www.rugbypass.com/news/stephen-donald-unpacks-what-dave-rennies-comments-reveal-about-his-game-plan/"
+          }
+        ]
+      },
+      {
+        "topic": "Preparation after Scotland, 7 November",
+        "text": "These are preparation priorities from the Murrayfield reports. They are not a verified Wales weakness. Scotland's first try was a rolling maul, about 8 minutes. Codie Taylor's try, about 19 minutes, was a New Zealand line-out drive after a Scotland penalty. Peter Lakai and Wallace Sititi were shown yellow in the first half. A final penalty count is not cross-checked, and no report shows aimless or overly deep New Zealand kicking. The detailed card is on the Scotland post-match. Cardiff uses the same priorities as practice, not as a scouted exploit.",
+        "sources": [
+          {
+            "name": "Scottish Rugby report",
+            "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+          },
+          {
+            "name": "BBC Sport",
+            "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+          },
+          {
+            "name": "All Blacks",
+            "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+          },
+          {
+            "name": "Scottish Rugby live blog",
+            "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
           }
         ]
       }

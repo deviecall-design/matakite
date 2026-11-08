@@ -3611,6 +3611,31 @@
           "url": "https://www.espn.com.au/rugby/results/_/team/8/"
         }
       ]
+    },
+    {
+      "id": "scotland-review",
+      "kind": "review",
+      "unit": "Whole team",
+      "title": "Murrayfield, 7 November: maul try and two yellow cards. Kicking depth is not shown.",
+      "text": "Checked 8 Nov 2026 from the match reports, not from a model and not from footage. Ashman's first try was a rolling maul. BBC also calls his third a line-out maul; the Scottish report does not. Taylor's try was a New Zealand line-out drive after a penalty. Lakai was binned for offside and Sititi was binned, with BBC saying off his feet and the Scottish report saying a team tally. No report gives a New Zealand kick count or kick depth, so aimless kicking is not a finding. The full reading is on the Scotland post-match card. It is one match.",
+      "sources": [
+        {
+          "name": "Scottish Rugby report",
+          "url": "https://scottishrugby.org/news-and-features/match-reportscotland-21-43-new-zealand/"
+        },
+        {
+          "name": "BBC Sport",
+          "url": "https://www.bbc.com/sport/rugby-union/articles/c9e8l5vlgxl5o"
+        },
+        {
+          "name": "Scottish Rugby live blog",
+          "url": "https://scottishrugby.org/matches/internationals/2026-27/nations-championship/scotland-v-new-zealand-3/"
+        },
+        {
+          "name": "All Blacks",
+          "url": "https://www.allblacks.com/news/all-blacks/match-report-all-blacks-v-scotland-nations-championship-2026"
+        }
+      ]
     }
   ],
   "notVerified": [
